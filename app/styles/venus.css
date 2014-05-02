@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.text.gigantic-size{
+  font-size: 10em;
+}
+
+.text.big-size{
+  font-size: 5em;
+}
+
+.text.centralized{
+  text-align: center;
+}
+
+.text.white{
+  color: #FFF;
+  text-shadow: 0 0 3px #000;
+}
