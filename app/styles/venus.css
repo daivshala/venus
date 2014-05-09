@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  outline: none;
 }
 
 body{
@@ -22,4 +23,74 @@ body{
 .text.white{
   color: #FFF;
   text-shadow: 0 0 3px #000;
+}
+
+.button{
+	line-height: normal;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+	font-weight: normal;
+	border-radius: 3px;
+	-webkit-animation: fadeIn 1s;
+	border: 0px;
+	text-shadow: 0 0 1px #000;
+  	padding: 13px 15px;
+  	cursor: pointer;
+  	text-align: center;
+  	width: 150px;
+}
+
+.button:active{
+	border-top: 2px solid transparent;
+	border-bottom: none !important;
+}
+
+.button.orange{
+	background: rgb(255,161,0);
+	border-bottom: 2px solid rgb(252,124,0);
+}
+
+.button.orange:hover{
+	background: rgb(255,166,0);
+}
+
+.button.orange:active{
+	background: rgb(255,166,0);
+}
+
+.button.blue{
+	background: rgb(0,165,223);
+	border-bottom: 2px solid rgb(0,144,204);
+}
+
+.button.blue:hover{
+	background: rgb(0,157,211);
+}
+
+.button.blue:active{
+	border-bottom: none;
+	background: rgb(0,157,211);
+}
+
+.button.ng-leave{
+	-webkit-animation: fadeOut 1s;
+}
+
+.button.wide{
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.button.round{
+	border: 1px solid rgb(0, 95, 182);
+	border-radius: 5px;
+	color: rgb(0, 95, 182);
+	font-size: 20px;
+	background: transparent;
+	height: 44px;
+	width: 44px;
+	padding: 0px;
+	text-shadow: none;
 }
