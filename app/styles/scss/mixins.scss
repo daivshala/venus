@@ -1,0 +1,30 @@
+//Actions
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin text-shadow($shadow) {
+  -webkit-text-shadow: $shadow;
+  -moz-text-shadow: $shadow;
+  -ms-text-shadow: $shadow;
+  text-shadow: $shadow;
+}
+
+//Fonts
+
+@mixin font-size-default {
+  font-size: 1rem;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+}

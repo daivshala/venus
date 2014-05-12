@@ -1,0 +1,71 @@
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  white-space: nowrap;
+  line-height: normal;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  @include font-size-default;
+  @include border-radius(3px);
+  border: 0px;
+  padding: 14px 45px;
+  min-width: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 20px;
+  text-align: center;
+  position: relative;
+  -webkit-animation: fadeIn 1s;
+  &:hover {
+    background: #0daadd;
+    outline: 0;
+    @include box-shadow(none);
+  }
+  &:active {
+    outline: 0;
+    background-image: none;
+    padding: 14px 45px 17px;
+  }
+  &:focus {
+    outline: 0;
+    @include box-shadow(none);
+  }
+  &.ng-leave {
+    -webkit-animation: fadeOut 1s;
+  }
+  &.blue {
+    @include text-shadow(0 1px #0091c9);
+    background: $seashore;
+    border-bottom: 3px solid $sky;
+    &:hover {
+      background: #0daadd;
+    }
+    &:active {
+      background: #0daadd;
+      border-bottom: 0;
+    }
+  }
+  &.orange {
+    @include text-shadow(0 1px #ec820a);
+    background: $sunshine;
+    border-bottom: 3px solid $honeycomb;
+    &:hover {
+      background: #fca81d;
+    }
+    &:active {
+      background: #fca81d;
+      border-bottom: 0;
+    }
+  }
+  &.wide {
+    display: block;
+    width: 100%;
+  }
+}
+
+button {
+  @extend .button;
+}
