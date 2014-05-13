@@ -7,7 +7,7 @@
   white-space: nowrap;
   line-height: normal;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: $text-button-color;
   @include font-size-default;
   @include border-radius(3px);
   border: 0px;
@@ -16,17 +16,21 @@
   cursor: pointer;
   font-weight: bold;
   margin-right: 20px;
-  text-align: center;
   position: relative;
   -webkit-animation: fadeIn 1s;
+  @include text-shadow(0 1px $button-blue-text-shadow);
+  background: $seashore;
+  border-bottom: 3px solid $sky;
   &:hover {
-    background: #0daadd;
+    background: $button-blue-hover;
     outline: 0;
     @include box-shadow(none);
   }
   &:active {
     outline: 0;
     background-image: none;
+    background: $button-blue-hover;
+    border-bottom: 0;
     padding: 14px 45px 17px;
   }
   &:focus {
@@ -36,28 +40,33 @@
   &.ng-leave {
     -webkit-animation: fadeOut 1s;
   }
-  &.blue {
-    @include text-shadow(0 1px #0091c9);
-    background: $seashore;
-    border-bottom: 3px solid $sky;
-    &:hover {
-      background: #0daadd;
-    }
-    &:active {
-      background: #0daadd;
-      border-bottom: 0;
-    }
-  }
   &.orange {
     @include text-shadow(0 1px #ec820a);
     background: $sunshine;
     border-bottom: 3px solid $honeycomb;
     &:hover {
-      background: #fca81d;
+      background: $button-orange-hover;
     }
     &:active {
-      background: #fca81d;
+      background: $button-orange-hover;
       border-bottom: 0;
+    }
+  }
+  &.disabled {
+    color: #b5bebe;
+    @include text-shadow(0 1px $button-disabled-text-shadow);
+    background: $button-disabled;
+    border-bottom: 3px solid #adb7b7;
+    cursor: default;
+    &:hover {
+      background: $button-disabled;
+      cursor: default;
+    }
+    &:active {
+      background: $button-disabled;
+      padding: 14px 45px;
+      border-bottom: 3px solid $button-disabled-border;
+      cursor: default;
     }
   }
   &.wide {
@@ -68,4 +77,21 @@
 
 button {
   @extend .button;
+  &:disabled {
+    color: #b5bebe;
+    @include text-shadow(0 1px $button-disabled-text-shadow);
+    background: $button-disabled;
+    border-bottom: 3px solid $button-disabled-border;
+    cursor: default;
+    &:hover {
+      background: $button-disabled;
+      cursor: default;
+    }
+    &:active {
+      background: $button-disabled;
+      padding: 14px 45px;
+      border-bottom: 3px solid $button-disabled-border;
+      cursor: default;
+    }
+  }
 }
