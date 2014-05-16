@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+body {
+  font-size: 100%; }
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  white-space: nowrap;
+  line-height: normal;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 0px;
+  padding: 14px 45px;
+  min-width: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: fadeIn 1s;
+  -webkit-text-shadow: 0 1px #0091c9;
+  -moz-text-shadow: 0 1px #0091c9;
+  -ms-text-shadow: 0 1px #0091c9;
+  text-shadow: 0 1px #0091c9;
+  background: #00a5db;
+  border-bottom: 3px solid #008bc1; }
+  .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    background: #0daadd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none; }
+  .button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+    outline: 0;
+    background-image: none;
+    background: #0daadd;
+    border-bottom: 0;
+    padding: 14px 45px 17px; }
+  .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none; }
+  .button.ng-leave, button.ng-leave, input.ng-leave[type="submit"], input.ng-leave[type="reset"], input.ng-leave[type="button"] {
+    -webkit-animation: fadeOut 1s; }
+  .button.orange, button.orange, input.orange[type="submit"], input.orange[type="reset"], input.orange[type="button"] {
+    -webkit-text-shadow: 0 1px #ec820a;
+    -moz-text-shadow: 0 1px #ec820a;
+    -ms-text-shadow: 0 1px #ec820a;
+    text-shadow: 0 1px #ec820a;
+    background: #fca311;
+    border-bottom: 3px solid #ec820a; }
+    .button.orange:hover, button.orange:hover, input.orange[type="submit"]:hover, input.orange[type="reset"]:hover, input.orange[type="button"]:hover {
+      background: #fca81d; }
+    .button.orange:active, button.orange:active, input.orange[type="submit"]:active, input.orange[type="reset"]:active, input.orange[type="button"]:active {
+      background: #fca81d;
+      border-bottom: 0; }
+  .button.disabled, button.disabled, input.disabled[type="submit"], input.disabled[type="reset"], input.disabled[type="button"], .button:disabled, button:disabled, input[type="submit"]:disabled, input[type="reset"]:disabled, input[type="button"]:disabled {
+    color: #b5bebe;
+    -webkit-text-shadow: 0 1px #f8f8f8;
+    -moz-text-shadow: 0 1px #f8f8f8;
+    -ms-text-shadow: 0 1px #f8f8f8;
+    text-shadow: 0 1px #f8f8f8;
+    background: #d3d7d8;
+    border-bottom: 3px solid #adb7b7;
+    cursor: default; }
+    .button.disabled:hover, button.disabled:hover, input.disabled[type="submit"]:hover, input.disabled[type="reset"]:hover, input.disabled[type="button"]:hover, .button:disabled:hover, button:disabled:hover, input[type="submit"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="button"]:disabled:hover {
+      background: #d3d7d8;
+      cursor: default; }
+    .button.disabled:active, button.disabled:active, input.disabled[type="submit"]:active, input.disabled[type="reset"]:active, input.disabled[type="button"]:active, .button:disabled:active, button:disabled:active, input[type="submit"]:disabled:active, input[type="reset"]:disabled:active, input[type="button"]:disabled:active {
+      background: #d3d7d8;
+      padding: 14px 45px;
+      border-bottom: 3px solid #adb7b7;
+      cursor: default; }
+  .button.wide, button.wide, input.wide[type="submit"], input.wide[type="reset"], input.wide[type="button"] {
+    display: block;
+    width: 100%; }
+  .button.dropdown, button.dropdown, input.dropdown[type="submit"], input.dropdown[type="reset"], input.dropdown[type="button"] {
+    min-width: 0;
+    padding: 24px 24px 23px; }
+    .button.dropdown:active, button.dropdown:active, input.dropdown[type="submit"]:active, input.dropdown[type="reset"]:active, input.dropdown[type="button"]:active {
+      padding-bottom: 26px; }
+    .button.dropdown:after, button.dropdown:after, input.dropdown[type="submit"]:after, input.dropdown[type="reset"]:after, input.dropdown[type="button"]:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      display: block;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+      top: 50%;
+      left: 40%;
+      border-width: 5px 5px 0; }
+
+.button-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+  .button-group > .button, .button-group > button, .button-group > input[type="submit"], .button-group > input[type="reset"], .button-group > input[type="button"] {
+    position: relative;
+    float: left; }
+    .button-group > .button:hover, .button-group > button:hover, .button-group > input[type="submit"]:hover, .button-group > input[type="reset"]:hover, .button-group > input[type="button"]:hover, .button-group > .button:active, .button-group > button:active, .button-group > input[type="submit"]:active, .button-group > input[type="reset"]:active, .button-group > input[type="button"]:active, .button-group > .button:focus, .button-group > button:focus, .button-group > input[type="submit"]:focus, .button-group > input[type="reset"]:focus, .button-group > input[type="button"]:focus {
+      z-index: 2; }
+    .button-group > .button:focus, .button-group > button:focus, .button-group > input[type="submit"]:focus, .button-group > input[type="reset"]:focus, .button-group > input[type="button"]:focus {
+      outline: 0; }
+  .button-group > .button:first-child, .button-group > button:first-child, .button-group > input[type="submit"]:first-child, .button-group > input[type="reset"]:first-child, .button-group > input[type="button"]:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.18);
+    margin-left: 0; }
+    .button-group > .button:first-child:not(:last-child):not(.arrow-button), .button-group > button:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="submit"]:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="reset"]:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="button"]:first-child:not(:last-child):not(.arrow-button) {
+      -webkit-border-bottom-right-radius: 0;
+      -webkit-border-top-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      -moz-border-radius-topright: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0; }
+  .button-group > .button:not(:first-child):not(:last-child):not(.arrow-button), .button-group > button:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="submit"]:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="reset"]:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="button"]:not(:first-child):not(:last-child):not(.arrow-button) {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    margin-left: -1px;
+    border-right: 1px solid rgba(0, 0, 0, 0.18);
+    border-left: 1px solid rgba(0, 0, 0, 0.18); }
+  .button-group > .button:last-child, .button-group > button:last-child, .button-group > input[type="submit"]:last-child, .button-group > input[type="reset"]:last-child, .button-group > input[type="button"]:last-child {
+    margin-left: -1px;
+    border-left: 1px solid rgba(0, 0, 0, 0.18);
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }

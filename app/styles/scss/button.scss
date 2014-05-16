@@ -1,0 +1,99 @@
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  white-space: nowrap;
+  line-height: normal;
+  text-decoration: none;
+  color: $text-button-color;
+  @include font-size-default;
+  @include border-radius(3px);
+  border: 0px;
+  padding: 14px 45px;
+  min-width: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: fadeIn 1s;
+  @include text-shadow(0 1px $button-blue-text-shadow);
+  background: $button-blue-background;
+  border-bottom: 3px solid $button-blue-border;
+  &:hover {
+    background: $button-blue-hover;
+    outline: 0;
+    @include box-shadow(none);
+  }
+  &:active {
+    outline: 0;
+    background-image: none;
+    background: $button-blue-hover;
+    border-bottom: 0;
+    padding: 14px 45px 17px;
+  }
+  &:focus {
+    outline: 0;
+    @include box-shadow(none);
+  }
+  &.ng-leave {
+    -webkit-animation: fadeOut 1s;
+  }
+  &.orange {
+    @include text-shadow(0 1px #ec820a);
+    background: $button-orange-background;
+    border-bottom: 3px solid $button-orange-border;
+    &:hover {
+      background: $button-orange-hover;
+    }
+    &:active {
+      background: $button-orange-hover;
+      border-bottom: 0;
+    }
+  }
+  &.disabled,
+  &:disabled {
+    color: #b5bebe;
+    @include text-shadow(0 1px $button-disabled-text-shadow);
+    background: $button-disabled;
+    border-bottom: 3px solid $button-disabled-border;
+    cursor: default;
+    &:hover {
+      background: $button-disabled;
+      cursor: default;
+    }
+    &:active {
+      background: $button-disabled;
+      padding: 14px 45px;
+      border-bottom: 3px solid $button-disabled-border;
+      cursor: default;
+    }
+  }
+  &.wide {
+    display: block;
+    width: 100%;
+  }
+  &.dropdown {
+    min-width: 0;
+    padding: 24px 24px 23px;
+    &:active {
+      padding-bottom: 26px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      display: block;
+      border-style: solid;
+      border-color: $text-button-color transparent transparent transparent;
+      top: 50%;
+      left: 40%;
+      border-width: 5px 5px 0;
+    }
+  }
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+  @extend .button;
+}
