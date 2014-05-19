@@ -140,3 +140,27 @@ body {
     -moz-border-radius-topleft: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
+
+.label {
+  display: inline;
+  padding: 7px 16px 8px;
+  font-size: 0.750rem;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #00a5db;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #00a5db; }
+  .label.infocus {
+    background: #ccedf8; }
+  .label a:hover, .label a:focus {
+    color: #00a5db;
+    text-decoration: none;
+    cursor: pointer; }
