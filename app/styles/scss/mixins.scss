@@ -51,3 +51,19 @@
   font-size: 0.750rem;
   font-size: 12px;
 }
+
+//Forms
+
+$input-height-base: 40px;
+$input-padding-base: 14px 12px;
+
+@mixin font-size-placeholder {
+  font-size: 0.875rem;
+  font-size: 14px;
+}
+
+@mixin placeholder-style {
+  color: $input-placeholder-color;
+  @include font-size-placeholder;
+  font-style: italic;
+}

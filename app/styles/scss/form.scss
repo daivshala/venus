@@ -1,0 +1,60 @@
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: block;
+  width: 100%;
+  padding: $input-padding-base;
+  @include border-radius(3px);
+  border: 1px solid $input-border-color;
+  line-height: 1;
+  margin-bottom: 15px;
+  &::-webkit-input-placeholder {
+    @include placeholder-style;
+  }
+  &:-moz-placeholder {
+    @include placeholder-style;
+  }
+  &::-moz-placeholder {
+    @include placeholder-style;
+  }
+  &:-ms-input-placeholder {
+    @include placeholder-style;
+  }
+  &:focus {
+    outline: none;
+    border-color: $input-border-focus-color;
+  }
+  &:invalid,
+  &.invalid {
+    color: $input-invalid-text;
+    border-color: $input-invalid-border;
+  }
+  &:disabled,
+  .disabled {
+    color: $input-disabled-text;
+    border-color: $input-disabled-border;
+    background: $input-disabled-background;
+  }
+}
+
+
