@@ -54,6 +54,18 @@ input[type="color"] {
     color: $input-disabled-text;
     border-color: $input-disabled-border;
     background: $input-disabled-background;
+    &::-webkit-input-placeholder {
+      color: $input-disabled-text;
+    }
+    &:-moz-placeholder {
+      color: $input-disabled-text;
+    }
+    &::-moz-placeholder {
+      color: $input-disabled-text;
+    }
+    &:-ms-input-placeholder {
+      color: $input-disabled-text;
+    }
   }
 }
 
