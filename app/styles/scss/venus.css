@@ -535,11 +535,13 @@ input[type="checkbox"]:checked + label:before {
   border-color: #00a5db; }
 
 input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
-  color: #d4d7d9; }
+  color: #d4d7d9;
+  cursor: default; }
 
 input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + label:before {
   background: #f8f8f8;
-  border-color: #d4d7d9; }
+  border-color: #d4d7d9;
+  cursor: default; }
 
 input[type="radio"] + label:before {
   content: "";

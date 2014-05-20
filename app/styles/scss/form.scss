@@ -108,11 +108,13 @@ input[type="checkbox"]:checked + label:before {
 
 input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
   color: $input-disabled-text;
+  cursor: default;
 }
 
 input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + label:before {
   background: $input-disabled-background;
   border-color: $input-disabled-border;
+  cursor: default;
 }
 
 input[type="radio"] + label {
