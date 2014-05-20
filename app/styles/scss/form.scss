@@ -106,19 +106,16 @@ input[type="checkbox"]:checked + label:before {
   border-color: $input-border-focus-color;
 }
 
-input[type="checkbox"]:disabled + label:before {
+input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
+  color: $input-disabled-text;
+}
+
+input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + label:before {
   background: $input-disabled-background;
   border-color: $input-disabled-border;
 }
 
 input[type="radio"] + label {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 35px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  font-size: 14px;
   &:before {
     content: "";
     display: inline-block;
@@ -143,19 +140,6 @@ input[type=radio]:checked + label:before {
   border-color: $input-border-focus-color;
 }
 
-input[type="radio"]:disabled + label {
-  color: $input-disabled-text;
-}
-
-input[type="radio"]:disabled + label:before {
-  background: $input-disabled-background;
-  border-color: $input-disabled-border;
-}
-
-input[type="radio"]:disabled + label:before {
-  background: $input-disabled-background;
-  border-color: $input-disabled-border;
-}
 
 
 

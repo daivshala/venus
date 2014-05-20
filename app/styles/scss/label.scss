@@ -11,15 +11,12 @@
   text-decoration: none;
   @include border-radius(3px);
   border: 1px solid $label-border-color;
-  &.infocus {
+  cursor: pointer;
+  &:hover,
+  &:focus {
     background: $label-focus-background;
-  }
-  a {
-    &:hover,
-    &:focus {
-      color: $label-font-color;
-      text-decoration: none;
-      cursor: pointer;
-    }
+    color: $label-font-color;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
