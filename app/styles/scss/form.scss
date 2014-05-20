@@ -69,42 +69,93 @@ input[type="color"] {
   }
 }
 
-input[type="checkbox"] {
-  opacity: 0;
-  float: left;
-  width: 20px;
-  + label {
-    font-size: 14px;
-    display: block;
-    margin: 0;
-    clear: none;
-    padding: 5px 0 4px 24px;
-    cursor: pointer;
-    position: relative;
-    &:after {
-      position: absolute;
-      content: '';
-      width: 20px;
-      height: 20px;
-      background: #ffffff;
-      border: 1px solid $input-border-color;
-      @include border-radius(3px);
-      left: -10px;
-      bottom: 3px;
-    }
-  }
-  &:checked + label {
-    &:after {
-      line-height: 1.5;
-      text-align: center;
-      content: "\2713";
-      color: #ffffff;
-      border-color: $input-border-focus-color;
-      background: $input-border-focus-color;
-    }
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $input-border-color;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: transparent;
+    @include border-radius(3px);
   }
 }
 
+input[type="checkbox"]:checked + label:before {
+  @include font-size-default;
+  content: "\2713";
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+  background: $input-border-focus-color;
+  border-color: $input-border-focus-color;
+}
+
+input[type="checkbox"]:disabled + label:before {
+  background: $input-disabled-background;
+  border-color: $input-disabled-border;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $input-border-color;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background-color: transparent;
+    @include border-radius(1000px);
+  }
+}
+
+input[type=radio]:checked + label:before {
+  content: "\2b24";
+  color: $input-border-focus-color;
+  color: $input-border-focus-color;
+  line-height: 1.3;
+  text-align: center;
+  border-color: $input-border-focus-color;
+}
+
+input[type="radio"]:disabled + label {
+  color: $input-disabled-text;
+}
+
+input[type="radio"]:disabled + label:before {
+  background: $input-disabled-background;
+  border-color: $input-disabled-border;
+}
+
+input[type="radio"]:disabled + label:before {
+  background: $input-disabled-background;
+  border-color: $input-disabled-border;
+}
 
 
 
