@@ -1,0 +1,56 @@
+#universe{
+  background-image: url(/images/venus.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+.section{
+  padding: 50px 20%;
+  min-height: 100%;
+
+  &.white{
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  &.black{
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+  }
+}
+
+h1{
+  border-bottom: 1px solid;
+  margin-top: 40px;
+}
+
+.text{
+  font-family: Lato, sans-serif;
+
+  &.big-size{
+    font-size: 32px;
+    text-shadow: 0 0 5px #000;
+  }
+
+  &.gigantic-size{
+    font-size: 72px;
+    text-shadow: 0 0 5px #000;
+  }
+
+  &.white{
+    color: #FFF;
+  }
+
+  &.black{
+    color: #000;
+  }
+
+  &.centralized{
+    text-align: center;
+  }
+}

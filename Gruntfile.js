@@ -15,6 +15,8 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  grunt.loadNpmTasks('grunt-contrib-sass');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -23,6 +25,18 @@ module.exports = function (grunt) {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
       dist: 'dist'
+    },
+
+    sass: {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles/scss/',
+                src: ['{,*/}*.scss'],
+                dest: '<%= yeoman.app %>/styles/css',
+                ext: '.css'
+            }]
+        }
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -43,8 +57,8 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.app %>/styles/scss/{,*/}*.scss'],
+        tasks: ['sass','newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -285,8 +299,8 @@ module.exports = function (grunt) {
       },
       styles: {
         expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
+        cwd: '<%= yeoman.app %>/styles/css',
+        dest: '.tmp/styles/css',
         src: '{,*/}*.css'
       }
     },
@@ -351,6 +365,7 @@ module.exports = function (grunt) {
       'clean:server',
       'bowerInstall',
       'concurrent:server',
+      'sass',
       'autoprefixer',
       'connect:livereload',
       'watch'
