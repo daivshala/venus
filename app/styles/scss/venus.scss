@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 //Foundation
 @import '_colors.scss';
 @import '_mixins.scss';
@@ -9,3 +11,5 @@
 @import '_button-group.scss';
 @import '_label.scss';
 @import '_form.scss';
+@import '_activity-indicator.scss';
+@import '_breadcrumbs.scss';

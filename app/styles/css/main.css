@@ -8,31 +8,48 @@
   position: fixed;
   overflow: auto; }
 
-.section {
+.venus.code {
+  font-family: monospace;
+  font-size: 14px;
+  color: #FFF;
+  background: #232323;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px; }
+  .venus.code textarea {
+    background: transparent;
+    font-family: inherit;
+    border: none;
+    width: 100%;
+    height: 150px;
+    padding: 0px;
+    outline: none; }
+.venus.activity-indicator {
+  position: fixed;
+  bottom: 0px;
+  left: 0px; }
+.venus.section {
   padding: 50px 20%;
   min-height: 100%; }
-  .section.white {
+  .venus.section.white {
     background: rgba(255, 255, 255, 0.8);
     color: #000; }
-  .section.black {
+  .venus.section.black {
     background: rgba(0, 0, 0, 0.8);
     color: #FFF; }
-
-h1 {
-  border-bottom: 1px solid;
-  margin-top: 40px; }
-
-.text {
+.venus.text {
   font-family: Lato, sans-serif; }
-  .text.big-size {
+  .venus.text.big-size {
     font-size: 32px;
     text-shadow: 0 0 5px #000; }
-  .text.gigantic-size {
+  .venus.text.gigantic-size {
     font-size: 72px;
-    text-shadow: 0 0 5px #000; }
-  .text.white {
+    text-shadow: 0 0 5px #000;
+    border-bottom: 1px solid;
+    margin-top: 40px; }
+  .venus.text.white {
     color: #FFF; }
-  .text.black {
+  .venus.text.black {
     color: #000; }
-  .text.centralized {
+  .venus.text.centralized {
     text-align: center; }

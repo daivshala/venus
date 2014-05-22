@@ -2,7 +2,9 @@
 
 angular
   .module('venusApp', [
-    'ngRoute'
+    'ngRoute',
+    'venusUI',
+    'ngAnimate'
   ])
   .config(function ($routeProvider) {
     $routeProvider

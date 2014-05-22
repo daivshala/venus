@@ -1,9 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+* {
+  box-sizing: border-box; }
+
 body {
   font-size: 100%;
   color: white; }
 
-.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+.venus .button {
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
@@ -33,40 +36,40 @@ body {
   text-shadow: 0 1px #0091c9;
   background: #00a5db;
   border-bottom: 3px solid #008bc1; }
-  .button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+  .venus .button:hover {
     background: #0daadd;
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none; }
-  .button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+  .venus .button:active {
     outline: 0;
     background-image: none;
     background: #0daadd;
     border-bottom: 0;
     padding: 14px 45px 17px; }
-  .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+  .venus .button:focus {
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     box-shadow: none; }
-  .button.ng-leave, button.ng-leave, input.ng-leave[type="submit"], input.ng-leave[type="reset"], input.ng-leave[type="button"] {
+  .venus .button.ng-leave {
     -webkit-animation: fadeOut 1s; }
-  .button.orange, button.orange, input.orange[type="submit"], input.orange[type="reset"], input.orange[type="button"] {
+  .venus .button.orange {
     -webkit-text-shadow: 0 1px #ec820a;
     -moz-text-shadow: 0 1px #ec820a;
     -ms-text-shadow: 0 1px #ec820a;
     text-shadow: 0 1px #ec820a;
     background: #fca311;
     border-bottom: 3px solid #ec820a; }
-    .button.orange:hover, button.orange:hover, input.orange[type="submit"]:hover, input.orange[type="reset"]:hover, input.orange[type="button"]:hover {
+    .venus .button.orange:hover {
       background: #fca81d; }
-    .button.orange:active, button.orange:active, input.orange[type="submit"]:active, input.orange[type="reset"]:active, input.orange[type="button"]:active {
+    .venus .button.orange:active {
       background: #fca81d;
       border-bottom: 0; }
-  .button.disabled, button.disabled, input.disabled[type="submit"], input.disabled[type="reset"], input.disabled[type="button"], .button:disabled, button:disabled, input[type="submit"]:disabled, input[type="reset"]:disabled, input[type="button"]:disabled {
+  .venus .button.disabled, .venus .button:disabled {
     color: #b5bebe;
     -webkit-text-shadow: 0 1px #f8f8f8;
     -moz-text-shadow: 0 1px #f8f8f8;
@@ -75,23 +78,23 @@ body {
     background: #d3d7d8;
     border-bottom: 3px solid #adb7b7;
     cursor: default; }
-    .button.disabled:hover, button.disabled:hover, input.disabled[type="submit"]:hover, input.disabled[type="reset"]:hover, input.disabled[type="button"]:hover, .button:disabled:hover, button:disabled:hover, input[type="submit"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="button"]:disabled:hover {
+    .venus .button.disabled:hover, .venus .button:disabled:hover {
       background: #d3d7d8;
       cursor: default; }
-    .button.disabled:active, button.disabled:active, input.disabled[type="submit"]:active, input.disabled[type="reset"]:active, input.disabled[type="button"]:active, .button:disabled:active, button:disabled:active, input[type="submit"]:disabled:active, input[type="reset"]:disabled:active, input[type="button"]:disabled:active {
+    .venus .button.disabled:active, .venus .button:disabled:active {
       background: #d3d7d8;
       padding: 14px 45px;
       border-bottom: 3px solid #adb7b7;
       cursor: default; }
-  .button.wide, button.wide, input.wide[type="submit"], input.wide[type="reset"], input.wide[type="button"] {
+  .venus .button.wide {
     display: block;
     width: 100%; }
-  .button.dropdown, button.dropdown, input.dropdown[type="submit"], input.dropdown[type="reset"], input.dropdown[type="button"] {
+  .venus .button.dropdown {
     min-width: 0;
     padding: 24px 24px 23px; }
-    .button.dropdown:active, button.dropdown:active, input.dropdown[type="submit"]:active, input.dropdown[type="reset"]:active, input.dropdown[type="button"]:active {
+    .venus .button.dropdown:active {
       padding-bottom: 26px; }
-    .button.dropdown:after, button.dropdown:after, input.dropdown[type="submit"]:after, input.dropdown[type="reset"]:after, input.dropdown[type="button"]:after {
+    .venus .button.dropdown:after {
       position: absolute;
       content: "";
       width: 0;
@@ -103,28 +106,28 @@ body {
       left: 40%;
       border-width: 5px 5px 0; }
 
-.button-group {
+.venus .button-group {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .button-group > .button, .button-group > button, .button-group > input[type="submit"], .button-group > input[type="reset"], .button-group > input[type="button"] {
+  .venus .button-group > .button {
     position: relative;
     float: left; }
-    .button-group > .button:hover, .button-group > button:hover, .button-group > input[type="submit"]:hover, .button-group > input[type="reset"]:hover, .button-group > input[type="button"]:hover, .button-group > .button:active, .button-group > button:active, .button-group > input[type="submit"]:active, .button-group > input[type="reset"]:active, .button-group > input[type="button"]:active, .button-group > .button:focus, .button-group > button:focus, .button-group > input[type="submit"]:focus, .button-group > input[type="reset"]:focus, .button-group > input[type="button"]:focus {
+    .venus .button-group > .button:hover, .venus .button-group > .button:active, .venus .button-group > .button:focus {
       z-index: 2; }
-    .button-group > .button:focus, .button-group > button:focus, .button-group > input[type="submit"]:focus, .button-group > input[type="reset"]:focus, .button-group > input[type="button"]:focus {
+    .venus .button-group > .button:focus {
       outline: 0; }
-  .button-group > .button:first-child, .button-group > button:first-child, .button-group > input[type="submit"]:first-child, .button-group > input[type="reset"]:first-child, .button-group > input[type="button"]:first-child {
+  .venus .button-group > .button:first-child {
     border-right: 1px solid rgba(0, 0, 0, 0.18);
     margin-left: 0; }
-    .button-group > .button:first-child:not(:last-child):not(.arrow-button), .button-group > button:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="submit"]:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="reset"]:first-child:not(:last-child):not(.arrow-button), .button-group > input[type="button"]:first-child:not(:last-child):not(.arrow-button) {
+    .venus .button-group > .button:first-child:not(:last-child):not(.arrow-button) {
       -webkit-border-bottom-right-radius: 0;
       -webkit-border-top-right-radius: 0;
       -moz-border-radius-bottomright: 0;
       -moz-border-radius-topright: 0;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0; }
-  .button-group > .button:not(:first-child):not(:last-child):not(.arrow-button), .button-group > button:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="submit"]:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="reset"]:not(:first-child):not(:last-child):not(.arrow-button), .button-group > input[type="button"]:not(:first-child):not(:last-child):not(.arrow-button) {
+  .venus .button-group > .button:not(:first-child):not(:last-child):not(.arrow-button) {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -132,7 +135,7 @@ body {
     margin-left: -1px;
     border-right: 1px solid rgba(0, 0, 0, 0.18);
     border-left: 1px solid rgba(0, 0, 0, 0.18); }
-  .button-group > .button:last-child, .button-group > button:last-child, .button-group > input[type="submit"]:last-child, .button-group > input[type="reset"]:last-child, .button-group > input[type="button"]:last-child {
+  .venus .button-group > .button:last-child {
     margin-left: -1px;
     border-left: 1px solid rgba(0, 0, 0, 0.18);
     -webkit-border-bottom-left-radius: 0;
@@ -166,27 +169,26 @@ body {
     text-decoration: none;
     cursor: pointer; }
 
-label {
+.venus form label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 10px; }
-
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+.venus form select,
+.venus form textarea,
+.venus form input[type="text"],
+.venus form input[type="password"],
+.venus form input[type="datetime"],
+.venus form input[type="datetime-local"],
+.venus form input[type="date"],
+.venus form input[type="month"],
+.venus form input[type="time"],
+.venus form input[type="week"],
+.venus form input[type="number"],
+.venus form input[type="email"],
+.venus form input[type="url"],
+.venus form input[type="search"],
+.venus form input[type="tel"],
+.venus form input[type="color"] {
   display: block;
   width: 100%;
   padding: 14px 12px;
@@ -197,313 +199,311 @@ input[type="color"] {
   border: 1px solid #9da6ad;
   line-height: 1;
   margin-bottom: 40px; }
-  select::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder,
-  input[type="text"]::-webkit-input-placeholder,
-  input[type="password"]::-webkit-input-placeholder,
-  input[type="datetime"]::-webkit-input-placeholder,
-  input[type="datetime-local"]::-webkit-input-placeholder,
-  input[type="date"]::-webkit-input-placeholder,
-  input[type="month"]::-webkit-input-placeholder,
-  input[type="time"]::-webkit-input-placeholder,
-  input[type="week"]::-webkit-input-placeholder,
-  input[type="number"]::-webkit-input-placeholder,
-  input[type="email"]::-webkit-input-placeholder,
-  input[type="url"]::-webkit-input-placeholder,
-  input[type="search"]::-webkit-input-placeholder,
-  input[type="tel"]::-webkit-input-placeholder,
-  input[type="color"]::-webkit-input-placeholder {
+  .venus form select::-webkit-input-placeholder,
+  .venus form textarea::-webkit-input-placeholder,
+  .venus form input[type="text"]::-webkit-input-placeholder,
+  .venus form input[type="password"]::-webkit-input-placeholder,
+  .venus form input[type="datetime"]::-webkit-input-placeholder,
+  .venus form input[type="datetime-local"]::-webkit-input-placeholder,
+  .venus form input[type="date"]::-webkit-input-placeholder,
+  .venus form input[type="month"]::-webkit-input-placeholder,
+  .venus form input[type="time"]::-webkit-input-placeholder,
+  .venus form input[type="week"]::-webkit-input-placeholder,
+  .venus form input[type="number"]::-webkit-input-placeholder,
+  .venus form input[type="email"]::-webkit-input-placeholder,
+  .venus form input[type="url"]::-webkit-input-placeholder,
+  .venus form input[type="search"]::-webkit-input-placeholder,
+  .venus form input[type="tel"]::-webkit-input-placeholder,
+  .venus form input[type="color"]::-webkit-input-placeholder {
     line-height: 1.5;
     color: #aeb4b8;
     font-size: 0.875rem;
     font-size: 14px;
     font-style: italic; }
-  select:-moz-placeholder,
-  textarea:-moz-placeholder,
-  input[type="text"]:-moz-placeholder,
-  input[type="password"]:-moz-placeholder,
-  input[type="datetime"]:-moz-placeholder,
-  input[type="datetime-local"]:-moz-placeholder,
-  input[type="date"]:-moz-placeholder,
-  input[type="month"]:-moz-placeholder,
-  input[type="time"]:-moz-placeholder,
-  input[type="week"]:-moz-placeholder,
-  input[type="number"]:-moz-placeholder,
-  input[type="email"]:-moz-placeholder,
-  input[type="url"]:-moz-placeholder,
-  input[type="search"]:-moz-placeholder,
-  input[type="tel"]:-moz-placeholder,
-  input[type="color"]:-moz-placeholder {
+  .venus form select:-moz-placeholder,
+  .venus form textarea:-moz-placeholder,
+  .venus form input[type="text"]:-moz-placeholder,
+  .venus form input[type="password"]:-moz-placeholder,
+  .venus form input[type="datetime"]:-moz-placeholder,
+  .venus form input[type="datetime-local"]:-moz-placeholder,
+  .venus form input[type="date"]:-moz-placeholder,
+  .venus form input[type="month"]:-moz-placeholder,
+  .venus form input[type="time"]:-moz-placeholder,
+  .venus form input[type="week"]:-moz-placeholder,
+  .venus form input[type="number"]:-moz-placeholder,
+  .venus form input[type="email"]:-moz-placeholder,
+  .venus form input[type="url"]:-moz-placeholder,
+  .venus form input[type="search"]:-moz-placeholder,
+  .venus form input[type="tel"]:-moz-placeholder,
+  .venus form input[type="color"]:-moz-placeholder {
     line-height: 1.5;
     color: #aeb4b8;
     font-size: 0.875rem;
     font-size: 14px;
     font-style: italic; }
-  select::-moz-placeholder,
-  textarea::-moz-placeholder,
-  input[type="text"]::-moz-placeholder,
-  input[type="password"]::-moz-placeholder,
-  input[type="datetime"]::-moz-placeholder,
-  input[type="datetime-local"]::-moz-placeholder,
-  input[type="date"]::-moz-placeholder,
-  input[type="month"]::-moz-placeholder,
-  input[type="time"]::-moz-placeholder,
-  input[type="week"]::-moz-placeholder,
-  input[type="number"]::-moz-placeholder,
-  input[type="email"]::-moz-placeholder,
-  input[type="url"]::-moz-placeholder,
-  input[type="search"]::-moz-placeholder,
-  input[type="tel"]::-moz-placeholder,
-  input[type="color"]::-moz-placeholder {
+  .venus form select::-moz-placeholder,
+  .venus form textarea::-moz-placeholder,
+  .venus form input[type="text"]::-moz-placeholder,
+  .venus form input[type="password"]::-moz-placeholder,
+  .venus form input[type="datetime"]::-moz-placeholder,
+  .venus form input[type="datetime-local"]::-moz-placeholder,
+  .venus form input[type="date"]::-moz-placeholder,
+  .venus form input[type="month"]::-moz-placeholder,
+  .venus form input[type="time"]::-moz-placeholder,
+  .venus form input[type="week"]::-moz-placeholder,
+  .venus form input[type="number"]::-moz-placeholder,
+  .venus form input[type="email"]::-moz-placeholder,
+  .venus form input[type="url"]::-moz-placeholder,
+  .venus form input[type="search"]::-moz-placeholder,
+  .venus form input[type="tel"]::-moz-placeholder,
+  .venus form input[type="color"]::-moz-placeholder {
     line-height: 1.5;
     color: #aeb4b8;
     font-size: 0.875rem;
     font-size: 14px;
     font-style: italic; }
-  select:-ms-input-placeholder,
-  textarea:-ms-input-placeholder,
-  input[type="text"]:-ms-input-placeholder,
-  input[type="password"]:-ms-input-placeholder,
-  input[type="datetime"]:-ms-input-placeholder,
-  input[type="datetime-local"]:-ms-input-placeholder,
-  input[type="date"]:-ms-input-placeholder,
-  input[type="month"]:-ms-input-placeholder,
-  input[type="time"]:-ms-input-placeholder,
-  input[type="week"]:-ms-input-placeholder,
-  input[type="number"]:-ms-input-placeholder,
-  input[type="email"]:-ms-input-placeholder,
-  input[type="url"]:-ms-input-placeholder,
-  input[type="search"]:-ms-input-placeholder,
-  input[type="tel"]:-ms-input-placeholder,
-  input[type="color"]:-ms-input-placeholder {
+  .venus form select:-ms-input-placeholder,
+  .venus form textarea:-ms-input-placeholder,
+  .venus form input[type="text"]:-ms-input-placeholder,
+  .venus form input[type="password"]:-ms-input-placeholder,
+  .venus form input[type="datetime"]:-ms-input-placeholder,
+  .venus form input[type="datetime-local"]:-ms-input-placeholder,
+  .venus form input[type="date"]:-ms-input-placeholder,
+  .venus form input[type="month"]:-ms-input-placeholder,
+  .venus form input[type="time"]:-ms-input-placeholder,
+  .venus form input[type="week"]:-ms-input-placeholder,
+  .venus form input[type="number"]:-ms-input-placeholder,
+  .venus form input[type="email"]:-ms-input-placeholder,
+  .venus form input[type="url"]:-ms-input-placeholder,
+  .venus form input[type="search"]:-ms-input-placeholder,
+  .venus form input[type="tel"]:-ms-input-placeholder,
+  .venus form input[type="color"]:-ms-input-placeholder {
     line-height: 1.5;
     color: #aeb4b8;
     font-size: 0.875rem;
     font-size: 14px;
     font-style: italic; }
-  select:focus,
-  textarea:focus,
-  input[type="text"]:focus,
-  input[type="password"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="time"]:focus,
-  input[type="week"]:focus,
-  input[type="number"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="search"]:focus,
-  input[type="tel"]:focus,
-  input[type="color"]:focus {
+  .venus form select:focus,
+  .venus form textarea:focus,
+  .venus form input[type="text"]:focus,
+  .venus form input[type="password"]:focus,
+  .venus form input[type="datetime"]:focus,
+  .venus form input[type="datetime-local"]:focus,
+  .venus form input[type="date"]:focus,
+  .venus form input[type="month"]:focus,
+  .venus form input[type="time"]:focus,
+  .venus form input[type="week"]:focus,
+  .venus form input[type="number"]:focus,
+  .venus form input[type="email"]:focus,
+  .venus form input[type="url"]:focus,
+  .venus form input[type="search"]:focus,
+  .venus form input[type="tel"]:focus,
+  .venus form input[type="color"]:focus {
     outline: none;
     border-color: #00a5db; }
-  select:invalid, select.invalid,
-  textarea:invalid,
-  textarea.invalid,
-  input[type="text"]:invalid,
-  input[type="text"].invalid,
-  input[type="password"]:invalid,
-  input[type="password"].invalid,
-  input[type="datetime"]:invalid,
-  input[type="datetime"].invalid,
-  input[type="datetime-local"]:invalid,
-  input[type="datetime-local"].invalid,
-  input[type="date"]:invalid,
-  input[type="date"].invalid,
-  input[type="month"]:invalid,
-  input[type="month"].invalid,
-  input[type="time"]:invalid,
-  input[type="time"].invalid,
-  input[type="week"]:invalid,
-  input[type="week"].invalid,
-  input[type="number"]:invalid,
-  input[type="number"].invalid,
-  input[type="email"]:invalid,
-  input[type="email"].invalid,
-  input[type="url"]:invalid,
-  input[type="url"].invalid,
-  input[type="search"]:invalid,
-  input[type="search"].invalid,
-  input[type="tel"]:invalid,
-  input[type="tel"].invalid,
-  input[type="color"]:invalid,
-  input[type="color"].invalid {
+  .venus form select:invalid, .venus form select.invalid,
+  .venus form textarea:invalid,
+  .venus form textarea.invalid,
+  .venus form input[type="text"]:invalid,
+  .venus form input[type="text"].invalid,
+  .venus form input[type="password"]:invalid,
+  .venus form input[type="password"].invalid,
+  .venus form input[type="datetime"]:invalid,
+  .venus form input[type="datetime"].invalid,
+  .venus form input[type="datetime-local"]:invalid,
+  .venus form input[type="datetime-local"].invalid,
+  .venus form input[type="date"]:invalid,
+  .venus form input[type="date"].invalid,
+  .venus form input[type="month"]:invalid,
+  .venus form input[type="month"].invalid,
+  .venus form input[type="time"]:invalid,
+  .venus form input[type="time"].invalid,
+  .venus form input[type="week"]:invalid,
+  .venus form input[type="week"].invalid,
+  .venus form input[type="number"]:invalid,
+  .venus form input[type="number"].invalid,
+  .venus form input[type="email"]:invalid,
+  .venus form input[type="email"].invalid,
+  .venus form input[type="url"]:invalid,
+  .venus form input[type="url"].invalid,
+  .venus form input[type="search"]:invalid,
+  .venus form input[type="search"].invalid,
+  .venus form input[type="tel"]:invalid,
+  .venus form input[type="tel"].invalid,
+  .venus form input[type="color"]:invalid,
+  .venus form input[type="color"].invalid {
     color: #d62828;
     border-color: #f13335; }
-  select:disabled,
-  select .disabled,
-  textarea:disabled,
-  textarea .disabled,
-  input[type="text"]:disabled,
-  input[type="text"] .disabled,
-  input[type="password"]:disabled,
-  input[type="password"] .disabled,
-  input[type="datetime"]:disabled,
-  input[type="datetime"] .disabled,
-  input[type="datetime-local"]:disabled,
-  input[type="datetime-local"] .disabled,
-  input[type="date"]:disabled,
-  input[type="date"] .disabled,
-  input[type="month"]:disabled,
-  input[type="month"] .disabled,
-  input[type="time"]:disabled,
-  input[type="time"] .disabled,
-  input[type="week"]:disabled,
-  input[type="week"] .disabled,
-  input[type="number"]:disabled,
-  input[type="number"] .disabled,
-  input[type="email"]:disabled,
-  input[type="email"] .disabled,
-  input[type="url"]:disabled,
-  input[type="url"] .disabled,
-  input[type="search"]:disabled,
-  input[type="search"] .disabled,
-  input[type="tel"]:disabled,
-  input[type="tel"] .disabled,
-  input[type="color"]:disabled,
-  input[type="color"] .disabled {
+  .venus form select:disabled,
+  .venus form select .disabled,
+  .venus form textarea:disabled,
+  .venus form textarea .disabled,
+  .venus form input[type="text"]:disabled,
+  .venus form input[type="text"] .disabled,
+  .venus form input[type="password"]:disabled,
+  .venus form input[type="password"] .disabled,
+  .venus form input[type="datetime"]:disabled,
+  .venus form input[type="datetime"] .disabled,
+  .venus form input[type="datetime-local"]:disabled,
+  .venus form input[type="datetime-local"] .disabled,
+  .venus form input[type="date"]:disabled,
+  .venus form input[type="date"] .disabled,
+  .venus form input[type="month"]:disabled,
+  .venus form input[type="month"] .disabled,
+  .venus form input[type="time"]:disabled,
+  .venus form input[type="time"] .disabled,
+  .venus form input[type="week"]:disabled,
+  .venus form input[type="week"] .disabled,
+  .venus form input[type="number"]:disabled,
+  .venus form input[type="number"] .disabled,
+  .venus form input[type="email"]:disabled,
+  .venus form input[type="email"] .disabled,
+  .venus form input[type="url"]:disabled,
+  .venus form input[type="url"] .disabled,
+  .venus form input[type="search"]:disabled,
+  .venus form input[type="search"] .disabled,
+  .venus form input[type="tel"]:disabled,
+  .venus form input[type="tel"] .disabled,
+  .venus form input[type="color"]:disabled,
+  .venus form input[type="color"] .disabled {
     color: #d4d7d9;
     border-color: #d4d7d9;
     background: #f8f8f8; }
-    select:disabled::-webkit-input-placeholder,
-    select .disabled::-webkit-input-placeholder,
-    textarea:disabled::-webkit-input-placeholder,
-    textarea .disabled::-webkit-input-placeholder,
-    input[type="text"]:disabled::-webkit-input-placeholder,
-    input[type="text"] .disabled::-webkit-input-placeholder,
-    input[type="password"]:disabled::-webkit-input-placeholder,
-    input[type="password"] .disabled::-webkit-input-placeholder,
-    input[type="datetime"]:disabled::-webkit-input-placeholder,
-    input[type="datetime"] .disabled::-webkit-input-placeholder,
-    input[type="datetime-local"]:disabled::-webkit-input-placeholder,
-    input[type="datetime-local"] .disabled::-webkit-input-placeholder,
-    input[type="date"]:disabled::-webkit-input-placeholder,
-    input[type="date"] .disabled::-webkit-input-placeholder,
-    input[type="month"]:disabled::-webkit-input-placeholder,
-    input[type="month"] .disabled::-webkit-input-placeholder,
-    input[type="time"]:disabled::-webkit-input-placeholder,
-    input[type="time"] .disabled::-webkit-input-placeholder,
-    input[type="week"]:disabled::-webkit-input-placeholder,
-    input[type="week"] .disabled::-webkit-input-placeholder,
-    input[type="number"]:disabled::-webkit-input-placeholder,
-    input[type="number"] .disabled::-webkit-input-placeholder,
-    input[type="email"]:disabled::-webkit-input-placeholder,
-    input[type="email"] .disabled::-webkit-input-placeholder,
-    input[type="url"]:disabled::-webkit-input-placeholder,
-    input[type="url"] .disabled::-webkit-input-placeholder,
-    input[type="search"]:disabled::-webkit-input-placeholder,
-    input[type="search"] .disabled::-webkit-input-placeholder,
-    input[type="tel"]:disabled::-webkit-input-placeholder,
-    input[type="tel"] .disabled::-webkit-input-placeholder,
-    input[type="color"]:disabled::-webkit-input-placeholder,
-    input[type="color"] .disabled::-webkit-input-placeholder {
+    .venus form select:disabled::-webkit-input-placeholder,
+    .venus form select .disabled::-webkit-input-placeholder,
+    .venus form textarea:disabled::-webkit-input-placeholder,
+    .venus form textarea .disabled::-webkit-input-placeholder,
+    .venus form input[type="text"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="text"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="password"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="password"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="datetime"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="datetime"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="datetime-local"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="datetime-local"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="date"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="date"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="month"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="month"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="time"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="time"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="week"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="week"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="number"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="number"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="email"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="email"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="url"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="url"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="search"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="search"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="tel"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="tel"] .disabled::-webkit-input-placeholder,
+    .venus form input[type="color"]:disabled::-webkit-input-placeholder,
+    .venus form input[type="color"] .disabled::-webkit-input-placeholder {
       color: #d4d7d9; }
-    select:disabled:-moz-placeholder,
-    select .disabled:-moz-placeholder,
-    textarea:disabled:-moz-placeholder,
-    textarea .disabled:-moz-placeholder,
-    input[type="text"]:disabled:-moz-placeholder,
-    input[type="text"] .disabled:-moz-placeholder,
-    input[type="password"]:disabled:-moz-placeholder,
-    input[type="password"] .disabled:-moz-placeholder,
-    input[type="datetime"]:disabled:-moz-placeholder,
-    input[type="datetime"] .disabled:-moz-placeholder,
-    input[type="datetime-local"]:disabled:-moz-placeholder,
-    input[type="datetime-local"] .disabled:-moz-placeholder,
-    input[type="date"]:disabled:-moz-placeholder,
-    input[type="date"] .disabled:-moz-placeholder,
-    input[type="month"]:disabled:-moz-placeholder,
-    input[type="month"] .disabled:-moz-placeholder,
-    input[type="time"]:disabled:-moz-placeholder,
-    input[type="time"] .disabled:-moz-placeholder,
-    input[type="week"]:disabled:-moz-placeholder,
-    input[type="week"] .disabled:-moz-placeholder,
-    input[type="number"]:disabled:-moz-placeholder,
-    input[type="number"] .disabled:-moz-placeholder,
-    input[type="email"]:disabled:-moz-placeholder,
-    input[type="email"] .disabled:-moz-placeholder,
-    input[type="url"]:disabled:-moz-placeholder,
-    input[type="url"] .disabled:-moz-placeholder,
-    input[type="search"]:disabled:-moz-placeholder,
-    input[type="search"] .disabled:-moz-placeholder,
-    input[type="tel"]:disabled:-moz-placeholder,
-    input[type="tel"] .disabled:-moz-placeholder,
-    input[type="color"]:disabled:-moz-placeholder,
-    input[type="color"] .disabled:-moz-placeholder {
+    .venus form select:disabled:-moz-placeholder,
+    .venus form select .disabled:-moz-placeholder,
+    .venus form textarea:disabled:-moz-placeholder,
+    .venus form textarea .disabled:-moz-placeholder,
+    .venus form input[type="text"]:disabled:-moz-placeholder,
+    .venus form input[type="text"] .disabled:-moz-placeholder,
+    .venus form input[type="password"]:disabled:-moz-placeholder,
+    .venus form input[type="password"] .disabled:-moz-placeholder,
+    .venus form input[type="datetime"]:disabled:-moz-placeholder,
+    .venus form input[type="datetime"] .disabled:-moz-placeholder,
+    .venus form input[type="datetime-local"]:disabled:-moz-placeholder,
+    .venus form input[type="datetime-local"] .disabled:-moz-placeholder,
+    .venus form input[type="date"]:disabled:-moz-placeholder,
+    .venus form input[type="date"] .disabled:-moz-placeholder,
+    .venus form input[type="month"]:disabled:-moz-placeholder,
+    .venus form input[type="month"] .disabled:-moz-placeholder,
+    .venus form input[type="time"]:disabled:-moz-placeholder,
+    .venus form input[type="time"] .disabled:-moz-placeholder,
+    .venus form input[type="week"]:disabled:-moz-placeholder,
+    .venus form input[type="week"] .disabled:-moz-placeholder,
+    .venus form input[type="number"]:disabled:-moz-placeholder,
+    .venus form input[type="number"] .disabled:-moz-placeholder,
+    .venus form input[type="email"]:disabled:-moz-placeholder,
+    .venus form input[type="email"] .disabled:-moz-placeholder,
+    .venus form input[type="url"]:disabled:-moz-placeholder,
+    .venus form input[type="url"] .disabled:-moz-placeholder,
+    .venus form input[type="search"]:disabled:-moz-placeholder,
+    .venus form input[type="search"] .disabled:-moz-placeholder,
+    .venus form input[type="tel"]:disabled:-moz-placeholder,
+    .venus form input[type="tel"] .disabled:-moz-placeholder,
+    .venus form input[type="color"]:disabled:-moz-placeholder,
+    .venus form input[type="color"] .disabled:-moz-placeholder {
       color: #d4d7d9; }
-    select:disabled::-moz-placeholder,
-    select .disabled::-moz-placeholder,
-    textarea:disabled::-moz-placeholder,
-    textarea .disabled::-moz-placeholder,
-    input[type="text"]:disabled::-moz-placeholder,
-    input[type="text"] .disabled::-moz-placeholder,
-    input[type="password"]:disabled::-moz-placeholder,
-    input[type="password"] .disabled::-moz-placeholder,
-    input[type="datetime"]:disabled::-moz-placeholder,
-    input[type="datetime"] .disabled::-moz-placeholder,
-    input[type="datetime-local"]:disabled::-moz-placeholder,
-    input[type="datetime-local"] .disabled::-moz-placeholder,
-    input[type="date"]:disabled::-moz-placeholder,
-    input[type="date"] .disabled::-moz-placeholder,
-    input[type="month"]:disabled::-moz-placeholder,
-    input[type="month"] .disabled::-moz-placeholder,
-    input[type="time"]:disabled::-moz-placeholder,
-    input[type="time"] .disabled::-moz-placeholder,
-    input[type="week"]:disabled::-moz-placeholder,
-    input[type="week"] .disabled::-moz-placeholder,
-    input[type="number"]:disabled::-moz-placeholder,
-    input[type="number"] .disabled::-moz-placeholder,
-    input[type="email"]:disabled::-moz-placeholder,
-    input[type="email"] .disabled::-moz-placeholder,
-    input[type="url"]:disabled::-moz-placeholder,
-    input[type="url"] .disabled::-moz-placeholder,
-    input[type="search"]:disabled::-moz-placeholder,
-    input[type="search"] .disabled::-moz-placeholder,
-    input[type="tel"]:disabled::-moz-placeholder,
-    input[type="tel"] .disabled::-moz-placeholder,
-    input[type="color"]:disabled::-moz-placeholder,
-    input[type="color"] .disabled::-moz-placeholder {
+    .venus form select:disabled::-moz-placeholder,
+    .venus form select .disabled::-moz-placeholder,
+    .venus form textarea:disabled::-moz-placeholder,
+    .venus form textarea .disabled::-moz-placeholder,
+    .venus form input[type="text"]:disabled::-moz-placeholder,
+    .venus form input[type="text"] .disabled::-moz-placeholder,
+    .venus form input[type="password"]:disabled::-moz-placeholder,
+    .venus form input[type="password"] .disabled::-moz-placeholder,
+    .venus form input[type="datetime"]:disabled::-moz-placeholder,
+    .venus form input[type="datetime"] .disabled::-moz-placeholder,
+    .venus form input[type="datetime-local"]:disabled::-moz-placeholder,
+    .venus form input[type="datetime-local"] .disabled::-moz-placeholder,
+    .venus form input[type="date"]:disabled::-moz-placeholder,
+    .venus form input[type="date"] .disabled::-moz-placeholder,
+    .venus form input[type="month"]:disabled::-moz-placeholder,
+    .venus form input[type="month"] .disabled::-moz-placeholder,
+    .venus form input[type="time"]:disabled::-moz-placeholder,
+    .venus form input[type="time"] .disabled::-moz-placeholder,
+    .venus form input[type="week"]:disabled::-moz-placeholder,
+    .venus form input[type="week"] .disabled::-moz-placeholder,
+    .venus form input[type="number"]:disabled::-moz-placeholder,
+    .venus form input[type="number"] .disabled::-moz-placeholder,
+    .venus form input[type="email"]:disabled::-moz-placeholder,
+    .venus form input[type="email"] .disabled::-moz-placeholder,
+    .venus form input[type="url"]:disabled::-moz-placeholder,
+    .venus form input[type="url"] .disabled::-moz-placeholder,
+    .venus form input[type="search"]:disabled::-moz-placeholder,
+    .venus form input[type="search"] .disabled::-moz-placeholder,
+    .venus form input[type="tel"]:disabled::-moz-placeholder,
+    .venus form input[type="tel"] .disabled::-moz-placeholder,
+    .venus form input[type="color"]:disabled::-moz-placeholder,
+    .venus form input[type="color"] .disabled::-moz-placeholder {
       color: #d4d7d9; }
-    select:disabled:-ms-input-placeholder,
-    select .disabled:-ms-input-placeholder,
-    textarea:disabled:-ms-input-placeholder,
-    textarea .disabled:-ms-input-placeholder,
-    input[type="text"]:disabled:-ms-input-placeholder,
-    input[type="text"] .disabled:-ms-input-placeholder,
-    input[type="password"]:disabled:-ms-input-placeholder,
-    input[type="password"] .disabled:-ms-input-placeholder,
-    input[type="datetime"]:disabled:-ms-input-placeholder,
-    input[type="datetime"] .disabled:-ms-input-placeholder,
-    input[type="datetime-local"]:disabled:-ms-input-placeholder,
-    input[type="datetime-local"] .disabled:-ms-input-placeholder,
-    input[type="date"]:disabled:-ms-input-placeholder,
-    input[type="date"] .disabled:-ms-input-placeholder,
-    input[type="month"]:disabled:-ms-input-placeholder,
-    input[type="month"] .disabled:-ms-input-placeholder,
-    input[type="time"]:disabled:-ms-input-placeholder,
-    input[type="time"] .disabled:-ms-input-placeholder,
-    input[type="week"]:disabled:-ms-input-placeholder,
-    input[type="week"] .disabled:-ms-input-placeholder,
-    input[type="number"]:disabled:-ms-input-placeholder,
-    input[type="number"] .disabled:-ms-input-placeholder,
-    input[type="email"]:disabled:-ms-input-placeholder,
-    input[type="email"] .disabled:-ms-input-placeholder,
-    input[type="url"]:disabled:-ms-input-placeholder,
-    input[type="url"] .disabled:-ms-input-placeholder,
-    input[type="search"]:disabled:-ms-input-placeholder,
-    input[type="search"] .disabled:-ms-input-placeholder,
-    input[type="tel"]:disabled:-ms-input-placeholder,
-    input[type="tel"] .disabled:-ms-input-placeholder,
-    input[type="color"]:disabled:-ms-input-placeholder,
-    input[type="color"] .disabled:-ms-input-placeholder {
+    .venus form select:disabled:-ms-input-placeholder,
+    .venus form select .disabled:-ms-input-placeholder,
+    .venus form textarea:disabled:-ms-input-placeholder,
+    .venus form textarea .disabled:-ms-input-placeholder,
+    .venus form input[type="text"]:disabled:-ms-input-placeholder,
+    .venus form input[type="text"] .disabled:-ms-input-placeholder,
+    .venus form input[type="password"]:disabled:-ms-input-placeholder,
+    .venus form input[type="password"] .disabled:-ms-input-placeholder,
+    .venus form input[type="datetime"]:disabled:-ms-input-placeholder,
+    .venus form input[type="datetime"] .disabled:-ms-input-placeholder,
+    .venus form input[type="datetime-local"]:disabled:-ms-input-placeholder,
+    .venus form input[type="datetime-local"] .disabled:-ms-input-placeholder,
+    .venus form input[type="date"]:disabled:-ms-input-placeholder,
+    .venus form input[type="date"] .disabled:-ms-input-placeholder,
+    .venus form input[type="month"]:disabled:-ms-input-placeholder,
+    .venus form input[type="month"] .disabled:-ms-input-placeholder,
+    .venus form input[type="time"]:disabled:-ms-input-placeholder,
+    .venus form input[type="time"] .disabled:-ms-input-placeholder,
+    .venus form input[type="week"]:disabled:-ms-input-placeholder,
+    .venus form input[type="week"] .disabled:-ms-input-placeholder,
+    .venus form input[type="number"]:disabled:-ms-input-placeholder,
+    .venus form input[type="number"] .disabled:-ms-input-placeholder,
+    .venus form input[type="email"]:disabled:-ms-input-placeholder,
+    .venus form input[type="email"] .disabled:-ms-input-placeholder,
+    .venus form input[type="url"]:disabled:-ms-input-placeholder,
+    .venus form input[type="url"] .disabled:-ms-input-placeholder,
+    .venus form input[type="search"]:disabled:-ms-input-placeholder,
+    .venus form input[type="search"] .disabled:-ms-input-placeholder,
+    .venus form input[type="tel"]:disabled:-ms-input-placeholder,
+    .venus form input[type="tel"] .disabled:-ms-input-placeholder,
+    .venus form input[type="color"]:disabled:-ms-input-placeholder,
+    .venus form input[type="color"] .disabled:-ms-input-placeholder {
       color: #d4d7d9; }
-
-input[type="checkbox"], input[type="radio"] {
+.venus form input[type="checkbox"], .venus form input[type="radio"] {
   display: none; }
-
-input[type="checkbox"] + label, input[type="radio"] + label {
+.venus form input[type="checkbox"] + label, .venus form input[type="radio"] + label {
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -511,7 +511,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
   margin-right: 40px;
   margin-bottom: 40px;
   font-size: 14px; }
-  input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+  .venus form input[type="checkbox"] + label:before, .venus form input[type="radio"] + label:before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -526,8 +526,7 @@ input[type="checkbox"] + label, input[type="radio"] + label {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     border-radius: 3px; }
-
-input[type="checkbox"]:checked + label:before {
+.venus form input[type="checkbox"]:checked + label:before {
   font-size: 1rem;
   font-size: 16px;
   font-family: Lato, sans-serif;
@@ -537,17 +536,14 @@ input[type="checkbox"]:checked + label:before {
   line-height: 1.2;
   background: #00a5db;
   border-color: #00a5db; }
-
-input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
+.venus form input[type="checkbox"]:disabled + label, .venus form input[type="radio"]:disabled + label {
   color: #d4d7d9;
   cursor: default; }
-
-input[type="checkbox"]:disabled + label:before, input[type="radio"]:disabled + label:before {
+.venus form input[type="checkbox"]:disabled + label:before, .venus form input[type="radio"]:disabled + label:before {
   background: #f8f8f8;
   border-color: #d4d7d9;
   cursor: default; }
-
-input[type="radio"] + label:before {
+.venus form input[type="radio"] + label:before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -562,59 +558,52 @@ input[type="radio"] + label:before {
   -moz-border-radius: 1000px;
   -ms-border-radius: 1000px;
   border-radius: 1000px; }
-
-input[type=radio]:checked + label:before {
+.venus form input[type=radio]:checked + label:before {
   content: "\2b24";
   color: #00a5db;
   color: #00a5db;
   line-height: 1.3;
   text-align: center;
   border-color: #00a5db; }
-
-select {
+.venus form select {
   height: 48px;
   font-size: 15px;
   -webkit-appearance: none !important;
   position: relative;
   background: transparent url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4yIiBiYXNlUHJvZmlsZT0idGlueSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTBweCIgaGVpZ2h0PSI1cHgiIHZpZXdCb3g9IjAgMCAxMCA1IiB4bWw6c3BhY2 U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMyRDJEMkQiIHBvaW50cz0iOS45NzMsMCA0Ljk4NSw0Ljk2NSAtMC4wMDMsMCAiLz4NCjwvc3ZnPg0K") no-repeat 97% center; }
-
-.range {
+.venus form .range {
   color: #aeb4b8;
   font-size: 10px;
   font-style: italic;
   margin-bottom: 40px; }
-  .range output {
+  .venus form .range output {
     display: block;
     width: 300px;
     margin-bottom: 10px;
     text-align: center; }
-
-input[type='range'] {
+.venus form input[type='range'] {
   -webkit-appearance: none;
   background-color: #d4d7d9;
   height: 1px;
   display: inline-block;
   width: 300px;
   vertical-align: middle; }
-  input[type='range']:focus {
+  .venus form input[type='range']:focus {
     outline: none; }
-
-input[type='range']::-moz-range-track {
+.venus form input[type='range']::-moz-range-track {
   -moz-appearance: none;
   border-radius: 5px;
   box-shadow: inset 0 0 5px #333;
   background-color: green;
   height: 10px; }
-
-input[type='range']::-webkit-slider-thumb {
+.venus form input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   background-color: white;
   border: 1px solid #9da6ad;
   height: 15px;
   width: 15px;
   position: relative; }
-
-input[type='range']::-moz-range-thumb {
+.venus form input[type='range']::-moz-range-thumb {
   -moz-appearance: none;
   border-radius: 20px;
   background-color: #FFF;
@@ -622,3 +611,66 @@ input[type='range']::-moz-range-thumb {
   border: 1px solid #999;
   height: 20px;
   width: 20px; }
+
+.venus.activity-indicator {
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-size: 17px;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-animation: fadeInUp 2s;
+  z-index: 999999;
+  padding: 20px 20%;
+  min-height: 44px; }
+  .venus.activity-indicator.ng-hide-add {
+    -webkit-animation: fadeOutDown 2s;
+    display: block !important; }
+  .venus.activity-indicator .activity {
+    -webkit-animation: pulse 1s infinite;
+    margin: 0;
+    padding: 10px; }
+    .venus.activity-indicator .activity.ng-leave {
+      color: green;
+      -webkit-animation: fadeOutUp 1s; }
+  .venus.activity-indicator .error {
+    color: #FFF;
+    -webkit-animation: tada 1s;
+    cursor: pointer;
+    margin: 0;
+    background: #d14d4d;
+    border-radius: 10px;
+    text-shadow: 0 0 1px #000;
+    padding: 20px; }
+    .venus.activity-indicator .error.ng-leave {
+      -webkit-animation: bounceOut 1s; }
+
+/*  BREADCRUMBS */
+.venus .breadcrumbs {
+  color: #FFF;
+  text-align: center;
+  overflow: auto;
+  margin: auto;
+  padding: 0px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 36px;
+  width: 450px; }
+  .venus .breadcrumbs .item {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 22px;
+    margin-right: 2%;
+    border: 1px solid #FFF;
+    padding: 0 15px; }
+    .venus .breadcrumbs .item.active {
+      background: #FFF !important;
+      color: #000 !important;
+      padding: 0 15px !important; }
+    .venus .breadcrumbs .item.done {
+      background: #39c439;
+      color: #000;
+      border: none;
+      padding: 0 15px 0 40px;
+      background-image: url(check-mark.png);
+      background-position: 14px center;
+      background-repeat: no-repeat; }
