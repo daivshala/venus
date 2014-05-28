@@ -730,3 +730,116 @@ body {
       background-image: url(check-mark.png);
       background-position: 14px center;
       background-repeat: no-repeat; }
+
+/* ALERTS */
+.venus {
+  /* Using inputs checkbox */ }
+  .venus .alert-box {
+    position: relative;
+    display: inline-block; }
+  .venus .alert {
+    display: inline-block;
+    padding: 17px 58px 15px 20px;
+    border: 1px solid #d09d0c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    color: #d09d0c;
+    font-size: 0.875rem;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    position: relative;
+    margin-bottom: 20px; }
+    .venus .alert:before {
+      position: absolute;
+      top: 36%;
+      right: 12px;
+      content: '\ff58';
+      color: #d09d0c;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 14px; }
+    .venus .alert.blue {
+      color: #008bc1;
+      border-color: #008bc1; }
+      .venus .alert.blue:before {
+        color: #008bc1; }
+    .venus .alert.green {
+      color: #19ae35;
+      border-color: #19ae35; }
+      .venus .alert.green:before {
+        color: #19ae35; }
+    .venus .alert.red {
+      color: #c41f1f;
+      border-color: #c41f1f; }
+      .venus .alert.red:before {
+        color: #c41f1f; }
+    .venus .alert > p,
+    .venus .alert > ul {
+      margin-bottom: 0; }
+    .venus .alert > p + p {
+      margin-top: 5px; }
+  .venus input[type="checkbox"].alert {
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    right: 12px;
+    cursor: pointer;
+    opacity: 0; }
+    .venus input[type="checkbox"].alert:before {
+      display: none; }
+  .venus input[type="checkbox"].alert + label {
+    padding: 17px 58px 15px 20px;
+    border: 1px solid #d09d0c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    color: #d09d0c;
+    font-size: 0.875rem;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    position: relative;
+    margin-bottom: 20px;
+    display: none; }
+    .venus input[type="checkbox"].alert + label:before {
+      position: absolute;
+      top: 36%;
+      right: 12px;
+      content: '\ff58';
+      color: #d09d0c;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 14px; }
+    .venus input[type="checkbox"].alert + label > p,
+    .venus input[type="checkbox"].alert + label > ul {
+      margin-bottom: 0; }
+    .venus input[type="checkbox"].alert + label > p + p {
+      margin-top: 5px; }
+  .venus input[type="checkbox"].alert.blue + label {
+    color: #008bc1;
+    border-color: #008bc1; }
+    .venus input[type="checkbox"].alert.blue + label:before {
+      color: #008bc1; }
+  .venus input[type="checkbox"].alert.blue + label {
+    color: #008bc1;
+    border-color: #008bc1; }
+    .venus input[type="checkbox"].alert.blue + label:before {
+      color: #008bc1; }
+  .venus input[type="checkbox"].alert.green + label {
+    color: #19ae35;
+    border-color: #19ae35; }
+    .venus input[type="checkbox"].alert.green + label:before {
+      color: #19ae35; }
+  .venus input[type="checkbox"].alert.red + label {
+    color: #c41f1f;
+    border-color: #c41f1f; }
+    .venus input[type="checkbox"].alert.red + label:before {
+      color: #c41f1f; }
+  .venus input[type="checkbox"].alert:checked + label {
+    display: inline-block; }

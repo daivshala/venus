@@ -1,0 +1,136 @@
+/* ALERTS */
+
+.venus {
+  .alert-box {
+    position: relative;
+    display: inline-block;
+  }
+  .alert {
+    display: inline-block;
+    padding: 17px 58px 15px 20px;
+    border: 1px solid $alert-default-color;
+    @include border-radius(3px);
+    color: $alert-default-color;
+    @include font-size-alerts;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    position: relative;
+    margin-bottom: 20px;
+    &:before {
+      position: absolute;
+      top: 36%;
+      right: 12px;
+      content: '\ff58';
+      color: $alert-default-color;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &.blue {
+      color: $alert-blue-color;
+      border-color: $alert-blue-color;
+      &:before {
+        color: $alert-blue-color;
+      }
+    }
+    &.green {
+      color: $alert-green-color;
+      border-color: $alert-green-color;
+      &:before {
+        color: $alert-green-color;
+      }
+    }
+    &.red {
+      color: $alert-red-color;
+      border-color: $alert-red-color;
+      &:before {
+        color: $alert-red-color;
+      }
+    }
+    > p,
+    > ul {
+      margin-bottom: 0;
+    }
+    > p + p {
+      margin-top: 5px;
+    }
+  }
+
+  /* Using inputs checkbox */
+
+  input[type="checkbox"].alert {
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    right: 12px;
+    cursor: pointer;
+    opacity: 0;
+    &:before {
+      display: none;
+    }
+  }
+
+  input[type="checkbox"].alert + label {
+    padding: 17px 58px 15px 20px;
+    border: 1px solid $alert-default-color;
+    @include border-radius(3px);
+    color: $alert-default-color;
+    @include font-size-alerts;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none;
+    position: relative;
+    margin-bottom: 20px;
+    &:before {
+      position: absolute;
+      top: 36%;
+      right: 12px;
+      content: '\ff58';
+      color: $alert-default-color;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    > p,
+    > ul {
+      margin-bottom: 0;
+    }
+    > p + p {
+      margin-top: 5px;
+    }
+    display: none;
+  }
+  input[type="checkbox"].alert.blue + label {
+    color: $alert-blue-color;
+    border-color: $alert-blue-color;
+    &:before {
+      color: $alert-blue-color;
+    }
+  }
+  input[type="checkbox"].alert.blue + label {
+    color: $alert-blue-color;
+    border-color: $alert-blue-color;
+    &:before {
+      color: $alert-blue-color;
+    }
+  }
+  input[type="checkbox"].alert.green + label {
+    color: $alert-green-color;
+    border-color: $alert-green-color;
+    &:before {
+      color: $alert-green-color;
+    }
+  }
+  input[type="checkbox"].alert.red + label {
+    color: $alert-red-color;
+    border-color: $alert-red-color;
+    &:before {
+      color: $alert-red-color;
+    }
+  }
+  input[type="checkbox"].alert:checked + label {
+    display: inline-block;
+  }
+
+}

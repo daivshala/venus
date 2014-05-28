@@ -67,3 +67,8 @@ $input-padding-base: 14px 12px;
   @include font-size-placeholder;
   font-style: italic;
 }
+
+@mixin font-size-alerts {
+  font-size: 0.875rem;
+  font-size: 14px;
+}
