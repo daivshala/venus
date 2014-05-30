@@ -1,7 +1,7 @@
 /* Steps Icons */
 
 .venus {
-  [class*="step-icon-"] {
+  [class*="icon-"], [class*="step-icon-"] {
     display: inline-block;
     width: auto;
     height: auto;
@@ -102,6 +102,17 @@
     }
     &.thick:before {
       content: '\0069'
+    }
+  }
+//  Default Icons
+  .icon-prev {
+    &:before {
+      content: '\004a';
+    }
+  }
+  .icon-next {
+    &:before {
+      content: '\004b';
     }
   }
 }

@@ -8,7 +8,7 @@ body {
   color: black; }
 
 /* Steps Icons */
-.venus [class*="step-icon-"] {
+.venus [class*="icon-"], .venus [class*="step-icon-"] {
   display: inline-block;
   width: auto;
   height: auto;
@@ -17,20 +17,20 @@ body {
   background-image: none;
   background-position: 0 0;
   background-repeat: repeat; }
-  .venus [class*="step-icon-"]:before {
+  .venus [class*="icon-"]:before, .venus [class*="step-icon-"]:before {
     font-family: 'VenusGlyphs-Regular';
     font-weight: normal;
     font-style: normal;
     text-decoration: inherit; }
-  .venus [class*="step-icon-"].s30 {
+  .venus [class*="icon-"].s30, .venus [class*="step-icon-"].s30 {
     font-size: 49px !important; }
-  .venus [class*="step-icon-"].s40 {
+  .venus [class*="icon-"].s40, .venus [class*="step-icon-"].s40 {
     font-size: 69px !important; }
-  .venus [class*="step-icon-"].blue {
+  .venus [class*="icon-"].blue, .venus [class*="step-icon-"].blue {
     color: #008bc1 !important; }
-  .venus [class*="step-icon-"].disabled {
+  .venus [class*="icon-"].disabled, .venus [class*="step-icon-"].disabled {
     color: #aeb4b8 !important; }
-  .venus [class*="step-icon-"].dark {
+  .venus [class*="icon-"].dark, .venus [class*="step-icon-"].dark {
     color: #2d2d2d !important; }
 .venus .step-icon-1:before {
   content: '\0041'; }
@@ -68,6 +68,10 @@ body {
   content: '\0049'; }
 .venus .step-icon-wallet.thick:before {
   content: "\0069"; }
+.venus .icon-prev:before {
+  content: '\004a'; }
+.venus .icon-next:before {
+  content: '\004b'; }
 
 .venus .button {
   display: inline-block;
@@ -935,3 +939,33 @@ body {
       line-height: 30px;
       position: relative;
       bottom: -8px; }
+
+.venus .pagination {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  font-size: 0.875rem;
+  font-size: 14px; }
+  .venus .pagination > li {
+    display: inline; }
+    .venus .pagination > li > a,
+    .venus .pagination > li > span {
+      position: relative;
+      float: left;
+      text-decoration: none;
+      color: #008bc1;
+      background: transparent;
+      margin-left: -1px;
+      padding: 12px; }
+      .venus .pagination > li > a.disabled,
+      .venus .pagination > li > span.disabled {
+        color: #aeb4b8;
+        cursor: default; }
+    .venus .pagination > li:first-child > a,
+    .venus .pagination > li:first-child > span {
+      margin-left: 0; }
+  .venus .pagination [class*="icon-"] {
+    font-size: 34px;
+    line-height: 20px;
+    position: relative;
+    top: -4px; }
