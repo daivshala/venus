@@ -72,3 +72,8 @@ $input-padding-base: 14px 12px;
   font-size: 0.875rem;
   font-size: 14px;
 }
+
+@mixin font-size-steps {
+  font-size: 0.875rem;
+  font-size: 14px;
+}

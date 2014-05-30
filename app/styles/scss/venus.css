@@ -1,10 +1,73 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(../fonts/venusglyphs.css);
 * {
   box-sizing: border-box; }
 
 body {
   font-size: 100%;
   color: black; }
+
+/* Steps Icons */
+.venus [class*="step-icon-"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat; }
+  .venus [class*="step-icon-"]:before {
+    font-family: 'VenusGlyphs-Regular';
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit; }
+  .venus [class*="step-icon-"].s30 {
+    font-size: 49px !important; }
+  .venus [class*="step-icon-"].s40 {
+    font-size: 69px !important; }
+  .venus [class*="step-icon-"].blue {
+    color: #008bc1 !important; }
+  .venus [class*="step-icon-"].disabled {
+    color: #aeb4b8 !important; }
+  .venus [class*="step-icon-"].dark {
+    color: #2d2d2d !important; }
+.venus .step-icon-1:before {
+  content: '\0041'; }
+.venus .step-icon-1.thick:before {
+  content: "\0061"; }
+.venus .step-icon-2:before {
+  content: '\0042'; }
+.venus .step-icon-2.thick:before {
+  content: "\0062"; }
+.venus .step-icon-3:before {
+  content: '\0043'; }
+.venus .step-icon-3.thick:before {
+  content: "\0063"; }
+.venus .step-icon-cart:before {
+  content: '\0044'; }
+.venus .step-icon-cart.thick:before {
+  content: "\0064"; }
+.venus .step-icon-check:before {
+  content: '\0045'; }
+.venus .step-icon-check.thick:before {
+  content: "\0065"; }
+.venus .step-icon-ticket:before {
+  content: '\0046'; }
+.venus .step-icon-ticket.thick:before {
+  content: "\0066"; }
+.venus .step-icon-tickets:before {
+  content: '\0047'; }
+.venus .step-icon-tickets.thick:before {
+  content: "\0067"; }
+.venus .step-icon-user:before {
+  content: '\0048'; }
+.venus .step-icon-user.thick:before {
+  content: "\0068"; }
+.venus .step-icon-wallet:before {
+  content: '\0049'; }
+.venus .step-icon-wallet.thick:before {
+  content: "\0069"; }
 
 .venus .button {
   display: inline-block;
@@ -843,3 +906,32 @@ body {
       color: #c41f1f; }
   .venus input[type="checkbox"].alert:checked + label {
     display: inline-block; }
+
+.venus .steps {
+  padding: 12px 0 40px;
+  list-style: none;
+  font-size: 0.875rem;
+  font-size: 14px;
+  color: #008bc1; }
+  .venus .steps > li {
+    display: inline-block;
+    margin-left: 20px; }
+    .venus .steps > li:first-child {
+      margin-left: 0; }
+  .venus .steps .active {
+    font-size: 1rem;
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+    font-weight: bold; }
+  .venus .steps .disabled {
+    color: #aeb4b8; }
+  .venus .steps [class*="step-icon-"] {
+    margin-right: 10px; }
+    .venus .steps [class*="step-icon-"].s40 {
+      line-height: 40px;
+      position: relative;
+      bottom: -14px; }
+    .venus .steps [class*="step-icon-"].s30 {
+      line-height: 30px;
+      position: relative;
+      bottom: -8px; }

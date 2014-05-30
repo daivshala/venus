@@ -1,0 +1,107 @@
+/* Steps Icons */
+
+.venus {
+  [class*="step-icon-"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat;
+    &:before {
+      font-family: 'VenusGlyphs-Regular';
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: inherit
+    }
+    &.s30 {
+      font-size: 49px !important;
+    }
+    &.s40 {
+      font-size: 69px !important;
+    }
+    &.blue {
+      color: $icon-color-blue !important;
+    }
+    &.disabled {
+      color: $icon-color-disabled !important;
+    }
+    &.dark {
+      color: $icon-color-dark !important;
+    }
+  }
+  .step-icon-1 {
+    &:before {
+      content: '\0041';
+    }
+    &.thick:before {
+      content: '\0061'
+    }
+  }
+  .step-icon-2 {
+    &:before {
+      content: '\0042';
+    }
+    &.thick:before {
+      content: '\0062'
+    }
+  }
+  .step-icon-3 {
+    &:before {
+      content: '\0043';
+    }
+    &.thick:before {
+      content: '\0063'
+    }
+  }
+  .step-icon-cart {
+    &:before {
+      content: '\0044';
+    }
+    &.thick:before {
+      content: '\0064'
+    }
+  }
+  .step-icon-check {
+    &:before {
+      content: '\0045';
+    }
+    &.thick:before {
+      content: '\0065'
+    }
+  }
+  .step-icon-ticket {
+    &:before {
+      content: '\0046';
+    }
+    &.thick:before {
+      content: '\0066'
+    }
+  }
+  .step-icon-tickets {
+    &:before {
+      content: '\0047';
+    }
+    &.thick:before {
+      content: '\0067'
+    }
+  }
+  .step-icon-user {
+    &:before {
+      content: '\0048';
+    }
+    &.thick:before {
+      content: '\0068'
+    }
+  }
+  .step-icon-wallet {
+    &:before {
+      content: '\0049';
+    }
+    &.thick:before {
+      content: '\0069'
+    }
+  }
+}
