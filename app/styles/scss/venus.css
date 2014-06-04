@@ -68,10 +68,118 @@ body {
   content: '\0049'; }
 .venus .step-icon-wallet.thick:before {
   content: "\0069"; }
+.venus .icon-add:before {
+  content: '\00a1'; }
+.venus .icon-alert:before {
+  content: '\002c'; }
+.venus .icon-attach:before {
+  content: '\002e'; }
+.venus .icon-bright:before {
+  content: '\003f'; }
+.venus .icon-brush:before {
+  content: '\002f'; }
+.venus .icon-calendar:before {
+  content: '\005c'; }
+.venus .icon-cam:before {
+  content: '\007c'; }
+.venus .icon-card:before {
+  content: '\0021'; }
+.venus .icon-cart:before {
+  content: '\0040'; }
+.venus .icon-chat:before {
+  content: '\0023'; }
+.venus .icon-check:before {
+  content: '\0024'; }
+.venus .icon-clock:before {
+  content: '\0025'; }
+.venus .icon-cloud:before {
+  content: '\002a'; }
+.venus .icon-directory:before {
+  content: '\003b'; }
+.venus .icon-download:before {
+  content: '\0029'; }
+.venus .icon-error:before {
+  content: '\0026'; }
+.venus .icon-flag:before {
+  content: '\2211'; }
+.venus .icon-globe:before {
+  content: '\002d'; }
+.venus .icon-heart:before {
+  content: '\003d'; }
+.venus .icon-home:before {
+  content: '\005f'; }
+.venus .icon-info:before {
+  content: '\002b'; }
+.venus .icon-less:before {
+  content: '\0032'; }
+.venus .icon-link:before {
+  content: '\003c'; }
+.venus .icon-mail:before {
+  content: '\003e'; }
+.venus .icon-mic:before {
+  content: '\0031'; }
+.venus .icon-mobile:before {
+  content: '\0033'; }
+.venus .icon-move:before {
+  content: '\0034'; }
+.venus .icon-movie:before {
+  content: '\0035'; }
+.venus .icon-pencil:before {
+  content: '\0036'; }
+.venus .icon-phone:before {
+  content: '\0037'; }
+.venus .icon-pic:before {
+  content: '\0038'; }
+.venus .icon-pin:before {
+  content: '\0039'; }
+.venus .icon-play:before {
+  content: '\0030'; }
 .venus .icon-prev:before {
   content: '\004a'; }
+.venus .icon-print:before {
+  content: '\2122'; }
+.venus .icon-query:before {
+  content: '\00a3'; }
 .venus .icon-next:before {
   content: '\004b'; }
+.venus .icon-reload:before {
+  content: '\00a2'; }
+.venus .icon-sad:before {
+  content: '\221e'; }
+.venus .icon-search:before {
+  content: '\00a7'; }
+.venus .icon-send:before {
+  content: '\00b6'; }
+.venus .icon-settings:before {
+  content: '\2022'; }
+.venus .icon-smile:before {
+  content: '\00aa'; }
+.venus .icon-smile:before {
+  content: '\00aa'; }
+.venus .icon-song:before {
+  content: '\00ba'; }
+.venus .icon-suitcase:before {
+  content: '\003b'; }
+.venus .icon-surprise:before {
+  content: '\00ba'; }
+.venus .icon-target:before {
+  content: '\2013'; }
+.venus .icon-text:before {
+  content: '\005b'; }
+.venus .icon-ticket:before {
+  content: '\007b'; }
+.venus .icon-tickets:before {
+  content: '\007d'; }
+.venus .icon-trash:before {
+  content: '\005d'; }
+.venus .icon-undo:before {
+  content: '\2264'; }
+.venus .icon-user:before {
+  content: '\2265'; }
+.venus .icon-wallet:before {
+  content: '\00f7'; }
+.venus .icon-watch:before {
+  content: '\2026'; }
 
 .venus .button {
   display: inline-block;
