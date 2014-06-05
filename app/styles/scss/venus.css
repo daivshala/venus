@@ -4,8 +4,154 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 100%;
-  color: black; }
+  font-size: 87.5%;
+  color: black;
+  font-family: Lato, sans-serif;
+  line-height: 1.429; }
+
+a {
+  color: #00a5db;
+  text-decoration: none; }
+  a:link, a:visited, a:active, a:hover, a:focus {
+    color: #00a5db; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit; }
+  h1 small,
+  h1 .small, h2 small,
+  h2 .small, h3 small,
+  h3 .small, h4 small,
+  h4 .small, h5 small,
+  h5 .small, h6 small,
+  h6 .small,
+  .h1 small,
+  .h1 .small, .h2 small,
+  .h2 .small, .h3 small,
+  .h3 .small, .h4 small,
+  .h4 .small, .h5 small,
+  .h5 .small, .h6 small,
+  .h6 .small {
+    font-weight: normal;
+    line-height: 1;
+    color: inherit; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  h1 small,
+  h1 .small, .h1 small,
+  .h1 .small,
+  h2 small,
+  h2 .small, .h2 small,
+  .h2 .small,
+  h3 small,
+  h3 .small, .h3 small,
+  .h3 .small {
+    font-size: 65%; }
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  h4 small,
+  h4 .small, .h4 small,
+  .h4 .small,
+  h5 small,
+  h5 .small, .h5 small,
+  .h5 .small,
+  h6 small,
+  h6 .small, .h6 small,
+  .h6 .small {
+    font-size: 75%; }
+
+h1, .h1 {
+  font-size: 34px;
+  font-size: 2.125rem; }
+
+h2, .h2 {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+h3, .h3 {
+  font-size: 26px;
+  font-size: 1.625rem; }
+
+h4, .h4 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+
+h5, .h5 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+h6, .h6 {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+p {
+  margin: 0;
+  line-height: 1.429; }
+
+p + p, img + p {
+  margin-top: 20px; }
+
+small,
+.small {
+  font-size: 85%; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+.list-inline .list-unstyled {
+  margin-left: -5px; }
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+dt,
+dd {
+  line-height: 20px; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0; }
 
 /* Steps Icons */
 .venus [class*="icon-"], .venus [class*="step-icon-"] {
@@ -192,7 +338,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  font-size: 16px;
+  font-size: 0.875px;
   font-family: Lato, sans-serif;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -759,7 +905,7 @@ body {
     border-radius: 3px; }
 .venus form input[type="checkbox"]:checked + label:before {
   font-size: 1rem;
-  font-size: 16px;
+  font-size: 0.875px;
   font-family: Lato, sans-serif;
   content: "\2713";
   color: #ffffff;
@@ -1032,7 +1178,7 @@ body {
       margin-left: 0; }
   .venus .steps .active {
     font-size: 1rem;
-    font-size: 16px;
+    font-size: 0.875px;
     font-family: Lato, sans-serif;
     font-weight: bold; }
   .venus .steps .disabled {
