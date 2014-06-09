@@ -17,7 +17,7 @@ angular.module('venusApp')
         },
     ];
 
-    $scope.isButtonDisabled = true;
+    $scope.isButtonDisabled = true
 
     $scope.activityTest = function(activityText){
         VenusActivityIndicatorService.startActivity(activityText);
