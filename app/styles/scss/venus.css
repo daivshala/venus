@@ -327,6 +327,118 @@ dd {
 .venus .icon-watch:before {
   content: '\2026'; }
 
+body > .venus.grid {
+  margin-left: 0% !important;
+  margin-right: 0% !important; }
+
+.venus.grid {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .venus.grid:after, .venus.grid.row:after {
+    padding-top: 0;
+    margin-top: 0; }
+  .venus.grid > .column,
+  .venus.grid .row > .column {
+    display: block;
+    float: left;
+    max-width: 960px;
+    font-size: 0.875rem;
+    font-size: 14px;
+    width: 80px;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top; }
+  .venus.grid > .column {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .venus.grid > .row {
+    display: block;
+    max-width: 960px;
+    margin-top: 1.5%;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1; }
+    .venus.grid > .row:after, .venus.grid > .row:before {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .venus.grid > .row:after {
+      clear: both; }
+    .venus.grid > .row:first-child {
+      padding-top: 0;
+      margin-top: 0; }
+    .venus.grid > .row > img,
+    .venus.grid > .row > .column > img {
+      max-width: 100%; }
+  .venus.grid .column > .venus.segment:only-child {
+    margin: 0em; }
+  .venus.grid > .row > .one.wide.column,
+  .venus.grid > .column.row > .one.wide.column,
+  .venus.grid > .one.wide.column,
+  .venus.grid > .one.wide.column {
+    width: 80px; }
+  .venus.grid > .row > .two.wide.column,
+  .venus.grid > .column.row > .two.wide.column,
+  .venus.grid > .two.wide.column,
+  .venus.grid > .two.wide.column {
+    width: 160px; }
+  .venus.grid > .row > .three.wide.column,
+  .venus.grid > .column.row > .three.wide.column,
+  .venus.grid > .three.wide.column,
+  .venus.grid > .three.wide.column {
+    width: 240px; }
+  .venus.grid > .row > .four.wide.column,
+  .venus.grid > .column.row > .four.wide.column,
+  .venus.grid > .four.wide.column,
+  .venus.grid > .four.wide.column {
+    width: 320px; }
+  .venus.grid > .row > .five.wide.column,
+  .venus.grid > .column.row > .five.wide.column,
+  .venus.grid > .five.wide.column,
+  .venus.grid > .five.wide.column {
+    width: 400px; }
+  .venus.grid > .row > .six.wide.column,
+  .venus.grid > .column.row > .six.wide.column,
+  .venus.grid > .six.wide.column,
+  .venus.grid > .six.wide.column {
+    width: 480px; }
+  .venus.grid > .row > .seven.wide.column,
+  .venus.grid > .column.row > .seven.wide.column,
+  .venus.grid > .seven.wide.column,
+  .venus.grid > .seven.wide.column {
+    width: 560px; }
+  .venus.grid > .row > .eight.wide.column,
+  .venus.grid > .column.row > .eight.wide.column,
+  .venus.grid > .seven.eight.column,
+  .venus.grid > .seven.eight.column {
+    width: 640px; }
+  .venus.grid > .row > .nine.wide.column,
+  .venus.grid > .column.row > .nine.wide.column,
+  .venus.grid > .seven.nine.column,
+  .venus.grid > .seven.nine.column {
+    width: 720px; }
+  .venus.grid > .row > .ten.wide.column,
+  .venus.grid > .column.row > .ten.wide.column,
+  .venus.grid > .seven.ten.column,
+  .venus.grid > .seven.ten.column {
+    width: 800px; }
+  .venus.grid > .row > .eleven.wide.column,
+  .venus.grid > .column.row > .eleven.wide.column,
+  .venus.grid > .seven.eleven.column,
+  .venus.grid > .seven.eleven.column {
+    width: 880px; }
+  .venus.grid > .row > .twelve.wide.column,
+  .venus.grid > .column.row > .twelve.wide.column,
+  .venus.grid > .seven.twelve.column,
+  .venus.grid > .seven.twelve.column {
+    width: 960px; }
+
 .venus .button {
   display: inline-block;
   margin-bottom: 0;
@@ -337,9 +449,8 @@ dd {
   line-height: normal;
   text-decoration: none;
   color: white;
-  font-size: 1rem;
-  font-size: 0.875px;
-  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+  font-size: 14px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -904,9 +1015,8 @@ dd {
     -ms-border-radius: 3px;
     border-radius: 3px; }
 .venus form input[type="checkbox"]:checked + label:before {
-  font-size: 1rem;
-  font-size: 0.875px;
-  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+  font-size: 14px;
   content: "\2713";
   color: #ffffff;
   text-align: center;
@@ -1177,9 +1287,8 @@ dd {
     .venus .steps > li:first-child {
       margin-left: 0; }
   .venus .steps .active {
-    font-size: 1rem;
-    font-size: 0.875px;
-    font-family: Lato, sans-serif;
+    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: bold; }
   .venus .steps .disabled {
     color: #aeb4b8; }

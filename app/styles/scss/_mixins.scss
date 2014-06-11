@@ -42,9 +42,8 @@
 //Fonts
 
 @mixin font-size-default {
-  font-size: 1rem;
-  font-size: 0.875px;
-  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 @mixin font-size-label {
