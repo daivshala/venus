@@ -4,6 +4,7 @@
 $text-default-color: #000;
 
 body {
+  background: #f6f6f6;
   font-size: 87.5%;
   color: $text-default-color;
   @include font-family-default;

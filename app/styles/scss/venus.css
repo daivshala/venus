@@ -4,6 +4,7 @@
   box-sizing: border-box; }
 
 body {
+  background: #f6f6f6;
   font-size: 87.5%;
   color: black;
   font-family: Lato, sans-serif;
@@ -438,6 +439,26 @@ body > .venus.grid {
   .venus.grid > .seven.twelve.column,
   .venus.grid > .seven.twelve.column {
     width: 960px; }
+
+.venus .segment {
+  position: relative;
+  background-color: #FFFFFF;
+  margin: 1em 0em;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+.venus:first-child {
+  margin-top: 0em; }
+.venus:last-child {
+  margin-bottom: 0em; }
+.venus:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
 
 .venus .button {
   display: inline-block;

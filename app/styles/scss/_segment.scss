@@ -1,0 +1,25 @@
+.venus {
+  .segment {
+    position: relative;
+    background-color: #FFFFFF;
+    margin: 1em 0em;
+    padding: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &:first-child {
+    margin-top: 0em;
+  }
+  &:last-child {
+    margin-bottom: 0em;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
