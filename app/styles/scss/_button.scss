@@ -93,5 +93,22 @@
                 border-width: 5px 5px 0;
             }
         }
+        &.labeled {
+          text-align: right;
+          padding-right: 30px;
+          padding-left: 60px;
+          &:active {
+            text-align: right;
+            padding-right: 30px;
+            padding-left: 60px;
+          }
+          > [class*="icon-"] {
+            font-size: 26px;
+            line-height: 16px;
+            position: absolute;
+            left: 30px;
+            top: 26%;
+          }
+        }
     }
 }
