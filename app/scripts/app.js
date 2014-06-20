@@ -4,7 +4,8 @@ angular
   .module('venusApp', [
     'ngRoute',
     'venusUI',
-    'ngAnimate'
+    'ngAnimate',
+    'ui.mask'
   ])
   .config(function ($routeProvider) {
     $routeProvider
