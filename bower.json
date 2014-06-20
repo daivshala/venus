@@ -1,8 +1,8 @@
 {
   "name": "venus",
-  "version": "0.1.2",
-  "main": ["./app/directives/venus-directives.js","./app/services/venus-services.js","./app/styles/css/venus.css"],
-  "ignore":[".sass-cache",".tmp","app/bower_components","node_modules","test","app/images","app/scripts","app/styles/scss","app/views"],
+  "version": "0.1.3",
+  "main": ["./venus.js","./app/styles/css/venus.css"],
+  "ignore":[".sass-cache",".tmp","node_modules","styles/scss","app"],
   "dependencies": {
     "angular": "~1.*",
     "animate.css": "~3.*",
