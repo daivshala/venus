@@ -23,7 +23,7 @@ angular.module('venusUI').directive('venusBreadcrumbs', function(){
 			steps: '='
 		}, // {} = isolate, true = child, false/undefined = no change
 		restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-		templateUrl: 'directives/venus-breadcrumbs-template.html',
+		templateUrl: 'bower_components/venus/dist/directives/venus-breadcrumbs-template.html',
 		controller: function($scope, $rootScope, $location) {
 			$scope.$watchCollection('steps',function(){
 				$scope.updateActiveStep();
@@ -71,7 +71,7 @@ angular.module('venusUI').directive('venusActivityIndicator', ['VenusActivityInd
 			}
 		},
 		restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-		templateUrl: 'directives/venus-activity-indicator.html',
+		templateUrl: 'bower_components/venus/dist/directives/venus-activity-indicator.html',
 		link: function($scope, iElm, iAttrs, controller) {}
 	};
 }]);
