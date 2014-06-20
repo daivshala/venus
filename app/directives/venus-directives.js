@@ -1,4 +1,4 @@
-angular.module('venusUI', []);
+angular.module('VenusUI', []);
 
 /*
 	VENUS BREADCRUMBS
@@ -16,7 +16,7 @@ angular.module('venusUI', []);
 	]
 */
 
-angular.module('venusUI').directive('venusBreadcrumbs', function(){
+angular.module('VenusUI').directive('venusBreadcrumbs', function(){
 	// Runs during compile
 	return {
 		scope: {
@@ -58,7 +58,7 @@ angular.module('venusUI').directive('venusBreadcrumbs', function(){
 	};
 });
 
-angular.module('venusUI').directive('venusActivityIndicator', ['VenusActivityIndicatorService', function(VenusActivityIndicatorService){
+angular.module('VenusUI').directive('venusActivityIndicator', ['VenusActivityIndicatorService', function(VenusActivityIndicatorService){
 	// Runs during compile
 	return {
 		scope: {}, // {} = isolate, true = child, false/undefined = no change
@@ -76,7 +76,7 @@ angular.module('venusUI').directive('venusActivityIndicator', ['VenusActivityInd
 	};
 }]);
 
-angular.module('venusUI').directive('venusPopover', function(){
+angular.module('VenusUI').directive('venusPopover', function(){
 	return {
 		// name: '',
 		// priority: 1,

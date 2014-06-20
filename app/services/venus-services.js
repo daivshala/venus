@@ -1,4 +1,4 @@
-angular.module('venusUI').service('VenusActivityIndicatorService', function(){
+angular.module('VenusUI').service('VenusActivityIndicatorService', function(){
     return{
         activities: [],
         errors: [],
