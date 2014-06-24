@@ -110,9 +110,19 @@
       content: '\00a1';
     }
   }
+  .icon-android {
+    &:before {
+      content: '\004c';
+    }
+  }
   .icon-alert {
     &:before {
       content: '\002c';
+    }
+  }
+  .icon-apple {
+    &:before {
+      content: '\004d';
     }
   }
   .icon-attach {
@@ -185,6 +195,11 @@
       content: '\0026';
     }
   }
+  .icon-facebook {
+    &:before {
+      content: '\004e';
+    }
+  }
   .icon-flag {
     &:before {
       content: '\2211';
@@ -193,6 +208,11 @@
   .icon-globe {
     &:before {
       content: '\002d';
+    }
+  }
+  .icon-gplus {
+    &:before {
+      content: '\004f';
     }
   }
   .icon-heart {
@@ -363,6 +383,11 @@
   .icon-trash {
     &:before {
       content: '\005d';
+    }
+  }
+  .icon-twitter {
+    &:before {
+      content: '\0050';
     }
   }
   .icon-undo {

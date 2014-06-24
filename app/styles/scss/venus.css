@@ -217,8 +217,12 @@ dd {
   content: "\0069"; }
 .venus .icon-add:before {
   content: '\00a1'; }
+.venus .icon-android:before {
+  content: '\004c'; }
 .venus .icon-alert:before {
   content: '\002c'; }
+.venus .icon-apple:before {
+  content: '\004d'; }
 .venus .icon-attach:before {
   content: '\002e'; }
 .venus .icon-bright:before {
@@ -247,10 +251,14 @@ dd {
   content: '\0029'; }
 .venus .icon-error:before {
   content: '\0026'; }
+.venus .icon-facebook:before {
+  content: '\004e'; }
 .venus .icon-flag:before {
   content: '\2211'; }
 .venus .icon-globe:before {
   content: '\002d'; }
+.venus .icon-gplus:before {
+  content: '\004f'; }
 .venus .icon-heart:before {
   content: '\003d'; }
 .venus .icon-home:before {
@@ -319,6 +327,8 @@ dd {
   content: '\007d'; }
 .venus .icon-trash:before {
   content: '\005d'; }
+.venus .icon-twitter:before {
+  content: '\0050'; }
 .venus .icon-undo:before {
   content: '\2264'; }
 .venus .icon-user:before {
@@ -383,7 +393,10 @@ dd {
     .column.hide {
       display: none; }
     .column.right {
-      float: right; } }
+      float: right; }
+    .column.center {
+      margin: 0 auto;
+      float: none; } }
 /* Grid for Smartphones and Small Tablets */
 @media only screen and (max-width: 40em) {
   .row {
@@ -418,7 +431,10 @@ dd {
     .column.hide {
       display: none; }
     .column.right {
-      float: right; } }
+      float: right; }
+    .column.center {
+      margin: 0 auto;
+      float: none; } }
 .venus .segment {
   position: relative;
   background-color: #FFFFFF;
@@ -551,6 +567,14 @@ dd {
       position: absolute;
       left: 30px;
       top: 26%; }
+    .venus .button.labeled > .icon-android,
+    .venus .button.labeled > .icon-apple,
+    .venus .button.labeled > .icon-facebook,
+    .venus .button.labeled > .icon-gplus,
+    .venus .button.labeled > .icon-twitter {
+      font-size: 40px;
+      left: 20px;
+      top: 22%; }
 
 .venus .button-group {
   position: relative;
@@ -667,6 +691,10 @@ dd {
     text-decoration: none;
     cursor: pointer; }
 
+.venus form input[type=number]::-webkit-inner-spin-button,
+.venus form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 .venus form label {
   display: inline-block;
   max-width: 100%;
