@@ -328,61 +328,97 @@ dd {
 .venus .icon-watch:before {
   content: '\2026'; }
 
-.row {
-  margin-left: -20px;
-  *zoom: 1; }
-  .row:before, .row:after {
-    display: table;
-    line-height: 0;
-    content: ""; }
-  .row:after {
-    clear: both; }
+/* Grid for Desktop and iPads */
+@media only screen and (min-width: 40.063em) {
+  .row {
+    margin-left: -20px;
+    *zoom: 1; }
+    .row:before, .row:after {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .row:after {
+      clear: both; }
 
-.container {
-  width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1; }
-  .container:before, .container:after {
-    display: table;
-    line-height: 0;
-    content: ""; }
-  .container:after {
-    clear: both; }
+  .container {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1; }
+    .container:before, .container:after {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .container:after {
+      clear: both; }
 
-.column {
-  float: left;
-  min-height: 1px;
-  margin-left: 20px; }
-  .column.one {
-    width: 60px; }
-  .column.two {
-    width: 140px; }
-  .column.three {
-    width: 220px; }
-  .column.four {
-    width: 300px; }
-  .column.five {
-    width: 380px; }
-  .column.six {
-    width: 460px; }
-  .column.seven {
-    width: 540px; }
-  .column.eight {
-    width: 620px; }
-  .column.nine {
-    width: 700px; }
-  .column.ten {
-    width: 780px; }
-  .column.eleven {
-    width: 860px; }
-  .column.twelve {
-    width: 940px; }
-  .column.hide {
-    display: none; }
-  .column.right {
-    float: right; }
+  .column {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px; }
+    .column.one {
+      width: 60px; }
+    .column.two {
+      width: 140px; }
+    .column.three {
+      width: 220px; }
+    .column.four {
+      width: 300px; }
+    .column.five {
+      width: 380px; }
+    .column.six {
+      width: 460px; }
+    .column.seven {
+      width: 540px; }
+    .column.eight {
+      width: 620px; }
+    .column.nine {
+      width: 700px; }
+    .column.ten {
+      width: 780px; }
+    .column.eleven {
+      width: 860px; }
+    .column.twelve {
+      width: 940px; }
+    .column.hide {
+      display: none; }
+    .column.right {
+      float: right; } }
+/* Grid for Smartphones and Small Tablets */
+@media only screen and (max-width: 40em) {
+  .row {
+    width: 100%;
+    *zoom: 1; }
+    .row:before, .row:after {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .row:after {
+      clear: both; }
 
+  .container {
+    padding: 0 20px;
+    max-width: 640px;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1; }
+    .container:before, .container:after {
+      display: table;
+      line-height: 0;
+      content: ""; }
+    .container:after {
+      clear: both; }
+
+  .column {
+    float: left;
+    display: block;
+    min-height: 1px; }
+    .column.one, .column.two, .column.three, .column.four, .column.five, .column.six, .column.seven, .column.eight, .column.nine, .column.ten, .column.eleven, .column.twelve {
+      width: 100%; }
+    .column.hide {
+      display: none; }
+    .column.right {
+      float: right; } }
 .venus .segment {
   position: relative;
   background-color: #FFFFFF;
