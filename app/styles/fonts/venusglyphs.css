@@ -1,9 +1,0 @@
-
-@font-face {
-	font-family: 'VenusGlyphs-Regular';
-	src: url('VenusGlyphs-Regular.eot?') format('eot'), 
-	     url('VenusGlyphs-Regular.otf')  format('opentype'),
-	     url('VenusGlyphs-Regular.woff') format('woff'), 
-	     url('VenusGlyphs-Regular.ttf')  format('truetype'),
-	     url('VenusGlyphs-Regular.svg#VenusGlyphs-Regular') format('svg');
-}
