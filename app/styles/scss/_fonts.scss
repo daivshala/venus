@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-@import "fonts/venusglyphs.css";
+
+@font-face {
+  font-family: 'VenusGlyphs-Regular';
+  src: url('fonts/VenusGlyphs-Regular.eot?') format('eot'),
+       url('fonts/VenusGlyphs-Regular.otf')  format('opentype'),
+       url('fonts/VenusGlyphs-Regular.woff') format('woff'),
+       url('fonts/VenusGlyphs-Regular.ttf')  format('truetype'),
+       url('fonts/VenusGlyphs-Regular.svg#VenusGlyphs-Regular') format('svg');
+}
 
 $text-default-color: #000;
 
