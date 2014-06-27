@@ -1,0 +1,4 @@
+<div class="venus activity-indicator" ng-hide="activities.length == 0 && errors.length == 0">
+    <p class="activity" ng-repeat="activity in activities">{{activity}}</p>
+    <p class="error" ng-repeat="error in errors" ng-click="clearError(error)">{{error}}</p>
+</div>
