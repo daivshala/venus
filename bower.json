@@ -10,7 +10,8 @@
     ".tmp",
     "node_modules",
     "styles/scss",
-    "app"
+    "app",
+    "doc"
   ],
   "dependencies": {
     "angular": "~1.*",
