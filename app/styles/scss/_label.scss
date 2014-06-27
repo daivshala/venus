@@ -12,12 +12,4 @@
   text-decoration: none;
   @include border-radius(3px);
   border: 1px solid $label-border-color;
-  cursor: pointer;
-  &:hover,
-  &:focus {
-    background: $label-focus-background;
-    color: $label-font-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
 }
