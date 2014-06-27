@@ -88,23 +88,8 @@ module.exports = function (grunt) {
           open: true,
           base: [
             '.tmp',
-            '<%= yeoman.app %>'
+            '.'
           ]
-        }
-      },
-      test: {
-        options: {
-          port: 9001,
-          base: [
-            '.tmp',
-            'test',
-            '<%= yeoman.app %>'
-          ]
-        }
-      },
-      dist: {
-        options: {
-          base: '<%= yeoman.dist %>'
         }
       }
     },
@@ -142,8 +127,8 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     bowerInstall: {
       app: {
-        src: ['<%= yeoman.app %>/index.html'],
-        ignorePath: '<%= yeoman.app %>/'
+        src: ['doc/index.html']
+        // ignorePath: 'doc/'
       }
     },
 
@@ -320,21 +305,21 @@ module.exports = function (grunt) {
   });
 
 
-  // grunt.registerTask('serve', function (target) {
-  //   if (target === 'dist') {
-  //     return grunt.task.run(['build', 'connect:dist:keepalive']);
-  //   }
+  grunt.registerTask('serve', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
 
-  //   grunt.task.run([
-  //     'clean:server',
-  //     'bowerInstall',
-  //     'concurrent:server',
-  //     'sass',
-  //     'autoprefixer',
-  //     'connect:livereload',
-  //     'watch'
-  //   ]);
-  // });
+    grunt.task.run([
+      'clean:server',
+      'bowerInstall',
+      'concurrent:server',
+      'sass',
+      'autoprefixer',
+      'connect:livereload',
+      'watch'
+    ]);
+  });
 
   // grunt.registerTask('server', function (target) {
   //   grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
