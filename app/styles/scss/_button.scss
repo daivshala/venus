@@ -109,6 +109,16 @@
             left: 30px;
             top: 26%;
           }
+          &.wide {
+            padding: 14px 45px;
+            text-align: center;
+            > [class*="icon-"] {
+              position: relative;
+              left: inherit;
+              margin-right: 20px;
+              top: inherit;
+            }
+          }
           > .icon-android,
           > .icon-apple,
           > .icon-facebook,
