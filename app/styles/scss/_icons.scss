@@ -130,6 +130,11 @@
       content: '\002e';
     }
   }
+  .icon-book {
+    &:before {
+      content: '\0061';
+    }
+  }
   .icon-bright {
     &:before {
       content: '\003f';
@@ -170,6 +175,11 @@
       content: '\0024';
     }
   }
+  .icon-check-list {
+    &:before {
+      content: '\0068';
+    }
+  }
   .icon-clock {
     &:before {
       content: '\0025';
@@ -195,6 +205,11 @@
       content: '\0026';
     }
   }
+  .icon-esc {
+    &:before {
+      content: '\006a';
+    }
+  }
   .icon-facebook {
     &:before {
       content: '\004e';
@@ -205,6 +220,16 @@
       content: '\2211';
     }
   }
+  .icon-filter {
+    &:before {
+      content: '\0063';
+    }
+    &.thick {
+      &:before {
+        content: '\0064';
+      }
+    }
+  }
   .icon-globe {
     &:before {
       content: '\002d';
@@ -213,6 +238,11 @@
   .icon-gplus {
     &:before {
       content: '\004f';
+    }
+  }
+  .icon-graph {
+    &:before {
+      content: '\0065';
     }
   }
   .icon-heart {
@@ -238,6 +268,11 @@
   .icon-link {
     &:before {
       content: '\003c';
+    }
+  }
+  .icon-lock {
+    &:before {
+      content: '\0066';
     }
   }
   .icon-mail {
@@ -285,6 +320,11 @@
       content: '\0039';
     }
   }
+  .icon-pause {
+    &:before {
+      content: '\006d';
+    }
+  }
   .icon-play {
     &:before {
       content: '\0030';
@@ -303,6 +343,16 @@
   .icon-query {
     &:before {
       content: '\00a3';
+    }
+  }
+  .icon-qrcode {
+    &:before {
+      content: '\0069';
+    }
+  }
+  .icon-qrframe {
+    &:before {
+      content: '\006c';
     }
   }
   .icon-next {
@@ -393,6 +443,16 @@
   .icon-undo {
     &:before {
       content: '\2264';
+    }
+  }
+  .icon-unlock {
+    &:before {
+      content: '\0067';
+    }
+  }
+  .icon-upload {
+    &:before {
+      content: '\006b';
     }
   }
   .icon-user {
