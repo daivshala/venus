@@ -28,15 +28,19 @@
     input[type="search"],
     input[type="tel"],
     input[type="color"] {
+		@include font-size-default;
+		color: $text-default-color;
         display: block;
         width: 100%;
+//        font-size: 14px;
         padding: $input-padding-base;
         @include border-radius(3px);
         border: 1px solid $input-border-color;
         line-height: 1;
         margin-bottom: 40px;
         &::-webkit-input-placeholder {
-            line-height: 1.5;
+            z-index: 99;
+            line-height: normal;
             @include placeholder-style;
         }
         &:-moz-placeholder {

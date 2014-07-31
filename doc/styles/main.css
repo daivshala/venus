@@ -1,60 +1,88 @@
 #universe {
-  background-image: url(../images/venus.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  overflow: auto; }
+	background-image: url(../images/venus.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	overflow: auto; }
 
 .venus.code {
-  font-family: monospace;
-  font-size: 14px;
-  color: #FFF;
-  background: #232323;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 10px; }
-  .venus.code textarea {
-    background: transparent;
-    font-family: inherit;
-    border: none;
-    width: 100%;
-    height: 150px;
-    padding: 0px;
-    outline: none;
-    color:#FFF;
-    font-size: 16px;
-  }
+	font-family: monospace;
+	font-size: 14px;
+	color: #FFF;
+	background: #232323;
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 10px; }
+.venus.code textarea {
+	background: transparent;
+	font-family: inherit;
+	border: none;
+	width: 100%;
+	height: 150px;
+	padding: 0px;
+	outline: none;
+	color:#FFF;
+	font-size: 16px;
+}
 .venus.activity-indicator {
-  position: fixed;
-  bottom: 0px;
-  left: 0px; }
+	position: fixed;
+	bottom: 0px;
+	left: 0px; }
 .venus.section {
-  padding: 50px 20%;
-  min-height: 100%; }
-  .venus.section.white {
-    background: rgba(255, 255, 255, 0.8);
-    color: #000; }
-  .venus.section.black {
-    background: rgba(0, 0, 0, 0.8);
-    color: #FFF; }
-  .venus.section .item {
-    margin-top: 100px; }
+	/*padding: 50px 20%;*/
+	min-height: 100%; }
+.venus.section.white {
+	background: rgba(255, 255, 255, 0.8);
+	color: #000; }
+.venus.section.black {
+	background: rgba(0, 0, 0, 0.8);
+	color: #FFF; }
+.venus.section .item {
+	margin-top: 100px; }
 .venus.text {
-  font-family: Lato, sans-serif; }
-  .venus.text.big-size {
-    font-size: 32px;
-    text-shadow: 0 0 5px #000; }
-  .venus.text.gigantic-size {
-    font-size: 72px;
-    text-shadow: 0 0 5px #000;
-    border-bottom: 1px solid;
-    margin-top: 40px; }
-  .venus.text.white {
-    color: #FFF; }
-  .venus.text.black {
-    color: #000; }
-  .venus.text.centralized {
-    text-align: center; }
+	font-family: Lato, sans-serif; }
+.venus.text.big-size {
+	font-size: 32px;
+	text-shadow: 0 0 5px #000; }
+.venus.text.gigantic-size {
+	font-size: 72px;
+	text-shadow: 0 0 5px #000;
+	border-bottom: 1px solid;
+	margin-top: 40px; }
+.venus.text.white {
+	color: #FFF; }
+.venus.text.black {
+	color: #000; }
+.venus.text.centralized {
+	text-align: center; }
+
+/*.grid-style {*/
+	/*margin-left: -10%;*/
+	/*margin-right: -10%;*/
+/*}*/
+
+.grid-style .column {
+	color: #4d4d4d;
+	background: #ccc;
+	/*padding: 10px;*/
+}
+
+.grid-style .row {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 40em) {
+	.grid-style .column {
+		background: none;
+	}
+	.row-col-mob {
+		margin-top: 20px;
+	}
+
+	.mob-one > div, .mob-two > div, .mob-three > div, .mob-four > div, .row-col-mob, .col-mob {
+		background: #95A5A6;
+	}
+}

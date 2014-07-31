@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
 }
+
+//CSS Reset
+@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+
 //Foundation
 @import '_colors.scss';
 @import '_mixins.scss';
