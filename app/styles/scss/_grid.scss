@@ -80,60 +80,64 @@
   }
 }
 
-.offset-1 {
-	margin-left: 100px;
-}
+@media only screen and (min-width: 48.0625em) {
 
-.offset-2 {
-	margin-left: 180px;
-}
+	.offset-1 {
+		margin-left: 100px;
+	}
 
-.offset-3 {
-	margin-left: 260px;
-}
+	.offset-2 {
+		margin-left: 180px;
+	}
 
-.offset-4 {
-	margin-left: 340px;
-}
+	.offset-3 {
+		margin-left: 260px;
+	}
 
-.offset-5 {
-	margin-left: 420px;
-}
+	.offset-4 {
+		margin-left: 340px;
+	}
 
-.offset-6 {
-	margin-left: 500px;
-}
+	.offset-5 {
+		margin-left: 420px;
+	}
 
-.offset-7 {
-	margin-left: 580px;
-}
+	.offset-6 {
+		margin-left: 500px;
+	}
 
-.offset-8 {
-	margin-left: 660px;
-}
+	.offset-7 {
+		margin-left: 580px;
+	}
 
-.offset-9 {
-	margin-left: 740px;
-}
+	.offset-8 {
+		margin-left: 660px;
+	}
 
-.offset-10 {
-	margin-left: 820px;
-}
+	.offset-9 {
+		margin-left: 740px;
+	}
 
-.offset-11 {
-	margin-left: 900px;
-}
+	.offset-10 {
+		margin-left: 820px;
+	}
 
-.offset-12 {
-	margin-left: 980px;
+	.offset-11 {
+		margin-left: 900px;
+	}
+
+	.offset-12 {
+		margin-left: 980px;
+	}
 }
 
 .mob-show {
 	display: none;
 }
 
+
 /* Grid for Smartphones and Small Tablets */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
 	.mob-show {
 		display: block;
 	}

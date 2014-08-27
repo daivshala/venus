@@ -8,127 +8,49 @@
     <div class="venus section white">
         <div class="container grid-style">
             <h1>Grid</h1>
+            <article>
+                <p>Create mult-device layouts quickly and easily with the deafult twelve column, making for a 940px wide container with responsive features enabled.</p>
+                <h5>Basic</h5>
+                <p>For a simple two column layout, create a <code>.row</code> and add the appropriate numer of columns.</p>
+            </article>
+
             <div class="row">
-                <div class="column mob-one four">
-                   <div class="mob-hide">4</div>
-                   <div class="mob-show">1</div>
-                </div>
-                <div class="column mob-two four">
-                    <div class="mob-hide">4</div>
-                    <div class="mob-show">2</div>
-                </div>
-                <div class="column mob-one four">
-                    <div class="mob-hide">4</div>
-                    <div class="mob-show">1</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column mob-two three">
-                    <div class="mob-hide">3</div>
-                    <div class="mob-show">2</div>
-                </div>
-                <div class="column mob-two six">
-                    <div class="mob-hide">6</div>
-                    <div class="mob-show">2</div>
-                </div>
-                <div class="column three">
-                    <div class="mob-hide">3</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column mob-one two">
-                    <div class="mob-hide">2</div>
-                    <div class="mob-show">1</div>
-                </div>
-                <div class="column mob-three eight">
-                    <div class="mob-hide">8</div>
-                    <div class="mob-show">3</div>
-                </div>
-                <div class="column mob-four two">
-                    <div class="mob-hide">2</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column three">
-                    <div class="mob-hide">3</div>
-                    <div class="mob-show col-mob">4</div>
-                </div>
-                <div class="column nine">
-                    <div class="mob-hide">9</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column four">
-                    <div class="mob-hide">4</div>
-                    <div class="mob-show col-mob">4</div>
-                </div>
-                <div class="column eight">
-                    <div class="mob-hide">8</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column five">
-                    <div class="mob-hide">5</div>
-                    <div class="mob-show col-mob">4</div>
-                </div>
-                <div class="column seven">
-                    <div class="mob-hide">7</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column six">
-                    <div class="mob-hide">6</div>
-                    <div class="mob-show col-mob">4</div>
-                </div>
-                <div class="column six">
-                    <div class="mob-hide">6</div>
-                    <div class="mob-show row-col-mob">4</div>
-                </div>
+                <div class="column eight">8</div>
+                <div class="column four">4</div>
             </div>
 
-            <div class="venus code">
-                <textarea>
-<div class="container">
-    <div class="row">
-        <div class="column mob-one four">4</div>
-        <div class="column mob-two four">4</div>
-        <div class="column mob-one four">4</div>
-    </div>
-    <div class="row">
-        <div class="column three">3</div>
-        <div class="column six">6</div>
-        <div class="column three">3</div>
-    </div>
-    <div class="row">
-        <div class="column two">2</div>
-        <div class="column eight">8</div>
-        <div class="column two">2</div>
-    </div>
-    <div class="row">
-        <div class="column three">3</div>
-        <div class="column nine">9</div>
-    </div>
-    <div class="row">
-        <div class="column four">4</div>
-        <div class="column eight">8</div>
-    </div>
-    <div class="row">
-        <div class="column five">5</div>
-        <div class="column seven">7</div>
-    </div>
-    <div class="row">
-        <div class="column six">6</div>
-        <div class="column six">6</div>
-    </div>
-</div>
+          <pre style="background:#002240;color:#fff; padding: 20px">&lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>row<span style="color:#3ad900">"</span>>
+    &lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>column eight<span style="color:#3ad900">"</span>><span style="color:#ff628c">8</span>&lt;<span style="color:#ff9d00">/</span>div>
+    &lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>column four<span style="color:#3ad900">"</span>><span style="color:#ff628c">4</span>&lt;<span style="color:#ff9d00">/</span>div>
+&lt;<span style="color:#ff9d00">/</span>div>
+</pre>
+            <article>
+                <p>The above code sets all columns in mobile mode in standard full width. To control the columns in Mobile mode, you must use the following code.</p>
+            </article>
 
-                </textarea>
+            <div class="row">
+                <div class="column eight mob-three">8</div>
+                <div class="column four mob-one">4</div>
             </div>
+
+            <pre style="background:#002240;color:#fff;padding: 20px">&lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>row<span style="color:#3ad900">"</span>>
+    &lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>column eight mob-three<span style="color:#3ad900">"</span>><span style="color:#ff628c">8</span>&lt;<span style="color:#ff9d00">/</span>div>
+    &lt;div class<span style="color:#ff9d00">=</span><span style="color:#3ad900">"</span>column four mob-one<span style="color:#3ad900">"</span>><span style="color:#ff628c">4</span>&lt;<span style="color:#ff9d00">/</span>div>
+&lt;<span style="color:#ff9d00">/</span>div>
+</pre>
+            <article>
+                <p>The mobile grid suport four columns: <code>.mob-one</code>, <code>.mob-two</code>, <code>.mob-three</code> and <code>.mob-four</code>.
+
+                <h5>Offsetting columns</h5>
+                <p>Move columns to the right, using <code>.offset-*</code> classes. Each class increases the left margin og column by a whole column. For example <code>.offset-4</code> moves column <code>.column .four</code> over four columns.</p>
+            </article>
+
+            <div class="row">
+                <div class="column four offset-4">4</div>
+            </div>
+
+
+
 
         <h1>Button</h1>
 
