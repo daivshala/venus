@@ -35,7 +35,7 @@
 	/*padding: 50px 20%;*/
 	min-height: 100%; }
 .venus.section.white {
-	background: rgba(255, 255, 255, 0.8);
+	background: #fff;
 	color: #000; }
 .venus.section.black {
 	background: rgba(0, 0, 0, 0.8);
