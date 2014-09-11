@@ -1,15 +1,17 @@
-.label {
-  display: inline-block;
-  padding: 7px 16px 8px;
-  margin-bottom: 8px;
-  @include font-size-label;
-  font-weight: bold;
-  line-height: 1;
-  color: $label-font-color;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  text-decoration: none;
-  @include border-radius(3px);
-  border: 1px solid $label-border-color;
+.venus {
+	&.label {
+		display: inline-block;
+		padding: 7px 16px 8px;
+		margin-bottom: 8px;
+		@include font-size-label;
+		font-weight: bold;
+		line-height: 1;
+		color: $label-font-color;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		text-decoration: none;
+		@include border-radius(3px);
+		border: 1px solid $label-border-color;
+	}
 }

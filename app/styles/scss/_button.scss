@@ -1,5 +1,5 @@
 .venus{
-    .button {
+    &.button {
         display: inline-block;
         margin-bottom: 0;
         text-align: center;
@@ -8,7 +8,7 @@
         white-space: nowrap;
         line-height: normal;
         text-decoration: none;
-        color: $text-button-color;
+        color: $text-button-color !important;
         @include font-size-default;
         @include border-radius(3px);
         border: 0px;
@@ -76,9 +76,9 @@
         }
         &.dropdown {
             min-width: 0;
-            padding: 24px 24px 21px;
+            padding: 24px 24px 20px;
             &:active {
-                padding-bottom: 24px;
+                padding-bottom: 23px;
             }
             &:after {
                 position: absolute;

@@ -1,9 +1,9 @@
 .venus{
-    .button-group {
+    &.button-group {
         position: relative;
         display: inline-block;
         vertical-align: middle;
-        >.button {
+        >.venus.button {
             position: relative;
             float: left;
             &:hover,
@@ -15,20 +15,20 @@
                 outline: 0;
             }
         }
-        >.button:first-child {
+        >.venus.button:first-child {
             border-right: 1px solid $button-group-border;
             margin-left: 0;
             &:not(:last-child):not(.arrow-button){
                 @include border-radius-right(0);
             }
         }
-        >.button:not(:first-child):not(:last-child):not(.arrow-button) {
+        >.venus.button:not(:first-child):not(:last-child):not(.arrow-button) {
             @include border-radius(0);
             margin-left: -1px;
             border-right: 1px solid $button-group-border;
             border-left: 1px solid $button-group-border;
         }
-        >.button:last-child {
+        >.venus.button:last-child {
             margin-left: -1px;
             border-left: 1px solid $button-group-border;
             @include border-radius-left(0);
