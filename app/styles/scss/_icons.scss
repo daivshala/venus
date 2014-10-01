@@ -33,6 +33,16 @@
 			content: '\006f';
 		}
 	}
+	&.icon-arrow-up {
+		&:before {
+			content: '\0071';
+		}
+	}
+	&.icon-arrow-down {
+		&:before {
+			content: '\0072';
+		}
+	}
 	&.icon-android {
 		&:before {
 			content: '\004c';

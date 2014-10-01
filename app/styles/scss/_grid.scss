@@ -18,7 +18,9 @@
 	&.mob-show {
 		display: none;
 	}
-
+	&.mob-hide {
+		display: inherit;
+	}
 	&.mob-tablet-show {
 		display: none;
 	}
@@ -145,41 +147,13 @@
 			margin-left: 900px;
 		}
 		&.container {
-			&.morhp-grid {
+			&.transmute-grid {
 				width: 940px;
 			}
 		}
 		&.column {
 			&.expand {
 				width: 940px;
-			}
-		}
-	}
-
-	// Grid with 20 columns for Screens with 1680 to 1920
-	@media only screen and (min-width: 1601px) {
-		&.container {
-			&.morhp-grid {
-				width: 1580px;
-			}
-		}
-		&.column {
-			&.expand {
-				width: 1580px;
-			}
-		}
-	}
-
-	// Grid with 18 columns for Screens with 1440 to 1600
-	@media only screen and (min-width: 1440px) {
-		&.container {
-			&.morhp-grid {
-				width: 1420px;
-			}
-		}
-		&.column {
-			&.expand {
-				width: 1420px;
 			}
 		}
 	}
@@ -187,13 +161,41 @@
 	// Grid with 16 columns for Screens with 1280px to 1366px
 	@media only screen and (min-width: 1280px) {
 		&.container {
-			&.morhp-grid {
+			&.transmute-grid {
 				width: 1260px;
 			}
 		}
 		&.column {
 			&.expand {
 				width: 1260px;
+			}
+		}
+	}
+
+	// Grid with 18 columns for Screens with 1440 to 1600
+	@media only screen and (min-width: 1440px) {
+		&.container {
+			&.transmute-grid {
+				width: 1420px;
+			}
+		}
+		&.column {
+			&.expand {
+				width: 1420px;
+			}
+		}
+	}
+
+	// Grid with 20 columns for Screens with 1680 to 1920
+	@media only screen and (min-width: 1601px) {
+		&.container {
+			&.transmute-grid {
+				width: 1580px;
+			}
+		}
+		&.column {
+			&.expand {
+				width: 1580px;
 			}
 		}
 	}
@@ -215,7 +217,8 @@
 	// Grid for Tablets
 	@media only screen and (max-width: 959px) and (min-width: 660px){
 		&.container {
-			&.morhp-grid {
+			&.transmute-grid-mob,
+			&.transmute-grid {
 				width: 620px;
 				.column {
 					&.nine,
@@ -223,6 +226,40 @@
 					&.eleven,
 					&.twelve,
 					&.expand {
+						width: 620px;
+					}
+					&.tablet-one,
+					&.tablet-two,
+					&.tablet-three,
+					&.tablet-four,
+					&.tablet-five,
+					&.tablet-six,
+					&.tablet-seven,
+					&.tablet-eight {
+						margin-left: 20px;
+					}
+					&.tablet-one {
+						width: 60px;
+					}
+					&.tablet-two {
+						width: 140px;
+					}
+					&.tablet-three {
+						width: 220px;
+					}
+					&.tablet-four {
+						width: 300px;
+					}
+					&.tablet-five {
+						width: 380px;
+					}
+					&.tablet-six {
+						width: 460px;
+					}
+					&.tablet-seven {
+						width: 540px;
+					}
+					&.tablet-eight {
 						width: 620px;
 					}
 				}
@@ -288,7 +325,8 @@
 		&.container {
 			padding: 0 10px;
 			width: 100%;
-			&.morhp-grid {
+			&.transmute-grid-mob,
+			&.transmute-grid {
 				width: 100%;
 			}
 		}
