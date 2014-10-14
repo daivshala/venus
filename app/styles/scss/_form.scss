@@ -27,8 +27,7 @@ form.venus {
     input[type="url"],
     input[type="search"],
     input[type="tel"],
-    input[type="color"],
-    input.ng-pristine {
+    input[type="color"] {
 		@include font-size-default;
 		color: $text-default-color;
         display: block;
@@ -161,6 +160,12 @@ form.venus {
         line-height: 1.3;
         text-align: center;
         border-color: $input-border-focus-color;
+    }
+
+    // Angular input
+    input.ng-pristine {
+      color: $text-default-color !important;
+      color: $text-default-color !important;
     }
 
     select {
