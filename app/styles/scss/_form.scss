@@ -27,7 +27,8 @@ form.venus {
     input[type="url"],
     input[type="search"],
     input[type="tel"],
-    input[type="color"] {
+    input[type="color"],
+    input.ng-pristine {
 		@include font-size-default;
 		color: $text-default-color;
         display: block;
