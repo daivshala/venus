@@ -33,6 +33,22 @@ a.venus {
   }
 }
 
+.venus.link {
+  color: $seashore;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  &:link,
+  &:visited,
+  &:active,
+  &:hover,
+  &:focus {
+    color: $seashore;
+    outline: 0;
+  }
+}
+
 // Headings
 
 h1.venus, h2.venus, h3.venus, h4.venus, h5.venus, h6.venus,
