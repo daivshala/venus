@@ -44,15 +44,12 @@
 .venus.text {
 	font-family: Lato, sans-serif; }
 .venus.text.big-size {
-	font-size: 32px;
-	text-shadow: 0 0 5px #000; }
+	font-size: 32px;}
 .venus.text.gigantic-size {
 	font-size: 72px;
-	text-shadow: 0 0 5px #000;
-	border-bottom: 1px solid;
 	margin-top: 40px; }
 .venus.text.white {
-	color: #FFF; }
+	color: #00A4DA; }
 .venus.text.black {
 	color: #000; }
 .venus.text.centralized {
