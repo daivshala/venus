@@ -9,6 +9,10 @@ form.venus {
         display: inline-block;
         max-width: 100%;
         margin-bottom: 10px;
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: $label-font-color;
+        text-transform: uppercase;
     }
 
 
@@ -100,7 +104,9 @@ form.venus {
         padding-left: 35px;
         margin-right: 40px;
         margin-bottom: 40px;
-        font-size: 14px;
+        font-size: 16px;
+        font-size: 1rem;
+        text-transform: capitalize;
         &:before {
             content: "";
             display: inline-block;
@@ -110,7 +116,7 @@ form.venus {
             margin-right: 10px;
             position: absolute;
             left: 0;
-            bottom: -2px;
+            bottom: 0px;
             background-color: transparent;
             @include border-radius(3px);
         }
@@ -121,7 +127,7 @@ form.venus {
         content: "\2713";
         color: #ffffff;
         text-align: center;
-        line-height: 1.2;
+        line-height: 1.4;
         background: $input-border-focus-color;
         border-color: $input-border-focus-color;
     }
@@ -157,7 +163,7 @@ form.venus {
         content: "\2b24";
         color: $input-border-focus-color;
         color: $input-border-focus-color;
-        line-height: 1.3;
+        line-height: 1.2;
         text-align: center;
         border-color: $input-border-focus-color;
     }

@@ -14,7 +14,9 @@
 			font-family: 'VenusGlyphs-Regular';
 			font-weight: normal;
 			font-style: normal;
-			text-decoration: inherit
+			text-decoration: inherit;
+      font-size: 26px;
+      line-height: 26px;
 		}
 	}
 
@@ -155,8 +157,13 @@
 	}
 	&.icon-flag {
 		&:before {
-			content: '\2211';
+			content: '\0046';
 		}
+    &.thick {
+      &:before {
+        content: '\0062';
+      }
+    }
 	}
 	&.icon-filter {
 		&:before {
@@ -268,11 +275,6 @@
 			content: '\0030';
 		}
 	}
-	&.icon-prev {
-		&:before {
-			content: '\004a';
-		}
-	}
 	&.icon-print {
 		&:before {
 			content: '\2122';
@@ -293,11 +295,6 @@
 			content: '\006c';
 		}
 	}
-	&.icon-next {
-		&:before {
-			content: '\004b';
-		}
-	}
 	&.icon-reload {
 		&:before {
 			content: '\00a2';
@@ -305,7 +302,7 @@
 	}
 	&.icon-sad {
 		&:before {
-			content: '\221e';
+			content: '\0047';
 		}
 	}
 	&.icon-search {
@@ -321,11 +318,6 @@
 	&.icon-settings {
 		&:before {
 			content: '\2022';
-		}
-	}
-	&.icon-smile {
-		&:before {
-			content: '\00aa';
 		}
 	}
 	&.icon-smile {
