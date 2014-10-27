@@ -24,12 +24,12 @@
         }
         >.venus.button:not(:first-child):not(:last-child):not(.arrow-button) {
             @include border-radius(0);
-            margin-left: -1px;
+            margin-left: -2px;
             border-right: 1px solid $button-group-border;
             border-left: 1px solid $button-group-border;
         }
         >.venus.button:last-child {
-            margin-left: -1px;
+            margin-left: -2px;
             border-left: 1px solid $button-group-border;
             @include border-radius-left(0);
         }
