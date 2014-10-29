@@ -166,6 +166,17 @@ dd.venus {
   margin-left: 0;
 }
 
+// Mobile version
+
+@media only screen and (max-width: 959px) {
+  h1.venus, .venus.h1 { font-size: 32px; font-size: 2rem; }
+  h2.venus, .venus.h2 { font-size: 28px; font-size: 1.75rem; }
+  h3.venus, .venus.h3 { font-size: 24px; font-size: 1.5rem; }
+  h4.venus, .venus.h4 { font-size: 20px; font-size: 1.25rem; }
+  h5.venus, .venus.h5 { font-size: 20px; font-size: 1.25rem; font-weight: 300; }
+  h6.venus, .venus.h6 { font-size: 20px; font-size: 1.25rem; font-weight: 100; }
+}
+
 
 
 
