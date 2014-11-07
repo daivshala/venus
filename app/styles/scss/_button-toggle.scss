@@ -37,7 +37,7 @@
         @include border-radius-left(3px);
       }
       &:not(:first-child):not(:last-child) {
-        margin-right: -5px;
+        margin-right: -6px;
       }
       &:last-child {
         @include border-radius-right(3px);
