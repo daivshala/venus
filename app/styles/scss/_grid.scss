@@ -172,22 +172,8 @@
 		}
 	}
 
-	// Grid with 18 columns for Screens with 1440 to 1600
-	@media only screen and (min-width: 1440px) {
-		&.container {
-			&.transmute-grid {
-				width: 1420px;
-			}
-		}
-		&.column {
-			&.expand {
-				width: 1420px;
-			}
-		}
-	}
-
 	// Grid with 20 columns for Screens with 1680 to 1920
-	@media only screen and (min-width: 1601px) {
+	@media only screen and (min-width: 1600px) {
 		&.container {
 			&.transmute-grid {
 				width: 1580px;
