@@ -41,7 +41,7 @@ form.venus {
         @include border-radius(3px);
         border: 1px solid $input-border-color;
         line-height: 1;
-        margin-bottom: 40px;
+        margin-bottom: 16px;
         &::-webkit-input-placeholder {
             z-index: 99;
             line-height: normal;
@@ -103,7 +103,7 @@ form.venus {
         position: relative;
         padding-left: 35px;
         margin-right: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 16px;
         font-size: 16px;
         font-size: 1rem;
         text-transform: capitalize;
@@ -187,7 +187,7 @@ form.venus {
         color: $input-placeholder-color;
         font-size: 10px;
         font-style: italic;
-        margin-bottom: 40px;
+        margin-bottom: 16px;
 
         output {
             display: block;
