@@ -160,12 +160,17 @@ form.venus {
     }
 
     input[type=radio]:checked + label:before {
-        content: "\2b24";
-        color: $input-border-focus-color;
-        color: $input-border-focus-color;
-        line-height: 1.2;
-        text-align: center;
-        border-color: $input-border-focus-color;
+      background: #00a5db;
+      background: -moz-radial-gradient(center, ellipse cover,  #00a5db 0%, #00a5db 50%, #ffffff 58%, #ffffff 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#00a5db), color-stop(50%,#00a5db), color-stop(58%,#ffffff), color-stop(100%,#ffffff));
+      background: -webkit-radial-gradient(center, ellipse cover,  #00a5db 0%,#00a5db 50%,#ffffff 58%,#ffffff 100%);
+      background: -o-radial-gradient(center, ellipse cover,  #00a5db 0%,#00a5db 50%,#ffffff 58%,#ffffff 100%);
+      background: -ms-radial-gradient(center, ellipse cover,  #00a5db 0%,#00a5db 50%,#ffffff 58%,#ffffff 100%);
+      background: radial-gradient(ellipse at center,  #00a5db 0%,#00a5db 50%,#ffffff 58%,#ffffff 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5db', endColorstr='#ffffff',GradientType=1 );
+      color: $input-border-focus-color;
+      color: $input-border-focus-color;
+      border-color: $input-border-focus-color;
     }
 
     // Angular input
