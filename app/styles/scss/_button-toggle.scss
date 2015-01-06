@@ -5,6 +5,60 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    overflow: hidden;
+    span.toggle-parent {
+      display: inline-block;
+      height: 28px;
+      border: 1px solid $seashore;
+      overflow: hidden;
+      &:first-of-type {
+        @include border-radius-left(3px);
+      }
+      &:not(:first-child):not(:last-child) {
+        margin-right: -6px;
+        margin-left: -5px;
+      }
+      &:last-child {
+        @include border-radius-right(3px);
+      }
+      > input[type="checkbox"], input[type="radio"] {
+        display: inline-block;
+      }
+      > input[type="checkbox"] + label, input[type="radio"] +label {
+        &:before {
+          display: none;
+        }
+      }
+      > input[type="checkbox"], input[type="radio"] {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+
+      }
+      > input[type="checkbox"] + label, input[type="radio"] +label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        font-size: 14px;
+        min-width: 74px;
+        text-align: center;
+        background: #ffffff;
+        color: $seashore;
+        padding: 6px 14px 4px;
+      }
+      > input[type="checkbox"]:checked + label, input[type="radio"]:checked +label {
+        background: $seashore;
+        color: #ffffff;
+      }
+      > input[type="radio"] + label {
+        min-width: 50px;
+        padding: 6px 8px 4px;
+      }
+
+    }
     > input[type="checkbox"], input[type="radio"] {
       display: inline-block;
     }
@@ -20,6 +74,7 @@
       height: 100%;
       cursor: pointer;
       opacity: 0;
+
     }
     > .toggle + label {
       display: inline-block;
@@ -32,6 +87,7 @@
       color: $seashore;
       border: 1px solid $seashore;
       padding: 6px 14px 4px;
+
       &:first-of-type {
         margin-left: 0;
         @include border-radius-left(3px);
