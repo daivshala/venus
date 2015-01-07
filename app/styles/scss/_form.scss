@@ -91,8 +91,8 @@ form.venus {
     input[type="checkbox"], input[type="radio"] {
       position: absolute;
       z-index: 1;
-      // width: 100%;
-      // height: 100%;
+      width: 20px;
+      height: 20px;
       cursor: pointer;
       opacity: 0;
     }
@@ -106,7 +106,7 @@ form.venus {
         margin-bottom: 16px;
         font-size: 16px;
         font-size: 1rem;
-        text-transform: capitalize;
+        text-transform: none;
         &:before {
             content: "";
             display: inline-block;

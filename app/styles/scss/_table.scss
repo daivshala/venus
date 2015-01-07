@@ -1,0 +1,60 @@
+// Table
+.venus {
+  &.table-list {
+    width: 100%;
+    display: table;
+    .table-row-group {
+      display: table-row-group;
+      &:nth-child(2n+0) {
+        background-color: $ice;
+      }
+    }
+    .table-row {
+      display: table-row;
+      position: relative;
+      width: 100%;
+    }
+    .table-cell {
+      display: table-cell;
+      &.rowspaned {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+  }
+  &.table {
+    width: 100%;
+    td, th {
+      padding: 20px 10px;
+    }
+    th {
+      text-align: left;
+      color: #7A8085;
+      font-weight: bold;
+    }
+    thead,
+    tr.head {
+      tr {
+        border-top: 1px solid #D4D7D9;
+        border-bottom: 1px solid #D4D7D9;
+        font-size: 12px;
+        font-size: 0.75rem;
+        color: #7A8085;
+        font-weight: bold;
+        th {
+          text-align: left;
+          color: #7A8085;
+          font-weight: bold;
+        }
+      }
+    }
+    tr {
+      &:nth-child(2n+0) {
+        background-color: $ice;
+      }
+    }
+  }
+}

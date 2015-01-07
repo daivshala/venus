@@ -52,6 +52,18 @@
                 border-bottom: 0;
             }
         }
+      &.facebook {
+        @include text-shadow(0 1px #2f4779);
+        background: #3b5998;
+        border-bottom: 3px solid #2f4779;
+        &:hover {
+          background: #355088;
+        }
+        &:active {
+          background: #355088;
+          border-bottom: 0;
+        }
+      }
         &.disabled,
         &:disabled {
             color: #b5bebe;
