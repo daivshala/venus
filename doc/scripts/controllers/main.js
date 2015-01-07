@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('venus-showcase')
-  .controller('MainCtrl', function ($scope, VenusActivityIndicatorService, $timeout) {
+  .controller('MainController', function ($scope, VenusActivityIndicatorService, $timeout) {
     $scope.steps = [
         {
             text: 'Step 1',

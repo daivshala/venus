@@ -249,6 +249,28 @@ module.exports = function (grunt) {
           src: ['generated/*']
         }]
       },
+      docBower: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>/bower_components',
+          dest: 'doc/bower_components',
+          src: [
+            '**/*',
+          ]
+        }]
+      },
+      doc: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.dist %>',
+          dest: 'doc/bower_components/venus/dist/',
+          src: [
+            '**/*'
+          ]
+        }]
+      },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles/css',
@@ -313,6 +335,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'bowerInstall',
+      'build',
       'concurrent:server',
       'sass',
       'autoprefixer',
@@ -343,6 +366,8 @@ module.exports = function (grunt) {
     // 'concat',
     'ngmin',
     'copy:dist',
+    'copy:docBower',
+    'copy:doc',
     'cdnify',
     'cssmin',
     'uglify',
