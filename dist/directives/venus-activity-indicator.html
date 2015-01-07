@@ -1,4 +1,9 @@
 <div class="venus activity-indicator" ng-hide="activities.length == 0 && errors.length == 0">
-    <p class="activity" ng-repeat="activity in activities">{{activity}}</p>
-    <p class="error" ng-repeat="error in errors" ng-click="clearError(error)">{{error}}</p>
+    <div class="loading-image" style="" ng-hide="activities.length == 0 && errors.length > 0"></div>
+    <div class="centered container" style="">
+      <p class="activity" ng-repeat="activity in activities">{{activity}}</p>
+      <p class="error" ng-repeat="error in errors" ng-click="clearError(error)" style="position: relative;">{{error}}
+        <i class="venus icon-error"></i>
+      </p>
+    </div>
 </div>
