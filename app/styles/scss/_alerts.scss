@@ -56,6 +56,25 @@
 			margin-top: 5px;
 		}
 	}
+
+  &.error-message {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 10px;
+    font-weight: 200;
+    color: #f13335;
+    font-size: 14px;
+    &:before {
+      content: '!';
+      top: 0;
+      left: 0;
+      font-size: 16px;
+      position: absolute;
+      color: #f13335;
+    }
+  }
 }
 
 // Using inputs checkbox
