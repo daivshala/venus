@@ -17,7 +17,7 @@
         cursor: pointer;
         font-weight: bold;
         position: relative;
-        -webkit-animation: fadeIn 1s;
+//        -webkit-animation: fadeIn 1s;
         @include text-shadow(0 1px $button-blue-text-shadow);
         background: $button-blue-background;
         border-bottom: 3px solid $button-blue-border;
@@ -37,9 +37,9 @@
             outline: 0;
             @include box-shadow(none);
         }
-        &.ng-leave {
-            -webkit-animation: fadeOut 1s;
-        }
+//        &.ng-leave {
+//            -webkit-animation: fadeOut 1s;
+//        }
         &.orange {
             @include text-shadow(0 1px #ec820a);
             background: $button-orange-background;
