@@ -481,6 +481,63 @@
 </pre></div>
 
             <br/><br/>
+          </form>
+
+          <input type="search" class="venus search-bar"/>
+          <form action="" class="venus">
+            <label for="">Search</label>
+          <div angucomplete-alt
+            id="ex1"
+            placeholder="Search countries"
+            maxlength="50"
+            pause="100"
+            selected-object="selectedCountry"
+            local-data="countries"
+            search-fields="name"
+            title-field="name"
+            minlength="1"
+            match-class="highlight"
+            input-class="venus search-bar"
+            match-class="highlight"
+            class="ng-isolate-scope">
+            <div class="angucomplete-holder venus" ng-class="{'angucomplete-dropdown-visible': showDropdown}">
+              <input
+                id="ex1_value"
+                ng-model="searchStr"
+                ng-disabled="disableInput"
+                type="search"
+                placeholder="Search countries"
+                maxlength="50"
+                ng-focus="onFocusHandler()"
+                class="venus search-bar ng-dirty"
+                ng-blur="hideResults($event)"
+                autocapitalize="off"
+                autocorrect="off"
+                autocomplete="off"
+                ng-change="inputChangeHandler(searchStr)">
+
+              <div id="ex1_dropdown" class="angucomplete-dropdown ng-hide" ng-show="showDropdown">
+                <div
+                  class="angucomplete-searching ng-binding ng-hide"
+                  ng-show="searching"
+                  ng-bind="textSearching">
+                  Buscando...
+                </div>
+                <div
+                  class="angucomplete-searching ng-binding"
+                  ng-show="!searching &amp;&amp; (!results || results.length == 0)"
+                  ng-bind="textNoResults">
+                  Sem resultados encontrados
+                </div>
+                <!-- ngRepeat: result in results -->
+              </div>
+            </div>
+          </div>
+          </form>
+
+            <form class="venus">
+
+            <br/><br/>
                 <input id="male" type="radio" name="gender" value="male">
                 <label for="male">Male</label>
                 <input id="female" type="radio" name="gender" value="female" disabled>
