@@ -483,8 +483,7 @@
             <br/><br/>
           </form>
 
-          <input type="search" class="venus search-bar"/>
-          <form action="" class="venus">
+          <form action="" class="venus search">
             <label for="">Search</label>
           <div angucomplete-alt
             id="ex1"
@@ -497,7 +496,7 @@
             title-field="name"
             minlength="1"
             match-class="highlight"
-            input-class="venus search-bar"
+            input-class="search-bar"
             match-class="highlight"
             class="ng-isolate-scope">
             <div class="angucomplete-holder venus" ng-class="{'angucomplete-dropdown-visible': showDropdown}">
@@ -509,7 +508,7 @@
                 placeholder="Search countries"
                 maxlength="50"
                 ng-focus="onFocusHandler()"
-                class="venus search-bar ng-dirty"
+                class="search-bar ng-dirty"
                 ng-blur="hideResults($event)"
                 autocapitalize="off"
                 autocorrect="off"
