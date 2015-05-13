@@ -3,6 +3,7 @@
 angular
   .module('venus-showcase', [
     'ngRoute',
+    'angucomplete-alt',
     'venusUI',
   ])
   .config(function ($routeProvider) {
