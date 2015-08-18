@@ -12,44 +12,45 @@
         @include font-size-default;
         @include border-radius(3px);
         border: 0px;
-        padding: 14px 45px;
+        padding: 10px 45px;
         min-width: 50px;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: normal;
         position: relative;
-//        -webkit-animation: fadeIn 1s;
         @include text-shadow(0 1px $button-blue-text-shadow);
         background: $button-blue-background;
-        border-bottom: 3px solid $button-blue-border;
+        box-shadow: inset 0px -3px 0px 0px $button-blue-border;
         &:hover {
             background: $button-blue-hover;
             outline: 0;
             @include box-shadow(none);
+             box-shadow: inset 0px -3px 0px 0px $button-blue-border;
         }
         &:active {
             outline: 0;
             background-image: none;
             background: $button-blue-hover;
-            border-bottom: 0;
-            padding: 14px 45px 17px;
+            padding: 13px 45px 7px;
+            @include box-shadow(none);
+            box-shadow: none;
         }
         &:focus {
             outline: 0;
             @include box-shadow(none);
         }
-//        &.ng-leave {
-//            -webkit-animation: fadeOut 1s;
-//        }
         &.orange {
             @include text-shadow(0 1px #ec820a);
             background: $button-orange-background;
-            border-bottom: 3px solid $button-orange-border;
+            box-shadow: inset 0px -3px 0px 0px $button-orange-border;
             &:hover {
                 background: $button-orange-hover;
+                @include box-shadow(none);
+                box-shadow: inset 0px -3px 0px 0px $button-orange-border;
             }
             &:active {
                 background: $button-orange-hover;
-                border-bottom: 0;
+                @include box-shadow(none);
+                box-shadow: none;
             }
         }
       &.facebook {
@@ -69,7 +70,7 @@
             color: #b5bebe;
             @include text-shadow(0 1px $button-disabled-text-shadow);
             background: $button-disabled;
-            border-bottom: 3px solid $button-disabled-border;
+            box-shadow: inset 0px -3px 0px 0px $button-disabled-border;
             cursor: default;
             &:hover {
                 background: $button-disabled;
@@ -77,8 +78,8 @@
             }
             &:active {
                 background: $button-disabled;
-                padding: 14px 45px;
-                border-bottom: 3px solid $button-disabled-border;
+                ppadding: 10px 45px;
+                box-shadow: inset 0px -3px 0px 0px $button-disabled-border;
                 cursor: default;
             }
         }

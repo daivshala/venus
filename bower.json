@@ -25,6 +25,7 @@
     "angular-mocks": "~1.*",
     "angular-scenario": "~1.*",
     "angular-route": "~1.*",
+    "venus": "~*",
     "angucomplete-alt": "~*"
   }
 }

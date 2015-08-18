@@ -29,3 +29,12 @@
 @import '_table.scss';
 @import '_nav.scss';
 @import '_progress.scss';
+
+.venus {
+  &.rating-bar {
+    display: block;
+    width: 200px;
+    height: 30px;
+    background: #000;
+  }
+}
