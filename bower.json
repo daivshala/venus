@@ -27,5 +27,8 @@
     "angular-route": "~1.*",
     "venus": "~*",
     "angucomplete-alt": "~*"
+  },
+  "resolutions": {
+    "angular": "~1.*"
   }
 }

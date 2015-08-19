@@ -4,11 +4,10 @@
   font-family: 'VenusGlyphs-Regular';
   src: url('/fonts/VenusGlyphs-Regular.eot');
   src: local('☺'),
-      url('/fonts/VenusGlyphs-Regular.otf') format('opentype'),
-      url('/fonts/VenusGlyphs-Regular.woff') format('woff'),
-      url('/fonts/VenusGlyphs-Regular.woff2') format('woff2'),
-      url('/fonts/VenusGlyphs-Regular.ttf') format('truetype'),
-      url('/fonts/VenusGlyphs-Regular.svg#VenusGlyphs-Regular') format('svg');
+      url('../fonts/VenusGlyphs-Regular.woff') format('woff'),
+      url('../fonts/VenusGlyphs-Regular.woff2') format('woff2'),
+      url('../fonts/VenusGlyphs-Regular.ttf') format('truetype'),
+      url('../fonts/VenusGlyphs-Regular.svg#VenusGlyphs-Regular') format('svg');
 }
 
 $text-default-color: #000;

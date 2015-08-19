@@ -4,29 +4,27 @@
         <title>Venus</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="dist/styles/venus.css"/>
+        <link rel="stylesheet" href="styles/css/venus.css"/>
         <!-- inject:css -->
         <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
         <!-- endinject -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/css/main.css">
     </head>
     <body ng-app="venus-showcase">
-
         <div venus-activity-indicator></div>
         <div class="" ng-view=""></div>
 
-
-
         <!-- inject:js -->
+        <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-animate/angular-animate.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-ui-utils/ui-utils-ieshiv.min.js"></script>
         <script src="bower_components/angular-ui-utils/ui-utils.min.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
         <!-- endinject -->
 
-        <script src="dist/venus.js"></script>
+        <script src="directives/venus-directives.js"></script>
+        <script src="services/venus-services.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
     </body>
