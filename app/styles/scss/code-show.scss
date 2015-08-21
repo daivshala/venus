@@ -1,0 +1,34 @@
+.code-show {
+    line-height: 22px;
+    background: #F1F1F1;
+    padding: 20px;
+    color: #00A4DA;
+    font-family: monospace;
+    font-size: 17px;
+    border-top: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+    border-left: 10px solid;
+}
+
+.icons-example {
+    font-size: 12px;
+    line-height: 42px;
+
+    .venus.column {
+        padding: 10px;
+        background: transparent;
+    }
+
+    i {
+        font-size: 42px;
+        vertical-align: middle !important;
+        margin-right: 10px;
+    }
+
+    p {
+        margin: 5px 0px;
+        display: inline-block;
+        width: 100%;
+    }
+}

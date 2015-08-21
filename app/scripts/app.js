@@ -5,6 +5,7 @@ angular
     'ngRoute',
     'angucomplete-alt',
     'venusUI',
+    'ngSanitize'
   ])
   .config(function ($routeProvider) {
     $routeProvider

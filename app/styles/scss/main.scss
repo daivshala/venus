@@ -1,0 +1,79 @@
+#universe {
+    background-image: url(images/venus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto; }
+
+article {
+    margin: 100px 0px;
+}
+
+.venus {
+    &.code {
+        font-family: monospace;
+        font-size: 14px;
+        color: #FFF;
+        background: #232323;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 10px;
+        textarea {
+            background: transparent;
+            font-family: inherit;
+            border: none;
+            width: 100%;
+            height: 150px;
+            padding: 0px;
+            outline: none;
+            color:#FFF;
+            font-size: 16px;
+        }
+    }
+    &.activity-indicator {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+    &.section {
+        min-height: 100%;
+    }
+}
+
+.venus.section.white {
+    background: #fff;
+    color: #000; }
+.venus.section.black {
+    background: #f8f8f8  }
+.venus.section .item {
+    margin-top: 100px; }
+.venus.text {
+    font-family: Lato, sans-serif; }
+.venus.text.big-size {
+    font-size: 32px;}
+.venus.text.gigantic-size {
+    font-size: 72px;
+    margin-top: 40px; }
+.venus.text.white {
+    color: #00A4DA; }
+.venus.text.black {
+    color: #000; }
+.venus.text.centralized {
+    text-align: center; }
+
+
+@media screen and (max-width: 40em) {
+    .grid-style .column {
+        background: none;
+    }
+    .row-col-mob {
+        margin-top: 20px;
+    }
+
+    .mob-one > div, .mob-two > div, .mob-three > div, .mob-four > div, .row-col-mob, .col-mob {
+        background: #95A5A6;
+    }
+}

@@ -19,7 +19,7 @@ angular.module('venusUI').directive('venusBreadcrumbs', function () {
   return {
     scope: { steps: '=' },
     restrict: 'A',
-    templateUrl: 'bower_components/venus/dist/directives/venus-breadcrumbs-template.html',
+    templateUrl: '/directives/venus-breadcrumbs-template.html',
     controller: [
       '$scope',
       '$rootScope',

@@ -13,20 +13,22 @@ function errorLog(error) {
     this.emit('end');
 }
 
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest('lib/'))
-});
-
 // Scripts Task
 // Uglifies
-gulp.task('scripts', function(){
-    gulp.src(['app/services/*.js', 'app/directives/*.js'])
+gulp.task('uglify', function(){
+    gulp.src(['app/directives/*.js', 'app/services/*.js'])
         .on('error', errorLog)
         .pipe($.uglify())
         .pipe($.rename('venus.js'))
-        .pipe(gulp.dest('dist'))
-        .pipe($.size({title: 'scripts'}));
+        .pipe(gulp.dest('dist/scripts/'))
+        .pipe($.size({title: 'Uglify venus scripts'}));
+
+    gulp.src(['app/scripts/**/*.js'])
+        .on('error', errorLog)
+        .pipe($.uglify())
+        .pipe($.rename('app.js'))
+        .pipe(gulp.dest('dist/scripts/'))
+        .pipe($.size({title: 'Uglify app scripts'}));
 });
 
 // Clean output directory
@@ -37,7 +39,24 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git'], {dot: true})
 gulp.task('styles', function(){
     return sass('app/styles/scss/venus.scss', {style: 'compressed'})
         .on('error', errorLog)
-        .pipe(gulp.dest('app/styles/css'))
+        .pipe(gulp.dest('app/styles'))
+        .pipe(gulp.dest('dist/styles'))
+        .pipe($.size({title: 'Build css styles'}));
+});
+
+gulp.task('stylesMain', function(){
+    return sass('app/styles/scss/main.scss', {style: 'compressed'})
+        .on('error', errorLog)
+        .pipe(gulp.dest('app/styles'))
+        .pipe(gulp.dest('dist/styles'))
+        .pipe($.size({title: 'Build css styles'}));
+});
+
+gulp.task('stylesCode', function(){
+    return sass('app/styles/scss/code-show.scss', {style: 'compressed'})
+        .on('error', errorLog)
+        .pipe(gulp.dest('app/styles'))
+        .pipe(gulp.dest('dist/styles'))
         .pipe($.size({title: 'Build css styles'}));
 });
 
@@ -49,10 +68,10 @@ gulp.task('fonts', function () {
 });
 
 // Copy directives to dist
-gulp.task('directives', function () {
+gulp.task('directivesHtml', function () {
   return gulp.src(['app/directives/*.html'])
     .pipe(gulp.dest('dist/directives'))
-    .pipe($.size({title: 'directives'}));
+    .pipe($.size({title: 'Copy directives htmls'}));
 });
 
 gulp.task('bower', function(cb){
@@ -62,15 +81,17 @@ gulp.task('bower', function(cb){
     });
 });
 
-gulp.task('index', function(){
-    gulp.src('index.html')
-        .pipe(inject(gulp.src(['bower_components/**/*min.js', 'bower_components/**/*.min.css'], {read: false}), {ignorePath: 'app/', addRootSlash: false}))
+gulp.task('inject', function(){
+    gulp.src('app/index.html')
+        .pipe(inject(gulp.src(['bower_components/**/*min.js', 'bower_components/**/*.min.css', 'app/scripts/**/*.js', 'app/styles/**/*.css', 'app/directives/**/*.js', 'app/services/**/*.js'], {read: false}), {ignorePath: 'app/'}))
+        .pipe(gulp.dest('app'));
+    gulp.src('app/index.html')
+        .pipe(inject(gulp.src(['dist/scripts/**/*.js', 'dist/styles/**/*.css'], {read: false}), {ignorePath: 'dist/'}))
         .pipe(gulp.dest('dist'));
 });
 
-
 // Static server
-gulp.task('serve', ['styles'], function() {
+gulp.task('serve', ['inject','styles','stylesMain','stylesCode'], function() {
 
     browserSync.init({
         server: {
@@ -81,18 +102,20 @@ gulp.task('serve', ['styles'], function() {
         }
     });
 
-    gulp.watch('app/services/*.js', ['scripts']);
+    gulp.watch(['app/directives/*.js','app/services/*.js'], ['uglify']);
+    gulp.watch(['app/scripts/**/*.js'], ['uglify']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch("**/*.html").on('change', browserSync.reload);
+    gulp.watch('**/*.html').on('change', browserSync.reload);
 });
 
-// gulp.task('default', ['scripts', 'styles', 'fonts', 'serve']);
+// gulp.task('default', ['ulglify', 'styles', 'fonts', 'serve']);
 
 gulp.task('default', ['clean'], function(cb){
     runSequence(
         'bower',
-        'styles',
-        ['scripts', 'fonts', 'directives', 'index'],
+        ['uglify', 'fonts'],
+        'styles','stylesMain','stylesCode',
+        'inject',
         'serve',
         cb);
 } );

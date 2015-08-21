@@ -2,3 +2,5 @@ archive
 node_modules
 .sass-cache
 bower_components
+app/styles/*.css
+dist

@@ -6,583 +6,133 @@
     </div>
 
     <div class="venus section white">
-        <div class="venus container">
+      <div class="venus container">
         <div class="grid-style">
-            <h1>Grid</h1>
-            <article>
-                <p>Create mult-device layouts quickly and easily with the deafult twelve column, making for a 940px wide container with responsive features enabled.</p>
-                <h5>Basic</h5>
-                <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of columns.</p>
-            </article>
-
-            <div class="venus row">
-                <div class="venus column eight">8</div>
-                <div class="venus column four">4</div>
-            </div>
-
-          <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column eight&quot;</span><span style="color: #007700">&gt;</span>8<span style="color: #007700">&lt;/div&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column four&quot;</span><span style="color: #007700">&gt;</span>4<span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
+          <h1 class="venus">Grid</h1>
+          <p>Create mult-device layouts quickly and easily with the deafult twelve column, making for a 940px wide container with responsive features enabled.</p>
 
           <article>
-                <p>The above code sets all columns in mobile mode in standard full width. To control the columns in Mobile mode, you must use the following code.</p>
-            </article>
-
-            <div class="venus row">
-                <div class="venus column eight mob-three">8</div>
-                <div class="venus column four mob-one">4</div>
-            </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column eight mob-three&quot;</span><span style="color: #007700">&gt;</span>8<span style="color: #007700">&lt;/div&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column four mob-one&quot;</span><span style="color: #007700">&gt;</span>4<span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-
-          <article>
-                <p>The mobile grid suport four columns: <code>.mob-one</code>, <code>.mob-two</code>, <code>.mob-three</code> and <code>.mob-four</code>.
-
-                <h5>Offsetting columns</h5>
-                <p>Move columns to the right, using <code>.offset-*</code> classes. Each class increases the left margin of column by a whole column. For example <code>.offset-4</code> moves column <code>.column .four</code> over four columns.</p>
-            </article>
-
-            <div class="venus row">
-                <div class="venus column four offset-four">4</div>
-            </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column four offset-four&quot;</span><span style="color: #007700">&gt;</span>4<span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-          <article>
-
-            <h5>Centralizing columns</h5>
-            <p>To center columns is very easy, just add the tag <code>.centered</code> and be happy.</p>
+            <h2 class="venus">Basic</h2>
+            <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of columns.</p>
+            <code-show render="true" file="/views/code-examples/grid-basic.html"></code-show>
+            <p>The above code sets all columns in mobile mode in standard full width. To control the columns in Mobile mode, you must use the following code.</p>
+            <p>The mobile grid suport four columns: <code>.mob-one</code>, <code>.mob-two</code>, <code>.mob-three</code> and <code>.mob-four</code>.
+            <code-show file="views/code-examples/grid-mobile.html"></code-show>
           </article>
 
-          <div class="venus row">
-            <div class="venus column five centered">5</div>
-          </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column five centered&quot;</span><span style="color: #007700">&gt;</span>5<span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
+          <article>
+            <h2 class="venus">Offsetting columns</h2>
+            <p>Move columns to the right, using <code>.offset-*</code> classes. Each class increases the left margin of column by a whole column. For example <code>.offset-4</code> moves column <code>.column .four</code> over four columns.</p>
+            <code-show render="true" file="views/code-examples/grid-offset.html"></code-show>
+          </article>
 
           <article>
-            <h5>Adaptive grids</h5>
+            <h2 class="venus">Centralizing columns</h2>
+            <p>To center columns is very easy, just add the tag <code>.centered</code> and be happy.</p>
+            <code-show render="true" file="views/code-examples/grid-centralized.html"></code-show>
+          </article>
+
+          <article>
+            <h2 class="venus">Adaptive grids</h2>
             <p>By default the tag container, keeps a fixed grid of 940px. But it is possible to expand this grid, for use on larger monitors as well, and if you want to build a specific layout for tablets.</p>
 
             <p>Adding the tag <code>.transmute-grid</code>, the container will expand according to the size of the monitors used. Enabling the grid to behave more columns, going from 12 to 20 columns.</p>
+            <code-show file="views/code-examples/grid-adaptive.html"></code-show>
+
+            <p>To use the grid of 8 columns specific to tablets, just add the tag to the container <code>.transmute-grid-mob</code></p>
+            <code-show file="views/code-examples/grid-adaptive-tablet.html"></code-show>
           </article>
 
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus container transmute-grid&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus twelve column&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
-    <span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-          <p>To use the grid of 8 columns specific to tablets, just add the tag to the container <code>.transmute-grid-mob</code></p>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus container transmute-grid-mob&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus twelve column&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
-    <span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-          <h1>Text</h1>
-
+          <article>
+            <h1 class="venus">Text</h1>
             <p>To style the text just add the class <code>.venus</code></p>
+            <br/><br/>
+            <code-show render="true" file="views/code-examples/text.html"></code-show>
+          </article>
 
-            <h1 class="venus">.h1 Tittle</h1>
-            <h2 class="venus">.h2 Tittle</h2>
-            <h3 class="venus">.h3 Tittle</h3>
-            <h4 class="venus">.h4 Tittle</h4>
-            <h5 class="venus">.h5 Tittle</h5>
-            <h6 class="venus">.h6 Tittle</h6>
-            <a class="venus" href="">.a Link</a>
+          <article>
+            <h1 class="venus">Header</h1>
+            <p>We have a default header</p>
+            <code-show render="true" file="views/code-examples/header.html"></code-show>
+          </article>
+
+
+          <article>
+            <h1 class="venus">Icons</h1>
+            <p>The Venus UI kit have a collection of icon fonts, ready for use.</p>
+            <code-show render="true" file="views/code-examples/icon.html"></code-show>
+          </article>
+
+          <article>
+            <h1 class="venus">Button</h1>
+            <p>to use the style buttons Venus UI Kit, just add class <code>.venus .button</code></p>
+            <code-show render="true" file="views/code-examples/button.html"></code-show>
+            <p>for the orange button, just add the class <code>.orange</code></p>
+            <code-show render="true" file="views/code-examples/button-orange.html"></code-show>
 
             <br/><br/>
-
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;h1</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span><span style="color: #007700">&gt;</span>Tittle 1<span style="color: #007700">&lt;/h1&gt;</span>
-<span style="color: #007700">&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;&quot;</span><span style="color: #007700">&gt;</span>Link<span style="color: #007700">&lt;/a&gt;</span>
-</pre></div>
-            </div>
-
-        <h1>Header</h1>
-
-        <p>We have a default header</p>
-
-        <div class="venus header">
-          <div class="venus container">
-            <div class="venus row">
-              <div class="venus column right six">
-                <nav class="menu">
-                  <ul>
-                    <li><a class="venus" href="">Link</a></li>
-                    <li><a class="venus" href="">Link</a></li>
-                    <li class="dropdown"><a class="venus" href="">Link</a></li>
-                    <li class="border"></li>
-                    <li><a class="venus button" href="">Link</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus header&quot;</span><span style="color: #007700">&gt;</span>
-  <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus container&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus row&quot;</span><span style="color: #007700">&gt;</span>
-      <span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus column right six&quot;</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;nav</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;menu&quot;</span><span style="color: #007700">&gt;</span>
-          <span style="color: #007700">&lt;ul&gt;</span>
-            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;&quot;</span><span style="color: #007700">&gt;</span>Link<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;&quot;</span><span style="color: #007700">&gt;</span>Link<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;li</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;dropdown&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;&quot;</span><span style="color: #007700">&gt;</span>Link<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;li</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;border&quot;</span><span style="color: #007700">&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;li&gt;&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;&quot;</span><span style="color: #007700">&gt;</span>Link<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-          <span style="color: #007700">&lt;/ul&gt;</span>
-        <span style="color: #007700">&lt;/nav&gt;</span>
-      <span style="color: #007700">&lt;/div&gt;</span>
-    <span style="color: #007700">&lt;/div&gt;</span>
-  <span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
+            <p>For expand button, just add the class <code>.wide</code></p>
+            <code-show render="true" file="views/code-examples/button-wide.html"></code-show>
 
 
-        <h1>Icons</h1>
+            <h2 class="venus">Button Disabled</h2>
+            <p>For disabled button, just add the class<code>.disabled</code></p>
+            <code-show render="true" file="views/code-examples/button-disabled.html"></code-show>
 
-            <p>The Venus UI kit have a collection of icon fonts, ready for use.</p>
+            <h2 class="venus">Button Group</h2>
+            <p>It is possible to create grouping of buttons</p>
+            <code-show render="true" file="views/code-examples/button-group.html"></code-show>
 
-            <div class="venus row">
-              <div class="venus column four">
-                <i class="venus icon-add"></i> <code>.venus.icon-add</code> <br/>
-                <i class="venus icon-arrow-left"></i> <code>.venus.icon-arrow-left</code> <br/>
-                <i class="venus icon-arrow-right"></i> <code>.venus.icon-arrow-right</code> <br/>
-                <i class="venus icon-arrow-left"></i> <code>.venus.icon-arrow-left</code> <br/>
-                <i class="venus icon-arrow-up"></i> <code>.venus.icon-arrow-up</code> <br/>
-                <i class="venus icon-arrow-down"></i> <code>.venus.icon-arrow-down</code> <br/>
-                <i class="venus icon-android"></i> <code>.venus.icon-android</code> <br/>
-                <i class="venus icon-alert"></i> <code>.venus.icon-alert</code> <br/>
-                <i class="venus icon-apple"></i> <code>.venus.icon-apple</code> <br/>
-                <i class="venus icon-attach"></i> <code>.venus.icon-attach</code> <br/>
-                <i class="venus icon-book"></i> <code>.venus.icon-book</code> <br/>
-                <i class="venus icon-bright"></i> <code>.venus.icon-bright</code> <br/>
-                <i class="venus icon-brush"></i> <code>.venus.icon-brush</code> <br/>
-                <i class="venus icon-bullet"></i> <code>.venus.icon-bullet</code> <br/>
-                <i class="venus icon-calendar"></i> <code>.venus.icon-calendar</code> <br/>
-                <i class="venus icon-cam"></i> <code>.venus.icon-cam</code> <br/>
-                <i class="venus icon-card"></i> <code>.venus.icon-card</code> <br/>
-                <i class="venus icon-chat"></i> <code>.venus.icon-chat</code> <br/>
-                <i class="venus icon-check"></i> <code>.venus.icon-check</code> <br/>
-                <i class="venus icon-check-list"></i> <code>.venus.icon-check-list</code> <br/>
-                <i class="venus icon-clock"></i> <code>.venus.icon-clock</code> <br/>
-                <i class="venus icon-cloud"></i> <code>.venus.icon-cloud</code> <br/>
-                <i class="venus icon-directory"></i> <code>.venus.icon-directory</code> <br/>
-                <i class="venus icon-download"></i> <code>.venus.icon-download</code> <br/>
-                <i class="venus icon-error"></i> <code>.venus.icon-error</code> <br/>
-                <i class="venus icon-esc"></i> <code>.venus.icon-esc</code> <br/>
-                <i class="venus icon-facebook"></i> <code>.venus.icon-facebook</code> <br/>
-                <i class="venus icon-flag"></i> <code>.venus.icon-flag</code> <br/>
-
-              </div>
-              <div class="venus column four">
-                <i class="venus icon-flag thick"></i> <code>.venus.icon-flag.thick</code> <br/>
-                <i class="venus icon-filter"></i> <code>.venus.icon-filter</code> <br/>
-                <i class="venus icon-filter thick"></i> <code>.venus.icon-filter.thick</code> <br/>
-                <i class="venus icon-globe"></i> <code>.venus.icon-globe</code> <br/>
-                <i class="venus icon-graph"></i> <code>.venus.icon-graph</code> <br/>
-                <i class="venus icon-heart"></i> <code>.venus.icon-heart</code> <br/>
-                <i class="venus icon-home"></i> <code>.venus.icon-home</code> <br/>
-                <i class="venus icon-info"></i> <code>.venus.icon-info</code> <br/>
-                <i class="venus icon-less"></i> <code>.venus.icon-less</code> <br/>
-                <i class="venus icon-link"></i> <code>.venus.icon-link</code> <br/>
-                <i class="venus icon-lock"></i> <code>.venus.icon-lock</code> <br/>
-                <i class="venus icon-mail"></i> <code>.venus.icon-mail</code> <br/>
-                <i class="venus icon-mic"></i> <code>.venus.icon-mic</code> <br/>
-                <i class="venus icon-mobile"></i> <code>.venus.icon-mobile</code> <br/>
-                <i class="venus icon-move"></i> <code>.venus.icon-move</code> <br/>
-                <i class="venus icon-movie"></i> <code>.venus.icon-movie</code> <br/>
-                <i class="venus icon-pencil"></i> <code>.venus.icon-pencil</code> <br/>
-                <i class="venus icon-phone"></i> <code>.venus.icon-phone</code> <br/>
-                <i class="venus icon-pic"></i> <code>.venus.icon-pic</code> <br/>
-                <i class="venus icon-pause"></i> <code>.venus.icon-pause</code> <br/>
-                <i class="venus icon-play"></i> <code>.venus.icon-play</code> <br/>
-                <i class="venus icon-print"></i> <code>.venus.icon-print</code> <br/>
-                <i class="venus icon-query"></i> <code>.venus.icon-query</code> <br/>
-                <i class="venus icon-qrcode"></i> <code>.venus.icon-qrcode</code> <br/>
-                <i class="venus icon-qrframe"></i> <code>.venus.icon-qrframe</code> <br/>
-                <i class="venus icon-reload"></i> <code>.venus.icon-reload</code> <br/>
-                <i class="venus icon-sad"></i> <code>.venus.icon-sad</code> <br/>
-                <i class="venus icon-search"></i> <code>.venus.icon-search</code> <br/>
+            <br/><br/>
+            <code-show render="true" file="views/code-examples/button-group-orange.html"></code-show>
 
 
-              </div>
-              <div class="venus column four">
-                <i class="venus icon-send"></i> <code>.venus.icon-send</code> <br/>
-
-                <i class="venus icon-settings"></i> <code>.venus.icon-settings</code> <br/>
-                <i class="venus icon-smile"></i> <code>.venus.icon-smile</code> <br/>
-                <i class="venus icon-song"></i> <code>.venus.icon-song</code> <br/>
-                <i class="venus icon-suitcase"></i> <code>.venus.icon-suitcase</code> <br/>
-                <i class="venus icon-target"></i> <code>.venus.icon-target</code> <br/>
-                <i class="venus icon-text"></i> <code>.venus.icon-text</code> <br/>
-                <i class="venus icon-ticket"></i> <code>.venus.icon-ticket</code> <br/>
-                <i class="venus icon-tickets"></i> <code>.venus.icon-tickets</code> <br/>
-                <i class="venus icon-trash"></i> <code>.venus.icon-trash</code> <br/>
-                <i class="venus icon-twitter"></i> <code>.venus.icon-twitter</code> <br/>
-                <i class="venus icon-undo"></i> <code>.venus.icon-undo</code> <br/>
-                <i class="venus icon-unlock"></i> <code>.venus.icon-unlock</code> <br/>
-                <i class="venus icon-upload"></i> <code>.venus.icon-upload</code> <br/>
-                <i class="venus icon-user"></i> <code>.venus.icon-user</code> <br/>
-                <i class="venus icon-wallet"></i> <code>.venus.icon-wallet</code> <br/>
-                <i class="venus icon-watch"></i> <code>.venus.icon-watch</code> <br/>
-
-              </div>
-            </div>
-
-        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;i</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus icon-flag&quot;</span><span style="color: #007700">&gt;&lt;/i&gt;</span>
-</pre></div>
+            <br/><br/>
+            <code-show render="true" file="views/code-examples/button-dropdown.html"></code-show>
 
 
+            <br/><br/>
+            <code-show render="true" file="views/code-examples/button-dropdown-orange.html"></code-show>
+          </article>
 
-
-
-
-
-        <h1>Button</h1>
-
-          <p>to use the style buttons Venus UI Kit, just add class <code>.venus .button</code></p>
-
-        <button class="venus button" ng-click="activityTest('Salvando...')">Salvar</button>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;#&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/a&gt;</span>
-
-<span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-
-<span style="color: #007700">&lt;input</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;submit&quot;</span><span style="color: #007700">/&gt;</span>
-</pre></div>
-
-
-          <br/><br/>
-
-          <p>for the orange button, just add the class <code>.orange</code></p>
-
-        <button class="venus button orange" ng-click="activityTest('Comprando...')">Comprar</button>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange&quot;</span><span style="color: #007700">&gt;&lt;/button&gt;</span>
-</pre></div>
-
-
-          <br/><br/>
-
-          <p>For expand button, just add the class <code>.wide</code></p>
-
-        <input class="venus button wide" type="submit" ng-click="activityTest('Enviando...')"/>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button wide&quot;</span><span style="color: #007700">&gt;&lt;/button&gt;</span>
-</pre></div>
-
-
-          <h1>Button Disabled</h1>
-
-          <p>For disabled button, just add the class<code>.disabled</code></p>
-
-
-        <button class="venus button disabled" ng-click="errorTest('Não toque neste botão!')">Button</button>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button disabled&quot;</span><span style="color: #007700">&gt;&lt;/button&gt;</span>
-</pre></div>
-
-
-          <h1>Button Group</h1>
-
-          <p>It is possible to create grouping of buttons</p>
-
-        <div class="venus button-group">
-            <button class="venus button" ng-click="activityTest('Indo...')">Vou</button>
-            <button class="venus button" ng-click="activityTest('Voltando...')">Não vou</button>
-        </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button-group&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span><span style="color: #007700">&gt;</span>Vou<span style="color: #007700">&lt;/button&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span><span style="color: #007700">&gt;</span>Não vou<span style="color: #007700">&lt;/button&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-          <br/><br/>
-
-        <div class="venus button-group">
-            <button class="venus button orange">Button</button>
-            <button class="venus button orange">Button</button>
-            <button class="venus button orange">Button</button>
-        </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button-group&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-          <br/><br/>
-
-        <div class="venus button-group">
-            <button class="venus button">Button</button>
-            <button class="venus button dropdown"></button>
-        </div>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button-group&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button dropdown&quot;</span><span style="color: #007700">&gt;&lt;/button&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-          <br/><br/>
-
-        <div class="venus button-group">
-            <div class="venus button orange">Button</div>
-            <div class="venus button orange dropdown"></div>
-        </div>
-
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button-group&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange&quot;</span><span style="color: #007700">&gt;</span>Button<span style="color: #007700">&lt;/button&gt;</span>
-    <span style="color: #007700">&lt;button</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus button orange dropdown&quot;</span><span style="color: #007700">&gt;&lt;/button&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-            <h1>Labels</h1>
-
+          <article>
+            <h1 class="venus">Labels</h1>
             <p>To style the labels, you only need to add the class <code>.venus .label</code></p>
-
-            <span class="venus label">Label</span>
-            <a class="venus label" href="#">Label</a>
-
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-top: 20px;margin-bottom: 60px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;span</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus label&quot;</span><span style="color: #007700">&gt;</span>Label<span style="color: #007700">&lt;/span&gt;</span>
-<span style="color: #007700">&lt;a</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus label&quot;</span> <span style="color: #000077">href=</span><span style="background-color: #e0e0ff">&quot;#&quot;</span><span style="color: #007700">&gt;</span>Label<span style="color: #007700">&lt;/a&gt;</span>
-</pre></div>
-
-        <h1>Progress Bar</h1>
-
-        <p>Whe have two sizes of progress bar, the deafult size and <code>.small</code> and five colors option <code>.blue .orange .pink .green .purple</code> </p>
+            <code-show render="true" file="views/code-examples/label.html"></code-show>
+          </article>
 
 
-            <div class="venus progress blue">
-              <div style="width: 66%" class="bar"></div>
-            </div>
-
-        <br/>
-
-            <div class="venus progress small orange">
-              <div style="width: 36%" class="bar"></div>
-            </div>
-
-        <br/>
-
-        <div class="venus progress green">
-          <span class="progress-label">3%</span>
-          <div style="width: 3%" class="bar">
-            <span class="progress-label">3%</span>
-          </div>
+          <article>
+            <h1 class="venus">Progress Bar</h1>
+            <p>Whe have two sizes of progress bar, the deafult size and <code>.small</code> and five colors option <code>.blue .orange .pink .green .purple</code> </p>
+            <code-show render="true" file="views/code-examples/progress.html"></code-show>
+          </article>
         </div>
-
-
-        <br/>
-
-        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus progress blue&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">style=</span><span style="background-color: #e0e0ff">&quot;width: 66%&quot;</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;bar&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-
-<span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus progress small orange&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">style=</span><span style="background-color: #e0e0ff">&quot;width: 36%&quot;</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;bar&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-
-<span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus progress green&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;span</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;progress-label&quot;</span><span style="color: #007700">&gt;</span>3%<span style="color: #007700">&lt;/span&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #000077">style=</span><span style="background-color: #e0e0ff">&quot;width: 3%&quot;</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;bar&quot;</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;span</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;progress-label&quot;</span><span style="color: #007700">&gt;</span>3%<span style="color: #007700">&lt;/span&gt;</span>
-    <span style="color: #007700">&lt;/div&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-
-        <br/><br/>
-
-
-
-
-
-        </div>
-    </div>
+      </div>
 
     <div class="venus section black">
-        <div class="venus container">
+      <div class="venus container">
 
+
+      <br/><br/>
+      <h1 class="venus">Form</h1>
+      <p>Create forms is very easy, just add the class <code>.venus</code> in the form</p>
+      <code-show render="true" file="views/code-examples/form.html"></code-show>
+
+      <form class="venus">
+        <br/><br/>
+        <code-show render="true" file="views/code-examples/input-radio.html"></code-show>
 
         <br/><br/>
+        <label>Tittle</label>
+        <code-show render="true" file="views/code-examples/select.html"></code-show>
 
-        <h1>Form</h1>
-
-          <p>Create forms is very easy, just add the class <code>.venus</code> in the form</p>
-
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;form</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;label&gt;</span>Tittle<span style="color: #007700">&lt;/label&gt;</span>
-    <span style="color: #007700">&lt;input</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;email&quot;</span> <span style="color: #000077">placeholder=</span><span style="background-color: #e0e0ff">&quot;Type...&quot;</span> <span style="color: #000077">disabled</span><span style="color: #007700">/&gt;</span>
-
-    <span style="color: #007700">&lt;label&gt;</span>Invalid<span style="color: #007700">&lt;/label&gt;</span>
-    <span style="color: #007700">&lt;input</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;email&quot;</span> <span style="color: #000077">placeholder=</span><span style="background-color: #e0e0ff">&quot;Type your email&quot;</span><span style="color: #007700">/&gt;</span>
-
-    <span style="color: #007700">&lt;label&gt;</span>Text<span style="color: #007700">&lt;/label&gt;</span>
-    <span style="color: #007700">&lt;textarea</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;&quot;</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;&quot;</span> <span style="color: #000077">cols=</span><span style="background-color: #e0e0ff">&quot;30&quot;</span> <span style="color: #000077">rows=</span><span style="background-color: #e0e0ff">&quot;10&quot;</span> <span style="color: #000077">placeholder=</span><span style="background-color: #e0e0ff">&quot;Type...&quot;</span><span style="color: #007700">&gt;&lt;/textarea&gt;</span>
-<span style="color: #007700">&lt;/form&gt;</span>
-</pre></div>
-
-          <br/><br/>
-
-          <form class="venus">
-            <label>Tittle</label>
-            <input type="email" placeholder="Type..." disabled/>
-            <label>Invalid</label>
-            <input type="email" placeholder="Type your email"/>
-            <label>Text</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Type..."></textarea>
-
-
-
-
-                <input id="check1" type="checkbox" name="check" value="check1">
-                <label for="check1">Checkbox No. 1</label>
-                <input id="check2" type="checkbox" name="check" value="check2">
-                <label for="check2">Checkbox No. 2</label>
-                <input id="check3" type="checkbox" name="check" value="check3" disabled>
-                <label for="check3">Checkbox No. 3</label>
-
-            <br/>
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;input</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;check1&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;checkbox&quot;</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;check&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;check1&quot;</span><span style="color: #007700">&gt;</span>
-<span style="color: #007700">&lt;label</span> <span style="color: #000077">for=</span><span style="background-color: #e0e0ff">&quot;check1&quot;</span><span style="color: #007700">&gt;</span>Checkbox No. 1<span style="color: #007700">&lt;/label&gt;</span>
-
-<span style="color: #007700">&lt;input</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;check2&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;checkbox&quot;</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;check&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;check2&quot;</span><span style="color: #007700">&gt;</span>
-<span style="color: #007700">&lt;label</span> <span style="color: #000077">for=</span><span style="background-color: #e0e0ff">&quot;check2&quot;</span><span style="color: #007700">&gt;</span>Checkbox No. 2<span style="color: #007700">&lt;/label&gt;</span>
-
-<span style="color: #007700">&lt;input</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;check3&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;checkbox&quot;</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;check&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;check3&quot;</span> <span style="color: #000077">disabled</span><span style="color: #007700">&gt;</span>
-<span style="color: #007700">&lt;label</span> <span style="color: #000077">for=</span><span style="background-color: #e0e0ff">&quot;check3&quot;</span><span style="color: #007700">&gt;</span>Checkbox No. 3<span style="color: #007700">&lt;/label&gt;</span>
-</pre></div>
-
-            <br/><br/>
-          </form>
-
-          <form action="" class="venus">
-            <label for="">Search</label>
-            <div angucomplete-alt=""
-                 id="ex1"
-                 placeholder="Search countries"
-                 maxlength="50" pause="100"
-                 selected-object="countrySelected"
-                 local-data="countries"
-                 search-fields="name"
-                 title-field="name"
-                 minlength="1"
-                 type="search"
-                 input-class="form-control form-control-small"
-                 match-class="highlight"
-                 class="ng-isolate-scope">
-              <div class="angucomplete-holder"
-                   ng-class="{'angucomplete-dropdown-visible': showDropdown}">
-                <input
-                  id="ex1_value"
-                  ng-model="searchStr"
-                  type="search"
-                  placeholder="Search countries"
-                  maxlength="50"
-                  ng-focus="onFocusHandler()"
-                  class="form-control form-control-small ng-dirty"
-                  ng-blur="hideResults($event)"
-                  autocapitalize="off"
-                  autocorrect="off"
-                  autocomplete="off"
-                  ng-change="inputChangeHandler(searchStr)">
-
-                <div id="ex1_dropdown" class="angucomplete-dropdown ng-hide" ng-show="showDropdown">
-                  <div
-                    class="angucomplete-searching ng-binding ng-hide"
-                    ng-show="searching"
-                    ng-bind="textSearching">
-                    Buscando...
-                  </div>
-                  <div
-                    class="angucomplete-searching ng-binding"
-                    ng-show="!searching &amp;&amp; (!results || results.length == 0)"
-                    ng-bind="textNoResults">
-                    Sem resultados encontrados
-                  </div>
-                  <!-- ngRepeat: result in results -->
-                </div>
-              </div>
-            </div>
-          </form>
-
-            <form class="venus">
-
-            <br/><br/>
-                <input id="male" type="radio" name="gender" value="male">
-                <label for="male">Male</label>
-                <input id="female" type="radio" name="gender" value="female" disabled>
-                <label for="female">Female</label>
-                <br/>
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;input</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;male&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;radio&quot;</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;gender&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;male&quot;</span><span style="color: #007700">&gt;</span>
-<span style="color: #007700">&lt;label</span> <span style="color: #000077">for=</span><span style="background-color: #e0e0ff">&quot;male&quot;</span><span style="color: #007700">&gt;</span>Male<span style="color: #007700">&lt;/label&gt;</span>
-
-<span style="color: #007700">&lt;input</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;female&quot;</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;radio&quot;</span> <span style="color: #000077">name=</span><span style="background-color: #e0e0ff">&quot;gender&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;female&quot;</span> <span style="color: #000077">disabled</span><span style="color: #007700">&gt;</span>
-<span style="color: #007700">&lt;label</span> <span style="color: #000077">for=</span><span style="background-color: #e0e0ff">&quot;female&quot;</span><span style="color: #007700">&gt;</span>Female<span style="color: #007700">&lt;/label&gt;</span>
-</pre></div>
-
-            <br/><br/>
-
-            <label>Tittle</label>
-                <select style="width: 200px">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;select&gt;</span>
-    <span style="color: #007700">&lt;option</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;volvo&quot;</span><span style="color: #007700">&gt;</span>Volvo<span style="color: #007700">&lt;/option&gt;</span>
-    <span style="color: #007700">&lt;option</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;saab&quot;</span><span style="color: #007700">&gt;</span>Saab<span style="color: #007700">&lt;/option&gt;</span>
-    <span style="color: #007700">&lt;option</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;mercedes&quot;</span><span style="color: #007700">&gt;</span>Mercedes<span style="color: #007700">&lt;/option&gt;</span>
-    <span style="color: #007700">&lt;option</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;audi&quot;</span><span style="color: #007700">&gt;</span>Audi<span style="color: #007700">&lt;/option&gt;</span>
- <span style="color: #007700">&lt;/select&gt;</span>
-</pre></div>
-            <br/><br/>
-            <label for="">Volume</label>
-            <div class="venus range">
-                <output id="rangevalue">5</output>
-                <span>0</span>
-                <input type="range" min="5" max="50" value="5" step="5" onchange="rangevalue.value=value" />
-                <span>50</span>
-            </div>
-
-            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;margin-bottom: 60px"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #000077">class=</span><span style="background-color: #e0e0ff">&quot;venus range&quot;</span><span style="color: #007700">&gt;</span>
-    <span style="color: #007700">&lt;output</span> <span style="color: #000077">id=</span><span style="background-color: #e0e0ff">&quot;rangevalue&quot;</span><span style="color: #007700">&gt;</span>5<span style="color: #007700">&lt;/output&gt;</span>
-    <span style="color: #007700">&lt;span&gt;</span>0<span style="color: #007700">&lt;/span&gt;</span>
-    <span style="color: #007700">&lt;input</span> <span style="color: #000077">type=</span><span style="background-color: #e0e0ff">&quot;range&quot;</span> <span style="color: #000077">min=</span><span style="background-color: #e0e0ff">&quot;5&quot;</span> <span style="color: #000077">max=</span><span style="background-color: #e0e0ff">&quot;50&quot;</span> <span style="color: #000077">value=</span><span style="background-color: #e0e0ff">&quot;5&quot;</span> <span style="color: #000077">step=</span><span style="background-color: #e0e0ff">&quot;5&quot;</span> <span style="color: #000077">onchange=</span><span style="background-color: #e0e0ff">&quot;rangevalue.value=value&quot;</span> <span style="color: #007700">/&gt;</span>
-    <span style="color: #007700">&lt;span&gt;</span>50<span style="color: #007700">&lt;/span&gt;</span>
-<span style="color: #007700">&lt;/div&gt;</span>
-</pre></div>
-
-          </form>
+        <br/><br/>
+        <label for="">Volume</label>
+        <code-show render="true" file="views/code-examples/range.html"></code-show>
+      </form>
     </div>
+
     <!-- <div class="venus section white">
         <div class="venus popover-container item">
             <p>Esse texto tem um popover que vai aparecer na parte de cima, passa o mouse aqui ;)</p>
