@@ -1,17 +1,9 @@
 {
   "name": "venus",
-  "version": "1.0.1",
+  "version": "1.11.0",
   "main": [
-    "./dist/venus.js",
+    "./dist/scripts/venus.js",
     "./dist/styles/venus.css"
-  ],
-  "ignore": [
-    ".sass-cache",
-    ".tmp",
-    "node_modules",
-    "styles/scss",
-    "app",
-    "doc"
   ],
   "dependencies": {
     "angular": "~1.*",
@@ -25,7 +17,6 @@
     "angular-mocks": "~1.*",
     "angular-scenario": "~1.*",
     "angular-route": "~1.*",
-    "venus": "~*",
     "angucomplete-alt": "~*"
   },
   "resolutions": {
