@@ -4,8 +4,7 @@ angular
   .module('venus-showcase', [
     'ngRoute',
     'angucomplete-alt',
-    'venusUI',
-    'ngSanitize'
+    'venusUI'
   ])
   .config(function ($routeProvider) {
     $routeProvider
