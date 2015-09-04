@@ -19,14 +19,14 @@ gulp.task('uglify', function(){
     gulp.src(['app/directives/*.js', 'app/services/*.js'])
         .on('error', errorLog)
         .pipe($.uglify())
-        .pipe($.rename('venus.js'))
+        .pipe($.rename('3.venus.js'))
         .pipe(gulp.dest('dist/scripts/'))
         .pipe($.size({title: 'Uglify venus scripts'}));
 
     gulp.src(['app/scripts/**/*.js'])
         .on('error', errorLog)
         .pipe($.uglify())
-        .pipe($.rename('app.js'))
+        .pipe($.rename('2.app.js'))
         .pipe(gulp.dest('dist/scripts/'))
         .pipe($.size({title: 'Uglify app scripts'}));
 });
@@ -75,18 +75,24 @@ gulp.task('directivesHtml', function () {
 });
 
 gulp.task('bower', function(cb){
-  bower.commands.install([], {save: true}, {})
-    .on('end', function(installed){
-      cb(); // notify gulp that this task is finished
-    });
+    bower.commands.install([], {save: true}, {})
+        .on('end', function(installed){
+            cb(); // notify gulp that this task is finished
+        });
+
+    gulp.src(['bower_components/**/*.*'])
+        .on('error', errorLog)
+        .pipe(gulp.dest('dist/bower_components'))
+        .pipe($.size({title: 'Copy bower_components'}));
 });
 
 gulp.task('inject', function(){
     gulp.src('app/index.html')
-        .pipe(inject(gulp.src(['bower_components/**/*min.js', 'bower_components/**/*.min.css', 'app/scripts/**/*.js', 'app/styles/**/*.css', 'app/directives/**/*.js', 'app/services/**/*.js'], {read: false}), {ignorePath: 'app/'}))
+        .pipe(inject(gulp.src(['bower_components/**/*.min.js', 'bower_components/**/*.min.css', 'app/scripts/**/*.js', 'app/styles/**/*.css', 'app/directives/**/*.js', 'app/services/**/*.js'], {read: false}), {addRootSlash: false, ignorePath: 'app/'}))
         .pipe(gulp.dest('app'));
+
     gulp.src('app/index.html')
-        .pipe(inject(gulp.src(['dist/scripts/**/*.js', 'dist/styles/**/*.css'], {read: false}), {ignorePath: 'dist/'}))
+        .pipe(inject(gulp.src(['bower_components/**/*.min.js', 'bower_components/**/*.min.css', 'dist/scripts/**/*.js', 'dist/styles/**/*.css', 'dist/directives/**/*.js', 'dist/services/**/*.js'], {read: false}), {addRootSlash: false, ignorePath: 'dist/'}))
         .pipe(gulp.dest('dist'));
 });
 
