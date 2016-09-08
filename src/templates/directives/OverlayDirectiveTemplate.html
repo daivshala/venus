@@ -1,0 +1,30 @@
+<div class="venus overlay"
+     data-ng-show="overlay.visibility">
+    <div class="venus overlay__content">
+        <div class="venus container">
+            <div class="venus alert">
+                <div class="venus overlay__content__title"
+                     data-ng-if="overlay.title">
+                    {{ overlay.title }}
+                </div>
+                <div class="venus overlay__content__text"
+                     data-ng-if="overlay.text">
+                    {{ overlay.text }}
+                </div>
+                <div class="venus overlay__content__actions">
+                    <button
+                        class="venus overlay__content__actions__button"
+                        data-ng-click="continueCallback()"
+                        data-ng-if="!hideContinue">
+                        {{ overlay.continueText }}
+                    </button>
+                    <button
+                        class="venus overlay__content__actions__button"
+                        data-ng-click="cancelCallback()">
+                        {{ overlay.cancelText }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

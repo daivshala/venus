@@ -1,9 +1,9 @@
 {
   "name": "venus",
-  "version": "1.11.0",
+  "version": "2.0.0",
   "main": [
-    "./dist/scripts/venus.js",
-    "./dist/styles/venus.css"
+    "./dist/scripts/venus.min.js",
+    "./dist/assets/venus.min.css"
   ],
   "dependencies": {
     "angular": "~1.*",
@@ -17,7 +17,8 @@
     "angular-mocks": "~1.*",
     "angular-scenario": "~1.*",
     "angular-route": "~1.*",
-    "angucomplete-alt": "~*"
+    "angucomplete-alt": "~*",
+    "angular-scroll": "^1.0.0"
   },
   "resolutions": {
     "angular": "~1.*"

@@ -1,0 +1,103 @@
+$this: ".venus.form__switch";
+
+#{$this} {
+    position  : relative;
+    display   : block !important;
+    min-height: 13px;
+
+    margin      : -2px 0 9px;
+    padding-left: 38px;
+
+    font-size     : 13px;
+    font-weight   : bold;
+    line-height   : 1;
+    text-transform: uppercase;
+
+    color: $color-dark-grey;
+
+    cursor: pointer;
+
+    @include no-select();
+
+    &:after {
+        content: " ";
+        display: block;
+    }
+
+    &--right {
+        padding: 0 38px 0 0;
+
+        #{$this} {
+            &__slider {
+                right : 0;
+                left  : auto;
+            }
+        }
+    }
+
+    &__check {
+        display: none;
+
+        &:checked + #{$this}__slider {
+            background-color: $color-green;
+
+            &:before {
+                -webkit-transform: translateX(16px);
+                -ms-transform    : translateX(16px);
+                transform        : translateX(16px);
+
+                border-color: $color-green;
+                box-shadow  : -1px 0 2px -1px rgba($color-black, .25);
+            }
+        }
+
+        &:disabled + #{$this}__slider,
+        &.disabled + #{$this}__slider {
+            cursor: default;
+            background-color: $color-light-grey;
+
+            &:before {
+                background-color: $color-white-smoke;
+                border-color    : $color-light-grey;
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor  : pointer;
+
+        width : 32px;
+        height: 16px;
+        top   : 49%;
+        bottom: 0;
+        left  : 0;
+
+        -webkit-transform: translateY(-49%);
+        -ms-transform    : translateY(-49%);
+        transform        : translateY(-49%);
+
+        background-color: $color-grey;
+
+        border-radius: 2px;
+
+        transition: .1s;
+
+        &:before {
+            position: absolute;
+            content : " ";
+
+            width : 14px;
+            height: 14px;
+            top   : 0;
+            left  : 0;
+
+            background-color: $color-white;
+            border          : 1px solid $color-grey;
+            border-radius   : 2px;
+            box-shadow      : 1px 0 2px -1px rgba($color-black, .25);
+
+            transition: .1s;
+        }
+    }
+}

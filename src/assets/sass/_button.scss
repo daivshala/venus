@@ -1,0 +1,198 @@
+/* Button
+-------------------------------------------------------------------------- */
+$this: ".venus.button";
+#{$this} {
+    position            : relative;
+    display             : inline-block;
+    cursor              : pointer;
+
+    margin              : 0;
+    padding             : 11px 15px 13px;
+
+    min-width           : 140px;
+    min-height          : 40px;
+
+    @include              font-size-default;
+    font-weight         : 400;
+    line-height         : 1;
+
+    text-align          : center;
+    text-decoration     : none;
+    border              : 0;
+    @include              border-radius(3px);
+
+    background-image    : none;
+    background-color    : $color-blue;
+    color               : $color-white;
+    box-shadow          : inset 0 -3px 0 0 #{$button-blue-border};
+    @include              text-shadow(0 1px rgba(0, 0, 0, .15));
+    @include              transition(.2s);
+
+    &:hover:not(:disabled) {
+        background-color: lighten($color-blue, 3%);
+    }
+
+    &:active {
+        padding         : 13px 15px 11px;
+        background-color: $button-blue-hover;
+    }
+
+    &.active,
+    &:active,
+    &:focus {
+        box-shadow      : none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline         : 0;
+        background-image: none;
+    }
+
+    &:disabled {
+        color           : darken($color-light-grey, 15%);
+        @include          text-shadow(0 1px $color-white-smoke);
+        background-color: $color-light-grey;
+        box-shadow      : inset 0 -3px 0 0 lighten($color-grey, 5%);
+        cursor          : default;
+    }
+
+    &.softed {
+        background-color: lighten($color-blue, 50%);
+        color           : $color-blue;
+        box-shadow      : inset 0 -3px 0 0 lighten($color-blue, 40%);
+        @include          text-shadow(none);
+
+        &:hover {
+            background-color    : lighten($color-blue, 45%);
+        }
+
+        &.active,
+        &:active,
+        &:focus {
+            box-shadow          : none;
+        }
+
+        &:disabled {
+            background-color: lighten($color-light-grey, 10%);
+            box-shadow      : inset 0 -3px 0 0 lighten($color-light-grey, 5%);
+            color           : darken($color-light-grey, 5%);
+            @include          text-shadow(none);
+        }
+    }
+
+    &.wide {
+        display: block;
+        width: 100%;
+    }
+
+    &.dropdown {
+        min-width: 0;
+        padding: 22px 20px 16px;
+
+        &:active {
+            padding: 23px 20px 15px;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-style: solid;
+            border-color: $text-button-color transparent transparent transparent;
+            top: 45%;
+            left: 38%;
+            border-width: 4px 4px 0;
+        }
+    }
+
+    &.labeled {
+        text-align: right;
+        padding-right: 30px;
+        padding-left: 60px;
+
+        &:active {
+            text-align: right;
+            padding-right: 30px;
+            padding-left: 60px;
+        }
+
+        > [class*="icon-"] {
+            font-size: 26px;
+            line-height: 16px;
+            position: absolute;
+            left: 30px;
+            top: 26%;
+        }
+
+        &.wide {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            text-align: center;
+
+            > [class*="icon-"] {
+                position: relative;
+                left: inherit;
+                margin-right: 20px;
+                top: inherit;
+            }
+        }
+
+        > .icon-android,
+        > .icon-apple,
+        > .icon-facebook,
+        > .icon-gplus,
+        > .icon-twitter {
+            font-size: 40px;
+            left: 20px;
+            top: 22%;
+        }
+    }
+
+    //Button colors
+    $btn_colors:
+        ("orange",              $color-orange, 	            $button-orange-border,      $color-white),
+        ("facebook",            $color-blue-facebook,       null,                       $color-white),
+    ;
+
+    @each $btn_class, $btn_bgColor, $btn_bgShadow, $btn_txtColor in $btn_colors {
+        &.#{$btn_class}:not(:disabled) {
+            background-color        : #{$btn_bgColor};
+            color                   : #{$btn_txtColor};
+            @if $btn_bgShadow {
+                box-shadow          : inset 0 -3px 0 0 #{$btn_bgShadow};
+            } @else {
+                box-shadow          : inset 0 -3px 0 0 darken($btn_bgColor, 8%);
+            }
+
+            &:hover {
+                background-color    : lighten($btn_bgColor, 8%);
+            }
+
+            &:active,
+            &:focus {
+                @include              box-shadow(none);
+            }
+
+            &.softed:not(:disabled) {
+                background-color    : lighten($btn_bgColor, 35%);
+                color               : $btn_bgColor;
+                box-shadow          : inset 0 -3px 0 0 lighten($btn_bgColor, 25%);
+                @include              text-shadow(none);
+
+                &:hover {
+                    background-color: lighten($btn_bgColor, 30%);
+                    box-shadow      : inset 0 -3px 0 0 lighten($btn_bgColor, 20%);
+                }
+
+                &:active,
+                &:focus {
+                    box-shadow      : none;
+                }
+            }
+        }
+    }
+}

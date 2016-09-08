@@ -1,0 +1,22 @@
+
+<form class="venus form">
+    <div class="venus form__field">
+
+        <label class="venus form__switch form__switch--right"
+               for="switch-right-with-text">
+            <input class="venus form__switch__check"
+                   type="checkbox"
+                   id="switch-right-with-text"
+                   data-ng-click="switchRightField=!switchRightField" />
+            <div class="venus form__switch__slider"></div>
+            Example Text
+        </label>
+
+        <input class="venus form__input"
+               type="text"
+               placeholder="Insert your text"
+               data-ng-model="switchText"
+               data-ng-show="switchRightField" />
+
+    </div>
+</form>

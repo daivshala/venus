@@ -1,0 +1,24 @@
+// Docs Header
+$this: ".docs-header";
+
+#{$this} {
+    display: block;
+    padding: 66px 0;
+
+    box-shadow: inset 0 -4px 5px -2px rgba($color-black, .05);
+
+    h1.venus,
+    h4.venus,
+    .venus.h1,
+    .venus.h4 {
+        &#{$this} {
+            &__title {
+                margin: 0;
+            }
+
+            &__subtitle {
+                margin: 14px 0 10px;
+            }
+        }
+    }
+}

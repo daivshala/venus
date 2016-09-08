@@ -1,0 +1,50 @@
+/* Version: 2.0.0 */
+
+// CSS Reset
+@import '_reset';
+
+// Foundation
+@import '_colors';
+@import '_variables';
+@import '_media-querie';
+@import '_mixins';
+@import '_fonts';
+@import '_grid';
+@import '_icons';
+@import '_keyframes';
+
+// Elements
+@import '_alert';
+@import '_button';
+@import '_button-toggle';
+@import '_divider';
+@import '_drag-and-drop';
+@import '_dropdown';
+@import '_form';
+@import '_form__custom-select';
+@import '_form__fieldset';
+@import '_form__range';
+@import '_form__switch';
+@import '_label';
+@import '_list';
+@import '_loader';
+@import '_navbar';
+@import '_overlay';
+@import '_pagination';
+@import '_progress-bar';
+@import '_table';
+@import '_tooltip';
+@import '_selector';
+
+.venus {
+    &.rating-bar {
+        display: block;
+        width: 200px;
+        height: 30px;
+        background: $color-black;
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}

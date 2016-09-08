@@ -1,0 +1,123 @@
+$this: ".venus.form__custom-select";
+
+#{$this} {
+    position: relative;
+    display : block;
+
+    font-size  : 16px;
+    line-height: 1.25;
+
+    &__input {
+        position: absolute;
+        opacity : 0;
+
+        left    : 0;
+        bottom  : 0;
+        padding : 0 !important;
+
+
+        width   : 0 !important;
+        height  : 100% !important;
+    }
+
+    &__toggle {
+        position: relative;
+
+        padding: 9px 20px 9px 10px;
+
+        color           : $color-black;
+        background-color: $color-white;
+
+        border: 1px solid $color-grey;
+
+        @include border-radius (3px);
+
+        &:after {
+            position: absolute;
+            content : "";
+
+            right : 8px;
+            top   : 50%;
+
+            width : 0;
+            height: 0;
+
+            margin-top: -2px;
+
+            border-width: 4px 4px 0;
+            border-style: solid;
+            border-color: $color-black transparent;
+        }
+
+        &--active {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius : 0;
+
+            border-color: $color-blue;
+
+            &:after {
+                border-color: $color-blue transparent;
+            }
+        }
+
+        &--placeholder {
+            font-style: italic;
+            color     : $color-light-grey;
+
+            @include no-select();
+        }
+    }
+
+    &__list {
+        position: absolute;
+        z-index : 1000;
+
+        top  : 100%;
+        right: 0;
+        left : 0;
+
+        padding: 0;
+        margin : 0;
+
+        list-style: none;
+
+        background-color: $color-white;
+        background-clip : padding-box;
+
+        border: 1px solid $color-grey;
+        border-top: 0;
+
+        @include border-radius(3px);
+        border-top-right-radius: 0;
+        border-top-left-radius : 0;
+
+        box-shadow: 2px 2px 4px rgba($color-black, .1);
+
+        &__option {
+            display: block;
+            width  : 100%;
+
+            padding: 9.5px 10px;
+
+            cursor: pointer;
+
+            border-top: 1px solid $color-light-grey;
+
+            @include no-select ();
+
+            &:hover {
+                color           : $color-white;
+                background-color: $color-blue;
+                border-color    : $color-white;
+
+                + #{$this}__list__option {
+                    border-color    : $color-blue;
+                }
+            }
+
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+    }
+}

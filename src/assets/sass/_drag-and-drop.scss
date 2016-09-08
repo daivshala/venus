@@ -1,0 +1,185 @@
+$this: ".venus.drag-and-drop";
+$dnd-border-radius: 3px;
+
+#{$this} {
+    position: relative;
+
+    &--shadow {
+        #{$this} {
+            &__item {
+                box-shadow: 0 0 6px -1px rgba($color-grey, .35);
+            }
+
+            &__sub-items {
+                #{$this} {
+                    &__item {
+                        box-shadow: 0 2px 6px -1px rgba($color-grey, .35);
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        z-index : 20;
+
+        margin    : 0 0 20px;
+        padding   : 0 0 0 32px;
+        min-height: 40px;
+
+        line-height: 1.25;
+
+        background-color: $color-white;
+
+        border: 1px solid darken($color-white-smoke, 5%);
+        @include border-radius($dnd-border-radius);
+
+        &:before,
+        &:after {
+            position: absolute;
+            cursor  : move;
+
+            font-size  : 12px;
+            line-height: .7;
+            text-align : center;
+
+            color           : rgba($color-black, .25);
+            background-color: $color-white-smoke;
+
+            border-top-left-radius   : $dnd-border-radius;
+            border-bottom-left-radius: $dnd-border-radius;
+        }
+
+        &:before {
+            content : " ";
+
+            width : 32px;
+            top   : 0;
+            bottom: 0;
+            left  : 0;
+        }
+
+        &:after {
+            content : "•• •• ••";
+
+            width    : 22px;
+            left     : 5px;
+            top      : 50%;
+            transform: translateY(-50%);
+
+            padding: 6px 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &__header,
+        &__content,
+        &__footer {
+            padding-right: 20px;
+            padding-left : 20px;
+        }
+
+        &__header {
+            font-weight: bold;
+
+            padding-top  : 13px;
+            margin-bottom: 2px;
+        }
+
+        &__content {
+            padding-top   : 8px;
+            padding-bottom: 10px;
+
+            border-top-right-radius   : $dnd-border-radius;
+            border-bottom-right-radius: $dnd-border-radius;
+        }
+
+        &__footer {
+            padding-bottom: 15px;
+        }
+    }
+
+    &__item + &__sub-items {
+        margin : -21px 0 0 0;
+        padding: 0 0 0 20px;
+
+        #{$this} {
+            &__item {
+                margin-bottom: 0;
+
+                &:first-of-type {
+                    #{$this} {
+                        &__item {
+                            &__header {
+                                padding-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__sub-items {
+        position: relative;
+        z-index : 10;
+
+        margin : 10px 0 0 0;
+
+        #{$this} {
+            &__sub-items {
+                margin-top: -2px;
+            }
+
+            &__item {
+                margin-bottom   : 10px;
+                background-color: $color-white-smoke;
+
+                &:before {
+                    border-right: 1px solid $color-light-grey;
+                }
+
+                &:before,
+                &:after {
+                    background-color: $color-white;
+                }
+
+                &__footer {
+                    border-top: 1px solid $color-light-grey;
+
+                    margin-top    : 6px;
+                    padding-top   : 6px;
+                    padding-bottom: 6px;
+
+                    .venus.label {
+                        margin-top   : 3px;
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__drop-area {
+        position: relative;
+        z-index : 30;
+
+        padding: 19px 20px;
+
+        font-size     : 14px;
+        line-height   : .75;
+        text-align    : center;
+        text-transform: uppercase;
+
+        color           : $color-blue;
+        background-color: $color-light-blue;
+
+        border: 1px dashed $color-blue;
+        @include border-radius($dnd-border-radius);
+
+        @include no-select();
+    }
+}

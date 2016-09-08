@@ -1,0 +1,68 @@
+$this: ".venus.selector";
+
+#{$this} {
+    display : block;
+    position: relative;
+
+    &__input {
+        opacity: 0;
+    }
+
+    &__input:checked + &__label {
+        color           : $color-white;
+        background-color: $color-blue;
+        border-color    : $color-blue;
+
+        #{$this} {
+            &__label {
+                &__prefix {
+                    background-color: transparent;
+
+                    border-color: $color-white;
+                }
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        display : inline-block;
+        padding : 11px 8px 10px 8px;
+
+        font-size  : 13px;
+        line-height: .6;
+        text-align : left;
+
+        white-space: nowrap;
+        overflow   : hidden;
+
+        color           : $color-black;
+        background-color: $color-white-smoke;
+        border          : 1px solid $color-light-grey;
+
+        @include border-radius (3px);
+        @include transition (.15s);
+        @include no-select ();
+
+        &[for] {
+            cursor: pointer;
+        }
+
+        &__prefix {
+            display  : inline-block;
+            min-width: 45px;
+
+            text-align: center;
+
+            padding: 11px 5px 10px;
+            margin : -11px 8px -10px -8px;
+
+            border-top-left-radius   : 2px;
+            border-bottom-left-radius: 2px;
+
+            background-color: $color-light-grey;
+
+            border-right: 1px solid $color-light-grey;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+/* ALERTS */
+$this: ".venus.alert";
+
+#{$this} {
+    position: relative;
+
+    display: block;
+    padding: 13px 15px 15px;
+
+    vertical-align: middle;
+
+    font-size  : 16px;
+    line-height: 1.25;
+    text-align : center;
+
+    background: rgba($color-white, .9);
+
+    color : $color-blue;
+    border: 1px solid $color-blue;
+    @include border-radius(3px);
+
+    animation: fadeIn .5s;
+
+    &--dismissable {
+        padding-right: 30px;
+    }
+
+    &__dismiss {
+        position: absolute;
+
+        top  : 15px;
+        right: 13px;
+
+        width  : 20px;
+        height : 20px;
+        padding: 2px;
+
+        font-weight: 100;
+        font-size  : 18px;
+        line-height: .8;
+        cursor     : pointer;
+
+        border          : 0;
+        outline         : 0;
+        background-color: transparent;
+
+        @include border-radius(50%);
+
+        color: $color-blue;
+    }
+
+    &--green {
+        color       : $color-green;
+        border-color: $color-green;
+
+        #{$this}__dismiss {
+            color: $color-green;
+        }
+    }
+
+    &--yellow {
+        color       : $color-lightning-yellow;
+        border-color: $color-lightning-yellow;
+
+        #{$this}__dismiss {
+            color: $color-lightning-yellow;
+        }
+    }
+
+    &--red {
+        color       : $color-red;
+        border-color: $color-red;
+
+        #{$this}__dismiss {
+            color: $color-red;
+        }
+    }
+
+    &-container {
+        display: block;
+        margin : 0 0 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &.ng-hide-add {
+        animation: fadeOut .25s;
+    }
+}

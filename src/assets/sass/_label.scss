@@ -1,0 +1,110 @@
+$this: ".venus.label";
+
+#{$this} {
+    display       : inline-block;
+    vertical-align: baseline;
+    position      : relative;
+
+    padding      : 6px 15px 7px;
+    margin-bottom: 8px;
+    margin-right : 8px;
+
+    @include font-size-label;
+    font-weight: bold;
+    line-height: 1.25;
+
+    text-align     : center;
+    white-space    : nowrap;
+    text-decoration: none;
+
+    color : $color-blue;
+    border: 1px solid $color-blue;
+    @include border-radius(3px);
+
+    background-color: $color-light-blue;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &--small {
+        padding  : 2px 8px 3px;
+        font-size: 11px;
+    }
+
+    &--rounded {
+        background-color: transparent;
+        @include border-radius(20px);
+
+        &#{$this}--small {
+            @include border-radius(10px);
+        }
+    }
+
+    &--add {
+        padding-left: 30px;
+
+        &:before {
+            position: absolute;
+            content : "+";
+
+            top : 8px;
+            left: 10px;
+
+            font-size  : 25px;
+            line-height: .65;
+            font-weight: 100;
+        }
+
+        &#{$this}--small {
+            padding-left: 20px;
+
+            &:before {
+                top : 3.5px;
+                left: 5px;
+
+                font-size: 20px;
+            }
+        }
+    }
+
+    &--dismiss {
+        padding-right: 30px;
+
+        &__close {
+            position: absolute;
+
+            top  : 3px;
+            right: 6px;
+
+            padding: 5px;
+
+            font-size  : 25px;
+            line-height: .65;
+            font-weight: 100;
+
+            background-color: transparent;
+            border          : none;
+            outline         : 0;
+
+            color: $color-blue;
+
+            &:hover {
+                opacity: .85;
+            }
+        }
+
+        &#{$this}--small {
+            padding-right: 20px;
+
+            #{$this}--dismiss__close {
+                top  : 2px;
+                right: 4px;
+
+                padding: 2px;
+
+                font-size: 20px;
+            }
+        }
+    }
+}

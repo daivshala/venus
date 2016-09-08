@@ -1,0 +1,28 @@
+<div class="venus form__custom-select">
+
+    <input type="text"
+           class="venus form__custom-select__input"
+           data-ng-model="ngModel"
+           readonly />
+
+    <div class="venus form__custom-select__toggle"
+         data-ng-class="{
+             'form__custom-select__toggle--active'      : open,
+             'form__custom-select__toggle--placeholder' : !ngModel
+         }"
+         data-ng-click="open = !open">
+        {{ toggleText }}
+    </div>
+
+    <ul class="venus form__custom-select__list"
+        data-ng-show="open">
+
+        <li class="venus form__custom-select__list__option"
+            data-ng-repeat="option in options"
+            data-ng-click="selectOption(option)"
+            data-ng-bind="option[optionsLabel]">
+        </li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,54 @@
+<nav class="venus navbar navbar--fixed-top">
+
+    <div class="venus container large">
+
+        <div class="venus navbar-nav">
+
+            <a class="venus navbar-brand"
+               title="Start"
+               data-ng-click="goTo()">
+                <img class="venus navbar-brand-logo"
+                     width="32" height="32"
+                     data-ng-src="./assets/images/application-logo.svg"
+                     />
+                venus
+                <small>
+                    v2.0.0 beta
+                </small>
+            </a>
+
+            <ul class="venus navbar-menu list">
+
+                <li class="venus list-item dropdown dropdown--right"
+                    data-ng-repeat="item in menu"
+                    data-dropdown id="dropdown{{ item.id }}">
+                    <a class="venus list-item-link dropdown-toggle">
+                       {{ item.title }}
+                    </a>
+                    <ul class="venus dropdown-content">
+                        <li class="venus dropdown-content-item"
+                            data-ng-repeat="subitem in item.items | orderBy: 'title'">
+                            <a class="venus dropdown-content-item-link"
+                               data-ng-click="goTo(item.path + subitem.id)">
+                                {{ subitem.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="venus list-border"></li>
+
+                <li class="venus list-item">
+                    <a class="venus button softed"
+                       data-ng-click="goTo('/updates')">
+                        Updates
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
