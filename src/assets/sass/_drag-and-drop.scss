@@ -24,7 +24,7 @@ $dnd-border-radius: 3px;
         position: relative;
         z-index : 20;
 
-        margin    : 0 0 20px;
+        margin    : 0 0 #{$container-horizontal-padding};
         padding   : 0 0 0 32px;
         min-height: 40px;
 
@@ -72,14 +72,14 @@ $dnd-border-radius: 3px;
         }
 
         &:last-of-type {
-            margin-bottom: 0;
+            margin-bottom: #{$container-horizontal-padding};
         }
 
         &__header,
         &__content,
         &__footer {
-            padding-right: 20px;
-            padding-left : 20px;
+            padding-right: #{$container-horizontal-padding};
+            padding-left : #{$container-horizontal-padding};
         }
 
         &__header {
@@ -103,13 +103,11 @@ $dnd-border-radius: 3px;
     }
 
     &__item + &__sub-items {
-        margin : -21px 0 0 0;
-        padding: 0 0 0 20px;
+        margin : -11px 0 #{$container-horizontal-padding};
+        padding: 0 0 0 #{$container-horizontal-padding};
 
         #{$this} {
             &__item {
-                margin-bottom: 0;
-
                 &:first-of-type {
                     #{$this} {
                         &__item {
@@ -167,7 +165,7 @@ $dnd-border-radius: 3px;
         position: relative;
         z-index : 30;
 
-        padding: 19px 20px;
+        padding: 19px #{$container-horizontal-padding};
 
         font-size     : 14px;
         line-height   : .75;

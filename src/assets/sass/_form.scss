@@ -1,142 +1,76 @@
 $this: ".venus.form";
-#{$this},
-form.venus {
-    .field,
-    .form-field,
-    .form__field {
-        line-height:.5;
-        margin: 20px 0;
+#{$this} {
+    &--with-fields {
+        margin-top   : -#{$container-horizontal-padding};
+        margin-bottom: -#{$container-horizontal-padding};
+    }
 
-        &.large {
-            margin: 40px 0;
-        }
+    &__field {
+        margin     : #{$container-horizontal-padding} 0;
+        line-height: .5;
 
-        &.first,
-        &:first-of-type {
-            margin-top: 0;
-        }
-
-        &.last,
-        &:last-of-type {
-            margin-bottom: 0;
-
-            select,
-            textarea,
-            input[type="text"],
-            input[type="password"],
-            input[type="datetime"],
-            input[type="datetime-local"],
-            input[type="date"],
-            input[type="month"],
-            input[type="time"],
-            input[type="week"],
-            input[type="number"],
-            input[type="email"],
-            input[type="url"],
-            input[type="search"],
-            input[type="tel"],
-            input[type="color"] {
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
+        &--large {
+            margin: #{$container-horizontal-padding * 2} 0;
         }
     }
 
-    .form-label,
-    .form__label {
+    &__label {
         display: inline-block;
-        margin: -5px 0 8px;
+        margin : -5px 0 8px;
 
-        font-size: 13px;
-        line-height: 1;
-        font-weight: 700;
-        color: $color-dark-grey;
+        font-size     : 13px;
+        line-height   : 1;
+        font-weight   : bold;
         text-transform: uppercase;
+
+        color: $color-dark-grey;
 
         &[for] {
             cursor: pointer;
         }
     }
 
-    input {
-        height: 40px;
-
-        &[type="checkbox"],
-        &[type="radio"] {
-            height: 20px;
-        }
-
-        &[type="hidden"] {
-            height: auto;
-        }
-
-        /* Firefox 18- */
-        &:-moz-placeholder {
-           color: $color-light-grey;
-           font-style: italic;
-           font-weight: bold;
-        }
-
-        /* Firefox 19+ */
-        &::-moz-placeholder {
-           color: $color-light-grey;
-           font-style: italic;
-           font-weight: bold;
-        }
-
-        &:-ms-input-placeholder {
-           color: $color-light-grey;
-           font-style: italic;
-           font-weight: bold;
-        }
-    }
-
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    select,
-    textarea,
-    input[type="text"],
-    input[type="password"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="email"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"] {
+    select#{$this}__control,
+    textarea#{$this}__control,
+    &__control[type="text"],
+    &__control[type="password"],
+    &__control[type="datetime"],
+    &__control[type="datetime-local"],
+    &__control[type="date"],
+    &__control[type="month"],
+    &__control[type="time"],
+    &__control[type="week"],
+    &__control[type="number"],
+    &__control[type="email"],
+    &__control[type="url"],
+    &__control[type="search"],
+    &__control[type="tel"],
+    &__control[type="color"] {
         display: block;
+        width  : 100%;
 
-		@include     font-size-default;
-        line-height: 1;
+        padding: $input-padding-base;
+        margin : 0;
 
-		color      : $text-default-color;
-        width      : 100%;
-        padding    : $input-padding-base;
-        margin     : 0 0 20px 0;
-        border     : 1px solid $input-border-color;
-        @include     border-radius(3px);
-        @include     transition;
+        @include     font-size-default;
+        line-height: 1.25;
+        color      : $text-default-color;
 
-        background-color  : $color-white;
-        box-shadow        : none;
-
-        -webkit-box-sizing: border-box;
         -moz-box-sizing   : border-box;
-        -webkit-appearance: none;
+        -webkit-box-sizing: border-box;
         box-sizing        : border-box;
 
+        -webkit-appearance: none;
+
+        background-color: $color-white;
+        box-shadow      : none;
+
+        border : 1px solid $input-border-color;
+        @include border-radius(3px);
+        @include transition;
+
         &::-webkit-input-placeholder {
-            z-index: 99;
+            z-index    : 99;
             line-height: normal;
             @include placeholder-style;
         }
@@ -157,20 +91,20 @@ form.venus {
         }
 
         &:focus {
-            outline: none;
+            outline     : none;
             border-color: $input-border-focus-color;
         }
 
         &.invalid:not(:focus),
         &.ng-invalid.ng-dirty:not(:focus) {
-            color: $input-invalid-text;
+            color       : $input-invalid-text;
             border-color: $input-invalid-border;
         }
 
         &:disabled,
         &.disabled {
-            color: $input-disabled-text;
-            border-color: $input-disabled-border;
+            color           : $input-disabled-text;
+            border-color    : $input-disabled-border;
             background-color: $input-disabled-background;
 
             &::-webkit-input-placeholder {
@@ -191,174 +125,223 @@ form.venus {
         }
     }
 
-    input[type="checkbox"],
-    input[type="radio"] {
-      position: absolute;
-      z-index: 1;
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
-      opacity: 0;
+    &__control {
+        height: $input-height-base;
 
-      &:focus {
-          + .form-label,
-          + .form__label {
-              &:before,
-              &:after {
-                  border-color: $input-border-focus-color;
-              }
-          }
-      }
-
-        + .form-label,
-        + .form__label {
-            display: inline-block;
-            cursor: pointer;
-            position: relative;
-            padding-left: 30px;
-            margin-right: 40px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.4;
-            color: $color-black;
-            text-transform: none;
-
-            &:hover {
-                opacity: 1;
-            }
-
-            &:before,
-            &:after {
-                content: " ";
-                position: absolute;
-                display: inline-block;
-                border: 1px solid $input-border-color;
-                margin-right: 10px;
-                left: 0;
-                bottom: 0;
-                background-color: transparent;
-                @include border-radius(3px);
-                @include transition;
-            }
-
-            &:before {
-                width: 13px;
-                height: 13px;
-                margin: 3px;
-                border-color: transparent;
-            }
-
-            &:after {
-                width: 19px;
-                height: 19px;
-            }
+        &[type="radio"],
+        &[type="checkbox"] {
+            height: 20px;
         }
 
-        &:checked {
-            & + .form-label,
-            & + .form__label {
+        &[type="hidden"] {
+            height: auto;
+        }
+
+        /* Firefox 18- */
+        &:-moz-placeholder {
+           color      : $color-light-grey;
+           font-style : italic;
+           font-weight: bold;
+        }
+
+        /* Firefox 19+ */
+        &::-moz-placeholder {
+           color      : $color-light-grey;
+           font-style : italic;
+           font-weight: bold;
+        }
+
+        &:-ms-input-placeholder {
+           color      : $color-light-grey;
+           font-style : italic;
+           font-weight: bold;
+        }
+
+        &[type=number]::-webkit-inner-spin-button,
+        &[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &[type="checkbox"],
+        &[type="radio"] {
+            position: absolute;
+            z-index : 1;
+            opacity : 0;
+
+            width : 20px;
+            height: 20px;
+
+            cursor: pointer;
+
+            &:focus {
+                + #{$this}__label {
+                    &:before,
+                    &:after {
+                        border-color: $input-border-focus-color;
+                    }
+                }
+            }
+
+            + #{$this}__label {
+                display : inline-block;
+                position: relative;
+
+                padding-left : 30px;
+                margin-right : $input-height-base;
+                margin-bottom: 20px;
+
+                font-size     : 16px;
+                font-weight   : normal;
+                line-height   : 1.4;
+                text-transform: none;
+
+                color: $color-black;
+
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:before,
+                &:after {
+                    content : " ";
+                    position: absolute;
+                    display : inline-block;
+
+                    left  : 0;
+                    bottom: 0;
+
+                    margin-right: 10px;
+
+                    border          : 1px solid $input-border-color;
+                    background-color: transparent;
+
+                    @include border-radius(3px);
+                    @include transition;
+                }
+
                 &:before {
-                    text-align: center;
-                    line-height: 1.4;
-                    background-color: $input-border-focus-color;
-                    border-color: $input-border-focus-color;
-                    @include animation ("scaleUp", .3s, "normal");
+                    width : 13px;
+                    height: 13px;
+                    margin: 3px;
+
+                    border-color: transparent;
                 }
 
                 &:after {
-                    border-color: $input-border-focus-color;
+                    width : 19px;
+                    height: 19px;
+                }
+            }
+
+            &:checked {
+                & + #{$this}__label {
+                    &:before {
+                        line-height: 1.4;
+                        text-align : center;
+
+                        border-color    : $input-border-focus-color;
+                        background-color: $input-border-focus-color;
+
+                        @include animation ("scaleUp", .25s, "normal");
+                    }
+
+                    &:after {
+                        border-color: $input-border-focus-color;
+                    }
+                }
+            }
+
+            &:disabled + #{$this}__label {
+                cursor: default;
+
+                &:after {
+                    cursor: default;
+
+                    border-color    : $color-light-grey;
+                    background-color: $input-disabled-background;
                 }
             }
         }
 
-        &:disabled + .form-label,
-        &:disabled + .form__label {
-            cursor: default;
-
+        &[type="radio"] + #{$this}__label {
+            &:before,
             &:after {
-                background-color: $input-disabled-background;
-                border-color: $color-light-grey;
-                cursor: default;
-            }
-        }
-    }
-
-    input[type="radio"] + .form-label,
-    input[type="radio"] + .form__label {
-        &:before,
-        &:after {
-            @include border-radius(50%);
-        }
-    }
-
-    input[type="checkbox"],
-    input[type="checkbox"] {
-        & + .form-label,
-        & + .form__label {
-            &:before {
-                border: none;
-                margin: 4px;
+                @include border-radius(50%);
             }
         }
 
-        &:checked {
-            & + .form-label,
-            & + .form__label {
+        &[type="checkbox"] {
+            & + #{$this}__label {
                 &:before {
                     border: none;
-                    background-color: transparent;
-                    background-image: url("#{map-get($path-assets, icons)}/icon--check--blue.svg");
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 13px 11px;
+                    margin: 4px;
+                }
+            }
+
+            &:checked {
+                & + #{$this}__label {
+                    &:before {
+                        border: none;
+
+                        background-color   : transparent;
+                        background-image   : url("#{map-get($path-assets, icons)}/icon--check--blue.svg");
+                        background-position: center;
+                        background-repeat  : no-repeat;
+                        background-size    : 13px 11px;
+                    }
                 }
             }
         }
-    }
 
-    // Angular input
-    input.ng-pristine {
-      border: 1px solid $input-border-color;
-      color: $text-default-color;
-    }
+        &.ng-pristine {
+            border: 1px solid $input-border-color;
+            color : $text-default-color;
+        }
 
-    ::-webkit-input-placeholder {
-       color: $color-light-grey;
-       font-style: italic;
-       line-height: 1.45 !important;
+        &::-webkit-input-placeholder {
+            color     : $color-light-grey;
+            font-style: italic;
+        }
     }
 
     select {
         position: relative;
+
+        -moz-appearance   : none;
         -webkit-appearance: none;
-        -moz-appearance: none;
-        background-image: url("#{map-get($path-assets, icons)}/icon--arrow--down.svg");
-        background-repeat: no-repeat;
+
+        background-image   : url("#{map-get($path-assets, icons)}/icon--arrow--down.svg");
+        background-repeat  : no-repeat;
         background-position: 98.5% center;
-        background-size: 9px;
+        background-size    : 9px;
+
+        -moz-background-position: -9999px -9999px;
+
         cursor: pointer;
-        -moz-background-position: -9999px -9999px;
-        -moz-background-position: -9999px -9999px;
+
         padding: 8px;
-        height: 40px;
+
         line-height: 1.15;
 
-        &.disabled,
         &:disabled,
-        &.grey-arrow {
+        &--disabled,
+        &#{$this}__control--grey-arrow {
             background-image: url("#{map-get($path-assets, icons)}/icon--arrow--down--grey.svg");
         }
 
-        &:focus {
+        &:focus,
+        &#{$this}__control--grey-arrow:focus {
             background-image: url("#{map-get($path-assets, icons)}/icon--arrow--down--blue.svg");
         }
     }
 
     textarea {
-        resize: vertical;
+        resize : vertical;
+        height : 140px;
         padding: 8px 10px 6px;
-        height: 140px;
 
         &[rows="2"] {
             height: 60px;
@@ -374,5 +357,13 @@ form.venus {
         }
     }
 
-    @import "_form-input-icon";
+    &__helper {
+        font-size  : 13px;
+        line-height: 1.55;
+
+        margin : 0;
+        padding: 5px 0 6px;
+    }
+
+    @import "_form__control-with-icon";
 }

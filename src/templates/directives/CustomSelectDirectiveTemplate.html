@@ -2,20 +2,28 @@
 
     <input type="text"
            class="venus form__custom-select__input"
+           id="{{ id }}"
            data-ng-model="ngModel"
-           readonly />
+           data-ng-required="ngRequired"
+           data-ng-disabled="ngDisabled" />
 
     <div class="venus form__custom-select__toggle"
          data-ng-class="{
-             'form__custom-select__toggle--active'      : open,
-             'form__custom-select__toggle--placeholder' : !ngModel
+             'form__custom-select__toggle--active'     : open,
+             'form__custom-select__toggle--placeholder': !ngModel,
+             'form__custom-select__toggle--disabled'   : ngDisabled
          }"
-         data-ng-click="open = !open">
+         data-ng-click="toggle()">
         {{ toggleText }}
     </div>
 
     <ul class="venus form__custom-select__list"
         data-ng-show="open">
+
+        <li class="venus form__custom-select__list__option"
+            data-ng-click="selectOption({ optionsValue: false })">
+            {{ placeholder }}
+        </li>
 
         <li class="venus form__custom-select__list__option"
             data-ng-repeat="option in options"

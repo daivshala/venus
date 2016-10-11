@@ -1,0 +1,15 @@
+<select class="venus form__control"
+        name="{{ id }}"
+        id="{{ id }}"
+        data-ng-model="ngModel"
+        data-ng-disabled="ngDisabled"
+        data-ng-required="ngRequired">
+        <option
+            data-ng-if="placeholder">
+        </option>
+        <option
+            data-ng-repeat="option in options | orderBy: [optionsLabel]"
+            data-ng-value="option[optionsValue]">
+            {{ option[optionsLabel] }}
+        </option>
+</select>

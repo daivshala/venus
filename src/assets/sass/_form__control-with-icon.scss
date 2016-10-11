@@ -1,22 +1,23 @@
 /* Input Icon
 -------------------------------------------------------------------------- */
-$this: ".input-with-icon";
+$this: ".venus.form__control-with-icon";
 $input-with-icon-side-padding: 35px;
  #{$this} {
     position: relative;
+    display : block;
 
-    input {
+    .venus.form__control {
         padding-right: $input-with-icon-side-padding;
 
         &:focus {
-            + .venus[class*="icon-"] {
+            + i.venus[class*="icon-"] {
                 color: $input-border-focus-color;
             }
         }
     }
 
-    button,
-    .venus[class*="icon-"] {
+    &__button,
+    i.venus[class*="icon-"] {
         cursor: default;
         position: absolute;
         line-height: 1;
@@ -34,7 +35,7 @@ $input-with-icon-side-padding: 35px;
         @include transition;
     }
 
-    button {
+    &__button {
         cursor: pointer;
 
         &:focus,
@@ -43,28 +44,28 @@ $input-with-icon-side-padding: 35px;
             outline: 0;
             color: $color-blue;
 
-            .venus[class*="icon-"] {
+            i.venus[class*="icon-"] {
                 color: $color-blue;
             }
         }
 
-        .venus[class*="icon-"] {
+        i.venus[class*="icon-"] {
             cursor: pointer;
         }
     }
 
-    &.left {
-        input {
+    &--left {
+        .venus.form__control {
             padding: {
                 right: 10px;
                 left: $input-with-icon-side-padding;
             }
         }
 
-        button,
-        .venus[class*="icon-"] {
+        #{$this}__button,
+        i.venus[class*="icon-"] {
             right: auto;
-            left: 0;
+            left : 0;
             padding: {
                 right: 0;
                 left: 4px;
@@ -76,15 +77,15 @@ $input-with-icon-side-padding: 35px;
 @include phone {
     #{$this} {
         &.hide-icon-mob {
-            input {
+            .venus.form__control {
                 padding: {
                     right: 10px;
-                    left: 10px;
+                    left : 10px;
                 }
             }
 
-            button,
-            .venus[class*="icon-"] {
+            #{$this}__button,
+            i.venus[class*="icon-"] {
                 display: none;
             }
         }

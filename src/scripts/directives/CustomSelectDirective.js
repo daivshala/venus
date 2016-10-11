@@ -1,20 +1,46 @@
 'use strict';
 
 angular.module('venus')
-.directive('customSelect', function () {
+.directive('customSelect', function ($window, $compile, $templateCache) {
     return {
         restrict: 'E',
         scope   : {
             ngModel     : '=',
+            ngDisabled  : '=?',
+            ngRequired  : '=?',
             options     : '=',
             optionsLabel: '@',
             optionsValue: '@?',
-            placeholder : '@?'
+            placeholder : '@?',
+            id          : '@?'
         },
-        link       : function (scope) {
-            scope.open       = false;
-            scope.toggleText = scope.placeholder ? scope.placeholder : null;
+        link       : function (scope, element) {
+            var screenWidth;
+            var template;
+            var templates = {
+                desktop: 'directives/CustomSelectDirectiveTemplate.html',
+                mobile : 'directives/CustomSelectMobileDirectiveTemplate.html'
+            };
 
+            scope.open       = false;
+            scope.toggleText = scope.placeholder ? angular.copy(scope.placeholder) : null;
+
+            /*
+             * Toggle list options visibility
+             */
+            scope.toggle = function () {
+
+                if (scope.ngDisabled) {
+                    return;
+                }
+
+                scope.open = scope.open ? false : true;
+                console.log(scope.ngDisabled);
+            };
+
+            /*
+             * Options dropdown selection
+             */
             scope.selectOption = function (option) {
                 scope.open       = false;
                 scope.toggleText = option[scope.optionsLabel];
@@ -26,7 +52,47 @@ angular.module('venus')
 
                 scope.ngModel = option.id;
             };
+
+            /*
+             * Watch window width to compile right template
+             */
+            scope.chooseTemplate = function () {
+                if (screenWidth !== $window.innerWidth) {
+                    screenWidth = $window.innerWidth;
+
+                    if (screenWidth >= 768 && template !== templates.desktop) {
+                        template = templates.desktop;
+
+                        scope.compile();
+                    }
+
+                    if (screenWidth <= 767 && template !== templates.mobile) {
+                        template = templates.mobile;
+
+                        scope.compile();
+                    }
+                }
+            };
+
+            /*
+             * Compile directive
+             */
+            scope.compile = function () {
+                element.html($templateCache.get(template));
+                $compile(element.contents())(scope);
+            };
+
+            /*
+             * Watch window resize to recompile
+             */
+            angular.element($window).bind('resize', function () {
+                scope.chooseTemplate();
+            });
+
+            /*
+             * First run
+             */
+            scope.chooseTemplate();
         },
-        templateUrl: 'directives/CustomSelectDirectiveTemplate.html'
     };
 });

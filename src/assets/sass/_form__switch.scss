@@ -28,6 +28,7 @@ $this: ".venus.form__switch";
         padding: 0 38px 0 0;
 
         #{$this} {
+            &__check,
             &__slider {
                 right : 0;
                 left  : auto;
@@ -36,7 +37,10 @@ $this: ".venus.form__switch";
     }
 
     &__check {
-        display: none;
+        display : inline-block;
+        position: absolute;
+        top     : -1px;
+        opacity : 0;
 
         &:checked + #{$this}__slider {
             background-color: $color-green;
@@ -52,7 +56,7 @@ $this: ".venus.form__switch";
         }
 
         &:disabled + #{$this}__slider,
-        &.disabled + #{$this}__slider {
+        &--disabled + #{$this}__slider {
             cursor: default;
             background-color: $color-light-grey;
 
@@ -61,17 +65,28 @@ $this: ".venus.form__switch";
                 border-color    : $color-light-grey;
             }
         }
+
+        &:focus,
+        &:active {
+            + #{$this}__slider {
+                box-shadow: 0 0 8px $color-light-grey;
+            }
+        }
+    }
+
+    &__check,
+    &__slider {
+        width : 32px;
+        height: 16px;
+        left  : 0;
     }
 
     &__slider {
         position: absolute;
         cursor  : pointer;
 
-        width : 32px;
-        height: 16px;
         top   : 49%;
         bottom: 0;
-        left  : 0;
 
         -webkit-transform: translateY(-49%);
         -ms-transform    : translateY(-49%);
