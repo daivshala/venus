@@ -21,6 +21,8 @@ $this: ".venus.alert";
 
     animation: fadeIn .5s;
 
+    transition: .15s line-height linear;
+
     &--dismissable {
         padding-right: 30px;
     }
@@ -85,7 +87,8 @@ $this: ".venus.alert";
         }
     }
 
-    &.ng-hide-add {
-        animation: fadeOut .25s;
+    &.ng-hide {
+        line-height: 0;
+        animation  : fadeOut .15s;
     }
 }
