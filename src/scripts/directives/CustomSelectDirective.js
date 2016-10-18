@@ -29,13 +29,11 @@ angular.module('venus')
              * Toggle list options visibility
              */
             scope.toggle = function () {
-
                 if (scope.ngDisabled) {
                     return;
                 }
 
                 scope.open = scope.open ? false : true;
-                console.log(scope.ngDisabled);
             };
 
             /*
