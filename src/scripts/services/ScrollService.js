@@ -3,7 +3,7 @@
 /**
  * Scroll body to top with smooth
  */
-angular.module('venus-docs')
+angular.module('venus')
 .factory('scroll', function ($document) {
     var factory = {};
 

@@ -361,8 +361,25 @@ $this: ".venus.form";
         font-size  : 13px;
         line-height: 1.55;
 
-        margin : 0;
+        margin-top   : 0;
+        margin-bottom: 0;
         padding: 5px 0 6px;
+
+        &--error {
+            color: $color-red;
+            font-style: italic;
+
+            animation : fadeIn .2s;
+            transition: line-height .2s linear;
+
+            &.ng-hide {
+                line-height: 0;
+
+                &-add {
+                    animation: fadeOut .2s;
+                }
+            }
+        }
     }
 
     @import "_form__control-with-icon";
