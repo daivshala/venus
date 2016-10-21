@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('venus')
-.directive('formValidation', function (scroll) {
+.directive('formValidation', function (scroll, $window) {
     return {
         restrict: 'A',
         require : '^form',
@@ -9,8 +9,30 @@ angular.module('venus')
             formValidationOffsetTop: '=?',
         },
         link    : function (scope, element) {
+            // Get body offset top based on device width
+            scope._getOffsetTop = function () {
+                // Large Devices
+                if ($window.innerWidth > 1024) {
+                    return 40;
+
+                } else {
+                    return 80;
+                }
+            };
+
+            // Get element offset top
+            scope._getElementOffsetTop = function (el) {
+                var offsetEl = el.offsetTop;
+
+                if (offsetEl < 0) {
+                    offsetEl = el.parentElement.offsetTop;
+                }
+
+                return offsetEl;
+            };
+
             var form      = element[0];
-            var offsetTop = scope.formValidationOffsetTop || 40;
+            var offsetTop = scope.formValidationOffsetTop || scope._getOffsetTop();
 
             // Wait for submit
             element.bind('submit', function (e) {
@@ -25,9 +47,8 @@ angular.module('venus')
                         // In case of an invalid/required field
                         if (fieldElement.hasClass('ng-invalid-required')) {
                             // Scroll page to the field position
-                            scroll.toTop(
-                                scope._calcOffsetTop(field) - offsetTop
-                            );
+                            var scrollPosition = scope._getElementOffsetTop(field);
+                            scroll.toTop(scrollPosition - offsetTop);
 
                             // Apply focus in field
                             field.focus();
@@ -42,18 +63,6 @@ angular.module('venus')
 
             // Add css class to form
             element.addClass('form--validation');
-
-            // Calc offset top position
-            scope._calcOffsetTop = function (el) {
-                var offsetEl = el.offsetTop;
-
-                if (offsetEl < 0) {
-                    offsetEl = el.parentElement.offsetTop;
-                }
-
-                return offsetEl;
-            };
-
         },
     };
 });
