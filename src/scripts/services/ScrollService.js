@@ -16,7 +16,10 @@ angular.module('venus')
         var offsetTop = offset || 0;
         var body      = $document.find('body');
 
-        body.scrollTop(offsetTop, 800);
+        body.scrollTop(offsetTop, 800)
+        .then(function () {
+            window.scrollTo(0, offsetTop);
+        });
     };
 
     return factory;
