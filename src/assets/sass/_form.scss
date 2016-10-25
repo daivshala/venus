@@ -12,6 +12,7 @@ $this: ".venus.form";
     }
 
     &__field {
+        position   : relative;
         margin     : #{$container-horizontal-padding} 0;
         line-height: .5;
 
@@ -231,8 +232,9 @@ $this: ".venus.form";
                 }
 
                 &:after {
-                    width : 19px;
-                    height: 19px;
+                    width : 20px;
+                    height: 20px;
+                    top: 2px;
                 }
             }
 
@@ -277,7 +279,7 @@ $this: ".venus.form";
             & + #{$this}__label {
                 &:before {
                     border: none;
-                    margin: 4px;
+                    margin: 3px 4px;
                 }
             }
 
@@ -290,7 +292,7 @@ $this: ".venus.form";
                         background-image   : url("#{map-get($path-assets, icons)}/icon--check--blue.svg");
                         background-position: center;
                         background-repeat  : no-repeat;
-                        background-size    : 13px 11px;
+                        background-size    : 14px 11px;
                     }
                 }
             }
@@ -366,8 +368,11 @@ $this: ".venus.form";
         padding: 5px 0 6px;
 
         &--error {
+            position: absolute;
             color: $color-red;
             font-style: italic;
+
+            background-color: $color-white;
 
             animation : fadeIn .2s;
             transition: line-height .2s linear;
