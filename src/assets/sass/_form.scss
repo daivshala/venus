@@ -12,7 +12,6 @@ $this: ".venus.form";
     }
 
     &__field {
-        position   : relative;
         margin     : #{$container-horizontal-padding} 0;
         line-height: .5;
 
@@ -173,6 +172,8 @@ $this: ".venus.form";
             width : 20px;
             height: 20px;
 
+            margin-top: -3px;
+
             cursor: pointer;
 
             &:focus {
@@ -189,12 +190,13 @@ $this: ".venus.form";
                 position: relative;
 
                 padding-left : 30px;
+                margin-top   : 2px;
                 margin-right : $input-height-base;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
 
                 font-size     : 16px;
                 font-weight   : normal;
-                line-height   : 1.4;
+                line-height   : 1.25;
                 text-transform: none;
 
                 color: $color-black;
@@ -211,8 +213,8 @@ $this: ".venus.form";
                     position: absolute;
                     display : inline-block;
 
-                    left  : 0;
                     bottom: 0;
+                    left  : 0;
 
                     margin-right: 10px;
 
@@ -224,17 +226,13 @@ $this: ".venus.form";
                 }
 
                 &:before {
-                    width : 13px;
-                    height: 13px;
-                    margin: 3px;
-
                     border-color: transparent;
                 }
 
                 &:after {
-                    width : 20px;
-                    height: 20px;
-                    top: 2px;
+                    top   : 0;
+                    width : 18px;
+                    height: 18px;
                 }
             }
 
@@ -268,18 +266,41 @@ $this: ".venus.form";
             }
         }
 
-        &[type="radio"] + #{$this}__label {
-            &:before,
-            &:after {
-                @include border-radius(50%);
+        &[type="radio"] {
+            @include border-radius(50%);
+
+            + #{$this}__label {
+                &:before,
+                &:after {
+                    @include border-radius(50%);
+                }
+
+                &:before {
+                    margin: 1px 3px 3px;
+
+                    width : 12px;
+                    height: 12px;
+                }
+            }
+
+            &:focus {
+                + #{$this}__label {
+                    &:before {
+                        border-color: transparent;
+                    }
+                }
             }
         }
 
         &[type="checkbox"] {
-            & + #{$this}__label {
+            + #{$this}__label {
                 &:before {
                     border: none;
                     margin: 3px 4px;
+
+                    width : 13px;
+                    height: 13px;
+                    margin: 2px 0 3px 4px;
                 }
             }
 
@@ -368,7 +389,6 @@ $this: ".venus.form";
         padding: 5px 0 6px;
 
         &--error {
-            position: absolute;
             color: $color-red;
             font-style: italic;
 

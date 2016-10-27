@@ -6,7 +6,7 @@ angular.module('venus')
         restrict: 'E',
         scope   : {
             title       : '@',
-            value       : '@?',
+            value       : '=?',
             prefix      : '@?',
             name        : '@?',
             array       : '=?',
@@ -14,6 +14,7 @@ angular.module('venus')
             ngTrueValue : '=?',
             ngFalseValue: '=?',
             ngRequired  : '=?',
+            ngDisabled  : '=?',
         },
         templateUrl: 'directives/SelectorDirectiveTemplate.html',
         link: function (scope, element) {

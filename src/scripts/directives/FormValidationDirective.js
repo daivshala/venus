@@ -8,7 +8,7 @@ angular.module('venus')
         scope   : {
             formValidationOffsetTop: '=?',
         },
-        link    : function (scope, element) {
+        link    : function (scope, element, attrs, formController) {
             // Get body offset top based on device width
             scope._getOffsetTop = function () {
                 // Large Devices
@@ -22,17 +22,13 @@ angular.module('venus')
 
             // Get element offset top
             scope._getElementOffsetTop = function (el) {
-                var offsetEl = el.offsetTop;
-
-                if (offsetEl < 0) {
-                    offsetEl = el.parentElement.offsetTop;
-                }
-
-                return offsetEl;
+                return el.parentElement.offsetTop;
             };
 
             var form      = element[0];
-            var offsetTop = scope.formValidationOffsetTop || scope._getOffsetTop();
+            var offsetTop = parseInt(scope.formValidationOffsetTop) || scope._getOffsetTop();
+
+            formController.changed = false;
 
             // Wait for submit
             element.bind('submit', function (e) {
@@ -63,6 +59,27 @@ angular.module('venus')
 
             // Add css class to form
             element.addClass('form--validation');
+
+            // Insert event listener in elements to mark form as changed
+            for (var k = 0; k < form.length; k++) {
+                var field = form[k];
+
+                if (k === form.length) {
+                    return;
+                }
+
+                if (angular.isObject(field) && !angular.isArray(field)) {
+                    var fieldElement = angular.element(field);
+
+                    fieldElement.bind('keypress', function () {
+                        formController.changed = true;
+                    });
+
+                    fieldElement.bind('change', function () {
+                        formController.changed = true;
+                    });
+                }
+            }
         },
     };
 });

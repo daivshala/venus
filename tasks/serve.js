@@ -17,6 +17,12 @@ gulp.task('serve', () => {
         injectChanges: true,
         minify: false,
         open: false,
+        ghostMode: {
+            clicks: false,
+            forms: false,
+            scroll: false,
+            code: true
+        },
         server: {
             baseDir: SRC
         }
