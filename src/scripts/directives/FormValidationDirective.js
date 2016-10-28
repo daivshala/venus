@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('venus')
-.directive('formValidation', function (scroll, $window) {
+.directive('formValidation', function ($window, scroll) {
     return {
         restrict: 'A',
         require : '^form',
@@ -25,61 +25,72 @@ angular.module('venus')
                 return el.parentElement.offsetTop;
             };
 
-            var form      = element[0];
-            var offsetTop = parseInt(scope.formValidationOffsetTop) || scope._getOffsetTop();
+            // Insert event listener in elements to mark form as changed
+            scope._childsListen = function (form) {
+                for (var k = 0; k < form.length; k++) {
+                    var field = form[k];
 
-            formController.changed = false;
-
-            // Wait for submit
-            element.bind('submit', function (e) {
-
-                // Verify fields
-                for (var j in form) {
-                    var field = form[j]; // uses native 'focus'
+                    if (k === form.length) {
+                        return;
+                    }
 
                     if (angular.isObject(field) && !angular.isArray(field)) {
-                        var fieldElement = angular.element(field); // uses angular resources
+                        var fieldElement = angular.element(field);
 
-                        // In case of an invalid/required field
-                        if (fieldElement.hasClass('ng-invalid-required')) {
-                            // Scroll page to the field position
-                            var scrollPosition = scope._getElementOffsetTop(field);
-                            scroll.toTop(scrollPosition - offsetTop);
+                        fieldElement.bind('keypress', function () {
+                            formController.changed = true;
+                        });
 
-                            // Apply focus in field
-                            field.focus();
-
-                            // prevent submit
-                            return e.preventDefault();
-                        }
+                        fieldElement.bind('change', function () {
+                            formController.changed = true;
+                        });
                     }
                 }
+            };
 
-            });
+            // Initialize variables
+            scope._init = function () {
+                var form      = element[0];
+                var offsetTop = parseInt(scope.formValidationOffsetTop) || scope._getOffsetTop();
 
-            // Add css class to form
-            element.addClass('form--validation');
+                formController.changed = false;
 
-            // Insert event listener in elements to mark form as changed
-            for (var k = 0; k < form.length; k++) {
-                var field = form[k];
+                // Initialize listener in childs
+                scope._childsListen(form);
 
-                if (k === form.length) {
-                    return;
-                }
+                // Wait for submit
+                element.bind('submit', function (e) {
 
-                if (angular.isObject(field) && !angular.isArray(field)) {
-                    var fieldElement = angular.element(field);
+                    // Verify fields
+                    for (var j in form) {
+                        var field = form[j]; // uses native 'focus'
 
-                    fieldElement.bind('keypress', function () {
-                        formController.changed = true;
-                    });
+                        if (angular.isObject(field) && !angular.isArray(field)) {
+                            var fieldElement = angular.element(field); // uses angular resources
 
-                    fieldElement.bind('change', function () {
-                        formController.changed = true;
-                    });
-                }
-            }
+                            // In case of an invalid/required field
+                            if (fieldElement.hasClass('ng-invalid-required')) {
+                                // Scroll page to the field position
+                                var scrollPosition = scope._getElementOffsetTop(field);
+                                scroll.toTop(scrollPosition - offsetTop);
+
+                                // Apply focus in field
+                                field.focus();
+
+                                // prevent submit
+                                return e.preventDefault();
+                            }
+                        }
+                    }
+
+                });
+
+                // Add css class to form
+                element.addClass('form--validation');
+            };
+
+            // Initialize directive
+            scope._init();
         },
     };
 });
