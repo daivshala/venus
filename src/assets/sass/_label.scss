@@ -53,6 +53,8 @@ $this: ".venus.label";
             bottom: 0;
             left  : 10px;
 
+            transform: translateY(-45%);
+
             width: 12px;
 
             background-image   : url("#{map-get($path-assets, icons)}/icon--plus--blue.svg");
@@ -76,8 +78,7 @@ $this: ".venus.label";
 
     &--add:before,
     &--dismiss__close {
-        top      : 50%;
-        transform: translateY(-45%);
+        top: 50%;
     }
 
     &--dismiss {
@@ -86,7 +87,9 @@ $this: ".venus.label";
         &__close {
             position: absolute;
 
-            right: 6px;
+            right: 2px;
+
+            transform: translateY(-50%);
 
             padding: 5px;
 
@@ -98,7 +101,19 @@ $this: ".venus.label";
             border          : none;
             outline         : 0;
 
-            color: $color-blue;
+            color: transparent;
+
+            right: 2px;
+
+            width : 25px;
+            height: 25px;
+
+            color: transparent;
+
+            background-image   : url("#{map-get($path-assets, icons)}/icon--close--blue.svg");
+            background-repeat  : no-repeat;
+            background-position: center center;
+            background-size    : 10px;
 
             &:hover {
                 opacity: .85;
@@ -109,11 +124,14 @@ $this: ".venus.label";
             padding-right: 20px;
 
             #{$this}--dismiss__close {
-                right: 4px;
+                right: 0;
 
                 padding: 2px;
 
                 font-size: 20px;
+
+                width : 20px;
+                height: 20px;
             }
         }
     }

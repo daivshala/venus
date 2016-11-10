@@ -7,6 +7,7 @@ angular.module('venus')
         require : '^form',
         scope   : {
             formValidationOffsetTop: '=?',
+            formValidationNoScroll : '=?',
         },
         link    : function (scope, element, attrs, formController) {
             // Get body offset top based on device width
@@ -71,8 +72,10 @@ angular.module('venus')
                             // In case of an invalid/required field
                             if (fieldElement.hasClass('ng-invalid-required')) {
                                 // Scroll page to the field position
-                                var scrollPosition = scope._getElementOffsetTop(field);
-                                scroll.toTop(scrollPosition - offsetTop);
+                                if (!scope.formValidationNoScroll) {
+                                    var scrollPosition = scope._getElementOffsetTop(field);
+                                    scroll.toTop(scrollPosition - offsetTop);
+                                }
 
                                 // Apply focus in field
                                 field.focus();
