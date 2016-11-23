@@ -76,7 +76,7 @@ angular.module('venus-docs')
 
     // Select all sessions
     $scope.selectAllSessions = function () {
-        $scope.sessions.map(function (session, index) {
+        $scope.sessions.map(function (session) {
             var hasSession =
                 $scope.selectedSessions.indexOf(
                     session.id.toString()

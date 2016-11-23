@@ -10,6 +10,11 @@ angular.module('venus')
             formValidationNoScroll : '=?',
         },
         link    : function (scope, element, attrs, formController) {
+            // Set form as changed
+            function setFormChanged () {
+                formController.changed = true;
+            }
+
             // Get body offset top based on device width
             scope._getOffsetTop = function () {
                 // Large Devices
@@ -38,13 +43,34 @@ angular.module('venus')
                     if (angular.isObject(field) && !angular.isArray(field)) {
                         var fieldElement = angular.element(field);
 
-                        fieldElement.bind('keypress', function () {
-                            formController.changed = true;
-                        });
+                        fieldElement.bind('keypress', setFormChanged());
+                        fieldElement.bind('change', setFormChanged());
+                    }
+                }
+            };
 
-                        fieldElement.bind('change', function () {
-                            formController.changed = true;
-                        });
+            // Verify fields
+            scope._validateFields = function (form, offsetTop, evt) {
+                for (var j = 0; j < form.length; j++) {
+                    var field = form[j]; // uses native 'focus'
+
+                    if (angular.isObject(field) && !angular.isArray(field)) {
+                        var fieldElement = angular.element(field); // uses angular resources
+
+                        // In case of an invalid/required field
+                        if (fieldElement.hasClass('ng-invalid-required')) {
+                            // Scroll page to the field position
+                            if (!scope.formValidationNoScroll) {
+                                var scrollPosition = scope._getElementOffsetTop(field);
+                                scroll.toTop(scrollPosition - offsetTop);
+                            }
+
+                            // Apply focus in field
+                            field.focus();
+
+                            // prevent submit
+                            return evt.preventDefault();
+                        }
                     }
                 }
             };
@@ -63,28 +89,7 @@ angular.module('venus')
                 element.bind('submit', function (e) {
 
                     // Verify fields
-                    for (var j in form) {
-                        var field = form[j]; // uses native 'focus'
-
-                        if (angular.isObject(field) && !angular.isArray(field)) {
-                            var fieldElement = angular.element(field); // uses angular resources
-
-                            // In case of an invalid/required field
-                            if (fieldElement.hasClass('ng-invalid-required')) {
-                                // Scroll page to the field position
-                                if (!scope.formValidationNoScroll) {
-                                    var scrollPosition = scope._getElementOffsetTop(field);
-                                    scroll.toTop(scrollPosition - offsetTop);
-                                }
-
-                                // Apply focus in field
-                                field.focus();
-
-                                // prevent submit
-                                return e.preventDefault();
-                            }
-                        }
-                    }
+                    scope._validateFields(form, offsetTop, e);
 
                 });
 
