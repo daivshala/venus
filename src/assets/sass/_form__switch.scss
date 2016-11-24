@@ -55,14 +55,22 @@ $this: ".venus.form__switch";
             }
         }
 
-        &:disabled + #{$this}__slider,
-        &--disabled + #{$this}__slider {
-            cursor: default;
-            background-color: $color-light-grey;
+        &:disabled,
+        &--disabled {
+            + #{$this}__slider {
+                cursor: default;
+                background-color: $color-light-grey;
 
-            &:before {
-                background-color: $color-white-smoke;
-                border-color    : $color-light-grey;
+                &:before {
+                    background-color: $color-white-smoke;
+                    border-color    : $color-light-grey;
+                }
+            }
+
+            &:checked {
+                + #{$this}__slider {
+                    background-color: lighten($color-green, 30%);
+                }
             }
         }
 
