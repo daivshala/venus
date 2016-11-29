@@ -3,22 +3,27 @@
 $this: ".venus.navbar";
 #{$this} {
     position: relative;
-    width: 100%;
-    min-height: $navbar-min-height;
-    @include transition();
-    background-color: $color-white;
-    color: $color-blue;
-    -moz-box-shadow: 0 4px 5px -2px rgba($color-black, .1);
-    box-shadow: 0 4px 5px -2px rgba($color-black, .1);
-    @include border-radius(3px);
 
-    &-nav {
+    width     : 100%;
+    min-height: $navbar-min-height;
+
+    background-color: $color-white;
+    color           : $color-blue;
+
+    -moz-box-shadow: 0 4px 5px -2px rgba($color-black, .1);
+    box-shadow     : 4px 5px -2px rgba($color-black, .1);
+
+    @include border-radius(3px);
+    @include transition();
+
+    &__nav {
         float: left;
         width: 100%;
-        margin: 0;
+
+        margin : 0;
         padding: {
-            left: 20px;
-            right: 20px;
+            right: #{$container-horizontal-padding};
+            left : #{$container-horizontal-padding};
         }
 
         &:before {
@@ -26,32 +31,41 @@ $this: ".venus.navbar";
             content: " ";
         }
 
-        #{$this}-brand {
-            color: $color-dark-grey;
+        #{$this}__brand {
             float: left;
+            color: $color-dark-grey;
+
             max-width: 250px;
-            height: $navbar-min-height;
-            padding: 15px 10px;
-            margin-left: -10px;
-            white-space: nowrap;
-            overflow: hidden;
+            height   : $navbar-min-height;
+
+            padding    : 15px 10px;
+            margin-left: -#{$container-horizontal-padding / 2};
+
+            white-space  : nowrap;
+            overflow     : hidden;
             text-overflow: ellipsis;
-            font-size: 27px;
-            line-height: 1.2;
+
+            font-size  : 27px;
+            line-height: 1;
             font-weight: 300;
-            text-decoration: none;
+
             outline: 0;
+            text-decoration: none;
             @include transition;
 
-            &-logo {
-                width: 32px;
+            &__logo {
+                width : 32px;
                 height: 32px;
-                margin: -7px 2px -7px 0;
+
+                margin: -1px 0 0;
+
+                display       : inline-block;
+                vertical-align: middle;
             }
 
-            small {
+            &__slogan {
                 font-size: 50%;
-                opacity: 0.5;
+                opacity  : 0.5;
             }
         }
 
@@ -63,7 +77,7 @@ $this: ".venus.navbar";
             top: 5px;
         }
 
-        #{$this}-menu {
+        #{$this}__menu {
             float: right;
             margin: 0;
             list-style: none !important;
@@ -73,7 +87,7 @@ $this: ".venus.navbar";
                 content: " ";
             }
 
-            &-toggle {
+            &__toggle {
                 display: none;
                 margin: 0;
                 padding: 18px 10px;
@@ -118,7 +132,7 @@ $this: ".venus.navbar";
                 .list-item {
                     padding: 0;
 
-                    &-link {
+                    &__link {
                         padding: 18px 10px;
 
                         &:hover,
@@ -139,13 +153,13 @@ $this: ".venus.navbar";
                 }
             }
 
-            &-user {
+            &__user {
                 max-width: 150px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
 
-                &-avatar {
+                &__avatar {
                     display: inline-block;
                     float: left;
                     width: 32px;
@@ -163,17 +177,17 @@ $this: ".venus.navbar";
         color: $color-white;
 
         #{$this} {
-            &-brand {
+            &__brand {
                 color: $color-white;
             }
         }
 
-        #{$this}-nav {
-            #{$this}-menu-toggle {
+        #{$this}__nav {
+            #{$this}__menu__toggle {
                 color: $color-white;
             }
 
-            #{$this}-menu {
+            #{$this}__menu {
 
                 &.list {
                     .list-border {
@@ -191,10 +205,10 @@ $this: ".venus.navbar";
                     }
                 }
 
-                &-item {
+                &__item {
                     color: $color-white;
 
-                    &-link:not(.button) {
+                    &__link:not(.button) {
                         color: $color-white;
                     }
 
@@ -205,12 +219,12 @@ $this: ".venus.navbar";
                     }
                 }
 
-                &-border {
+                &__border {
                     border-left: 1px solid rgba($color-white, .2);
                 }
 
-                &-user {
-                    &-avatar {
+                &__user {
+                    &__avatar {
                         background-color: $color-white;
                         border-color: $color-white;
                     }
@@ -227,7 +241,7 @@ $this: ".venus.navbar";
         @include border-radius(0);
 
         #{$this} {
-            &-nav {
+            &__nav {
                 padding: {
                     left: 0;
                     right: 0;
@@ -244,11 +258,11 @@ $this: ".venus.navbar";
 
 @include phone {
     #{$this} {
-        &-nav {
+        &__nav {
             #{$this}-menu {
                 display: none;
 
-                &-toggle {
+                &__toggle {
                     display: block;
                 }
             }
