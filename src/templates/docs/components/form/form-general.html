@@ -1,0 +1,319 @@
+
+<form class="venus form form--with-fields"
+      novalidate
+      data-form-validation>
+
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-6">
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                        for="exampleField-01">
+                    Input: Normal
+                </label>
+                <input class="venus form__control"
+                        type="text"
+                        id="exampleField-01"
+                        name="exampleField-01"
+                        placeholder="Your text here..."
+                />
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                        for="exampleField-02">
+                    Input: Error
+                </label>
+                <input class="venus form__control"
+                        type="email"
+                        id="exampleField-02"
+                        name="exampleField-02"
+                        placeholder="Something's wrong..."
+                        data-ng-model="user.email"
+                        data-ng-model-options="{ updateOn: 'blur' }"
+                        required
+                />
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                       for="example-input-with-icon">
+                    Input: with Icon
+                </label>
+
+                <div class="venus form__control-with-icon">
+                    <input class="venus form__control"
+                            type="text"
+                            placeholder="Looking for..."
+                            id="example-input-with-icon"
+                    />
+                    <i class="venus icon-search"></i>
+                </div>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                       for="example-input-with-icon-left">
+                    Input: with Icon left
+                </label>
+
+                <div class="venus form__control-with-icon form__control-with-icon--left">
+                    <input class="venus form__control"
+                            type="text"
+                            placeholder="Search..."
+                            id="example-input-with-icon-left" />
+                    <i class="venus icon-search"></i>
+                </div>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                       for="with-icon-button">
+                    Input: with Icon Button
+                </label>
+                <div class="venus form__control-with-icon">
+                    <input class="venus form__control"
+                        type="search"
+                        data-ng-model="search.request.term"
+                        id="with-icon-button"
+                        placeholder="Hadouken"
+                    />
+                    <button class="venus form__control-with-icon__button" type="submit">
+                        <i class="venus icon-search"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                       for="with-icon-button-left">
+                    Input: with Icon Button Left
+                </label>
+                <div class="venus form__control-with-icon form__control-with-icon--left">
+                    <input class="venus form__control"
+                        type="search"
+                        data-ng-model="search.request.term"
+                        id="with-icon-button-left"
+                        placeholder="Hadouken"
+                    />
+                    <button class="venus form__control-with-icon__button" type="submit">
+                        <i class="venus icon-search"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                        for="exampleField-03">
+                    Input: Disabled
+                </label>
+                <input class="venus form__control"
+                        type="text"
+                        id="exampleField-03"
+                        name="exampleField-03"
+                        placeholder="Your text here..."
+                        disabled
+                />
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                    for="exampleField-04">
+                    Select: Normal
+                </label>
+                <select class="venus form__control" id="exampleField-04">
+                    <option value="1">
+                        Option #1
+                    </option>
+                    <option value="2">
+                        Option #2
+                    </option>
+                    <option value="3">
+                        Option #3
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                    for="exampleField-select-grey">
+                    Select: Grey Arrow
+                </label>
+                <select class="venus form__control form__control--grey-arrow"
+                        id="exampleField-select-grey">
+                    <option value="1">
+                        Option #1
+                    </option>
+                    <option value="2">
+                        Option #2
+                    </option>
+                    <option value="3">
+                        Option #3
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                    for="exampleSelectDisabled">
+                    Select: Disabled
+                </label>
+                <select class="venus form__control" id="exampleSelectDisabled" disabled>
+                    <option>
+                        Option #1
+                    </option>
+                    <option>
+                        Option #2
+                    </option>
+                    <option>
+                        Option #3
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <label class="venus form__label"
+                    for="exampleField-05">
+                    Text Area
+                </label>
+                <textarea class="venus form__control" id="exampleField-05"></textarea>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <div>
+                    <label class="venus form__label">
+                        Radio
+                    </label>
+                </div>
+
+                <br />
+
+                <input class="venus form__control"
+                    type="radio"
+                    id="exampleField-12"
+                    name="radioExample"
+                />
+                <label class="venus form__label"
+                    for="exampleField-12">
+                    One
+                </label>
+
+                <input class="venus form__control"
+                    type="radio"
+                    id="exampleField-13"
+                    name="radioExample"
+                />
+                <label class="venus form__label"
+                    for="exampleField-13">
+                    Two
+                </label>
+
+                <input class="venus form__control"
+                    type="radio"
+                    id="exampleField-14"
+                    name="radioExample"
+                />
+                <label class="venus form__label"
+                    for="exampleField-14">
+                    Three
+                </label>
+
+                <input class="venus form__control"
+                    type="radio"
+                    id="exampleField-15"
+                    name="radioExample"
+                    disabled
+                />
+                <label class="venus form__label"
+                    for="exampleField-15">
+                    Disabled
+                </label>
+
+            </div>
+
+            <div class="venus form__field form__field--large">
+
+                <div>
+                    <label class="venus form__label">
+                        Checkbox
+                    </label>
+                </div>
+
+                <br />
+
+                <input class="venus form__control"
+                        type="checkbox"
+                        id="exampleField-10"
+                        name="exampleField-10"
+                />
+                <label class="venus form__label"
+                        for="exampleField-10">
+                    One
+                </label>
+
+                <input class="venus form__control"
+                        type="checkbox"
+                        id="exampleField-101"
+                        name="exampleField-101"
+                />
+                <label class="venus form__label"
+                        for="exampleField-101">
+                    Two
+                </label>
+
+                <input class="venus form__control"
+                        type="checkbox"
+                        id="exampleField-102"
+                        name="exampleField-102"
+                />
+                <label class="venus form__label"
+                        for="exampleField-102">
+                    Three
+                </label>
+
+                <input class="venus form__control"
+                        type="checkbox"
+                        id="exampleField-11"
+                        name="exampleField-11"
+                        disabled
+                />
+                <label class="venus form__label"
+                        for="exampleField-11">
+                    Disabled
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

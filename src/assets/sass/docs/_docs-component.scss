@@ -5,7 +5,7 @@ $this: ".docs-component";
     position: relative;
     display : block;
 
-    padding: 20px 0 19px;
+    padding: 20px 0;
     margin : 20px 0;
 
     line-height: 1.25;
@@ -17,7 +17,7 @@ $this: ".docs-component";
     }
 
     &__title {
-        margin: -5px 0 27px !important;
+        margin: -5px 0 25px !important;
     }
 
     &__description {
@@ -67,7 +67,7 @@ $this: ".docs-component";
 
             font-size  : 22px;
             line-height: .75;
-            font-weight: bold;
+            font-weight: normal;
 
             padding: 15px 10px;
 

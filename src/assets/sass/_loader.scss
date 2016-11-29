@@ -151,7 +151,7 @@ $this: ".venus.loader";
     }
 }
 
-@include phone {
+@include xs {
     #{$this} {
         &__content {
             &__error {

@@ -7,11 +7,9 @@ $this: ".venus.navbar";
     width     : 100%;
     min-height: $navbar-min-height;
 
-    background-color: $color-white;
     color           : $color-blue;
-
-    -moz-box-shadow: 0 4px 5px -2px rgba($color-black, .1);
-    box-shadow     : 4px 5px -2px rgba($color-black, .1);
+    background-color: $color-white;
+    box-shadow      : 0 0 8px rgba($color-black, .25);
 
     @include border-radius(3px);
     @include transition();
@@ -116,9 +114,14 @@ $this: ".venus.navbar";
                 .list-border,
                 .list-item,
                 .list-item-link {
-                    float: left;
-                    margin: 0;
+                    float : left;
                     height: $navbar-min-height;
+
+                    margin : 0;
+                    padding: {
+                        top   : 18px;
+                        bottom: 18px;
+                    }
                 }
 
                 .list-border {
@@ -256,7 +259,7 @@ $this: ".venus.navbar";
     }
 }
 
-@include phone {
+@include xs {
     #{$this} {
         &__nav {
             #{$this}-menu {

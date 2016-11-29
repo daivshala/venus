@@ -1,0 +1,6 @@
+$this: ".venus.container";
+
+#{$this} {
+    padding-right: #{$container-horizontal-padding};
+    padding-left : #{$container-horizontal-padding};
+}

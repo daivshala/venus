@@ -3,6 +3,21 @@
 angular.module('venus-docs')
 .constant('routes', [
     {
+        id   : 'css',
+        title: 'CSS',
+        path : '/css/',
+        items: [
+            {
+                id   : 'grid',
+                title: 'Flexbox Grid',
+            },
+            {
+                id   : 'form',
+                title: 'Forms',
+            },
+        ]
+    },
+    {
         id   : 'components',
         title: 'Components',
         path : '/components/',
@@ -58,5 +73,5 @@ angular.module('venus-docs')
                 title     : 'Custom Select',
             }
         ]
-    },
+    }
 ]);

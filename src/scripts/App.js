@@ -1,5 +1,7 @@
 'use strict';
 
 angular.module('venus', [
-    'ngAnimate'
+    'ngAnimate',
+    'duScroll',
+    'angular-click-outside',
 ]);

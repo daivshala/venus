@@ -1,51 +1,68 @@
 <nav class="venus navbar navbar--fixed-top">
 
-    <div class="venus container large">
+    <div class="venus container huge">
 
         <div class="venus navbar__nav">
 
-            <a class="venus navbar__brand"
-               title="Start"
-               data-ng-click="goTo()">
-                <img class="venus navbar__brand__logo"
-                     width="32" height="32"
-                     data-ng-src="./assets/images/application-logo.svg"
-                     />
-                venus
-                <small class="venus navbar__brand__slogan">
-                    v2.0.1 beta
-                </small>
-            </a>
+            <div class="row">
 
-            <ul class="venus navbar__menu list">
+                <div class="col-sm-3 col-xs-12">
 
-                <li class="venus list-item dropdown dropdown--right"
-                    data-ng-repeat="item in menu"
-                    data-dropdown id="dropdown{{ item.id }}">
-                    <a class="venus list-item-link dropdown-toggle">
-                       {{ item.title }}
-                    </a>
-                    <ul class="venus dropdown-content">
-                        <li class="venus dropdown-content-item"
-                            data-ng-repeat="subitem in item.items | orderBy: 'title'">
-                            <a class="venus dropdown-content-item-link"
-                               data-ng-click="goTo(item.path + subitem.id)">
-                                {{ subitem.title }}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                    <div class="box">
+                        <a class="venus navbar__brand"
+                           title="Start"
+                           data-ng-click="goTo()">
+                            <img class="venus navbar__brand__logo"
+                                 width="32" height="32"
+                                 data-ng-src="./assets/images/application-logo.svg"
+                                 />
+                            venus
+                            <small class="venus navbar__brand__slogan">
+                                v3.0 beta
+                            </small>
+                        </a>
+                    </div>
 
-                <li class="venus list-border"></li>
+                </div>
 
-                <li class="venus list-item">
-                    <a class="venus button softed"
-                       data-ng-click="goTo('/updates')">
-                        Updates
-                    </a>
-                </li>
+                <div class="col-sm-9 col-xs-12">
 
-            </ul>
+                    <div class="box">
+                        <ul class="venus navbar__menu list">
+
+                            <li class="venus list-item dropdown dropdown--right"
+                                data-ng-repeat="item in menu"
+                                data-dropdown
+                                data-click-outside="closeDropdown();">
+                                <a class="venus list-item-link dropdown-toggle">
+                                   {{ item.title }}
+                                </a>
+                                <ul class="venus dropdown-content">
+                                    <li class="venus dropdown-content-item"
+                                        data-ng-repeat="subitem in item.items | orderBy: 'title'">
+                                        <a class="venus dropdown-content-item-link"
+                                           data-ng-click="goTo(item.path + subitem.id)">
+                                            {{ subitem.title }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="venus list-border"></li>
+
+                            <li class="venus list-item">
+                                <a class="venus button softed"
+                                   data-ng-click="goTo('/updates')">
+                                    Updates
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
