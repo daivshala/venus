@@ -47,25 +47,38 @@ $this: ".venus.label";
         &:before {
             position: absolute;
             content : "+";
+            color   : transparent;
 
-            top : 8px;
-            left: 10px;
+            top   : 0;
+            bottom: 0;
+            left  : 10px;
 
-            font-size  : 25px;
-            line-height: .65;
-            font-weight: 100;
+            transform: translateY(-45%);
+
+            width: 12px;
+
+            background-image   : url("#{map-get($path-assets, icons)}/icon--plus--blue.svg");
+            background-size    : 12px 12px;
+            background-repeat  : no-repeat;
+            background-position: center center;
         }
 
         &#{$this}--small {
             padding-left: 20px;
 
             &:before {
-                top : 3.5px;
                 left: 5px;
 
-                font-size: 20px;
+                width: 11px;
+
+                background-size: 9px 9px;
             }
         }
+    }
+
+    &--add:before,
+    &--dismiss__close {
+        top: 50%;
     }
 
     &--dismiss {
@@ -74,8 +87,9 @@ $this: ".venus.label";
         &__close {
             position: absolute;
 
-            top  : 3px;
-            right: 6px;
+            right: 2px;
+
+            transform: translateY(-50%);
 
             padding: 5px;
 
@@ -87,7 +101,19 @@ $this: ".venus.label";
             border          : none;
             outline         : 0;
 
-            color: $color-blue;
+            color: transparent;
+
+            right: 2px;
+
+            width : 25px;
+            height: 25px;
+
+            color: transparent;
+
+            background-image   : url("#{map-get($path-assets, icons)}/icon--close--blue.svg");
+            background-repeat  : no-repeat;
+            background-position: center center;
+            background-size    : 10px;
 
             &:hover {
                 opacity: .85;
@@ -98,12 +124,14 @@ $this: ".venus.label";
             padding-right: 20px;
 
             #{$this}--dismiss__close {
-                top  : 2px;
-                right: 4px;
+                right: 0;
 
                 padding: 2px;
 
                 font-size: 20px;
+
+                width : 20px;
+                height: 20px;
             }
         }
     }

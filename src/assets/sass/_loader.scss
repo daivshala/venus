@@ -44,7 +44,7 @@ $this: ".venus.loader";
 
             padding: 17px 18px;
 
-            animation: fadeInDown 1s;
+            animation: fadeInDown .5s;
 
             &.ng-hide-add,
             &.ng-leave {
@@ -79,9 +79,9 @@ $this: ".venus.loader";
             line-height: 1.25;
             text-align : center;
 
-            margin-top: 10px;
+            margin: 10px 0;
 
-            animation : fadeInUp 1s;
+            animation : fadeInDown .75s;
 
             &__text {
                 font-size : 16px;
@@ -91,7 +91,7 @@ $this: ".venus.loader";
             &.ng-hide-add,
             &.ng-leave {
                 color    : $color-blue;
-                animation: fadeOutDown .5s;
+                animation: fadeOutUp .75s;
             }
         }
 
@@ -111,7 +111,7 @@ $this: ".venus.loader";
             color           : $color-red;
             background-color: rgba($color-white, .9);
 
-            animation: fadeIn 1.75s;
+            animation: fadeInUp .75s;
 
             &__icon {
                 position: absolute;
@@ -145,7 +145,7 @@ $this: ".venus.loader";
 
             &.ng-hide-add,
             &.ng-leave {
-                animation: fadeOut .5s;
+                animation: fadeOutDown .75s;
             }
         }
     }

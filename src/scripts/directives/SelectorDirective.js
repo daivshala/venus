@@ -6,17 +6,21 @@ angular.module('venus')
         restrict: 'E',
         scope   : {
             title       : '@',
-            value       : '@?',
+            value       : '=?',
             prefix      : '@?',
+            name        : '@?',
             array       : '=?',
             ngModel     : '=?',
             ngTrueValue : '=?',
             ngFalseValue: '=?',
+            ngRequired  : '=?',
+            ngDisabled  : '=?',
         },
+        templateUrl: 'directives/SelectorDirectiveTemplate.html',
         link: function (scope, element) {
-            element.addClass('venus selector');
-
             scope.randomId = Math.random();
+
+            element.addClass('venus selector');
 
             if (scope.array) {
                 var index;
@@ -37,12 +41,17 @@ angular.module('venus')
 
                     if (index > -1) {
                         scope.isChecked = true;
+
+                        return;
                     }
+
+                    scope.isChecked = false;
                 };
 
-                scope.itemChecked();
+                scope.$watch('array', function () {
+                    scope.itemChecked();
+                }, true);
             }
         },
-        templateUrl: 'directives/SelectorDirectiveTemplate.html'
     };
 });

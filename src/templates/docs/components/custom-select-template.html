@@ -26,11 +26,54 @@
 
                     <custom-select
                         data-ng-model="selectedTicket"
+                        data-ng-required="true"
                         data-options="tickets"
                         data-options-label="title"
                         data-options-value="price"
-                        data-placeholder="Select a ticket"
-                        data-required="true">
+                        data-placeholder="Select a ticket">
+                    </custom-select>
+
+                </div>
+
+                <div class="venus form__field">
+
+                    <h6 class="venus">
+                        Ticket Price
+                    </h6>
+                    <div>
+                        {{ selectedTicket | currency: 'R$ ' }}
+                    </div>
+
+                </div>
+
+            </form>
+
+            <br />
+
+        </component>
+
+        <component
+            data-properties="{
+                title      : 'Disabled',
+                templateUrl: 'docs/components/custom-select/custom-select-disabled.html',
+                hideTemplate: true
+            }">
+
+            <form class="venus form">
+
+                <div class="venus form__field">
+
+                    <label class="venus form__label">
+                        Your Wallet
+                    </label>
+
+                    <custom-select
+                        data-ng-model="selectedTicket"
+                        data-ng-disabled="true"
+                        data-options="tickets"
+                        data-options-label="title"
+                        data-options-value="price"
+                        data-placeholder="Select a ticket">
                     </custom-select>
 
                 </div>

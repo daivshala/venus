@@ -3,7 +3,7 @@
 /**
  * Scroll body to top with smooth
  */
-angular.module('venus-docs')
+angular.module('venus')
 .factory('scroll', function ($document) {
     var factory = {};
 
@@ -16,7 +16,10 @@ angular.module('venus-docs')
         var offsetTop = offset || 0;
         var body      = $document.find('body');
 
-        body.scrollTop(offsetTop, 800);
+        body.scrollTop(offsetTop, 800)
+        .then(function () {
+            window.scrollTo(0, offsetTop);
+        });
     };
 
     return factory;

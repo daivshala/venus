@@ -3,7 +3,7 @@
     <div class="venus loader__content">
         <div class="venus container">
             <figure class="venus loader__content__spinner"
-                 data-ng-show="activities.length !== 0 && errors.length === 0">
+                 data-ng-show="activities.length !== 0">
                 <img class="venus loader__content__spinner__image"
                      data-ng-src="./assets/images/loader--spinner.gif"
                      alt="Loading" />
@@ -31,7 +31,7 @@
                 <div data-ng-bind-html="error | unsafe"></div>
                 <button class="venus loader__content__error__icon"
                         data-ng-click="clearError(error)"
-                        title="Fechar Mensagem">
+                        title="Fechar esta mensagem">
                     ×
                 </button>
             </div>

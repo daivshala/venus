@@ -1,11 +1,16 @@
 <div data-ng-if="!array">
     <input type="checkbox"
            class="venus selector__input"
-           id="selector{{ randomId }}"
+           id="selector-{{ randomId }}"
+           name="{{ name }}"
            data-ng-model="$parent.ngModel"
            data-ng-attr-value="{{ value || undefined }}"
+           data-ng-required="ngRequired"
+           data-ng-checked="isChecked"
+           data-is-checked="{{ isChecked }}"
+           data-ng-disabled="ngDisabled"
            />
-    <label for="selector{{ randomId }}"
+    <label for="selector-{{ randomId }}"
            class="venus selector__label">
         <span class="venus selector__label__prefix"
               data-ng-if="prefix">
@@ -18,12 +23,15 @@
 <div data-ng-if="array">
     <input type="checkbox"
            class="venus selector__input"
-           id="selectorArray{{ randomId }}"
+           id="selector-array-{{ randomId }}"
+           name="{{ name }}"
            data-ng-value="{{ value }}"
            data-ng-click="checkArray()"
            data-ng-checked="isChecked"
+           data-is-checked="{{ isChecked }}"
+           data-ng-disabled="ngDisabled"
            />
-    <label for="selectorArray{{ randomId }}"
+    <label for="selector-array-{{ randomId }}"
            class="venus selector__label">
         <span class="venus selector__label__prefix"
               data-ng-if="prefix">

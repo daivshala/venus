@@ -103,16 +103,27 @@
 
             <form class="venus form">
 
-                <div class="venus row">
+                <div class="venus form__field">
+                    <button class="venus link"
+                            data-ng-click="selectAllSessions()">
+                        Select all
+                    </button>
+                </div>
 
-                    <div class="venus column three"
-                         data-ng-repeat="session in sessions">
+                <div class="venus form__field">
 
-                        <selector data-array="selectedSessions"
-                                  data-value="{{ session.id }}"
-                                  data-prefix="{{ session.weekDay | limitTo:3 | uppercase }}"
-                                  data-title="{{ session.date + ' - ' + session.time }}">
-                        </selector>
+                    <div class="venus row">
+
+                        <div class="venus column three"
+                             data-ng-repeat="session in sessions">
+
+                            <selector data-array="selectedSessions"
+                                      data-value="{{ session.id }}"
+                                      data-prefix="{{ session.weekDay | limitTo:3 | uppercase }}"
+                                      data-title="{{ session.date + ' - ' + session.time }}">
+                            </selector>
+
+                        </div>
 
                     </div>
 
