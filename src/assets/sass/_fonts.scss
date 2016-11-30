@@ -17,17 +17,18 @@ body.venus {
 }
 
 // Links
-a.venus:not(.button) {
-  color: $color-blue;
-  text-decoration: none;
-  cursor: pointer;
-  @include transition();
+a.venus:not(.btn) {
+    color : $color-blue;
+    cursor: pointer;
 
-  &.active,
-  &:hover,
-  &:focus {
-    outline: 0;
-  }
+    text-decoration: none;
+    @include transition();
+
+    &.active,
+    &:hover,
+    &:focus {
+        outline: 0;
+    }
 }
 
 .venus.link {

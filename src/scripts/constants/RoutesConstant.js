@@ -15,6 +15,10 @@ angular.module('venus-docs')
                 id   : 'form',
                 title: 'Forms',
             },
+            {
+                id   : 'button',
+                title: 'Buttons',
+            },
         ]
     },
     {

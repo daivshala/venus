@@ -150,7 +150,7 @@ $this: ".venus.navbar";
                         color: $color-blue;
                     }
 
-                    .button {
+                    .btn {
                         margin: 10px 0;
                     }
                 }
@@ -262,7 +262,7 @@ $this: ".venus.navbar";
 @include xs {
     #{$this} {
         &__nav {
-            #{$this}-menu {
+            #{$this}__menu {
                 display: none;
 
                 &__toggle {
