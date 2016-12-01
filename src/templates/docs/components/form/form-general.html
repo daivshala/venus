@@ -1,7 +1,6 @@
 
 <form class="venus form form--with-fields"
-      novalidate
-      data-form-validation>
+      name="general">
 
     <div class="row">
 
@@ -18,24 +17,6 @@
                         id="exampleField-01"
                         name="exampleField-01"
                         placeholder="Your text here..."
-                />
-
-            </div>
-
-            <div class="venus form__field form__field--large">
-
-                <label class="venus form__label"
-                        for="exampleField-02">
-                    Input: Error
-                </label>
-                <input class="venus form__control"
-                        type="email"
-                        id="exampleField-02"
-                        name="exampleField-02"
-                        placeholder="Something's wrong..."
-                        data-ng-model="user.email"
-                        data-ng-model-options="{ updateOn: 'blur' }"
-                        required
                 />
 
             </div>
@@ -206,113 +187,119 @@
 
             </div>
 
-            <div class="venus form__field form__field--large">
-
-                <div>
-                    <label class="venus form__label">
-                        Radio
-                    </label>
-                </div>
-
-                <br />
-
-                <input class="venus form__control"
-                    type="radio"
-                    id="exampleField-12"
-                    name="radioExample"
-                />
-                <label class="venus form__label"
-                    for="exampleField-12">
-                    One
-                </label>
-
-                <input class="venus form__control"
-                    type="radio"
-                    id="exampleField-13"
-                    name="radioExample"
-                />
-                <label class="venus form__label"
-                    for="exampleField-13">
-                    Two
-                </label>
-
-                <input class="venus form__control"
-                    type="radio"
-                    id="exampleField-14"
-                    name="radioExample"
-                />
-                <label class="venus form__label"
-                    for="exampleField-14">
-                    Three
-                </label>
-
-                <input class="venus form__control"
-                    type="radio"
-                    id="exampleField-15"
-                    name="radioExample"
-                    disabled
-                />
-                <label class="venus form__label"
-                    for="exampleField-15">
-                    Disabled
-                </label>
-
-            </div>
-
-            <div class="venus form__field form__field--large">
-
-                <div>
-                    <label class="venus form__label">
-                        Checkbox
-                    </label>
-                </div>
-
-                <br />
-
-                <input class="venus form__control"
-                        type="checkbox"
-                        id="exampleField-10"
-                        name="exampleField-10"
-                />
-                <label class="venus form__label"
-                        for="exampleField-10">
-                    One
-                </label>
-
-                <input class="venus form__control"
-                        type="checkbox"
-                        id="exampleField-101"
-                        name="exampleField-101"
-                />
-                <label class="venus form__label"
-                        for="exampleField-101">
-                    Two
-                </label>
-
-                <input class="venus form__control"
-                        type="checkbox"
-                        id="exampleField-102"
-                        name="exampleField-102"
-                />
-                <label class="venus form__label"
-                        for="exampleField-102">
-                    Three
-                </label>
-
-                <input class="venus form__control"
-                        type="checkbox"
-                        id="exampleField-11"
-                        name="exampleField-11"
-                        disabled
-                />
-                <label class="venus form__label"
-                        for="exampleField-11">
-                    Disabled
-                </label>
-
-            </div>
-
         </div>
+
+    </div>
+
+    <div class="venus form__field form__field--large">
+        <input class="venus form__control"
+            type="radio"
+            id="exampleField-12"
+            name="radioExample"
+        />
+        <label class="venus form__label"
+            for="exampleField-12">
+            Radio
+        </label>
+
+        <input class="venus form__control"
+            type="radio"
+            id="exampleField-13"
+            name="radioExample"
+        />
+        <label class="venus form__label"
+            for="exampleField-13">
+            Radio
+        </label>
+
+        <input class="venus form__control"
+            type="radio"
+            id="exampleField-14"
+            name="radioExample"
+        />
+        <label class="venus form__label"
+            for="exampleField-14">
+            Radio
+        </label>
+
+        <input class="venus form__control"
+            type="radio"
+            id="exampleField-15"
+            name="radioExample"
+            data-ng-disabled="true"
+        />
+        <label class="venus form__label"
+            for="exampleField-15">
+            Disabled
+        </label>
+
+        <input class="venus form__control"
+            type="radio"
+            id="exampleField-152"
+            name="radioExample2"
+            data-ng-checked="true"
+            data-ng-disabled="true"
+        />
+        <label class="venus form__label"
+            for="exampleField-152">
+            Disabled Checked
+        </label>
+
+    </div>
+
+    <div class="venus form__field form__field--large">
+        <input class="venus form__control"
+                type="checkbox"
+                id="exampleField-10"
+                name="exampleField-10"
+        />
+        <label class="venus form__label"
+                for="exampleField-10">
+            Checkbox
+        </label>
+
+        <input class="venus form__control"
+                type="checkbox"
+                id="exampleField-101"
+                name="exampleField-101"
+        />
+        <label class="venus form__label"
+                for="exampleField-101">
+            Checkbox
+        </label>
+
+        <input class="venus form__control"
+                type="checkbox"
+                id="exampleField-102"
+                name="exampleField-102"
+        />
+        <label class="venus form__label"
+                for="exampleField-102">
+            Checkbox
+        </label>
+
+        <input class="venus form__control"
+                type="checkbox"
+                id="exampleField-11"
+                name="exampleField-11"
+                data-ng-disabled="true"
+        />
+        <label class="venus form__label"
+                for="exampleField-11">
+            Disabled
+        </label>
+
+        <input class="venus form__control"
+                type="checkbox"
+                id="exampleField-112"
+                name="exampleField-112"
+                data-ng-checked="true"
+                data-ng-disabled="true"
+        />
+        <label class="venus form__label"
+                for="exampleField-112">
+            Disabled Checked
+        </label>
 
     </div>
 

@@ -10,6 +10,16 @@ angular.module('venus')
             formValidationNoScroll : '=?',
         },
         link    : function (scope, element, attrs, formController) {
+            var excludedInputs   = [
+                'submit',
+                'reset',
+                'button'
+            ];
+            var includedElements = [
+                'TEXTAREA',
+                'SELECT'
+            ];
+
             // Set form as changed
             function setFormChanged () {
                 formController.changed = true;
@@ -28,7 +38,7 @@ angular.module('venus')
 
             // Get element offset top
             scope._getElementOffsetTop = function (el) {
-                return el.parentElement.offsetTop;
+                return el.parentElement.offsetTop + el.offsetTop;
             };
 
             // Insert event listener in elements to mark form as changed
@@ -43,8 +53,13 @@ angular.module('venus')
                     if (angular.isObject(field) && !angular.isArray(field)) {
                         var fieldElement = angular.element(field);
 
-                        fieldElement.bind('keypress', setFormChanged());
-                        fieldElement.bind('change', setFormChanged());
+                        if (fieldElement.type && excludedInputs.indexOf(fieldElement.type) === -1 ||
+                            includedElements.indexOf(fieldElement.tagName) > -1) {
+
+                            fieldElement.on('keypress', setFormChanged());
+                            fieldElement.on('change', setFormChanged());
+                        }
+
                     }
                 }
             };
@@ -61,8 +76,10 @@ angular.module('venus')
                         if (fieldElement.hasClass('ng-invalid-required')) {
                             // Scroll page to the field position
                             if (!scope.formValidationNoScroll) {
-                                var scrollPosition = scope._getElementOffsetTop(field);
-                                scroll.toTop(scrollPosition - offsetTop);
+                                var scrollPosition =
+                                    scope._getElementOffsetTop(field) + form.offsetTop - offsetTop;
+
+                                scroll.toTop(scrollPosition);
                             }
 
                             // Apply focus in field
@@ -86,7 +103,7 @@ angular.module('venus')
                 scope._childsListen(form);
 
                 // Wait for submit
-                element.bind('submit', function (e) {
+                element.on('submit', function (e) {
 
                     // Verify fields
                     scope._validateFields(form, offsetTop, e);

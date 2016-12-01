@@ -4,3 +4,13 @@ $this: ".venus.container";
     padding-right: #{$container-horizontal-padding};
     padding-left : #{$container-horizontal-padding};
 }
+
+
+// Flexgrid override
+$this: ".row";
+
+#{$this} {
+    &[class*="center-"] {
+        text-align: inherit;
+    }
+}
