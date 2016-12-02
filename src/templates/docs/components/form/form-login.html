@@ -1,13 +1,13 @@
 
 <div class="row center-sm center-md">
 
-    <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="col-xs-12 col-sm-4">
 
         <form class="venus form form--with-fields"
               name="login"
               novalidate
               data-form-validation="login"
-              data-ng-submit="login();">
+              data-ng-submit="login.$valid && login()">
 
             <div class="venus form__field">
                 <h5 class="venus">

@@ -3,14 +3,14 @@ $this: ".venus.form__switch";
 #{$this} {
     position  : relative;
     display   : block !important;
-    min-height: 13px;
+    min-height: 30px;
 
-    margin      : 0;
-    padding-left: 38px;
+    margin : 0;
+    padding: 6px 0 6px 60px;
 
     font-size     : 13px;
     font-weight   : 500;
-    line-height   : 1;
+    line-height   : 1.5;
     text-transform: uppercase;
 
     color: $color-dark-grey;
@@ -25,7 +25,8 @@ $this: ".venus.form__switch";
     }
 
     &--right {
-        padding: 0 38px 0 0;
+        padding-right: 60px;
+        padding-left : 0;
 
         #{$this} {
             &__check,

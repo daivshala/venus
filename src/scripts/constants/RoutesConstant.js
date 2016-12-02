@@ -13,11 +13,11 @@ angular.module('venus-docs')
             },
             {
                 id   : 'form',
-                title: 'Forms',
+                title: 'Form',
             },
             {
                 id   : 'button',
-                title: 'Buttons',
+                title: 'Button',
             },
         ]
     },

@@ -7,7 +7,7 @@
               name="register"
               novalidate
               data-form-validation="register"
-              data-ng-submit="register();">
+              data-ng-submit="register.$valid && register()">
 
             <div class="venus form__field">
                 <h5 class="venus">
@@ -174,8 +174,8 @@
                     <div class="venus form__field">
 
                         <label class="venus form__label"
-                               for="register-cellphone">
-                            PRIVADO
+                               for="register-private">
+                            PRIVATE
                         </label>
 
                         <!-- SWITCH -->
