@@ -19,20 +19,9 @@ angular.module('venus-docs')
                 id   : 'button',
                 title: 'Button',
             },
-        ]
-    },
-    {
-        id   : 'components',
-        title: 'Components',
-        path : '/components/',
-        items: [
             {
                 id   : 'icons',
                 title: 'Icons',
-            },
-            {
-                id   : 'switch',
-                title: 'Switch',
             },
             {
                 id   : 'label',
@@ -41,6 +30,21 @@ angular.module('venus-docs')
             {
                 id   : 'divider',
                 title: 'Divider',
+            },
+            {
+                id   : 'drag-and-drop',
+                title: 'Drag & Drop',
+            },
+        ]
+    },
+    {
+        id   : 'components',
+        title: 'Components',
+        path : '/components/',
+        items: [
+            {
+                id   : 'switch',
+                title: 'Switch',
             },
             {
                 id   : 'fieldset',
@@ -53,10 +57,6 @@ angular.module('venus-docs')
             {
                 id   : 'progress-bar',
                 title: 'Progress Bar',
-            },
-            {
-                id   : 'drag-and-drop',
-                title: 'Drag & Drop',
             },
             {
                 id   : 'alert',
@@ -75,7 +75,11 @@ angular.module('venus-docs')
             {
                 id        : 'custom-select',
                 title     : 'Custom Select',
-            }
+            },
+            {
+                id        : 'toggle',
+                title     : 'Toggle',
+            },
         ]
     }
 ]);

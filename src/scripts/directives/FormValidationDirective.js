@@ -32,6 +32,10 @@ angular.module('venus')
 
             // Set form as changed
             function _setFormChanged () {
+                if (formController.changed) {
+                    return;
+                }
+
                 console.info(
                     'VENUS FORM VALIDATION:\nForm marked as CHANGED.\n\n'
                 );
@@ -41,6 +45,10 @@ angular.module('venus')
 
             // Set an element as dirty
             function _setElementDirty (evt) {
+                if (formController[evt.srcElement.name].$dirty) {
+                    return;
+                }
+
                 console.info(
                     'VENUS FORM VALIDATION:\nElement "' +
                     evt.srcElement.name +
@@ -61,7 +69,7 @@ angular.module('venus')
             }
 
             // Insert event listener in elements to mark form as changed
-            scope._childsListen = function (form) {
+            function _childsListen (form) {
                 for (var k = 0; k < form.length; k++) {
                     var field = form[k];
 
@@ -83,10 +91,10 @@ angular.module('venus')
 
                     }
                 }
-            };
+            }
 
             // Verify fields
-            scope._validateFields = function (form, evt) {
+            function _validateFields (form, evt) {
                 for (var j = 0; j < form.length; j++) {
                     var field = form[j]; // uses native 'focus'
 
@@ -97,6 +105,7 @@ angular.module('venus')
                         if (fieldElement.hasClass('ng-invalid-required') ||
                             fieldElement.hasClass('ng-invalid-email') ||
                             fieldElement.hasClass('ng-invalid-email-remove')) {
+
                             // Scroll page to the field position
                             if (!scope.formValidationNoScroll) {
                                 scroll.toTop(
@@ -112,31 +121,31 @@ angular.module('venus')
                         }
                     }
                 }
-            };
+            }
 
             // Initialize variables
-            scope._init = function () {
+            function _init () {
                 var form = element[0];
 
                 formController.changed = false;
 
                 // Initialize listener in childs
-                scope._childsListen(form);
+                _childsListen(form);
 
                 // Wait for submit
                 element.on('submit', function (e) {
 
                     // Verify fields
-                    scope._validateFields(form, e);
+                    _validateFields(form, e);
 
                 });
 
                 // Add css class to form
                 element.addClass('form--validation');
-            };
+            }
 
             // Initialize directive
-            scope._init();
+            _init();
         },
     };
 });

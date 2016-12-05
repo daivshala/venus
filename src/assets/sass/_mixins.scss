@@ -59,8 +59,8 @@
 
 //Forms
 @mixin placeholder-style {
-    font-size  : 14px;
-    font-style : italic;
+    font-size  : 16px;
+    font-style : normal;
     font-weight: normal !important;
 
     color: $input-placeholder-color;

@@ -17,7 +17,6 @@
 // Elements
 @import '_alert';
 @import '_button';
-@import '_button-toggle';
 @import '_divider';
 @import '_drag-and-drop';
 @import '_dropdown';
@@ -35,18 +34,6 @@
 @import '_pagination';
 @import '_progress-bar';
 @import '_table';
+@import '_toggle';
 @import '_tooltip';
 @import '_selector';
-
-.venus {
-    &.rating-bar {
-        display: block;
-        width: 200px;
-        height: 30px;
-        background: $color-black;
-    }
-
-    &.no-scroll {
-        overflow: hidden;
-    }
-}
