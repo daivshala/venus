@@ -34,10 +34,12 @@
                                 data-ng-repeat="item in menu"
                                 data-dropdown
                                 data-click-outside="closeDropdown();">
-                                <a class="venus list-item-link dropdown-toggle">
+                                <a class="venus list-item-link"
+                                   data-ng-class="{ 'dropdown-toggle': item.items.length > 0 }">
                                    {{ item.title }}
                                 </a>
-                                <ul class="venus dropdown-content">
+                                <ul class="venus dropdown-content"
+                                    data-ng-if="item.items.length > 0">
                                     <li class="venus dropdown-content-item"
                                         data-ng-repeat="subitem in item.items | orderBy: 'title'">
                                         <a class="venus dropdown-content-item-link"

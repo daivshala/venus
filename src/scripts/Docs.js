@@ -14,6 +14,14 @@ angular.module('venus-docs', [
             templateUrl: 'docs/updates-template.html',
             controller : 'UpdatesController'
         })
+        .when('/css', {
+            templateUrl: 'docs/css-template.html',
+        })
+        .when('/css/:featureId', {
+            templateUrl: function (urlattr) {
+                return 'docs/css/' + urlattr.featureId + '-template.html';
+            }
+        })
         .when('/components', {
             templateUrl: 'docs/components-template.html',
         })
@@ -23,13 +31,14 @@ angular.module('venus-docs', [
             },
             controller : 'ComponentsGenericController'
         })
-        .when('/css', {
-            templateUrl: 'docs/css-template.html',
+        .when('/services', {
+            templateUrl: 'docs/services-template.html',
         })
-        .when('/css/:featureId', {
+        .when('/services/:serviceId', {
             templateUrl: function (urlattr) {
-                return 'docs/css/' + urlattr.featureId + '-template.html';
-            }
+                return 'docs/services/' + urlattr.serviceId + '-template.html';
+            },
+            controller: 'ServicesGenericController'
         })
         .otherwise({
             redirectTo: '/'

@@ -40,9 +40,10 @@ $dnd-border-radius: 3px;
             position: absolute;
             cursor  : move;
 
-            font-size  : 12px;
-            line-height: .7;
+            font-size  : 16px;
+            line-height: .5;
             text-align : center;
+            letter-spacing: 2px;
 
             color           : rgba($color-black, .25);
             background-color: $color-white-smoke;
@@ -68,7 +69,7 @@ $dnd-border-radius: 3px;
             top      : 50%;
             transform: translateY(-50%);
 
-            padding: 6px 0;
+            padding: 6px 0 6px 2px;
         }
 
         &:last-of-type {
@@ -90,8 +91,8 @@ $dnd-border-radius: 3px;
         }
 
         &__content {
-            padding-top   : 8px;
-            padding-bottom: 10px;
+            padding-top   : 9px;
+            padding-bottom: 9px;
 
             border-top-right-radius   : $dnd-border-radius;
             border-bottom-right-radius: $dnd-border-radius;
@@ -103,8 +104,8 @@ $dnd-border-radius: 3px;
     }
 
     &__item + &__sub-items {
-        margin : -11px 0 #{$container-horizontal-padding};
-        padding: 0 0 0 #{$container-horizontal-padding};
+        margin : -12px 0 #{$container-horizontal-padding};
+        padding: 0 0 0 32px;
 
         #{$this} {
             &__item {
@@ -152,7 +153,7 @@ $dnd-border-radius: 3px;
                     padding-top   : 6px;
                     padding-bottom: 6px;
 
-                    .venus.label {
+                    .venus.tag {
                         margin-top   : 3px;
                         margin-bottom: 3px;
                     }

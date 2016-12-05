@@ -24,8 +24,8 @@ angular.module('venus-docs')
                 title: 'Icons',
             },
             {
-                id   : 'label',
-                title: 'Label',
+                id   : 'tag',
+                title: 'Tag',
             },
             {
                 id   : 'divider',
@@ -34,6 +34,10 @@ angular.module('venus-docs')
             {
                 id   : 'drag-and-drop',
                 title: 'Drag & Drop',
+            },
+            {
+                id   : 'table',
+                title: 'Table',
             },
         ]
     },
@@ -63,23 +67,40 @@ angular.module('venus-docs')
                 title: 'Alert',
             },
             {
-                id        : 'overlay',
-                title     : 'Overlay',
-                controller: 'ComponentOverlayController'
-            },
-            {
                 id        : 'selector',
                 title     : 'Selector',
                 controller: 'ComponentSelectorController'
             },
             {
-                id        : 'custom-select',
-                title     : 'Custom Select',
+                id   : 'custom-select',
+                title: 'Custom Select',
             },
             {
-                id        : 'toggle',
-                title     : 'Toggle',
+                id   : 'toggle',
+                title: 'Toggle',
             },
         ]
-    }
+    },
+    {
+        id   : 'services',
+        title: 'Services',
+        path : '/services/',
+        items: [
+            {
+                id        : 'loader',
+                title     : 'Loader',
+                controller: 'ServiceLoaderController'
+            },
+            {
+                id        : 'overlay',
+                title     : 'Overlay',
+                controller: 'ServiceOverlayController'
+            },
+            // {
+            //     id        : 'scroll',
+            //     title     : 'Scroll',
+            //     controller: 'ServiceScrollController'
+            // },
+        ]
+    },
 ]);

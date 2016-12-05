@@ -199,6 +199,8 @@ $this: ".venus.navbar";
 
                     .list-item,
                     .list-item-link {
+                        color: $color-white;
+
                         &:hover,
                         &:focus,
                         &:active,

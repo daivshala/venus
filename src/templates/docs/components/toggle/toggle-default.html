@@ -4,42 +4,38 @@
     <!-- navigation -->
     <div class="venus toggle__nav">
 
-        <form name="example-form">
+        <input class="venus toggle__radio"
+               type="radio"
+               name="tab"
+               id="tab-left"
+               value="left"
+               data-ng-model="properties.tab" />
+        <label for="tab-left"
+               class="venus toggle__label">
+            Left
+        </label>
 
-            <input class="venus toggle__radio"
-                   type="radio"
-                   name="tab"
-                   id="tab-left"
-                   value="left"
-                   data-ng-model="properties.tab" />
-            <label for="tab-left"
-                   class="venus toggle__label">
-                Left
-            </label>
+        <input class="venus toggle__radio"
+               type="radio"
+               name="tab"
+               id="tab-center"
+               value="center"
+               data-ng-model="properties.tab" />
+        <label for="tab-center"
+               class="venus toggle__label">
+            Center
+        </label>
 
-            <input class="venus toggle__radio"
-                   type="radio"
-                   name="tab"
-                   id="tab-center"
-                   value="center"
-                   data-ng-model="properties.tab" />
-            <label for="tab-center"
-                   class="venus toggle__label">
-                Center
-            </label>
-
-            <input class="venus toggle__radio"
-                   type="radio"
-                   name="tab"
-                   id="tab-right"
-                   value="right"
-                   data-ng-model="properties.tab" />
-            <label for="tab-right"
-                   class="venus toggle__label">
-                Right
-            </label>
-
-        </form>
+        <input class="venus toggle__radio"
+               type="radio"
+               name="tab"
+               id="tab-right"
+               value="right"
+               data-ng-model="properties.tab" />
+        <label for="tab-right"
+               class="venus toggle__label">
+            Right
+        </label>
 
     </div>
     <!-- navigation -->

@@ -1,7 +1,8 @@
 <page-header
     data-properties="{
         title   : 'Custom Select',
-        subtitle: 'Component'
+        subtitle: 'Component',
+        bg      : 'grey',
     }">
 </page-header>
 
@@ -41,7 +42,7 @@
                         Ticket Price
                     </h6>
                     <div>
-                        {{ selectedTicket | currency: 'R$ ' }}
+                        {{ selectedTicket || 0 | currency: 'R$ ' }}
                     </div>
 
                 </div>
@@ -84,7 +85,7 @@
                         Ticket Price
                     </h6>
                     <div>
-                        {{ selectedTicket | currency: 'R$ ' }}
+                        {{ selectedTicket || 0 | currency: 'R$ ' }}
                     </div>
 
                 </div>
