@@ -39,6 +39,10 @@ angular.module('venus-docs')
                 id   : 'table',
                 title: 'Table',
             },
+            {
+                id   : 'navbar',
+                title: 'Navbar',
+            },
         ]
     },
     {

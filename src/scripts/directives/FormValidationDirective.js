@@ -23,7 +23,9 @@ angular.module('venus')
             var excludedInputs   = [
                 'submit',
                 'reset',
-                'button'
+                'button',
+                'file',
+                'range'
             ];
             var includedElements = [
                 'TEXTAREA',

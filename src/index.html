@@ -16,9 +16,10 @@
 
         <loader></loader>
 
-        <navbar></navbar>
-
-        <main data-ng-view></main>
+        <main>
+            <navbar></navbar>
+            <div data-ng-view></div>
+        </main>
 
         <!-- build:js ./scripts/venus-vendors.min.js -->
         <script src="/bower_components/angular/angular.js"></script>
@@ -39,6 +40,7 @@
 
         <script src="/scripts/directives/AlertDirective.js"></script>
         <script src="/scripts/directives/CustomSelectDirective.js"></script>
+        <script src="/scripts/directives/DrawerDirective.js"></script>
         <script src="/scripts/directives/DropdownDirective.js"></script>
         <script src="/scripts/directives/FieldsetAccordionDirective.js"></script>
         <script src="/scripts/directives/LoaderDirective.js"></script>
@@ -63,8 +65,8 @@
         <script src="/scripts/constants/UrlsConstant.js"></script>
         <script src="/scripts/constants/CountriesConstant.js"></script>
 
-        <script src="/scripts/services/FlowService.js"></script>
         <script src="/scripts/services/RouteChangeService.js"></script>
+        <script src="/scripts/services/FlowService.js"></script>
 
         <script src="/scripts/directives/docs/NavbarDirective.js"></script>
         <script src="/scripts/directives/docs/PageHeaderDirective.js"></script>

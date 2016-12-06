@@ -24,7 +24,7 @@ $this: ".venus.list";
     }
 
     &--bulleted {
-        #{$this}-item {
+        #{$this}__item {
             &:before {
                 -webkit-user-select: none;
                 pointer-events: none;
@@ -43,7 +43,7 @@ $this: ".venus.list";
     &--ordered {
         counter-reset: ordered;
 
-        #{$this}-item {
+        #{$this}__item {
             position: relative;
 
             &:before {
@@ -71,20 +71,20 @@ $this: ".venus.list";
         margin-right: -15px;
 
         #{$this} {
-            &-item,
-            &-border {
+            &__item,
+            &__border {
                 display: inline-block;
             }
 
-            &-header,
-            &-item {
+            &__header,
+            &__item {
                 padding-right: 15px;
                 padding-left: 15px;
             }
 
-            &-item {
+            &__item {
 
-                &-link {
+                &__link {
                     margin-left: -15px;
                     margin-right: -15px;
                     padding-right: 15px;
@@ -92,7 +92,7 @@ $this: ".venus.list";
                 }
             }
 
-            &-border {
+            &__border {
                 border-left: 1px solid rgba($color-black, .1);
                 height: 40px;
                 margin: -14px 10px;
@@ -103,18 +103,18 @@ $this: ".venus.list";
 
     &--inverted {
         #{$this} {
-            &-item,
-            &-item-link {
+            &__item,
+            &__item__link {
                 color: $color-white;
             }
 
-            &-item-link {
+            &__item__link {
                 &:hover {
                     color: darken($color-white, 5%);
                 }
             }
 
-            &-border {
+            &__border {
                 border-color: rgba($color-white, .25);
             }
         }
@@ -122,17 +122,17 @@ $this: ".venus.list";
 
     &--divided {
         #{$this} {
-            &-header {
+            &__header {
                 margin-bottom: 0;
                 padding-bottom: 4px;
             }
 
-            &-header,
-            &-item {
+            &__header,
+            &__item {
                 border-bottom: 1px solid $color-light-grey;
             }
 
-            &-item {
+            &__item {
                 &:last-child {
                     border-bottom: none;
                 }
@@ -140,18 +140,18 @@ $this: ".venus.list";
         }
     }
 
-    &--linked {
+    &__linked {
         line-height: .8;
 
         #{$this} {
-            &-item {
+            &__item {
                 padding: 10px 0;
             }
         }
 
         &#{$this}--divided {
             #{$this} {
-                &-item {
+                &__item {
                     margin-top: -1px;
                 }
             }
@@ -162,13 +162,13 @@ $this: ".venus.list";
         line-height: 1.55;
 
         #{$this} {
-            &-item {
+            &__item {
                 padding: 14px 0 15px;
             }
         }
     }
 
-    &-header {
+    &__header {
         margin-top: 30px;
         margin-bottom: 10px;
         color: $color-dark-grey;
@@ -176,7 +176,7 @@ $this: ".venus.list";
         text-transform: uppercase;
     }
 
-    &-item {
+    &__item {
         padding: 4px 0 5px;
 
         &.active,
@@ -189,19 +189,19 @@ $this: ".venus.list";
             color: $color-grey;
             cursor: default;
 
-            #{$this}-item-link {
+            #{$this}__item__link {
                 color: $color-grey;
                 cursor: default;
 
                 &--external {
                     &:after {
-                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--grey.svg");
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external__link--grey.svg");
                     }
                 }
             }
         }
 
-        &-link {
+        &__link {
             display: block;
             margin: -10px;
             padding: 10px;
@@ -233,16 +233,21 @@ $this: ".venus.list";
                     background-size: 16px;
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-image: url("#{map-get($path-assets, icons)}/icon--external-link.svg");
+                    background-image: url("#{map-get($path-assets, icons)}/icon--external__link.svg");
                 }
 
                 &.disabled,
                 &:disabled {
                     &:after {
-                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--grey.svg");
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external__link--grey.svg");
                     }
                 }
             }
+        }
+
+        #{$this} {
+            margin-top : 5px;
+            margin-left: 20px;
         }
     }
 }
