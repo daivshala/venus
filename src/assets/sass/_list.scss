@@ -3,10 +3,12 @@
 $this: ".venus.list";
 #{$this} {
     list-style-type: none;
-    margin: 20px 0;
+
+    margin : 20px 0;
     padding: 0;
-    font-size: 13px;
-    line-height: 1.25;
+
+    font-size  : 14px;
+    line-height: 1.45;
 
     &:first-child {
         margin-top: 0;
@@ -106,11 +108,19 @@ $this: ".venus.list";
             &__item,
             &__item__link {
                 color: $color-white;
+
+                &--external {
+                    &:after {
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--white.svg");
+                    }
+                }
             }
 
             &__item__link {
+                font-weight: 700;
+
                 &:hover {
-                    color: darken($color-white, 5%);
+                    color: darken($color-white, 10%);
                 }
             }
 
@@ -120,7 +130,7 @@ $this: ".venus.list";
         }
     }
 
-    &--divided {
+    &--bordered {
         #{$this} {
             &__header {
                 margin-bottom: 0;
@@ -133,8 +143,19 @@ $this: ".venus.list";
             }
 
             &__item {
+                padding-bottom: 4px;
+
                 &:last-child {
                     border-bottom: none;
+                }
+            }
+
+            #{$this} {
+                &__item {
+                    &:first-child {
+                        border-top : 1px solid $color-light-grey;
+                        padding-top: 4px;
+                    }
                 }
             }
         }
@@ -149,7 +170,7 @@ $this: ".venus.list";
             }
         }
 
-        &#{$this}--divided {
+        &#{$this}--bordered {
             #{$this} {
                 &__item {
                     margin-top: -1px;
@@ -159,25 +180,46 @@ $this: ".venus.list";
     }
 
     &--large {
-        line-height: 1.55;
-
         #{$this} {
             &__item {
-                padding: 14px 0 15px;
+                padding: 15px 0;
+
+                #{$this} {
+                    margin-top   : 15px;
+                    margin-bottom: -15px;
+                }
+            }
+        }
+
+        &#{$this} {
+            &--bordered {
+                #{$this} {
+                    &__item {
+                        padding-bottom: 14px;
+                    }
+
+                    #{$this} {
+                        &__item {
+                            &:first-child {
+                                padding-top: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 
     &__header {
-        margin-top: 30px;
-        margin-bottom: 10px;
+        margin-top   : 15px;
+        margin-bottom: 15px;
         color: $color-dark-grey;
         font-weight: 700;
         text-transform: uppercase;
     }
 
     &__item {
-        padding: 4px 0 5px;
+        padding: 5px 0;
 
         &.active,
         &:focus {
@@ -195,7 +237,7 @@ $this: ".venus.list";
 
                 &--external {
                     &:after {
-                        background-image: url("#{map-get($path-assets, icons)}/icon--external__link--grey.svg");
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--grey.svg");
                     }
                 }
             }
@@ -233,21 +275,24 @@ $this: ".venus.list";
                     background-size: 16px;
                     background-repeat: no-repeat;
                     background-position: center;
-                    background-image: url("#{map-get($path-assets, icons)}/icon--external__link.svg");
+                    background-image: url("#{map-get($path-assets, icons)}/icon--external-link.svg");
                 }
 
                 &.disabled,
                 &:disabled {
                     &:after {
-                        background-image: url("#{map-get($path-assets, icons)}/icon--external__link--grey.svg");
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--grey.svg");
                     }
                 }
             }
         }
 
         #{$this} {
-            margin-top : 5px;
-            margin-left: 20px;
+            margin: 5px 0 -5px 20px;
+        }
+
+        .btn {
+            margin: 4.5px 0;
         }
     }
 }

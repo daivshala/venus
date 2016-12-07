@@ -14,10 +14,15 @@ $this: ".docs-header";
         &#{$this} {
             &__title {
                 margin: 4px 0 0;
+
+                font-weight: 900;
+                text-transform: uppercase;
             }
 
             &__subtitle {
                 margin: 10px 0 7px;
+
+                font-weight: 500;
             }
         }
     }

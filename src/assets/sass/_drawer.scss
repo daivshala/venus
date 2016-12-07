@@ -29,14 +29,6 @@ $this: ".venus.drawer";
         left: 0;
         box-shadow: 2px 0 4px -2px $color-light-grey;
     }
-
-    &__menu {
-        &.list {
-            .list__item {
-                padding: 7px 0 8px;
-            }
-        }
-    }
 }
 
 // Content

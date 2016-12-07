@@ -14,6 +14,8 @@ angular.module('venus-docs')
                         ('bg-' + scope.properties.bg) : 'bg-white-smoke';
 
             element.addClass('docs-header ' + bgClass);
+
+            element.addClass(scope.properties.class);
         }
     };
 });

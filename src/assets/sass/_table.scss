@@ -30,23 +30,16 @@ $this: ".venus.table";
         }
     }
 
-    tbody {
-        tr {
-            &:last-of-type {
-                td {
-                    padding-bottom: 14px;
-                }
-            }
-        }
-    }
-
     tfoot {
         font-weight: 500;
 
         tr {
             &:first-of-type {
-                margin-top: -1px;
                 border-top: 1px solid $color-light-grey;
+
+                td {
+                    padding-top: 13px;
+                }
             }
         }
     }
@@ -104,8 +97,12 @@ $this: ".venus.table";
         }
 
         tfoot {
-            td {
-                padding-top: 4px;
+            tr {
+                &:first-of-type {
+                    td {
+                        padding-top: 4px;
+                    }
+                }
             }
         }
     }

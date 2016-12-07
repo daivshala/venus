@@ -43,6 +43,10 @@ angular.module('venus-docs')
                 id   : 'navbar',
                 title: 'Navbar',
             },
+            {
+                id   : 'lists',
+                title: 'Lists',
+            },
         ]
     },
     {

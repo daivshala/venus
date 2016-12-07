@@ -26,10 +26,6 @@ $this: ".venus.btn";
 
     transition: .15s all linear;
 
-    &:hover {
-        background-color: lighten($color-blue, 3%);
-    }
-
     &.active,
     &:active,
     &:focus {
@@ -43,6 +39,7 @@ $this: ".venus.btn";
         background-image: none;
     }
 
+    &:hover,
     &:active {
         background-color: darken($color-blue, 10%) !important;
     }
@@ -52,6 +49,7 @@ $this: ".venus.btn";
         cursor          : default;
         color           : darken($color-light-grey, 15%) !important;
         background-color: $color-light-grey !important;
+        border-color    : $color-light-grey !important;
 
         &:hover,
         &:active,
@@ -68,14 +66,13 @@ $this: ".venus.btn";
     &--bordered {
         background-color: transparent;
         color           : $color-blue;
-        border          : 2px solid $color-blue;
-
-        padding-top   : 9px;
-        padding-bottom: 10px;
+        border          : 1px solid $color-blue;
+        padding-bottom  : 10px;
 
         &:hover {
             color           : $color-white;
-            background-color: $color-blue;
+            background-color: $color-lochmara;
+            border-color    : $color-lochmara;
         }
 
         &.disabled,
@@ -164,10 +161,7 @@ $this: ".venus.btn";
             color           : $btn_txtColor;
             background-color: $btn_bgColor;
 
-            &:hover {
-                background-color: lighten($btn_bgColor, 8%);
-            }
-
+            &:hover,
             &:active {
                 background-color: darken($btn_bgColor, 10%) !important;
             }
@@ -179,14 +173,14 @@ $this: ".venus.btn";
                     border-color    : $btn_bgColor;
 
                     &:hover,
-                    &:focus,
                     &:active {
-                        color           : $btn_txtColor;
-                        background-color: $btn_bgColor;
+                        color: $btn_txtColor;
                     }
 
+                    &:hover,
+                    &:focus,
                     &:active {
-                        border-color: darken($btn_bgColor, 10%) !important;
+                        border-color: darken($btn_bgColor, 10%);
                     }
                 }
 
@@ -195,7 +189,7 @@ $this: ".venus.btn";
                     background-color: transparent;
 
                     &:hover {
-                        background-color: rgba($color-black, .05);
+                        color: $color-white;
                     }
 
                     &:active {

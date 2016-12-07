@@ -13,4 +13,45 @@ $this: ".docs-css";
             border-radius: 4px;
         }
     }
+
+    &__list-inverted-example {
+        padding: 10px $container-horizontal-padding $container-horizontal-padding;
+        border-radius: 4px;
+
+        &--without-header {
+            padding-top: $container-horizontal-padding;
+        }
+    }
+
+    &__icon {
+        margin : 10px 0;
+        padding: $container-horizontal-padding 0;
+
+        text-align: center;
+
+        transition   : .2s all linear;
+
+        border       : 1px solid transparent;
+        border-radius: 4px;
+
+        .venus[class^="venus icon--"] {
+            display  : block;
+            font-size: 20px;
+            margin   : 2px 0 -2px;
+        }
+
+        code {
+            font-size: 10px;
+        }
+
+        &:hover {
+            color           : $color-blue;
+            border-color    : $color-light-grey;
+            background-color: $color-white-smoke;
+
+            code {
+                font-weight: bold;
+            }
+        }
+    }
 }

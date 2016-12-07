@@ -20,7 +20,8 @@ angular.module('venus-docs', [
         .when('/css/:featureId', {
             templateUrl: function (urlattr) {
                 return 'docs/css/' + urlattr.featureId + '-template.html';
-            }
+            },
+            controller : 'CSSGenericController'
         })
         .when('/components', {
             templateUrl: 'docs/components-template.html',
