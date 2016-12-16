@@ -34,10 +34,13 @@ $this: ".docs-css";
         border       : 1px solid transparent;
         border-radius: 4px;
 
-        .venus[class^="venus icon--"] {
+        i.venus[class^="venus icon-"] {
             display  : block;
-            font-size: 20px;
-            margin   : 2px 0 -2px;
+            margin   : -28px 0;
+
+            &:before {
+                font-size: 60px;
+            }
         }
 
         code {

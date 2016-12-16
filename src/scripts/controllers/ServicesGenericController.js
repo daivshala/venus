@@ -10,7 +10,7 @@ angular.module('venus-docs')
     $scope.error = {
         message: {
             text: 'Example: Something\'s wrong. Please contact our support.',
-            html: '<strong>Example</strong><br />Something\'s wrong.<br />Please contact our support.',
+            html: '<div class="venus loader__content__error__title">Example</div>Something\'s wrong.<br />Please contact our support.',
         },
     };
 

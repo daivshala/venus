@@ -2,7 +2,7 @@
 
 const gulp  = require('gulp'),
       paths = require('./paths'),
-      browserSync = require('browser-sync').create(),
+      browserSync = require('browser-sync').create('venus'),
       SRC   = './src';
 
 
@@ -26,23 +26,6 @@ gulp.task('serve', () => {
         server: {
             baseDir: SRC
         }
-    });
-
-    // On change of files reload
-    gulp.watch([
-        paths.index,
-        paths.js.src,
-        paths.html,
-        paths.htmlDocs
-    ]).on('change', browserSync.reload);
-
-    // On change of files reload
-    gulp.watch([
-        paths.css,
-        paths.sassAll
-    ]).on('change', () => {
-        browserSync.reload('./src/assets/venus.min.css');
-        browserSync.reload('./src/assets/venus-docs.min.css');
     });
 });
 

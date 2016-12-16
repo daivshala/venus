@@ -5,33 +5,45 @@ $this: ".venus.alert";
     position: relative;
 
     display: block;
-    padding: 14px 15px;
+    padding: 15px;
 
     vertical-align: middle;
 
     font-size  : 16px;
-    line-height: 1.25;
-    text-align : center;
+    line-height: 20px;
+    font-weight: normal;
 
+    text-align : left;
+
+    color     : $color-dark-grey;
     background: rgba($color-white, .9);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
 
-    color : $color-blue;
-    border: 1px solid $color-blue;
-    @include border-radius(3px);
-
-    animation: fadeIn .5s;
-
+    animation : fadeIn .5s;
     transition: .15s line-height linear;
+
+    @include border-radius(3px);
 
     &--dismissable {
         padding-right: 30px;
     }
 
+    &__title {
+        color      : $color-blue;
+        font-weight: bold;
+    }
+
+    div#{$this}__title {
+        margin-bottom: 10px;
+    }
+
     &__dismiss {
         position: absolute;
 
-        top  : 15px;
+        top  : 50%;
         right: 13px;
+
+        transform: translateY(-50%);
 
         width  : 20px;
         height : 20px;
@@ -57,36 +69,32 @@ $this: ".venus.alert";
     }
 
     &--green {
-        color       : $color-green;
-        border-color: $color-green;
+        #{$this} {
+            &__title {
+                color: $color-green;
+            }
 
-        #{$this}__dismiss {
-            color: $color-green;
-            background-image: url("#{map-get($path-assets, icons)}/icon--close--green.svg");
-        }
-    }
-
-    &--yellow {
-        color       : $color-lightning-yellow;
-        border-color: $color-lightning-yellow;
-
-        #{$this}__dismiss {
-            color: $color-lightning-yellow;
-            background-image: url("#{map-get($path-assets, icons)}/icon--close--yellow.svg");
+            &__dismiss {
+                color: $color-green;
+                background-image: url("#{map-get($path-assets, icons)}/icon--close--green.svg");
+            }
         }
     }
 
     &--red {
-        color       : $color-red;
-        border-color: $color-red;
+        #{$this} {
+            &__title {
+                color: $color-red;
+            }
 
-        #{$this}__dismiss {
-            color: $color-red;
-            background-image: url("#{map-get($path-assets, icons)}/icon--close--red.svg");
+            &__dismiss {
+                color: $color-red;
+                background-image: url("#{map-get($path-assets, icons)}/icon--close--red.svg");
+            }
         }
     }
 
-    &-container {
+    &__container {
         display: block;
         margin : 0 0 20px;
 
@@ -95,8 +103,31 @@ $this: ".venus.alert";
         }
     }
 
+    &__actions {
+        text-align: right;
+
+        margin: 14px 0 4px 0;
+    }
+
     &.ng-hide {
         line-height: 0;
         animation  : fadeOut .15s;
+    }
+
+    .venus.btn {
+        font-size  : 13px;
+        font-weight: 500;
+
+        min-height : 30px;
+        padding    : 5px 15px;
+        margin-left: 15px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        @include xs {
+            margin-left: 0;
+        }
     }
 }

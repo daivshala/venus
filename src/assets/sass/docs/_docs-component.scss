@@ -91,4 +91,10 @@ $this: ".docs-component";
             }
         }
     }
+
+    &__alert {
+        .venus.alert {
+            margin-bottom: 20px;
+        }
+    }
 }
