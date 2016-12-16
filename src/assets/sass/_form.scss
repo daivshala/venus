@@ -11,28 +11,23 @@ $this: ".venus.form";
         margin-bottom: -#{$container-horizontal-padding};
     }
 
-    &__field {
-        margin     : #{$container-horizontal-padding} 0;
-        line-height: .5;
-
-        &--large {
-            margin: #{$container-horizontal-padding * 2} 0;
-        }
-    }
-
     &__label {
         display: inline-block;
         margin : -5px 0 8px;
 
         font-size     : 13px;
-        line-height   : 1;
-        font-weight   : bold;
+        line-height   : 1.1;
+        font-weight   : 500;
         text-transform: uppercase;
 
         color: $color-dark-grey;
 
         &[for] {
             cursor: pointer;
+        }
+
+        + .venus.form__switch {
+            margin-top: 9px;
         }
     }
 
@@ -58,8 +53,8 @@ $this: ".venus.form";
         padding: $input-padding-base;
         margin : 0;
 
-        @include     font-size-default;
-        color      : $text-default-color;
+        @include font-size-default;
+        color  : $text-default-color;
 
         -moz-box-sizing   : border-box;
         -webkit-box-sizing: border-box;
@@ -74,15 +69,20 @@ $this: ".venus.form";
         @include border-radius(3px);
         @include transition;
 
+        &::placeholder {
+            line-height: normal;
+            @include placeholder-style;
+        }
+
         &::-webkit-input-placeholder {
             z-index    : 99;
             line-height: normal !important;
             @include placeholder-style;
         }
 
-        &:-moz-placeholder {
-            line-height: normal;
-            @include placeholder-style;
+        &::-moz-placeholder {
+            line-height: 2.1;
+           @include placeholder-style;
         }
 
         &:-ms-input-placeholder {
@@ -128,15 +128,6 @@ $this: ".venus.form";
     &__control {
         height: $input-height-base;
 
-        &[type="radio"],
-        &[type="checkbox"] {
-            height: 20px;
-        }
-
-        &[type="hidden"] {
-            height: auto;
-        }
-
         /* Firefox 18- */
         &:-moz-placeholder {
            color      : $color-light-grey;
@@ -157,6 +148,10 @@ $this: ".venus.form";
            font-weight: bold;
         }
 
+        &[type="hidden"] {
+            height: auto;
+        }
+
         &[type=number]::-webkit-inner-spin-button,
         &[type=number]::-webkit-outer-spin-button {
             -webkit-appearance: none;
@@ -169,30 +164,19 @@ $this: ".venus.form";
             z-index : 1;
             opacity : 0;
 
-            width : 20px;
-            height: 20px;
+            width : 22px;
+            height: 22px;
 
-            margin-top: -3px;
+            margin: -1px 0 10px;
 
             cursor: pointer;
-
-            &:focus {
-                + #{$this}__label {
-                    &:before,
-                    &:after {
-                        border-color: $input-border-focus-color;
-                    }
-                }
-            }
 
             + #{$this}__label {
                 display : inline-block;
                 position: relative;
 
-                padding-left : 30px;
-                margin-top   : 2px;
-                margin-right : $input-height-base;
-                margin-bottom: 10px;
+                padding: 0 30px;
+                margin : 0 0 -1px;
 
                 font-size     : 16px;
                 font-weight   : normal;
@@ -221,29 +205,32 @@ $this: ".venus.form";
                     border          : 1px solid $input-border-color;
                     background-color: transparent;
 
+                    box-sizing: border-box;
+
                     @include border-radius(3px);
                     @include transition;
                 }
 
                 &:before {
-                    border-color: transparent;
+                    border: none;
+
+                    width : 15px;
+                    height: 15px;
+
+                    margin: 3px;
                 }
 
                 &:after {
-                    top   : 0;
-                    width : 18px;
-                    height: 18px;
+                    top   : -1px;
+                    width : 21px;
+                    height: 21px;
                 }
             }
 
             &:checked {
                 & + #{$this}__label {
                     &:before {
-                        line-height: 1.4;
-                        text-align : center;
-
-                        border-color    : $input-border-focus-color;
-                        background-color: $input-border-focus-color;
+                        text-align: center;
 
                         @include animation ("scaleUp", .25s, "normal");
                     }
@@ -254,14 +241,30 @@ $this: ".venus.form";
                 }
             }
 
-            &:disabled + #{$this}__label {
+            &:disabled {
                 cursor: default;
 
-                &:after {
+                + #{$this}__label {
                     cursor: default;
+                    color : $color-grey;
 
-                    border-color    : $color-light-grey;
-                    background-color: $input-disabled-background;
+                    &:before,
+                    &:after {
+                        cursor: default;
+                    }
+
+                    &:after {
+                        border-color    : $color-light-grey;
+                        background-color: $input-disabled-background;
+                    }
+                }
+
+                &:checked {
+                    + #{$this}__label {
+                        &:before {
+                            z-index: 1;
+                        }
+                    }
                 }
             }
         }
@@ -274,13 +277,6 @@ $this: ".venus.form";
                 &:after {
                     @include border-radius(50%);
                 }
-
-                &:before {
-                    margin: 1px 3px 3px;
-
-                    width : 12px;
-                    height: 12px;
-                }
             }
 
             &:focus {
@@ -290,31 +286,62 @@ $this: ".venus.form";
                     }
                 }
             }
+
+            &:checked {
+                + #{$this}__label {
+                    &:before {
+                        background-color: $input-border-focus-color;
+                    }
+                }
+
+                &:disabled + #{$this}__label {
+                    &:before {
+                        background-color: $color-light-grey;
+                    }
+                }
+            }
         }
 
         &[type="checkbox"] {
             + #{$this}__label {
                 &:before {
-                    border: none;
-                    margin: 3px 4px;
-
-                    width : 13px;
-                    height: 13px;
-                    margin: 2px 0 3px 4px;
+                    background-image   : none;
+                    background-position: center;
+                    background-repeat  : no-repeat;
+                    background-size    : 15px;
                 }
             }
 
             &:checked {
-                & + #{$this}__label {
+                + #{$this}__label {
                     &:before {
-                        border: none;
-
-                        background-color   : transparent;
-                        background-image   : url("#{map-get($path-assets, icons)}/icon--check--blue.svg");
-                        background-position: center;
-                        background-repeat  : no-repeat;
-                        background-size    : 14px 11px;
+                        background-image: url("#{map-get($path-assets, icons)}/icon--check--blue.svg");
                     }
+                }
+            }
+
+            &:disabled {
+                &:checked + #{$this}__label {
+                    &:before {
+                        background-image: url("#{map-get($path-assets, icons)}/icon--check--grey.svg");
+                    }
+                }
+            }
+
+            &:focus {
+                + #{$this}__label {
+                    &:after {
+                        border-color: $input-border-focus-color;
+                    }
+                }
+
+                &:checked {
+                    + #{$this}__label {
+                        &:after {
+                            border-color: $color-lochmara;
+                        }
+                    }
+
                 }
             }
         }
@@ -380,13 +407,36 @@ $this: ".venus.form";
         }
     }
 
+    &__field {
+        margin     : #{$container-horizontal-padding} 0;
+        line-height: .5;
+
+        &--large {
+            margin: #{$container-horizontal-padding * 2} 0;
+        }
+
+        #{$this} {
+            &__switch {
+                margin-bottom: -1px;
+            }
+
+            &__control {
+                &[type="checkbox"],
+                &[type="radio"] {
+                    + #{$this}__label {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
     &__helper {
         font-size  : 13px;
-        line-height: 1.55;
+        line-height: 1.5;
 
-        margin-top   : 0;
-        margin-bottom: 0;
-        padding: 5px 0 6px;
+        margin : 0 0 -9px;
+        padding: 5px 0;
 
         &--error {
             color: $color-red;

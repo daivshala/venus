@@ -3,25 +3,60 @@
 angular.module('venus-docs')
 .constant('routes', [
     {
-        id   : 'components',
-        title: 'Components',
-        path : '/components/',
+        id   : 'css',
+        title: 'CSS',
+        path : '/css/',
         items: [
+            {
+                id   : 'grid',
+                title: 'Flexbox Grid',
+            },
+            {
+                id   : 'form',
+                title: 'Form',
+            },
+            {
+                id   : 'button',
+                title: 'Button',
+            },
             {
                 id   : 'icons',
                 title: 'Icons',
             },
             {
-                id   : 'switch',
-                title: 'Switch',
-            },
-            {
-                id   : 'label',
-                title: 'Label',
+                id   : 'tag',
+                title: 'Tag',
             },
             {
                 id   : 'divider',
                 title: 'Divider',
+            },
+            {
+                id   : 'drag-and-drop',
+                title: 'Drag & Drop',
+            },
+            {
+                id   : 'table',
+                title: 'Table',
+            },
+            {
+                id   : 'navbar',
+                title: 'Navbar',
+            },
+            {
+                id   : 'lists',
+                title: 'Lists',
+            },
+        ]
+    },
+    {
+        id   : 'components',
+        title: 'Components',
+        path : '/components/',
+        items: [
+            {
+                id   : 'switch',
+                title: 'Switch',
             },
             {
                 id   : 'fieldset',
@@ -36,17 +71,8 @@ angular.module('venus-docs')
                 title: 'Progress Bar',
             },
             {
-                id   : 'drag-and-drop',
-                title: 'Drag & Drop',
-            },
-            {
                 id   : 'alert',
                 title: 'Alert',
-            },
-            {
-                id        : 'overlay',
-                title     : 'Overlay',
-                controller: 'ComponentOverlayController'
             },
             {
                 id        : 'selector',
@@ -54,9 +80,35 @@ angular.module('venus-docs')
                 controller: 'ComponentSelectorController'
             },
             {
-                id        : 'custom-select',
-                title     : 'Custom Select',
-            }
+                id   : 'custom-select',
+                title: 'Custom Select',
+            },
+            {
+                id   : 'toggle',
+                title: 'Toggle',
+            },
+        ]
+    },
+    {
+        id   : 'services',
+        title: 'Services',
+        path : '/services/',
+        items: [
+            {
+                id        : 'loader',
+                title     : 'Loader',
+                controller: 'ServiceLoaderController'
+            },
+            {
+                id        : 'overlay',
+                title     : 'Overlay',
+                controller: 'ServiceOverlayController'
+            },
+            // {
+            //     id        : 'scroll',
+            //     title     : 'Scroll',
+            //     controller: 'ServiceScrollController'
+            // },
         ]
     },
 ]);

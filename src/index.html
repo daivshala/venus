@@ -6,9 +6,6 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="description" content="" />
 
-        <link rel="stylesheet" type="text/css"
-              href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" />
-
         <link rel="icon" sizes="64x64" href="./assets/images/favicon.png" />
 
         <!-- sass compiled styles -->
@@ -19,9 +16,10 @@
 
         <loader></loader>
 
-        <navbar></navbar>
-
-        <main data-ng-view></main>
+        <main>
+            <navbar></navbar>
+            <div data-ng-view></div>
+        </main>
 
         <!-- build:js ./scripts/venus-vendors.min.js -->
         <script src="/bower_components/angular/angular.js"></script>
@@ -29,6 +27,8 @@
 
         <!-- build:js ./scripts/venus.min.js -->
         <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="/bower_components/angular-scroll/angular-scroll.js"></script>
+        <script src="/bower_components/angular-click-outside/clickoutside.directive.js"></script>
         <script src="/scripts/App.js"></script>
         <script src="/scripts/Views.js"></script>
 
@@ -40,6 +40,7 @@
 
         <script src="/scripts/directives/AlertDirective.js"></script>
         <script src="/scripts/directives/CustomSelectDirective.js"></script>
+        <script src="/scripts/directives/DrawerDirective.js"></script>
         <script src="/scripts/directives/DropdownDirective.js"></script>
         <script src="/scripts/directives/FieldsetAccordionDirective.js"></script>
         <script src="/scripts/directives/LoaderDirective.js"></script>
@@ -53,9 +54,6 @@
 
         <!-- build:js ./scripts/venus-docs.min.js -->
         <script src="/bower_components/angular-route/angular-route.js"></script>
-        <script src="/bower_components/angular-ui-utils/ui-utils-ieshiv.js"></script>
-        <script src="/bower_components/angular-ui-utils/ui-utils.js"></script>
-        <script src="/bower_components/angular-scroll/angular-scroll.js"></script>
 
         <script src="/scripts/Docs.js"></script>
         <script src="/scripts/Docs.run.js"></script>
@@ -63,10 +61,9 @@
 
         <script src="/scripts/constants/RoutesConstant.js"></script>
         <script src="/scripts/constants/UrlsConstant.js"></script>
-        <script src="/scripts/constants/CountriesConstant.js"></script>
 
-        <script src="/scripts/services/FlowService.js"></script>
         <script src="/scripts/services/RouteChangeService.js"></script>
+        <script src="/scripts/services/FlowService.js"></script>
 
         <script src="/scripts/directives/docs/NavbarDirective.js"></script>
         <script src="/scripts/directives/docs/PageHeaderDirective.js"></script>
@@ -74,8 +71,9 @@
         <script src="/scripts/directives/docs/ComponentDirective.js"></script>
 
         <script src="/scripts/controllers/MainController.js"></script>
-        <script src="/scripts/controllers/UpdatesController.js"></script>
         <script src="/scripts/controllers/ComponentsGenericController.js"></script>
+        <script src="/scripts/controllers/CSSGenericController.js"></script>
+        <script src="/scripts/controllers/ServicesGenericController.js"></script>
 
         <script src="./scripts/libs/prism.js"></script>
         <script src="./scripts/libs/prism-config.js"></script>

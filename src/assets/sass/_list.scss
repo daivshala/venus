@@ -3,10 +3,12 @@
 $this: ".venus.list";
 #{$this} {
     list-style-type: none;
-    margin: 20px 0;
+
+    margin : 20px 0;
     padding: 0;
-    font-size: 13px;
-    line-height: 1.25;
+
+    font-size  : 14px;
+    line-height: 1.45;
 
     &:first-child {
         margin-top: 0;
@@ -24,7 +26,7 @@ $this: ".venus.list";
     }
 
     &--bulleted {
-        #{$this}-item {
+        #{$this}__item {
             &:before {
                 -webkit-user-select: none;
                 pointer-events: none;
@@ -43,7 +45,7 @@ $this: ".venus.list";
     &--ordered {
         counter-reset: ordered;
 
-        #{$this}-item {
+        #{$this}__item {
             position: relative;
 
             &:before {
@@ -71,20 +73,20 @@ $this: ".venus.list";
         margin-right: -15px;
 
         #{$this} {
-            &-item,
-            &-border {
+            &__item,
+            &__border {
                 display: inline-block;
             }
 
-            &-header,
-            &-item {
+            &__header,
+            &__item {
                 padding-right: 15px;
                 padding-left: 15px;
             }
 
-            &-item {
+            &__item {
 
-                &-link {
+                &__link {
                     margin-left: -15px;
                     margin-right: -15px;
                     padding-right: 15px;
@@ -92,7 +94,7 @@ $this: ".venus.list";
                 }
             }
 
-            &-border {
+            &__border {
                 border-left: 1px solid rgba($color-black, .1);
                 height: 40px;
                 margin: -14px 10px;
@@ -103,55 +105,74 @@ $this: ".venus.list";
 
     &--inverted {
         #{$this} {
-            &-item,
-            &-item-link {
+            &__item,
+            &__item__link {
                 color: $color-white;
-            }
 
-            &-item-link {
-                &:hover {
-                    color: darken($color-white, 5%);
+                &--external {
+                    &:after {
+                        background-image: url("#{map-get($path-assets, icons)}/icon--external-link--white.svg");
+                    }
                 }
             }
 
-            &-border {
+            &__item__link {
+                font-weight: 700;
+
+                &:hover {
+                    color: darken($color-white, 10%);
+                }
+            }
+
+            &__border {
                 border-color: rgba($color-white, .25);
             }
         }
     }
 
-    &--divided {
+    &--bordered {
         #{$this} {
-            &-header {
+            &__header {
                 margin-bottom: 0;
                 padding-bottom: 4px;
             }
 
-            &-header,
-            &-item {
+            &__header,
+            &__item {
                 border-bottom: 1px solid $color-light-grey;
             }
 
-            &-item {
+            &__item {
+                padding-bottom: 4px;
+
                 &:last-child {
                     border-bottom: none;
+                }
+            }
+
+            #{$this} {
+                &__item {
+                    &:first-child {
+                        border-top : 1px solid $color-light-grey;
+                        padding-top: 4px;
+                    }
                 }
             }
         }
     }
 
-    &--linked {
+    &__linked {
         line-height: .8;
 
         #{$this} {
-            &-item {
+            &__item {
                 padding: 10px 0;
             }
         }
 
-        &#{$this}--divided {
+        &#{$this}--bordered {
             #{$this} {
-                &-item {
+                &__item {
                     margin-top: -1px;
                 }
             }
@@ -159,25 +180,46 @@ $this: ".venus.list";
     }
 
     &--large {
-        line-height: 1.55;
-
         #{$this} {
-            &-item {
-                padding: 14px 0 15px;
+            &__item {
+                padding: 15px 0;
+
+                #{$this} {
+                    margin-top   : 15px;
+                    margin-bottom: -15px;
+                }
+            }
+        }
+
+        &#{$this} {
+            &--bordered {
+                #{$this} {
+                    &__item {
+                        padding-bottom: 14px;
+                    }
+
+                    #{$this} {
+                        &__item {
+                            &:first-child {
+                                padding-top: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 
-    &-header {
-        margin-top: 30px;
-        margin-bottom: 10px;
+    &__header {
+        margin-top   : 15px;
+        margin-bottom: 15px;
         color: $color-dark-grey;
         font-weight: 700;
         text-transform: uppercase;
     }
 
-    &-item {
-        padding: 4px 0 5px;
+    &__item {
+        padding: 5px 0;
 
         &.active,
         &:focus {
@@ -189,7 +231,7 @@ $this: ".venus.list";
             color: $color-grey;
             cursor: default;
 
-            #{$this}-item-link {
+            #{$this}__item__link {
                 color: $color-grey;
                 cursor: default;
 
@@ -201,7 +243,7 @@ $this: ".venus.list";
             }
         }
 
-        &-link {
+        &__link {
             display: block;
             margin: -10px;
             padding: 10px;
@@ -243,6 +285,14 @@ $this: ".venus.list";
                     }
                 }
             }
+        }
+
+        #{$this} {
+            margin: 5px 0 -5px 20px;
+        }
+
+        .btn {
+            margin: 4.5px 0;
         }
     }
 }

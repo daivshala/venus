@@ -1,60 +1,109 @@
-// Table
-.venus {
-  &.table-list {
+$this: ".venus.table";
+
+#{$this} {
     width: 100%;
-    display: table;
-    .table-row-group {
-      display: table-row-group;
-      &:nth-child(2n+0) {
-        background-color: $ice;
-      }
+    border-collapse: collapse;
+
+    th,
+    td {
+        font-size  : 16px;
+        line-height: 1.35;
+        padding: 14px $container-horizontal-padding 15px;
     }
-    .table-row {
-      display: table-row;
-      position: relative;
-      width: 100%;
-    }
-    .table-cell {
-      display: table-cell;
-      &.rowspaned {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        display: block;
-      }
-    }
-  }
-  &.table {
-    width: 100%;
-    td, th {
-      padding: 20px 10px;
-    }
+
     th {
-      text-align: left;
-      color: #7A8085;
-      font-weight: bold;
+        color: $color-grey;
+
+        font-size  : 14px;
+        line-height: 1.45;
+        font-weight: 500;
+
+        text-align    : left;
+        text-transform: uppercase;
     }
-    thead,
-    tr.head {
-      tr {
-        border-top: 1px solid #D4D7D9;
-        border-bottom: 1px solid #D4D7D9;
-        font-size: 12px;
-        font-size: 0.75rem;
-        color: #7A8085;
-        font-weight: bold;
-        th {
-          text-align: left;
-          color: #7A8085;
-          font-weight: bold;
+
+    thead {
+        tr {
+            &:last-of-type {
+                border-bottom: 1px solid $color-light-grey;
+            }
         }
-      }
     }
-    tr {
-      &:nth-child(2n+0) {
-        background-color: $ice;
-      }
+
+    tfoot {
+        font-weight: 500;
+
+        tr {
+            &:first-of-type {
+                border-top: 1px solid $color-light-grey;
+
+                td {
+                    padding-top: 13px;
+                }
+            }
+        }
     }
-  }
+
+    &--striped {
+        tbody {
+            tr:nth-child(even) {
+                background-color: $color-white-smoke;
+            }
+        }
+    }
+
+    &--hover {
+        tbody {
+            tr:hover {
+                background-color: $color-white-smoke;
+            }
+        }
+
+        &#{$this}--striped {
+            tbody {
+                tr:nth-child(even) {
+                    &:hover {
+                        box-shadow: 0 0 8px -2px $color-light-grey inset;
+                    }
+                }
+            }
+        }
+    }
+
+    &--condensed {
+        th,
+        td {
+            padding: 5px #{$container-horizontal-padding / 2} 4px;
+        }
+
+        thead th {
+            font-size  : 13px;
+            line-height: 1.55;
+        }
+
+        td {
+            font-size  : 14px;
+            line-height: 1.5;
+        }
+
+        tbody {
+            tr {
+                &:last-of-type {
+                    td {
+                        padding-bottom: 4px;
+                    }
+                }
+            }
+        }
+
+        tfoot {
+            tr {
+                &:first-of-type {
+                    td {
+                        padding-top: 4px;
+                    }
+                }
+            }
+        }
+    }
 }

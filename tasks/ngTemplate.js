@@ -1,16 +1,18 @@
 'use strict';
 
-const gulp    = require('gulp'),
-      paths   = require('./paths'),
-      htmlmin = require('gulp-htmlmin'),
+const gulp       = require('gulp'),
+      paths      = require('./paths'),
+      htmlmin    = require('gulp-htmlmin'),
       ngtemplate = require('gulp-ng-template'),
-      DEST    = './src/scripts/';
+      DEST       = './src/scripts/';
 
 
 /**
  * Compile HTML templates with $templateCache task
  */
 gulp.task('ng-template', () => {
+    var browserSync = require('browser-sync').get('venus');
+
     gulp.src(paths.htmlDocs)
         .pipe(htmlmin({
             collapseWhitespace       : false,
@@ -25,7 +27,8 @@ gulp.task('ng-template', () => {
             prefix    : 'docs/',
             filePath  : 'DocsViews.js'
         }))
-        .pipe(gulp.dest(DEST));
+        .pipe(gulp.dest(DEST))
+        .pipe(browserSync.stream());
 
     return gulp.src(paths.html)
         .pipe(htmlmin({
@@ -41,5 +44,6 @@ gulp.task('ng-template', () => {
             prefix    : '',
             filePath  : 'Views.js'
         }))
-        .pipe(gulp.dest(DEST));
+        .pipe(gulp.dest(DEST))
+        .pipe(browserSync.stream());
 });

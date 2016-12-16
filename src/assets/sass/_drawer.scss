@@ -1,0 +1,41 @@
+// Drawer
+$this: ".venus.drawer";
+
+#{$this} {
+    position: fixed;
+    z-index : 1030;
+
+    top   : 0;
+    left  :-300px;
+
+    width : 300px;
+    height: 100%;
+
+    background: $color-white-smoke;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: $container-horizontal-padding;
+
+    -webkit-overflow-scrolling: touch;
+
+    transition: .2s left linear;
+    animation : fadeInLeft;
+
+    border-right: 1px solid $color-light-grey;
+
+    &.active {
+        left: 0;
+        box-shadow: 2px 0 4px -2px $color-light-grey;
+    }
+}
+
+// Content
+$this: ".venus.content";
+
+#{$this} {
+    &.active {
+        margin-left: 300px;
+    }
+}

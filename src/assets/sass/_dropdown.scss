@@ -25,12 +25,12 @@ $this: ".venus.dropdown";
     }
 
     &.active {
-        #{$this}-content {
+        #{$this}__content {
             display: block;
         }
     }
 
-    &-content {
+    &__content {
         display: none;
         position: absolute;
         z-index: 99;
@@ -73,13 +73,13 @@ $this: ".venus.dropdown";
             top: -9px;
         }
 
-        &-item {
+        &__item {
             margin: 0;
             padding: 10.5px 15px;
             float: none;
             color: $color-black;
 
-            &-link {
+            &__link {
                 display: block;
                 padding: 10.5px 15px;
                 margin: -10.5px -15px;
@@ -97,8 +97,8 @@ $this: ".venus.dropdown";
 
     &--medium {
         #{$this} {
-            &-content,
-            &+#{$this}-content {
+            &__content,
+            &+#{$this}__content {
                 width: 200px;
             }
         }
@@ -106,7 +106,7 @@ $this: ".venus.dropdown";
 
     &--large {
         #{$this} {
-            &-content {
+            &__content {
                 width: 250px;
             }
         }
@@ -118,12 +118,12 @@ $this: ".venus.dropdown";
             right: 10px;
         }
 
-        > .dropdown-toggle {
+        > .dropdown__toggle {
             padding-right: 25px !important;
         }
 
         #{$this} {
-            &-content {
+            &__content {
                 left: auto;
                 right: 0;
 

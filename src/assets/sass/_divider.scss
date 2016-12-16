@@ -4,7 +4,7 @@ $this: ".venus.divider";
     margin: 10px 0;
     height: 0;
 
-    line-height   : .65;
+    line-height   : .5;
     text-transform: uppercase;
 
     border: 0;
@@ -46,7 +46,7 @@ $this: ".venus.divider";
     }
 
     .venus {
-        &.label {
+        &.tag {
             margin: 0 -1px;
         }
     }

@@ -54,18 +54,16 @@
 }
 
 @mixin font-family-default {
-  font-family: "Lato", Helvetica Neue, Arial, sans-serif;
+  font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
 }
 
 //Forms
-@mixin font-size-placeholder {
-  font-size: 14px;
-}
-
 @mixin placeholder-style {
-  color: $input-placeholder-color;
-  @include font-size-placeholder;
-  font-style: italic;
+    font-size  : 16px;
+    font-style : normal;
+    font-weight: normal !important;
+
+    color: $input-placeholder-color;
 }
 
 @mixin font-size-alerts {
@@ -79,7 +77,6 @@
 @mixin font-size-pagination {
   font-size: 14px;
 }
-
 
 // Transition
 @mixin transition ($time: .25s) {

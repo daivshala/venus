@@ -1,7 +1,8 @@
 <page-header
     data-properties="{
         title   : 'Switch',
-        subtitle: 'Component'
+        subtitle: 'Component',
+        bg      : 'grey',
     }">
 </page-header>
 
@@ -11,7 +12,7 @@
 
         <div class="venus row">
 
-            <div class="venus column six">
+            <div class="venus col-md-6">
 
                 <component
                     data-properties="{
@@ -22,7 +23,7 @@
 
             </div>
 
-            <div class="venus column six">
+            <div class="venus col-md-6">
 
                 <component
                     data-properties="{
@@ -33,14 +34,29 @@
 
             </div>
 
-        </div>
+            <div class="venus col-md-6">
 
-        <component
-            data-properties="{
-                title: 'Disabled',
-                templateUrl: 'docs/components/switch/switch-disabled.html'
-            }">
-        </component>
+                <component
+                    data-properties="{
+                        title: 'Disabled',
+                        templateUrl: 'docs/components/switch/switch-disabled.html'
+                    }">
+                </component>
+
+            </div>
+
+            <div class="venus col-md-6">
+
+                <component
+                    data-properties="{
+                        title: 'Disabled Checked',
+                        templateUrl: 'docs/components/switch/switch-disabled-checked.html'
+                    }">
+                </component>
+
+            </div>
+
+        </div>
 
     </div>
 

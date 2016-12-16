@@ -102,16 +102,26 @@ $this: ".venus.loader";
             width    : 100%;
             max-width: 460px;
 
-            margin : 8px auto 0;
-            padding: 14px 35px 16px 20px;
+            margin : 5px auto 0;
+            padding: 16px 35px 15px 20px;
 
-            border       : 1px solid $color-red;
             border-radius: 4px;
 
-            color           : $color-red;
+            color           : $color-dark-grey;
             background-color: rgba($color-white, .9);
+            box-shadow      : 0 0 8px 0 rgba(0, 0, 0, .2);
 
             animation: fadeInUp .75s;
+
+            strong,
+            &__title {
+                color      : $color-red;
+                font-weight: bold;
+            }
+
+            &__title {
+                margin-bottom: 10px;
+            }
 
             &__icon {
                 position: absolute;
@@ -151,7 +161,7 @@ $this: ".venus.loader";
     }
 }
 
-@include phone {
+@include xs {
     #{$this} {
         &__content {
             &__error {

@@ -7,13 +7,15 @@ $this: ".venus.form__fieldset";
     @include  border-radius(3px);
 
     &--hidden {
+        margin-bottom: 21px;
+
         border    : 0;
         border-top: 1px solid $color-blue;
         @include    border-radius(0);
     }
 
     &__legend {
-        padding : 8px 15px 7px;
+        padding : 8px 15px;
         margin  : -1px 0 -10px 10px;
 
         color : $color-blue;
@@ -22,7 +24,7 @@ $this: ".venus.form__fieldset";
 
         font-size     : 13px;
         font-weight   : bold;
-        line-height   : 1;
+        line-height   : .9;
         text-transform: uppercase;
 
         &[data-ng-click] {
@@ -39,6 +41,12 @@ $this: ".venus.form__fieldset";
 
             &.ng-hide-add {
                 animation: fadeOut .25s;
+
+                .venus {
+                    .form__field {
+                       line-height: 0;
+                    }
+                }
             }
         }
     }

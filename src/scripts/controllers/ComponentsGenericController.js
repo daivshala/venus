@@ -1,37 +1,7 @@
 'use strict';
 
 angular.module('venus-docs')
-.controller('ComponentsGenericController', function ($scope, Overlay) {
-
-    /*
-     * Overlay Component
-     */
-    var test;
-
-    $scope.createOverlay = function () {
-        test = new Overlay.create({
-            title: 'Overlay Dialog Test #1',
-            text : 'Venus, Ingresse, Backstage, Brazil, Amazonas, São Paulo.',
-
-            cancelText: 'Oh, wait. I won\'t do this',
-            cancel    : function () {
-                console.log('Cancelled by user.');
-            },
-
-            continueText: 'Yep! Go ahead',
-            continue    : function () {
-                console.log('Authorized by user.');
-            }
-        });
-    };
-
-    $scope.createOtherOverlay = function () {
-        test = new Overlay.create({
-            title: 'Lorem Ipsum is simply dummy',
-            text : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        });
-    };
-
+.controller('ComponentsGenericController', function ($scope) {
 
     /*
      * Selector Component

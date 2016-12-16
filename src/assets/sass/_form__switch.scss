@@ -3,14 +3,14 @@ $this: ".venus.form__switch";
 #{$this} {
     position  : relative;
     display   : block !important;
-    min-height: 13px;
+    min-height: 30px;
 
-    margin      : -2px 0 9px;
-    padding-left: 38px;
+    margin : 0;
+    padding: 6px 0 6px 60px;
 
     font-size     : 13px;
-    font-weight   : bold;
-    line-height   : 1;
+    font-weight   : 500;
+    line-height   : 1.5;
     text-transform: uppercase;
 
     color: $color-dark-grey;
@@ -25,7 +25,8 @@ $this: ".venus.form__switch";
     }
 
     &--right {
-        padding: 0 38px 0 0;
+        padding-right: 60px;
+        padding-left : 0;
 
         #{$this} {
             &__check,
@@ -46,9 +47,9 @@ $this: ".venus.form__switch";
             background-color: $color-green;
 
             &:before {
-                -webkit-transform: translateX(16px);
-                -ms-transform    : translateX(16px);
-                transform        : translateX(16px);
+                -webkit-transform: translateX(20px);
+                -ms-transform    : translateX(20px);
+                transform        : translateX(20px);
 
                 border-color: $color-green;
                 box-shadow  : -1px 0 2px -1px rgba($color-black, .25);
@@ -84,8 +85,8 @@ $this: ".venus.form__switch";
 
     &__check,
     &__slider {
-        width : 32px;
-        height: 16px;
+        width : 50px;
+        height: 30px;
         left  : 0;
     }
 
@@ -110,14 +111,14 @@ $this: ".venus.form__switch";
             position: absolute;
             content : " ";
 
-            width : 14px;
-            height: 14px;
+            width : 28px;
+            height: 28px;
             top   : 0;
             left  : 0;
 
             background-color: $color-white;
             border          : 1px solid $color-grey;
-            border-radius   : 2px;
+            border-radius   : 3px;
             box-shadow      : 1px 0 2px -1px rgba($color-black, .25);
 
             transition: .1s;

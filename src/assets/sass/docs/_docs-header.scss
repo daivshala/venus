@@ -13,12 +13,32 @@ $this: ".docs-header";
     .venus.h4 {
         &#{$this} {
             &__title {
-                margin: 0;
+                margin: 4px 0 0;
+
+                font-weight: 900;
+                text-transform: uppercase;
             }
 
             &__subtitle {
-                margin: 14px 0 10px;
+                margin: 10px 0 7px;
+
+                font-weight: 500;
             }
         }
     }
+
+    a {
+        color: $color-blue;
+        text-decoration: none;
+    }
+
+    &.bg-blue {
+        a {
+            color: $color-white;
+        }
+    }
+}
+
+#gridRuler {
+    display: none;
 }

@@ -6,9 +6,6 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="description" content="" />
 
-        <link rel="stylesheet" type="text/css"
-              href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" />
-
         <link rel="icon" sizes="64x64" href="./assets/images/favicon.png" />
 
         <!-- sass compiled styles -->
@@ -19,9 +16,10 @@
 
         <loader></loader>
 
-        <navbar></navbar>
-
-        <main data-ng-view></main>
+        <main>
+            <navbar></navbar>
+            <div data-ng-view></div>
+        </main>
 
         <script src="./scripts/venus-vendors.min.js"></script>
 

@@ -78,7 +78,7 @@ $this: ".venus.overlay";
                     }
                 }
 
-                @include phone {
+                @include xs {
                     display   : block;
                     text-align: center;
 

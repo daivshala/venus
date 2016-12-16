@@ -1,6 +1,6 @@
 'use strict';
 
-const gulp = require('gulp'),
+const gulp   = require('gulp'),
       reqDir = require('require-dir'),
       runSeq = require('run-sequence');
 
@@ -18,10 +18,9 @@ gulp.task('default', [
     'sass',
     'sassDocs'
 ], () => {
-    gulp.watch(dir.paths.js.src,                   ['js-hint']);
-    gulp.watch(dir.paths.html,                     ['ng-template']);
-    gulp.watch(dir.paths.htmlDocs,                 ['ng-template']);
-    gulp.watch([dir.paths.sassAll, dir.paths.css], ['sass', 'sassDocs']);
+    gulp.watch(dir.paths.js.src,                        [ 'js-hint' ]);
+    gulp.watch([ dir.paths.html, dir.paths.htmlDocs ],  [ 'ng-template' ]);
+    gulp.watch([ dir.paths.sassAll, dir.paths.css ],    [ 'sass', 'sassDocs' ]);
 });
 
 

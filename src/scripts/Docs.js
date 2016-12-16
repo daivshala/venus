@@ -2,7 +2,6 @@
 
 angular.module('venus-docs', [
     'ngRoute',
-    'duScroll',
     'venus'
 ])
 .config(function ($routeProvider) {
@@ -15,6 +14,15 @@ angular.module('venus-docs', [
             templateUrl: 'docs/updates-template.html',
             controller : 'UpdatesController'
         })
+        .when('/css', {
+            templateUrl: 'docs/css-template.html',
+        })
+        .when('/css/:featureId', {
+            templateUrl: function (urlattr) {
+                return 'docs/css/' + urlattr.featureId + '-template.html';
+            },
+            controller : 'CSSGenericController'
+        })
         .when('/components', {
             templateUrl: 'docs/components-template.html',
         })
@@ -23,6 +31,15 @@ angular.module('venus-docs', [
                 return 'docs/components/' + urlattr.componentId + '-template.html';
             },
             controller : 'ComponentsGenericController'
+        })
+        .when('/services', {
+            templateUrl: 'docs/services-template.html',
+        })
+        .when('/services/:serviceId', {
+            templateUrl: function (urlattr) {
+                return 'docs/services/' + urlattr.serviceId + '-template.html';
+            },
+            controller: 'ServicesGenericController'
         })
         .otherwise({
             redirectTo: '/'

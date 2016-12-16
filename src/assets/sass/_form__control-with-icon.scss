@@ -28,7 +28,7 @@ $input-with-icon-side-padding: 35px;
         height: 100%;
         width: $input-with-icon-side-padding;
         font-size: 27px;
-        padding: 4px 4px 4px 0;
+        padding: 6px 4px 6px 0;
         background: transparent;
         border: 0;
         color: $input-border-color;
@@ -74,7 +74,7 @@ $input-with-icon-side-padding: 35px;
     }
 }
 
-@include phone {
+@include xs {
     #{$this} {
         &.hide-icon-mob {
             .venus.form__control {

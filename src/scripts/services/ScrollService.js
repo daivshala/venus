@@ -10,13 +10,15 @@ angular.module('venus')
     /**
      * Scroll to the top
      *
-     * @param {integer} [offset=0] - Offset to the top of the page
+     * @param {integer} [offset=0]  - Offset to the top of the page
+     * @param {integer} [speed=800] - Time in milliseconds to animate scroll
      */
-    factory.toTop = function (offset) {
+    factory.toTop = function (offset, speed) {
         var offsetTop = offset || 0;
+        var speedAnim = speed  || 800;
         var body      = $document.find('body');
 
-        body.scrollTop(offsetTop, 800)
+        body.scrollTop(offsetTop, speedAnim)
         .then(function () {
             window.scrollTo(0, offsetTop);
         });

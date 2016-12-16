@@ -13,6 +13,8 @@ const gulp  = require('gulp'),
  * Sass compiler
  */
 gulp.task('sassDocs', () => {
+    var browserSync = require('browser-sync').get('venus');
+
     return gulp.src(paths.sassDoc)
         .pipe(sass({
             options: {
@@ -23,5 +25,6 @@ gulp.task('sassDocs', () => {
         .pipe(sourcemaps.write())
         .pipe(prefixer())
         .pipe(nano({ safe: true }))
-        .pipe(gulp.dest(DEST));
+        .pipe(gulp.dest(DEST))
+        .pipe(browserSync.stream());
 });

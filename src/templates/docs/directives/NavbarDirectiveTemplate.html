@@ -1,34 +1,33 @@
 <nav class="venus navbar navbar--fixed-top">
 
-    <div class="venus container large">
+    <div class="venus container huge">
 
-        <div class="venus navbar-nav">
-
-            <a class="venus navbar-brand"
+        <div class="venus navbar__nav">
+            <a class="venus navbar__brand"
                title="Start"
                data-ng-click="goTo()">
-                <img class="venus navbar-brand-logo"
-                     width="32" height="32"
-                     data-ng-src="./assets/images/application-logo.svg"
-                     />
-                venus
-                <small>
-                    v2.0.1 beta
+                <span class="venus navbar__brand__logo"></span>
+                <span class="venus navbar__brand__title">
+                    venus
+                </span>
+                <small class="venus navbar__brand__slogan">
+                    v3.0 beta
                 </small>
             </a>
 
-            <ul class="venus navbar-menu list">
+            <ul class="venus navbar__menu navbar__menu--right list">
 
-                <li class="venus list-item dropdown dropdown--right"
-                    data-ng-repeat="item in menu"
-                    data-dropdown id="dropdown{{ item.id }}">
-                    <a class="venus list-item-link dropdown-toggle">
+                <li class="venus list__item dropdown dropdown--right"
+                    data-dropdown
+                    data-click-outside="closeDropdown();"
+                    data-ng-repeat="item in menu">
+                    <a class="venus list__item__link dropdown__toggle">
                        {{ item.title }}
                     </a>
-                    <ul class="venus dropdown-content">
-                        <li class="venus dropdown-content-item"
+                    <ul class="venus dropdown__content">
+                        <li class="venus dropdown__content__item"
                             data-ng-repeat="subitem in item.items | orderBy: 'title'">
-                            <a class="venus dropdown-content-item-link"
+                            <a class="venus dropdown__content__item__link"
                                data-ng-click="goTo(item.path + subitem.id)">
                                 {{ subitem.title }}
                             </a>
@@ -36,19 +35,67 @@
                     </ul>
                 </li>
 
-                <li class="venus list-border"></li>
+                <li class="venus list__border"></li>
 
-                <li class="venus list-item">
-                    <a class="venus button softed"
-                       data-ng-click="goTo('/updates')">
-                        Updates
+                <li class="venus list__item">
+                    <a class="venus btn btn--bordered"
+                       href="https://github.com/ingresse/venus"
+                       target="_blank">
+                        GitHub
                     </a>
                 </li>
 
             </ul>
+
+            <label class="venus navbar__menu__drawer"
+                   for="drawer"
+                   data-drawer="drawer-menu">
+
+                <input class="venus navbar__menu__drawer__checkbox"
+                       type="checkbox"
+                       name="drawer"
+                       id="drawer"
+                       data-click-outside="closeDrawer();"
+                       data-outside-if-not="drawer-menu"
+                       />
+
+            </div>
 
         </div>
 
     </div>
 
 </nav>
+
+<div class="venus drawer"
+     id="drawer-menu">
+
+    <ul class="venus list drawer__menu">
+        <li class="venus list__header">
+            Venus UI Framework
+        </li>
+        <li class="venus list__item"
+            data-ng-repeat="item in menu">
+            {{ item.title }}
+
+            <ul class="venus list">
+                <li class="venus list__item"
+                    data-ng-repeat="subitem in item.items | orderBy: 'title'">
+                    <a class="venus list__item__link"
+                       data-ng-click="goTo(item.path + subitem.id);">
+                        {{ subitem.title }}
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="venus list__border"></li>
+        <li class="venus list__item">
+            <a class="venus btn btn--bordered btn--block"
+               href="https://github.com/ingresse/venus"
+               target="_blank">
+                GitHub
+            </a>
+        </li>
+    </ul>
+
+</div>

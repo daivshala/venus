@@ -24,7 +24,7 @@
             Ticket Price
         </h6>
         <div>
-            {{ selectedTicket | currency: 'R$ ' }}
+            {{ selectedTicket || 0 | currency: 'R$ ' }}
         </div>
 
     </div>

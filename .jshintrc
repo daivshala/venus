@@ -47,6 +47,7 @@
     "camelcase":false,
     "globals": {
         "angular": false,
+        "Croppie": false,
         "Prism"  : false
     }
 }

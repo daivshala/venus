@@ -131,7 +131,7 @@ $this: ".tooltip";
     }
 }
 
-@include phone {
+@include xs {
     #{$this} {
         &__content {
             &--right,

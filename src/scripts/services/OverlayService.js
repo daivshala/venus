@@ -14,14 +14,14 @@ angular.module('venus')
         this.defaultProperties = {
             visibility: true,
 
-            title: 'Cautela nesta operação',
-            text : 'Esta alteração pode ser de extrema importância.',
+            title: 'Warning!',
+            text : 'This is an important update.',
 
             cancel    : angular.noop,
-            cancelText: 'Desfazer',
+            cancelText: 'Undo',
 
             continue    : angular.noop,
-            continueText: 'Entendi, continuar mesmo assim'
+            continueText: 'Understood, continue please'
         };
 
         scope.properties = angular.extend(this.defaultProperties, properties);
