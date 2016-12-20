@@ -10,8 +10,8 @@ $this: ".venus.btn";
     padding   : 11px 24px;
     min-height: 40px;
 
-    @include     font-size-default;
-    font-weight: 400;
+    font-size  : $font-size;
+    font-weight: $font-weight;
     line-height: 18px;
 
     text-transform : uppercase;

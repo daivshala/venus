@@ -53,8 +53,8 @@ $this: ".venus.form";
         padding: $input-padding-base;
         margin : 0;
 
-        @include font-size-default;
-        color  : $text-default-color;
+        font-size: $font-size;
+        color    : $text-default-color;
 
         -moz-box-sizing   : border-box;
         -webkit-box-sizing: border-box;
@@ -440,7 +440,6 @@ $this: ".venus.form";
 
         &--error {
             color: $color-red;
-            font-style: italic;
 
             background-color: $color-white;
 

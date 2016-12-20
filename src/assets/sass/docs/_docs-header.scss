@@ -8,21 +8,20 @@ $this: ".docs-header";
     box-shadow: inset 0 -4px 5px -2px rgba($color-black, .05);
 
     h1.venus,
-    h4.venus,
-    .venus.h1,
-    .venus.h4 {
+    h2.venus{
         &#{$this} {
             &__title {
-                margin: 4px 0 0;
+                margin: 3px 0 18px;
 
-                font-weight: 900;
                 text-transform: uppercase;
+
+                overflow-y   : hidden;
+                white-space  : nowrap;
+                text-overflow: ellipsis;
             }
 
             &__subtitle {
-                margin: 10px 0 7px;
-
-                font-weight: 500;
+                margin: -6px 0 3px;
             }
         }
     }
