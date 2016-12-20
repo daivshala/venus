@@ -1,22 +1,26 @@
 // Roboto Font Family from Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
 
+// Venus Icons Font
 @font-face {
-  font-family: "VenusGlyphs-Regular";
-  src: url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.eot");
-  src: local("☺"),
-      url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.svg#VenusGlyphs-Regular") format("svg"),
-      url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.woff") format("woff"),
-      url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.woff2") format("woff2"),
-      url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.ttf") format("truetype");
+    font-family: "VenusGlyphs-Regular";
+    src        : url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.eot");
+    src        : local("☺"),
+                    url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.svg#VenusGlyphs-Regular") format("svg"),
+                    url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.woff") format("woff"),
+                    url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.woff2") format("woff2"),
+                    url("#{map-get($path-assets, fonts)}/VenusGlyphs-Regular.ttf") format("truetype");
 }
 
-$text-default-color: $color-black;
-
+// Body
 body.venus {
-  @include font-family-default;
-  font-size  : 100%;
-  line-height: 1.5;
+    font-family: $font-family;
+    font-size  : $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+
+    color: $color-black;
 }
 
 // Links
@@ -35,86 +39,115 @@ a.venus:not(.btn) {
 }
 
 .venus.link {
-  color: $seashore;
-  text-decoration: none;
-  background: none;
-  border: 0;
-  padding: 0;
-  &:link,
-  &:visited,
-  &:active,
-  &:hover,
-  &:focus {
-    color: $seashore;
-    outline: 0;
-  }
-}
+    color  : $color-blue;
+    border : 0;
+    padding: 0;
 
-// Headings
+    text-decoration: none;
+    background     : none;
 
-h1, h1.venus, h2, h2.venus, h3, h3.venus, h4, h4.venus, h5, h5.venus, h6, h6.venus,
-.venus.h1, .venus.h2, .venus.h3, .venus.h4, .venus.h5, .venus.h6 {
-  @include font-family-default;
-  font-weight: 400;
-  line-height: 1;
-
-  small.venus,
-  .venus.small {
-    font-weight: normal;
-    line-height: 1;
-    color: inherit;
-  }
-}
-
-h1, h1.venus, .h1.venus,
-h2, h2.venus, .h2.venus,
-h3, h3.venus, .h3.venus {
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-  small.venus,
-  .venus.small {
-    font-size: 65%;
-  }
-}
-h4, h4.venus, .venus.h4,
-h5, h5.venus, .venus.h5,
-h6, h6.venus, .venus.h6 {
-    line-height: 1.1;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    small.venus,
-    .venus.small {
-        font-size: 75%;
+    &:link,
+    &:visited,
+    &:active,
+    &:hover,
+    &:focus {
+        color  : $color-lochmara;
+        outline: 0;
     }
 }
 
-h1.venus, .venus.h1 { font-size: 60px; }
-h2.venus, .venus.h2 { font-size: 52px; }
-h3.venus, .venus.h3 { font-size: 44px; }
-h4.venus, .venus.h4 { font-size: 34px; }
-h5.venus, .venus.h5 { font-size: 28px; }
-h6.venus, .venus.h6 { font-size: 20px; }
+// Headings
+h1,
+h2,
+h3 {
+    &.venus {
+        font-weight: $font-weight;
+        padding    : 0;
 
-// Body text
+        &.heavy {
+            font-weight: 900;
+        }
 
-p.venus {
-  margin: 10px 0;
-  line-height: 1.5;
+        &.support {
+            font-weight: 700;
+            font-family: "Kalam", cursive;
+        }
+
+        small.venus,
+        .venus.small {
+            font-size: 65%;
+        }
+    }
 }
 
-p.venus + p, img.venus + p {
-  margin-top: 10px;
+h1.venus {
+    font-size  : 32px;
+    line-height: 40px;
+
+    margin: 29px 0 11px;
+
+    &.heavy {
+        font-size  : 60px;
+        line-height: 60px;
+    }
+}
+
+h2.venus {
+    font-size  : 27px;
+    line-height: 40px;
+
+    margin: 20px 0 10px;
+
+    &.heavy {
+        font-size  : 50px;
+        line-height: 60px;
+
+        margin: 22px 0 18px;
+
+        + p.venus {
+            margin-top: -10px;
+        }
+    }
+
+    + p.venus {
+        margin-top: 10px;
+    }
+}
+
+h3.venus {
+    font-size  : 22px;
+    line-height: 30px;
+
+    margin: 17px 0 13px;
+
+    &.heavy {
+        font-size  : 40px;
+        line-height: 40px;
+    }
+
+    + p.venus {
+        margin-top: 12px;
+    }
+}
+
+// Text
+p.venus {
+    padding: 0;
+    margin : 5px 0;
+
+    + p.venus {
+        margin-top: 10px;
+
+        &.small {
+            margin-top: 5px;
+        }
+    }
 }
 
 small.venus,
 .venus.small {
-  font-size: 85%;
-}
-
-.venus.minimal {
-    @include font-size-minimal;
+    font-size  : 13px;
+    line-height: 20px;
 }
 
 // Alignment
@@ -129,39 +162,6 @@ small.venus,
 .venus.text-normal        { font-weight: 400; font-style: normal; }
 .venus.text-underline     { text-decoration: underline; }
 
-// Lists
-// -------------------------
-
-// Unordered and Ordered lists
-ul.venus,
-ol.venus {
-  margin-top: 0;
-  margin-bottom: 10px;
-  ul.venus,
-  ol.venus {
-    margin-bottom: 0;
-  }
-}
-
-// List options
-
-.venus.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-// Inline turns list items into inline-block
-.venus.list-inline {
-	.venus.list-unstyled {
-    margin-left: -5px;
-  }
-
-  > li.venus {
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
 
 // Description Lists
 dl.venus {
@@ -182,10 +182,7 @@ dd.venus {
 // Mobile version
 
 @include xs-sm {
-  h1.venus, .venus.h1 { font-size: 32px; }
-  h2.venus, .venus.h2 { font-size: 28px; }
-  h3.venus, .venus.h3 { font-size: 24px; }
-  h4.venus, .venus.h4 { font-size: 20px; }
-  h5.venus, .venus.h5 { font-size: 20px; }
-  h6.venus, .venus.h6 { font-size: 20px; }
+  h1.venus { font-size: 32px; }
+  h2.venus { font-size: 28px; }
+  h3.venus { font-size: 24px; }
 }

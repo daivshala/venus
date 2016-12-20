@@ -12,13 +12,16 @@
         <link rel="stylesheet" type="text/css" href="./assets/venus.min.css" />
         <link rel="stylesheet" type="text/css" href="./assets/venus-docs.min.css" />
     </head>
-    <body>
+    <body class="venus">
 
-        <loader></loader>
+        <main class="docs">
+            <loader></loader>
 
-        <main>
-            <navbar></navbar>
-            <div data-ng-view></div>
+            <docs-nav class="docs__nav"></docs-nav>
+
+            <div class="docs__content" data-ng-view></div>
+
+            <docs-footer class="docs__footer"></docs-footer>
         </main>
 
         <!-- build:js ./scripts/venus-vendors.min.js -->
@@ -67,6 +70,7 @@
 
         <script src="/scripts/directives/docs/NavbarDirective.js"></script>
         <script src="/scripts/directives/docs/PageHeaderDirective.js"></script>
+        <script src="/scripts/directives/docs/FooterDirective.js"></script>
         <script src="/scripts/directives/docs/CodeShowDirective.js"></script>
         <script src="/scripts/directives/docs/ComponentDirective.js"></script>
 

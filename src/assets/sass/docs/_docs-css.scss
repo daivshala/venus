@@ -1,6 +1,8 @@
 $this: ".docs-css";
 
 #{$this} {
+    padding: 20px 0;
+
     &__grid {
         .box-row {
             min-height: 40px;
@@ -54,6 +56,16 @@ $this: ".docs-css";
 
             code {
                 font-weight: bold;
+            }
+        }
+    }
+}
+
+@include xs {
+    #{$this} {
+        &__btn {
+            .venus.btn {
+                margin-bottom: 20px;
             }
         }
     }

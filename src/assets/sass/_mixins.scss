@@ -39,24 +39,6 @@
   text-shadow: $shadow;
 }
 
-//Fonts
-
-@mixin font-size-default {
-  font-size: 16px;
-}
-
-@mixin font-size-minimal {
-  font-size: 13px;
-}
-
-@mixin font-size-label {
-  font-size: 12px;
-}
-
-@mixin font-family-default {
-  font-family: "Roboto", Helvetica Neue, Arial, sans-serif;
-}
-
 //Forms
 @mixin placeholder-style {
     font-size  : 16px;

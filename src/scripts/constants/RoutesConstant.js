@@ -8,6 +8,10 @@ angular.module('venus-docs')
         path : '/css/',
         items: [
             {
+                id   : 'typography',
+                title: 'Typography',
+            },
+            {
                 id   : 'grid',
                 title: 'Flexbox Grid',
             },

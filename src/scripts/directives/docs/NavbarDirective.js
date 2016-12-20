@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('venus-docs')
-.directive('navbar', function (flow, routes) {
+.directive('docsNav', function (flow, routes) {
     return {
         restrict   : 'E',
         templateUrl: 'docs/directives/NavbarDirectiveTemplate.html',
