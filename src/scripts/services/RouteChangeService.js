@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .factory('routeChange', function ($rootScope, $location, $timeout,
     flow, scroll, loader) {
     var factory = {};

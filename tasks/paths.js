@@ -18,9 +18,9 @@ var paths = {
         './src/templates/code-examples/{,*/,*/*/,*/*/*/}*.html',
         './src/templates/directives/docs/{,*/,*/*/,*/*/*/}*.html',
     ],
-    sass   : './src/assets/sass/venus.min.scss',
-    sassDoc: './src/assets/sass/docs/venus-docs.min.scss',
-    sassAll: './src/assets/sass/{,*/}*.scss',
+    sass   : './src/assets/scss/aphrodite.min.scss',
+    sassDoc: './src/assets/scss/docs/aphrodite-docs.min.scss',
+    sassAll: './src/assets/scss/{,*/}*.scss',
     css    : './src/assets/css/*.css',
     index  : './src/index.html',
     images : [

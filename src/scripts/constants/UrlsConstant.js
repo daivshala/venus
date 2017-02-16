@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .constant('urls', {
-    github: 'https://github.com/ingresse/venus'
+    github: 'https://github.com/ingresse/aphrodite'
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('selector', function () {
     return {
         restrict: 'E',
@@ -20,7 +20,7 @@ angular.module('venus')
         link: function (scope, element) {
             scope.randomId = Math.random();
 
-            element.addClass('venus selector');
+            element.addClass('aphrodite selector');
 
             if (scope.array) {
                 var index;

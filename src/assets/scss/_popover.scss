@@ -1,0 +1,54 @@
+.aph {
+    &.popover {
+        position: absolute;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-animation: fadeIn 1s;
+        background-color: $color-black;
+        color: $color-white;
+
+        &.blue {
+            background-color: $color-blue;
+        }
+
+        img {
+            height: 100%;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .pointer {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+
+            &.top {
+                bottom: -20px;
+                background-image: url(#{map-get($path-assets, images)}/popover--bottom.png);
+            }
+
+            &.bottom {
+                top: -20px;
+                background-image: url(#{map-get($path-assets, images)}/popover--top.png);
+            }
+
+            &.right {
+                left: -20px;
+                background-image: url(#{map-get($path-assets, images)}/popover--left.png);
+            }
+
+            &.left {
+                right: -20px;
+                background-image: url(#{map-get($path-assets, images)}/popover--right.png);
+            }
+        }
+    }
+
+    &.popover-container{
+        position: relative;
+    }
+}

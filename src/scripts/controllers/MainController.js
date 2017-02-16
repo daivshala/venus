@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .controller('MainController', function ($scope) {
 
     $scope.steps = [

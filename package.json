@@ -1,6 +1,6 @@
 {
-  "name": "venus",
-  "version": "3.0.0",
+  "name": "aphrodite",
+  "version": "1.0.0",
   "private": false,
   "engines": {
     "node": ">=0.10.0"

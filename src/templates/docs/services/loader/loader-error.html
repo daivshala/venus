@@ -2,7 +2,7 @@
 <!-- Controller Example
 "use strict";
 
-angular.module("example-app")
+angular.module("example-app", [ "aphrodite" ])
 .controller("ExampleController", function ($scope, loader) {
 
     $scope.error = {
@@ -21,7 +21,7 @@ angular.module("example-app")
 
 <!-- Markup -->
 <button type="button"
-        class="venus btn btn--red"
+        class="aph btn btn--red"
         data-ng-click="loaderErrorTest(error.message.text)">
     Loader Error
 </button>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .directive('codeShow', function ($compile, $templateCache) {
     return {
         restrict   : 'E',

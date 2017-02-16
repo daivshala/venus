@@ -1,9 +1,9 @@
 {
-  "name": "venus",
-  "version": "3.0.0",
+  "name": "aphrodite",
+  "version": "1.0.0",
   "main": [
-    "./dist/scripts/venus.js",
-    "./dist/assets/venus.css"
+    "./dist/scripts/aphrodite.js",
+    "./dist/assets/aphrodite.css"
   ],
   "dependencies": {
     "angular": "1.5.10",

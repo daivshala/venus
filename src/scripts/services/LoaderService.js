@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .factory('loader', function () {
 
     var factory = {

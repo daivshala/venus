@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('venus-docs', [
+angular.module('aphrodite-docs', [
     'ngRoute',
-    'venus'
+    'aphrodite'
 ])
 .config(function ($routeProvider) {
     $routeProvider

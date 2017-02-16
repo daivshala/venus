@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('customSelect', function ($window, $compile, $templateCache) {
     return {
         restrict: 'E',

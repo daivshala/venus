@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('overlay', function ($document, $timeout) {
     return {
         restrict   : 'E',
@@ -12,12 +12,12 @@ angular.module('venus')
         link       : function (scope, element) {
             var body = $document.find('body');
 
-            body.toggleClass('venus overlay-active');
+            body.toggleClass('aphrodite overlay-active');
 
             var destroyOverlay = function () {
                 scope.overlay.visibility = false;
 
-                body.toggleClass('venus overlay-active');
+                body.toggleClass('aphrodite overlay-active');
 
                 $timeout(function () {
                     element.remove();

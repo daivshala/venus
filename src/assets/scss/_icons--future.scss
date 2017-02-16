@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@font-face {
+    font-weight: normal;
+    font-style : normal;
+    font-family: "venus";
+    src: url("fonts/venus.eot");
+    src: url("fonts/venus.eot?#iefix") format("embedded-opentype"),
+         url("fonts/venus.woff") format("woff"),
+         url("fonts/venus.ttf") format("truetype"),
+         url("fonts/venus.svg#aph") format("svg");
+}
+
+[data-aph-icon]:before,
+[class^="aph icon--"]:before,
+[class*="aph icon--"]:before {
+    font-family: "venus" !important;
+
+    font-style    : normal !important;
+    font-weight   : normal !important;
+    font-variant  : normal !important;
+
+    text-transform: none !important;
+
+    speak: none;
+
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[data-aph-icon]:before {
+    content: attr(data-icon);
+}
+
+[data-aph-icon],
+[class^="aph icon--"],
+[class*="aph icon--"] {
+    position: relative;
+    bottom  : -1px;
+}
+
+.aph.icon--check:before {
+    content: "\61";
+}
+.aph.icon--close:before {
+    content: "\62";
+}
+.aph.icon--hamburger:before {
+    content: "\63";
+}
+.aph.icon--plus:before {
+    content: "\64";
+}

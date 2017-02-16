@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('drawer', function () {
     return {
         restrict: 'A',

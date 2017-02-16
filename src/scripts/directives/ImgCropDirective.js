@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('imgCrop', function () {
     return {
         restrict: 'E',
@@ -25,7 +25,7 @@ angular.module('venus')
 
             console.log(imageContainer);
 
-            element.addClass('venus image-crop');
+            element.addClass('aphrodite image-crop');
         },
     };
 });

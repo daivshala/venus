@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('alert', function () {
     return {
         restrict   : 'E',
@@ -11,7 +11,7 @@ angular.module('venus')
         templateUrl: 'directives/AlertDirectiveTemplate.html',
         transclude : true,
         link       : function (scope, element) {
-            element.addClass('venus alert-container');
+            element.addClass('aphrodite alert-container');
 
             scope.dismiss = function () {
                 scope.alertVisibility = !scope.alertVisibility;

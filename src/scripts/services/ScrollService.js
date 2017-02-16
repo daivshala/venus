@@ -3,7 +3,7 @@
 /**
  * Scroll body to top with smooth
  */
-angular.module('venus')
+angular.module('aphrodite')
 .factory('scroll', function ($document) {
     var factory = {};
 

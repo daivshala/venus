@@ -4,14 +4,14 @@ const gulp  = require('gulp'),
       del   = require('del'),
       paths = require('./paths'),
       SRC   = [
-          './src/assets/venus.min.css',
-          './src/assets/venus-docs.min.css',
+          './src/assets/aphrodite.min.css',
+          './src/assets/aphrodite-docs.min.css',
           './src/assets/fonts/*',
           './server/**/*',
           './package.json',
       ],
       DIST  = [
-          './src/assets/venus.min.css',
+          './src/assets/aphrodite.min.css',
           './src/assets/fonts/*',
       ];
 

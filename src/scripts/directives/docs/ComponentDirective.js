@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .directive('component', function (scroll) {
     return {
         restrict   : 'E',

@@ -2,7 +2,7 @@
 <!-- Controller Example
 "use strict";
 
-angular.module("example-app")
+angular.module("example-app", [ "aphrodite" ])
 .controller("ExampleController", function ($scope, Overlay) {
 
     /*
@@ -32,7 +32,7 @@ angular.module("example-app")
 
 
 <!-- Markup -->
-<button class="venus button"
+<button class="aph button"
         data-ng-click="createOverlay()">
     Overlay Dialog Test
 </button>

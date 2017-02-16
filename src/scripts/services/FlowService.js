@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .factory('flow', function ($filter, $location, $route) {
     /**
      * Control the application flow

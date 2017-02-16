@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('progressBar', function () {
     return {
         restrict: 'EA',
@@ -9,7 +9,7 @@ angular.module('venus')
             progressOptions: '=?'
         },
         link    : function (scope, element) {
-            element.addClass('venus progress');
+            element.addClass('aphrodite progress');
 
             if (scope.progressOptions && scope.progressOptions.size) {
                 element.addClass('progress--' + scope.progressOptions.size.toString());

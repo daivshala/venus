@@ -1,0 +1,157 @@
+$this: ".aph.form__custom-select";
+
+#{$this} {
+    position: relative;
+    display : block;
+
+    font-size  : 16px;
+    line-height: 1.25;
+
+    &__input {
+        position: absolute;
+        opacity : 0;
+
+        left    : 0;
+        bottom  : 0;
+        padding : 0 !important;
+
+        width   : 0 !important;
+        height  : 100% !important;
+
+        &:focus,
+        &:active {
+            + #{$this} {
+                &__toggle {
+                    border-color: $color-blue;
+
+                    &:after {
+                        border-color: $color-blue transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggle {
+        position: relative;
+
+        min-height: $input-height-base;
+        padding   : 10px 20px 8px 10px;
+
+        color           : $color-black;
+        background-color: $color-white;
+
+        border: 1px solid $color-grey;
+
+        @include border-radius (3px);
+
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            content : "";
+
+            right : 8px;
+            top   : 50%;
+
+            width : 0;
+            height: 0;
+
+            margin-top: -2px;
+
+            border-width: 4px 4px 0;
+            border-style: solid;
+            border-color: $color-black transparent;
+        }
+
+        &--active {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius : 0;
+
+            border-color: $color-blue;
+
+            &:after {
+                border-color: $color-blue transparent;
+            }
+        }
+
+        &--placeholder {
+            font-style : normal;
+            font-size  : 16px;
+            line-height: 1.3;
+
+            color: $color-light-grey;
+
+            @include no-select();
+        }
+
+        &--disabled {
+            cursor: initial;
+
+            color           : $input-disabled-text;
+            border-color    : $input-disabled-border;
+            background-color: $input-disabled-background;
+
+            &:after {
+                border-color: $input-disabled-border transparent;
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        z-index : 1000;
+
+        top  : 100%;
+        right: 0;
+        left : 0;
+
+        max-height: 200px;
+        overflow  : auto;
+
+        padding: 0;
+        margin : 0;
+
+        list-style: none;
+
+        background-color: $color-white;
+        background-clip : padding-box;
+
+        border: 1px solid $color-grey;
+        border-top: 0;
+
+        @include border-radius(3px);
+        border-top-right-radius: 0;
+        border-top-left-radius : 0;
+
+        box-shadow: 2px 2px 4px rgba($color-black, .1);
+
+        &__option {
+            display: block;
+            width  : 100%;
+            min-height: 39px;
+
+            padding: 9.5px 10px;
+
+            cursor: pointer;
+
+            border-top: 1px solid $color-light-grey;
+
+            @include no-select ();
+
+            &:hover {
+                color           : $color-white;
+                background-color: $color-blue;
+                border-color    : $color-white;
+
+                + #{$this}__list__option {
+                    border-color    : $color-blue;
+                }
+            }
+
+            &:first-of-type {
+                border-top: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,146 @@
+.aph{
+    &.button {
+        display: inline-block;
+        margin-bottom: 0;
+        text-align: center;
+        vertical-align: middle;
+        background-image: none;
+        white-space: nowrap;
+        line-height: normal;
+        text-decoration: none;
+        color: $text-button-color !important;
+        @include font-size-default;
+        @include border-radius(3px);
+        border: 0px;
+        padding: 10px 45px;
+        min-width: 50px;
+        cursor: pointer;
+        font-weight: normal;
+        position: relative;
+        @include text-shadow(0 1px $button-blue-text-shadow);
+        background: $button-blue-background;
+        box-shadow: inset 0px -3px 0px 0px $button-blue-border;
+        &:hover {
+            background: $button-blue-hover;
+            outline: 0;
+            @include box-shadow(none);
+             box-shadow: inset 0px -3px 0px 0px $button-blue-border;
+        }
+        &:active {
+            outline: 0;
+            background-image: none;
+            background: $button-blue-hover;
+            padding: 13px 45px 7px;
+            @include box-shadow(none);
+            box-shadow: none;
+        }
+        &:focus {
+            outline: 0;
+            @include box-shadow(none);
+        }
+        &.orange {
+            @include text-shadow(0 1px #ec820a);
+            background: $button-orange-background;
+            box-shadow: inset 0px -3px 0px 0px $button-orange-border;
+            &:hover {
+                background: $button-orange-hover;
+                @include box-shadow(none);
+                box-shadow: inset 0px -3px 0px 0px $button-orange-border;
+            }
+            &:active {
+                background: $button-orange-hover;
+                @include box-shadow(none);
+                box-shadow: none;
+            }
+        }
+      &.facebook {
+        @include text-shadow(0 1px #2f4779);
+        background: #3b5998;
+        border-bottom: 3px solid #2f4779;
+        &:hover {
+          background: #355088;
+        }
+        &:active {
+          background: #355088;
+          border-bottom: 0;
+        }
+      }
+        &.disabled,
+        &:disabled {
+            color: #b5bebe;
+            @include text-shadow(0 1px $button-disabled-text-shadow);
+            background: $button-disabled;
+            box-shadow: inset 0px -3px 0px 0px $button-disabled-border;
+            cursor: default;
+            &:hover {
+                background: $button-disabled;
+                cursor: default;
+            }
+            &:active {
+                background: $button-disabled;
+                ppadding: 10px 45px;
+                box-shadow: inset 0px -3px 0px 0px $button-disabled-border;
+                cursor: default;
+            }
+        }
+        &.wide {
+            display: block;
+            width: 100%;
+        }
+        &.dropdown {
+            min-width: 0;
+            padding: 22px 20px 16px;
+            &:active {
+                padding: 23px 20px 15px;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                border-style: solid;
+                border-color: $text-button-color transparent transparent transparent;
+                top: 50%;
+                left: 40%;
+                border-width: 5px 5px 0;
+            }
+        }
+        &.labeled {
+          text-align: right;
+          padding-right: 30px;
+          padding-left: 60px;
+          &:active {
+            text-align: right;
+            padding-right: 30px;
+            padding-left: 60px;
+          }
+          > [class*="icon-"] {
+            font-size: 26px;
+            line-height: 16px;
+            position: absolute;
+            left: 30px;
+            top: 26%;
+          }
+          &.wide {
+            padding: 14px 45px;
+            text-align: center;
+            > [class*="icon-"] {
+              position: relative;
+              left: inherit;
+              margin-right: 20px;
+              top: inherit;
+            }
+          }
+          > .icon-android,
+          > .icon-apple,
+          > .icon-facebook,
+          > .icon-gplus,
+          > .icon-twitter {
+            font-size: 40px;
+            left: 20px;
+            top: 22%;
+          }
+        }
+    }
+}

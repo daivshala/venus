@@ -3,33 +3,33 @@
 
     <div class="col-xs-12 col-sm-4">
 
-        <form class="venus form form--with-fields"
+        <form class="aph form form--with-fields"
               name="login"
               novalidate
               data-form-validation="login"
               data-ng-submit="login.$valid && login()">
 
-            <div class="venus form__field">
-                <h5 class="venus">
+            <div class="aph form__field">
+                <h5 class="aph">
                     Login
                 </h5>
             </div>
 
-            <div class="venus form__field">
+            <div class="aph form__field">
 
-                <label class="venus form__label"
+                <label class="aph form__label"
                        for="login-email">
                     E-mail:
                 </label>
-                <input class="venus form__control"
+                <input class="aph form__control"
                        type="email"
                        id="login-email"
                        name="login-email"
-                       placeholder="Ex.: venus@ingresse.com"
+                       placeholder="Ex.: aph@ingresse.com"
                        data-ng-required="true"
                        data-ng-model="login.email" />
 
-               <div class="venus form__helper form__helper--error"
+               <div class="aph form__helper form__helper--error"
                     data-ng-show="login['login-email'].$invalid && !login['login-email'].$pristine">
                    This field is required and
                    need a valid e-mail address
@@ -37,13 +37,13 @@
 
             </div>
 
-            <div class="venus form__field">
+            <div class="aph form__field">
 
-                <label class="venus form__label"
+                <label class="aph form__label"
                        for="login-pass">
                     Password:
                 </label>
-                <input class="venus form__control"
+                <input class="aph form__control"
                        type="password"
                        id="login-pass"
                        name="login-pass"
@@ -51,30 +51,30 @@
                        data-ng-required="true"
                        data-ng-model="login.password" />
 
-               <div class="venus form__helper form__helper--error"
+               <div class="aph form__helper form__helper--error"
                     data-ng-show="login['login-pass'].$invalid && !login['login-pass'].$pristine">
                    This field is required
                </div>
 
             </div>
 
-            <div class="venus form__field">
+            <div class="aph form__field">
 
-                <input class="venus form__control"
+                <input class="aph form__control"
                        type="checkbox"
                        id="login-remember"
                        name="login-remember"
                        data-ng-model="login.remember" />
-                <label class="venus form__label"
+                <label class="aph form__label"
                        for="login-remember">
                     Remember me
                 </label>
 
             </div>
 
-            <div class="venus form__field">
+            <div class="aph form__field">
 
-                <button class="venus btn btn--orange btn--block"
+                <button class="aph btn btn--orange btn--block"
                         type="submit">
                     LOGIN
                 </button>

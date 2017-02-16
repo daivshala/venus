@@ -11,7 +11,7 @@ const gulp       = require('gulp'),
  * Compile HTML templates with $templateCache task
  */
 gulp.task('ng-template', () => {
-    var browserSync = require('browser-sync').get('venus');
+    var browserSync = require('browser-sync').get('aphrodite');
 
     gulp.src(paths.htmlDocs)
         .pipe(htmlmin({
@@ -22,7 +22,7 @@ gulp.task('ng-template', () => {
             removeOptionalTags       : true
         }))
         .pipe(ngtemplate({
-            moduleName: 'venus-docs',
+            moduleName: 'aphrodite-docs',
             standalone: false,
             prefix    : 'docs/',
             filePath  : 'DocsViews.js'
@@ -39,7 +39,7 @@ gulp.task('ng-template', () => {
             removeOptionalTags       : true
         }))
         .pipe(ngtemplate({
-            moduleName: 'venus',
+            moduleName: 'aphrodite',
             standalone: false,
             prefix    : '',
             filePath  : 'Views.js'

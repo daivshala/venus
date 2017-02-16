@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .directive('docsFooter', function () {
     return {
         restrict   : 'E',

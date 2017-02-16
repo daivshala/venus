@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .directive('formValidation', function ($window, scroll) {
     return {
         restrict: 'A',

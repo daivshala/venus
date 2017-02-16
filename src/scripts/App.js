@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus', [
+angular.module('aphrodite', [
     'ngAnimate',
     'duScroll',
     'angular-click-outside',

@@ -1,35 +1,35 @@
-<div class="venus loader"
+<div class="aph loader"
      data-ng-hide="activities.length === 0 && errors.length === 0">
-    <div class="venus loader__content">
-        <div class="venus container">
-            <figure class="venus loader__content__spinner"
+    <div class="aph loader__content">
+        <div class="aph container">
+            <figure class="aph loader__content__spinner"
                  data-ng-show="activities.length !== 0">
-                <img class="venus loader__content__spinner__image"
+                <img class="aph loader__content__spinner__image"
                      data-ng-src="./assets/images/loader--spinner.gif"
                      alt="Loading" />
             </figure>
 
-            <div class="venus loader__content__message"
+            <div class="aph loader__content__message"
                  data-ng-repeat="activity in activities">
                 <div data-ng-if="!activity.title && !activity.text"
                      data-ng-bind-html="activity | unsafe">
                 </div>
 
-                <div class="venus loader__content__message__title"
+                <div class="aph loader__content__message__title"
                      data-ng-if="activity.title"
                      data-ng-bind-html="activity.title | unsafe">
                 </div>
 
-                <div class="venus loader__content__message__text"
+                <div class="aph loader__content__message__text"
                      data-ng-if="activity.text"
                      data-ng-bind-html="activity.text | unsafe">
                 </div>
             </div>
 
-            <div class="venus loader__content__error"
+            <div class="aph loader__content__error"
                  data-ng-repeat="error in errors">
                 <div data-ng-bind-html="error | unsafe"></div>
-                <button class="venus loader__content__error__icon"
+                <button class="aph loader__content__error__icon"
                         data-ng-click="clearError(error)"
                         title="Fechar esta mensagem">
                     ×

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .run(function ($rootScope, $location, routeChange) {
     /**
      * When some route failed to resolve

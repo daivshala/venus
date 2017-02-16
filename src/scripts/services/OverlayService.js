@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus')
+angular.module('aphrodite')
 .factory('Overlay', function ($rootScope, $document, $compile) {
 
     /*

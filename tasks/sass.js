@@ -13,7 +13,7 @@ const gulp  = require('gulp'),
  * Sass compiler
  */
 gulp.task('sass', () => {
-    var browserSync = require('browser-sync').get('venus');
+    var browserSync = require('browser-sync').get('aphrodite');
 
     return gulp.src(paths.sass)
         .pipe(sass({

@@ -5,10 +5,10 @@ const gulp  = require('gulp'),
       paths = require('./paths'),
       SRC   = [
           paths.dist + '/index.html',
-          paths.dist + '/assets/venus-docs.min.css',
+          paths.dist + '/assets/aphrodite-docs.min.css',
           paths.dist + '/assets/images/favicon.png',
           paths.dist + '/assets/images/application-logo*.svg',
-          paths.dist + '/scripts/venus-docs.min.js',
+          paths.dist + '/scripts/aphrodite-docs.min.js',
       ];
 
 

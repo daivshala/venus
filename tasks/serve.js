@@ -2,7 +2,7 @@
 
 const gulp  = require('gulp'),
       paths = require('./paths'),
-      browserSync = require('browser-sync').create('venus'),
+      browserSync = require('browser-sync').create('aphrodite'),
       SRC   = './src';
 
 

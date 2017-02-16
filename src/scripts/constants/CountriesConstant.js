@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .constant('countries', [
     {name: 'Afghanistan', code: 'AF'},
     {name: 'Aland Islands', code: 'AX'},
@@ -246,4 +246,3 @@ angular.module('venus-docs')
     {name: 'Zambia', code: 'ZM'},
     {name: 'Zimbabwe', code: 'ZW'}
 ]);
-    

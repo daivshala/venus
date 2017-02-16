@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('venus-docs')
+angular.module('aphrodite-docs')
 .controller('ServicesGenericController', function ($scope, $timeout, loader, Overlay) {
 
     /*
@@ -10,7 +10,7 @@ angular.module('venus-docs')
     $scope.error = {
         message: {
             text: 'Example: Something\'s wrong. Please contact our support.',
-            html: '<div class="venus loader__content__error__title">Example</div>Something\'s wrong.<br />Please contact our support.',
+            html: '<div class="aph loader__content__error__title">Example</div>Something\'s wrong.<br />Please contact our support.',
         },
     };
 
